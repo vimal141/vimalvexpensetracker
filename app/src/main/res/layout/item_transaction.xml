@@ -4,24 +4,24 @@
     android:id="@+id/card_transaction"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
     app:cardBackgroundColor="@color/bgColorCard"
     app:cardCornerRadius="@dimen/_12sdp"
     app:cardElevation="0dp"
     app:strokeColor="@color/divider_color"
-    app:strokeWidth="1dp">
+    app:strokeWidth="0.8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_9sdp">
+        android:padding="@dimen/_10sdp">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/icon_container"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
             app:cardBackgroundColor="#1A2DCC70"
+            app:cardCornerRadius="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -30,8 +30,8 @@
 
             <ImageView
                 android:id="@+id/img_category"
-                android:layout_width="@dimen/_16sdp"
-                android:layout_height="@dimen/_16sdp"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_shopping"
                 app:tint="@color/primaryColor" />
@@ -42,15 +42,15 @@
             android:id="@+id/txt_category_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_9sdp"
-            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
             android:ellipsize="end"
-            android:fontFamily="@font/medium"
+            android:fontFamily="@font/semi_bold"
             android:maxLines="1"
-            android:textAlignment="viewStart"
             android:text="@string/cat_shopping"
+            android:textAlignment="viewStart"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/_11ssp"
+            android:textSize="@dimen/_13ssp"
             app:layout_constraintBottom_toTopOf="@+id/txt_notes"
             app:layout_constraintEnd_toStartOf="@+id/txt_amount"
             app:layout_constraintStart_toEndOf="@id/icon_container"
@@ -63,14 +63,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginEnd="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:ellipsize="end"
             android:fontFamily="@font/regular"
             android:maxLines="1"
             android:text="@string/notes"
             android:textAlignment="viewStart"
             android:textColor="@color/subTextColor"
-            android:textSize="@dimen/_9ssp"
+            android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="@id/icon_container"
             app:layout_constraintEnd_toStartOf="@+id/txt_date"
             app:layout_constraintStart_toStartOf="@id/txt_category_name"
@@ -85,10 +85,10 @@
             android:maxLines="1"
             android:text="@string/amount"
             android:textColor="@color/expense_red"
-            android:textSize="@dimen/_11ssp"
-            app:layout_constraintStart_toEndOf="@+id/txt_category_name"
+            android:textSize="@dimen/_13ssp"
             app:layout_constraintBottom_toBottomOf="@id/txt_category_name"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_category_name"
             app:layout_constraintTop_toTopOf="@id/txt_category_name" />
 
         <!-- Date -->
@@ -96,16 +96,16 @@
             android:id="@+id/txt_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/medium"
-            android:text="@string/date"
             android:ellipsize="end"
+            android:fontFamily="@font/medium"
             android:maxLines="1"
+            android:text="@string/date"
             android:textAlignment="viewEnd"
             android:textColor="@color/subTextColor"
-            android:textSize="@dimen/_9ssp"
-            app:layout_constraintStart_toEndOf="@+id/txt_notes"
+            android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="@id/txt_notes"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_notes"
             app:layout_constraintTop_toTopOf="@id/txt_notes" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

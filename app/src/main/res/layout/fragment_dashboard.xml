@@ -24,12 +24,12 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/bold"
                 android:maxLines="1"
-                android:paddingHorizontal="@dimen/_13sdp"
-                android:paddingVertical="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_12sdp"
                 android:text="@string/nav_dashboard"
                 android:textAlignment="viewStart"
                 android:textColor="@color/TextColor"
-                android:textSize="@dimen/_15ssp"
+                android:textSize="@dimen/_22ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -38,8 +38,8 @@
                 android:id="@+id/layout_month_selector"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="@+id/card_balance"
                 app:layout_constraintStart_toStartOf="@+id/card_balance"
@@ -49,9 +49,9 @@
                     android:id="@+id/btn_prev_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_9sdp"
                     android:elevation="0dp"
                     app:cardBackgroundColor="@color/bgColorCard"
+                    app:cardCornerRadius="@dimen/_57ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/card_month_selector"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,16 +59,13 @@
                     app:rippleColor="@android:color/transparent"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
                     app:strokeColor="@color/divider_color"
-                    app:strokeWidth="1dp">
+                    app:strokeWidth="0.3dp">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_19sdp"
-                        android:layout_height="@dimen/_19sdp"
-                        android:padding="@dimen/_3sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:padding="@dimen/_4sdp"
                         android:src="@drawable/ic_left"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:tint="@color/primaryColor" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -77,11 +74,11 @@
                     android:id="@+id/card_month_selector"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_4sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_next_month"
                     app:layout_constraintStart_toEndOf="@id/btn_prev_month"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:strokeWidth="0dp">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/ic_calendar_icon"
@@ -94,20 +91,13 @@
                         app:layout_constraintHorizontal_chainStyle="packed"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/divider_color"
                         app:strokeWidth="0dp">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp"
-                            android:padding="@dimen/_6sdp"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:padding="@dimen/_5sdp"
                             android:src="@drawable/ic_calendar"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/txt_selected_month"
-                            app:layout_constraintHorizontal_chainStyle="packed"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
                             app:tint="@color/primaryColor" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -116,14 +106,14 @@
                         android:id="@+id/txt_selected_month"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
                         android:ellipsize="end"
-                        android:fontFamily="@font/medium"
+                        android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:text="@string/date"
                         android:textAlignment="viewStart"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/ic_calendar_icon"
@@ -135,9 +125,9 @@
                     android:id="@+id/btn_next_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_9sdp"
                     android:elevation="0dp"
                     app:cardBackgroundColor="@color/bgColorCard"
+                    app:cardCornerRadius="@dimen/_57ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/card_month_selector"
@@ -145,37 +135,35 @@
                     app:rippleColor="@android:color/transparent"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
                     app:strokeColor="@color/divider_color"
-                    app:strokeWidth="1dp">
+                    app:strokeWidth="0.3dp">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_19sdp"
-                        android:layout_height="@dimen/_19sdp"
-                        android:padding="@dimen/_3sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:padding="@dimen/_4sdp"
                         android:rotation="180"
                         android:src="@drawable/ic_left"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:tint="@color/primaryColor" />
 
                 </com.google.android.material.card.MaterialCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- ATM Card Balance Section -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_balance"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_9sdp"
                 android:clipToPadding="false"
-                app:cardCornerRadius="@dimen/_13sdp"
-                app:layout_constraintDimensionRatio="H,1.586:1"
+                app:cardCornerRadius="@dimen/_14sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintDimensionRatio="H,1.68:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout_month_selector"
-                app:strokeColor="#4DFFFFFF"
+                app:strokeColor="#33FFFFFF"
                 app:strokeWidth="1dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -192,87 +180,94 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="@dimen/_13sdp">
+                    android:padding="@dimen/_14sdp">
 
+                    <!-- Top Row: Wallet Icon + Balance Label + Visibility + More -->
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/img_wallet"
                         android:layout_width="@dimen/_18sdp"
                         android:layout_height="@dimen/_18sdp"
                         android:src="@drawable/ic_wallet"
+                        app:layout_constraintBottom_toBottomOf="@id/txt_balance_label"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#C8D0D8" />
+                        app:layout_constraintTop_toTopOf="@id/txt_balance_label"
+                        app:tint="#D0D8E0" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/txt_balance_label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
-                        android:fontFamily="@font/medium"
-                        android:letterSpacing="0.05"
+                        android:fontFamily="@font/bold"
+                        android:letterSpacing="0.08"
                         android:text="@string/total_balance"
                         android:textAllCaps="true"
-                        android:textColor="#C8D0D8"
-                        android:textSize="@dimen/_9ssp"
-                        app:layout_constraintBottom_toBottomOf="@id/img_wallet"
+                        android:textColor="#D0D8E0"
+                        android:textSize="@dimen/_10ssp"
                         app:layout_constraintStart_toEndOf="@id/img_wallet"
-                        app:layout_constraintTop_toTopOf="@id/img_wallet" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ivVisibility"
-                        android:layout_width="@dimen/_13sdp"
-                        android:layout_height="@dimen/_13sdp"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
                         android:layout_marginStart="@dimen/_6sdp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
                         android:focusable="true"
+                        android:padding="@dimen/_2sdp"
                         android:src="@drawable/ic_visibility"
                         app:layout_constraintBottom_toBottomOf="@id/txt_balance_label"
                         app:layout_constraintStart_toEndOf="@id/txt_balance_label"
                         app:layout_constraintTop_toTopOf="@id/txt_balance_label"
-                        app:tint="#C8D0D8" />
+                        app:tint="#D0D8E0" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ivMore"
-                        android:layout_width="@dimen/_19sdp"
-                        android:layout_height="@dimen/_19sdp"
-                        android:padding="@dimen/_4sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="@dimen/_3sdp"
                         android:src="@drawable/ic_more"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#C8D0D8" />
+                        app:tint="#D0D8E0" />
 
+                    <!-- Middle Section: Balance Amount directly below Wallet Icon -->
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/txt_balance_value"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
                         android:fontFamily="@font/bold"
                         android:maxLines="1"
-                        android:shadowColor="#80000000"
+                        android:shadowColor="#99000000"
                         android:shadowDx="1.0"
                         android:shadowDy="2.0"
-                        android:shadowRadius="2.0"
+                        android:shadowRadius="3.0"
                         android:text="@string/amount"
+                        android:textAlignment="viewStart"
                         android:textColor="#FFFFFF"
-                        android:textSize="@dimen/_19ssp"
+                        android:textSize="@dimen/_25ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/img_wallet" />
 
+                    <!-- Bottom Section: Cardholder Name + Account/Card Number + Payment Network Logo -->
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/txtCardHolderName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
                         android:fontFamily="@font/medium"
-                        android:letterSpacing="0.1"
+                        android:letterSpacing="0.08"
                         android:shadowColor="#A6000000"
                         android:shadowDx="0.0"
                         android:shadowDy="-1.0"
                         android:shadowRadius="1.0"
                         android:text="@string/text_card_holder"
                         android:textAllCaps="true"
-                        android:textColor="#C8D0D8"
+                        android:textColor="#D0D8E0"
                         android:textSize="@dimen/_10ssp"
                         app:layout_constraintBottom_toTopOf="@id/txtAccountNumber"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -288,30 +283,30 @@
                         android:shadowDy="-1.0"
                         android:shadowRadius="1.0"
                         android:text="@string/default_card_number"
-                        android:textColor="#C8D0D8"
+                        android:textColor="#E0E6ED"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ivRupay"
-                        android:layout_width="@dimen/_20sdp"
+                        android:layout_width="@dimen/_32sdp"
                         android:layout_height="@dimen/_20sdp"
                         android:src="@drawable/ic_round_rupay"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
 
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Income & Expense Summary Cards -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_income"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_59sdp"
-                android:layout_marginStart="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
                 app:cardBackgroundColor="@color/bgColorCard"
                 app:cardCornerRadius="@dimen/_12sdp"
                 app:cardElevation="0dp"
@@ -319,26 +314,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/card_balance"
                 app:strokeColor="@color/divider_color"
-                app:strokeWidth="1dp">
+                app:strokeWidth="0.8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_10sdp">
 
                     <View
                         android:id="@+id/ic_income_bg"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:background="@drawable/bg_circle"
                         android:backgroundTint="@color/income_green_bg"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="@dimen/_13sdp"
-                        android:layout_height="@dimen/_13sdp"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
                         android:rotation="90"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_back"
@@ -352,14 +347,14 @@
                         android:id="@+id/txt_income_label"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_7sdp"
-                        android:fontFamily="@font/medium"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/semi_bold"
                         android:letterSpacing="0.03"
                         android:text="@string/income"
                         android:textAlignment="viewStart"
                         android:textAllCaps="true"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_9ssp"
+                        android:textSize="@dimen/_10ssp"
                         app:layout_constraintBottom_toBottomOf="@id/ic_income_bg"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ic_income_bg"
@@ -369,15 +364,16 @@
                         android:id="@+id/txt_income_value"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:ellipsize="end"
-                        android:fontFamily="@font/semi_bold"
+                        android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:paddingHorizontal="@dimen/_2sdp"
                         android:text="@string/amount"
                         android:textColor="@color/income_green"
-                        android:textSize="@dimen/_11ssp"
-                        app:layout_constraintEnd_toEndOf="@+id/txt_income_label"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/ic_income_bg"
                         app:layout_constraintTop_toBottomOf="@+id/ic_income_bg" />
 
@@ -387,10 +383,10 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_expense"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_59sdp"
-                android:layout_marginStart="@dimen/_3sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_13sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
                 app:cardBackgroundColor="@color/bgColorCard"
                 app:cardCornerRadius="@dimen/_12sdp"
                 app:cardElevation="0dp"
@@ -398,26 +394,26 @@
                 app:layout_constraintStart_toEndOf="@id/card_income"
                 app:layout_constraintTop_toBottomOf="@id/card_balance"
                 app:strokeColor="@color/divider_color"
-                app:strokeWidth="1dp">
+                app:strokeWidth="0.8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_10sdp">
 
                     <View
                         android:id="@+id/ic_expense_bg"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:background="@drawable/bg_circle"
                         android:backgroundTint="@color/expense_red_bg"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="@dimen/_13sdp"
-                        android:layout_height="@dimen/_13sdp"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
                         android:rotation="-90"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_back"
@@ -431,14 +427,14 @@
                         android:id="@+id/txt_expense_label"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_7sdp"
-                        android:fontFamily="@font/medium"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/semi_bold"
                         android:letterSpacing="0.05"
                         android:text="@string/expense"
                         android:textAlignment="viewStart"
                         android:textAllCaps="true"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_9ssp"
+                        android:textSize="@dimen/_10ssp"
                         app:layout_constraintBottom_toBottomOf="@id/ic_expense_bg"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ic_expense_bg"
@@ -448,93 +444,95 @@
                         android:id="@+id/txt_expense_value"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:ellipsize="end"
-                        android:fontFamily="@font/semi_bold"
+                        android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:paddingHorizontal="@dimen/_2sdp"
                         android:text="@string/amount"
                         android:textColor="@color/expense_red"
-                        android:textSize="@dimen/_11ssp"
-                        app:layout_constraintEnd_toEndOf="@+id/txt_expense_label"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/ic_expense_bg"
                         app:layout_constraintTop_toBottomOf="@+id/ic_expense_bg" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Recent Transactions Section -->
             <com.google.android.material.textview.MaterialTextView
-                tools:visibility="gone"
                 android:id="@+id/txt_recent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_14sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:ellipsize="end"
-                android:fontFamily="@font/semi_bold"
+                android:fontFamily="@font/bold"
                 android:maxLines="1"
                 android:text="@string/recent_transactions"
                 android:textAlignment="viewStart"
                 android:textColor="@color/TextColor"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_14ssp"
                 app:layout_constraintEnd_toStartOf="@+id/btn_view_all"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/card_income"
-                app:layout_constraintVertical_bias="0" />
+                tools:visibility="gone" />
 
             <com.google.android.material.card.MaterialCardView
-                tools:visibility="gone"
                 android:id="@+id/btn_view_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="@id/txt_recent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/txt_recent"
                 app:layout_constraintTop_toTopOf="@id/txt_recent"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
-                app:strokeWidth="0dp">
+                app:strokeWidth="0dp"
+                tools:visibility="gone">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/medium"
-                    android:paddingHorizontal="@dimen/_7sdp"
-                    android:paddingVertical="@dimen/_3sdp"
+                    android:fontFamily="@font/semi_bold"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_4sdp"
                     android:text="@string/view_all"
                     android:textColor="@color/primaryColor"
-                    android:textSize="@dimen/_9ssp" />
+                    android:textSize="@dimen/_11ssp" />
 
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.recyclerview.widget.RecyclerView
-                tools:visibility="gone"
                 android:id="@+id/rv_transactions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:clipToPadding="false"
-                android:layout_marginTop="@dimen/_7sdp"
                 android:nestedScrollingEnabled="false"
                 android:overScrollMode="never"
-                android:paddingHorizontal="@dimen/_13sdp"
-                android:paddingBottom="@dimen/_69sdp"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingBottom="@dimen/_70sdp"
                 android:scrollbars="none"
                 android:visibility="visible"
-                app:layout_constraintVertical_bias="0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_recent"
+                app:layout_constraintVertical_bias="0"
                 tools:itemCount="4"
-                tools:listitem="@layout/item_transaction" />
+                tools:listitem="@layout/item_transaction"
+                tools:visibility="gone" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clNoData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -546,91 +544,83 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_20sdp"
-                    android:fontFamily="@font/semi_bold"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/bold"
                     android:gravity="center"
-                    android:visibility="visible"
-                    android:layout_marginBottom="@dimen/_9sdp"
                     android:text="@string/no_transactions_yet"
                     android:textColor="@color/TextColor"
-                    android:textSize="@dimen/_13ssp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/tvNoDataDes"/>
-
+                    android:textSize="@dimen/_15ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/tvNoDataDes"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvNoDataDes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
                     android:fontFamily="@font/regular"
                     android:gravity="center"
-                    android:visibility="visible"
-                    android:layout_marginBottom="@dimen/_9sdp"
                     android:text="@string/start_tracking_your_income_and_nexpenses_to_see_insights_here"
                     android:textColor="@color/subTextColor"
-                    android:textSize="@dimen/_10ssp"
-                    app:layout_constraintTop_toBottomOf="@+id/tvNoData"/>
-
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNoData" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnAddExpanse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
                     app:cardBackgroundColor="@color/primaryColor"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tvNoDataDes"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toBottomOf="@+id/tvNoDataDes">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingVertical="@dimen/_6sdp"
-                        android:paddingStart="@dimen/_6sdp"
-                        android:paddingEnd="@dimen/_10sdp">
-
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:paddingVertical="@dimen/_8sdp">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivAddTransaction"
-                            android:layout_width="@dimen/_16sdp"
-                            android:layout_height="@dimen/_16sdp"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
                             android:src="@drawable/ic_plus"
                             android:tint="@android:color/white"
-                            app:layout_constraintHorizontal_chainStyle="packed"
-                            app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tvAddTransaction"
+                            app:layout_constraintHorizontal_chainStyle="packed"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/tvAddTransaction"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvAddTransaction"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:layout_marginStart="@dimen/_6sdp"
                             android:fontFamily="@font/semi_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
                             android:text="@string/add_first_transaction"
                             android:textColor="@android:color/white"
-                            android:textSize="@dimen/_12ssp"
-                            android:includeFontPadding="false"
-                            android:layout_marginStart="@dimen/_3sdp"
-                            app:layout_constraintStart_toEndOf="@+id/ivAddTransaction"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintStart_toEndOf="@+id/ivAddTransaction"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
                 </com.google.android.material.card.MaterialCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -640,21 +630,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_12sdp"
         android:clipToOutline="true"
         android:outlineSpotShadowColor="@color/primaryColor"
-        android:layout_margin="@dimen/_9sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintVertical_bias="1"
         android:src="@android:drawable/ic_input_add"
+        android:visibility="gone"
         app:backgroundTint="@color/primaryColor"
-        app:tint="@android:color/white"
         app:elevation="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:tint="@android:color/white"
         app:useCompatPadding="true" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

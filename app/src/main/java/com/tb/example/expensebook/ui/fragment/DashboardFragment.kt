@@ -178,7 +178,8 @@ class DashboardFragment : Fragment() {
         }
 
         binding.btnAddExpanse.setOnClickListener {
-            binding.fabAdd.performClick()
+            val intent = Intent(requireContext(), AddTransactionActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -246,7 +247,7 @@ class DashboardFragment : Fragment() {
             binding.clNoData.visibility = View.VISIBLE
             binding.btnViewAll.visibility = View.GONE
             binding.txtRecent.visibility = View.GONE
-            binding.fabAdd.isVisible = true
+            binding.fabAdd.isVisible = false
         } else {
             binding.clNoData.visibility = View.GONE
             binding.btnViewAll.visibility = View.VISIBLE
