@@ -22,11 +22,13 @@
 
     <style name="CategoryChip" parent="Widget.Material3.Chip.Filter">
         <item name="chipCornerRadius">20dp</item>
-        <item name="android:textSize">12sp</item>
-        <item name="chipMinHeight">36dp</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="fontFamily">@font/semi_bold</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="chipMinHeight">@dimen/_30sdp</item>
         <item name="chipBackgroundColor">@color/bgColorChip</item>
         <item name="checkedIconVisible">false</item>
-        <item name="chipStrokeWidth">0.5dp</item>
+        <item name="chipStrokeWidth">1dp</item>
         <item name="rippleColor">@null</item>
         <item name="chipStrokeColor">@color/chip_stroke_color</item>
     </style>
