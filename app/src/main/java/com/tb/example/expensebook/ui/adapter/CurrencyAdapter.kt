@@ -27,17 +27,7 @@ class CurrencyAdapter(
         holder.binding.txtCurrencyCode.text = currency.code
         holder.binding.txtCurrencyName.text = currency.name
         
-        if (position == currencies.size - 1) {
-            holder.binding.divider.visibility = View.GONE
-        } else {
-            holder.binding.divider.visibility = View.VISIBLE
-        }
-
-        if (currency.code == selectedCode) {
-            holder.binding.icCheck.visibility = View.VISIBLE
-        } else {
-            holder.binding.icCheck.visibility = View.GONE
-        }
+        holder.binding.rbSelected.isChecked = (currency.code == selectedCode)
 
         holder.binding.root.setOnClickListener {
             val oldCode = selectedCode

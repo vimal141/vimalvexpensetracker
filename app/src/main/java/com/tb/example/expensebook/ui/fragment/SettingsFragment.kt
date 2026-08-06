@@ -77,23 +77,14 @@ class SettingsFragment : Fragment() {
         }
 
         binding.layoutClearData.setOnClickListener {
-            AlertDialog.Builder(requireContext())
-                .setTitle(getString(R.string.warning_clear_all_data))
-                .setMessage(getString(R.string.desc_clear_all_data))
-                .setPositiveButton(getString(R.string.delete_all)) { _, _ ->
-                    viewModel.deleteAll()
-                    Toast.makeText(requireContext(), getString(R.string.toast_all_data_cleared), Toast.LENGTH_SHORT).show()
-                }
-                .setNegativeButton(getString(R.string.cancel), null)
-                .show()
+            ClearDataBottomSheet {
+                viewModel.deleteAll()
+                Toast.makeText(requireContext(), getString(R.string.toast_all_data_cleared), Toast.LENGTH_SHORT).show()
+            }.show(parentFragmentManager, "ClearDataBottomSheet")
         }
 
         binding.layoutAbout.setOnClickListener {
-            AlertDialog.Builder(requireContext())
-                .setTitle(getString(R.string.app_title))
-                .setMessage(getString(R.string.app_about_desc))
-                .setPositiveButton(getString(R.string.ok), null)
-                .show()
+            startActivity(Intent(requireContext(), com.tb.example.expensebook.ui.activity.AboutActivity::class.java))
         }
 
         binding.layoutPrivacy.setOnClickListener {

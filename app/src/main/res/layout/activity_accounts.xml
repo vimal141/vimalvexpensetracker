@@ -5,20 +5,23 @@
     android:layout_height="match_parent"
     android:background="@color/bgColor">
 
+    <!-- Header / Toolbar (Same as ThemeActivity) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_13sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_12sdp"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btn_back"
-            android:layout_width="@dimen/_19sdp"
-            android:layout_height="@dimen/_19sdp"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
+            android:padding="@dimen/_4sdp"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,42 +30,46 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_title"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:fontFamily="@font/semi_bold"
-            android:gravity="center"
+            android:maxLines="1"
             android:text="@string/manage_accounts"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/_15ssp"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAccounts"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        android:padding="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_80sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
+    <!-- Floating Action Button Add Account -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
-        android:src="@android:drawable/ic_input_add"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_plus"
         app:backgroundTint="@color/primaryColor"
-        app:tint="@android:color/white"
-        app:elevation="@dimen/_6sdp"
-        app:useCompatPadding="true"
+        app:elevation="@dimen/_4sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

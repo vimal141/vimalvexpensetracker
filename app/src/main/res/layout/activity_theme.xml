@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,29 +10,32 @@
         android:id="@+id/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/_13sdp"
-        android:paddingVertical="@dimen/_13sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_12sdp"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btn_back"
-            android:layout_width="@dimen/_26sdp"
-            android:layout_height="@dimen/_26sdp"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bold"
+            android:ellipsize="end"
+            android:fontFamily="@font/semi_bold"
+            android:maxLines="1"
             android:text="@string/select_theme"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/_13ssp"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,17 +43,18 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.card.MaterialCardView
+       <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
         app:cardBackgroundColor="@color/bgColorCard"
-        app:cardCornerRadius="@dimen/_13sdp"
+        app:cardCornerRadius="@dimen/_14sdp"
         app:cardElevation="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/layout_header"
         app:strokeColor="@color/divider_color"
-        app:strokeWidth="1dp">
+        app:strokeWidth="0.8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,117 +65,194 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_light"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:paddingHorizontal="@dimen/_13sdp">
+                android:paddingHorizontal="@dimen/_14sdp">
+
+                <FrameLayout
+                    android:id="@+id/icon_light_container"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="#1A2DCC70" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_light_mode"
+                        app:tint="@color/primaryColor" />
+
+                </FrameLayout>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/medium"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/semi_bold"
                     android:text="@string/light"
                     android:textColor="@color/TextColor"
-                    android:textSize="@dimen/_12ssp"
+                    android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/radio_light"
+                    app:layout_constraintStart_toEndOf="@id/icon_light_container"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_check_light"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_16sdp"
-                    android:src="@drawable/ic_check"
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio_light"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:buttonTint="@color/radio_button_tint"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/primaryColor"
-                    android:visibility="gone" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_2sdp"
-                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_height="0.8dp"
                 android:background="@color/divider_color" />
 
             <!-- Dark Theme -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_dark"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:paddingHorizontal="@dimen/_13sdp">
+                android:paddingHorizontal="@dimen/_14sdp">
+
+                <FrameLayout
+                    android:id="@+id/icon_dark_container"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="#1A2DCC70" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_dark_mode"
+                        app:tint="@color/primaryColor" />
+
+                </FrameLayout>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/medium"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/semi_bold"
                     android:text="@string/dark"
                     android:textColor="@color/TextColor"
-                    android:textSize="@dimen/_12ssp"
+                    android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/radio_dark"
+                    app:layout_constraintStart_toEndOf="@id/icon_dark_container"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_check_dark"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_16sdp"
-                    android:src="@drawable/ic_check"
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio_dark"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:buttonTint="@color/radio_button_tint"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/primaryColor"
-                    android:visibility="gone" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_2sdp"
-                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_height="0.8dp"
                 android:background="@color/divider_color" />
 
             <!-- System Default Theme -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_system"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:paddingHorizontal="@dimen/_13sdp">
+                android:paddingHorizontal="@dimen/_14sdp">
+
+                <FrameLayout
+                    android:id="@+id/icon_system_container"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="#1A2DCC70" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_system_mode"
+                        app:tint="@color/primaryColor" />
+
+                </FrameLayout>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/medium"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/semi_bold"
                     android:text="@string/system_default"
                     android:textColor="@color/TextColor"
-                    android:textSize="@dimen/_12ssp"
+                    android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/radio_system"
+                    app:layout_constraintStart_toEndOf="@id/icon_system_container"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_check_system"
-                    android:layout_width="@dimen/_16sdp"
-                    android:layout_height="@dimen/_16sdp"
-                    android:src="@drawable/ic_check"
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio_system"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:buttonTint="@color/radio_button_tint"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/primaryColor"
-                    android:visibility="gone" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

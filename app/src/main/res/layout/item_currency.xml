@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_39sdp"
-    android:background="?attr/selectableItemBackground"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_9sdp"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/bgColorCard"
+    app:cardCornerRadius="@dimen/_14sdp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/divider_color"
+    app:strokeWidth="0.8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/_13sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="@dimen/_52sdp"
+        android:paddingHorizontal="@dimen/_14sdp">
 
-        <com.google.android.material.card.MaterialCardView
+        <FrameLayout
             android:id="@+id/card_symbol"
-            android:layout_width="@dimen/_29sdp"
-            android:layout_height="@dimen/_29sdp"
-            app:cardBackgroundColor="#1A2DCC70"
-            app:cardCornerRadius="@dimen/_15sdp"
-            app:cardElevation="0dp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="#1A2DCC70" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/txt_currency_symbol"
@@ -32,57 +39,54 @@
                 android:fontFamily="@font/bold"
                 android:gravity="center"
                 android:textColor="@color/primaryColor"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_13ssp" />
 
-        </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
 
-        <LinearLayout
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_currency_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ic_check"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/semi_bold"
+            android:maxLines="1"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_currency_name"
+            app:layout_constraintEnd_toStartOf="@+id/rbSelected"
             app:layout_constraintStart_toEndOf="@id/card_symbol"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_currency_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/semi_bold"
-                android:textColor="@color/TextColor"
-                android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_currency_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/medium"
+            android:letterSpacing="0.06"
+            android:maxLines="1"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rbSelected"
+            app:layout_constraintStart_toEndOf="@id/card_symbol"
+            app:layout_constraintTop_toBottomOf="@id/txt_currency_code" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_currency_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:fontFamily="@font/medium"
-                android:textColor="@color/subTextColor"
-                android:textSize="@dimen/_9ssp" />
-        </LinearLayout>
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/ic_check"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="gone"
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbSelected"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:clickable="false"
+            android:focusable="false"
+            app:buttonTint="@color/radio_button_tint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/primaryColor" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_2sdp"
-        android:background="@color/divider_color"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

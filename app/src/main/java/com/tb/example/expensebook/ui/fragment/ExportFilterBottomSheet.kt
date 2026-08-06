@@ -77,6 +77,14 @@ class ExportFilterBottomSheet : BottomSheetDialogFragment() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        dialog?.let { d ->
+            val bottomSheet = d.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+            bottomSheet?.setBackgroundResource(android.R.color.transparent)
+        }
+    }
+
     override fun getTheme(): Int {
         return com.google.android.material.R.style.Theme_Design_BottomSheetDialog
     }

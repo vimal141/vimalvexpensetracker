@@ -28,9 +28,9 @@ class ThemeActivity : BaseActivity<ActivityThemeBinding>() {
 
     private fun setupUI() {
         val currentMode = PrefManager.themeMode
-        binding.icCheckLight.visibility = if (currentMode == AppCompatDelegate.MODE_NIGHT_NO) View.VISIBLE else View.GONE
-        binding.icCheckDark.visibility = if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) View.VISIBLE else View.GONE
-        binding.icCheckSystem.visibility = if (currentMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) View.VISIBLE else View.GONE
+        binding.radioLight.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_NO)
+        binding.radioDark.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_YES)
+        binding.radioSystem.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     }
 
     private fun setupListeners() {
