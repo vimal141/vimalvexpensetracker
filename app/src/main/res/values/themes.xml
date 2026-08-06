@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.ExpenseBook" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:windowBackground">@color/bgColor</item>
+        <item name="android:statusBarColor">@color/bgColor</item>
+        <item name="android:navigationBarColor">@color/bgColor</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.App.Headline</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.App.Title</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.App.Body</item>
+        <item name="materialCardViewStyle">@style/Widget.App.Card</item>
+        <item name="colorSecondaryContainer">#1A1A8A5A</item>
+        <item name="colorSurface">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.ExpenseBook" parent="Base.Theme.ExpenseBook">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="CategoryChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipCornerRadius">20dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="chipMinHeight">36dp</item>
+        <item name="chipBackgroundColor">@color/bgColorChip</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipStrokeWidth">0.5dp</item>
+        <item name="rippleColor">@null</item>
+        <item name="chipStrokeColor">@color/chip_stroke_color</item>
+    </style>
+
+    <style name="CustomTextInputLayout"
+        parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/input_hint_selector</item>
+        <item name="boxStrokeColor">@color/input_stroke_selector</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+</resources>

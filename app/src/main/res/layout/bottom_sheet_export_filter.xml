@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="@dimen/_16sdp">
+
+    <View
+        android:id="@+id/dragHandle"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:background="@color/indicatorInactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:fontFamily="@font/bold"
+        android:text="Select Statement Period"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dragHandle" />
+
+    <RadioGroup
+        android:id="@+id/rgPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <RadioButton
+            android:id="@+id/rbThisMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:padding="@dimen/_10sdp"
+            android:text="This Month"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp" />
+
+        <RadioButton
+            android:id="@+id/rbLast3Months"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:padding="@dimen/_10sdp"
+            android:text="Last 3 Months"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp" />
+
+        <RadioButton
+            android:id="@+id/rbLast6Months"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:padding="@dimen/_10sdp"
+            android:text="Last 6 Months"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp" />
+
+        <RadioButton
+            android:id="@+id/rbThisYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:padding="@dimen/_10sdp"
+            android:text="This Year"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp" />
+
+        <RadioButton
+            android:id="@+id/rbAllTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/medium"
+            android:padding="@dimen/_10sdp"
+            android:text="All Time"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_13ssp" />
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        style="@style/Widget.App.PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:text="Next"
+        app:cornerRadius="@dimen/_12sdp"
+        app:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/rgPeriod" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
