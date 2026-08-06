@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgColor"
     android:clipToPadding="false"
     android:fillViewport="true"
-    android:paddingBottom="@dimen/_69sdp"
+    android:paddingBottom="@dimen/_75sdp"
     android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/_13sdp"
-        android:paddingHorizontal="@dimen/_13sdp">
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_20sdp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragmentTittle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:fontFamily="@font/bold"
-            android:paddingVertical="@dimen/_13sdp"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/_14sdp"
             android:text="@string/settings"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/_13ssp"
+            android:textSize="@dimen/_22ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,9 +34,9 @@
             android:id="@+id/cardProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_2sdp"
             app:cardBackgroundColor="@color/primaryColor"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
             app:layout_constraintTop_toBottomOf="@id/fragmentTittle"
             app:strokeColor="@color/primaryColor"
@@ -44,12 +45,13 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_12sdp">
 
                 <FrameLayout
                     android:id="@+id/icon_profile_container"
-                    android:layout_width="@dimen/_36sdp"
-                    android:layout_height="@dimen/_36sdp"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -61,8 +63,8 @@
                         android:backgroundTint="#40FFFFFF" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_wallet"
@@ -74,13 +76,13 @@
                     android:id="@+id/txt_app_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
                     android:ellipsize="end"
                     android:fontFamily="@font/bold"
                     android:maxLines="1"
                     android:text="@string/app_name"
                     android:textColor="#FFFFFF"
-                    android:textSize="@dimen/_13ssp"
+                    android:textSize="@dimen/_16ssp"
                     app:layout_constraintBottom_toTopOf="@+id/txt_app_version"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/icon_profile_container"
@@ -91,11 +93,12 @@
                     android:id="@+id/txt_app_version"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
                     android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/medium"
                     android:text="@string/version_1_0_0"
                     android:textColor="#CCFFFFFF"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_11ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/icon_profile_container"
@@ -105,14 +108,15 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Preferences Section -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/lbl_preferences"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:fontFamily="@font/medium"
-            android:letterSpacing="0.1"
-            android:paddingBottom="@dimen/_7sdp"
+            android:letterSpacing="0.08"
+            android:paddingBottom="@dimen/_4sdp"
             android:text="@string/preferences"
             android:textAllCaps="true"
             android:textColor="@color/subTextColor"
@@ -126,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
             app:layout_constraintTop_toBottomOf="@id/lbl_preferences"
             app:strokeColor="@color/divider_color"
@@ -137,20 +141,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- Theme -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_theme"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_theme"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -162,8 +166,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_theme"
@@ -174,11 +178,11 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/theme"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/txt_theme_value"
                         app:layout_constraintStart_toEndOf="@id/icon_theme"
@@ -188,21 +192,22 @@
                         android:id="@+id/txt_theme_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:fontFamily="@font/medium"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:text="@string/system_default"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_10ssp"
+                        android:textSize="@dimen/_12ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_theme"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ic_arrow_theme"
-                        android:layout_width="@dimen/_9sdp"
-                        android:layout_height="@dimen/_9sdp"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
+                        android:rotation="180"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_left"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -214,23 +219,23 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
+                <!-- Manage Accounts -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_manage_accounts"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_accounts"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -242,23 +247,23 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_account"
-                            app:tint="@color/primaryColor"/>
+                            app:tint="@color/primaryColor" />
 
                     </FrameLayout>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/manage_accounts"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_accounts"
                         app:layout_constraintStart_toEndOf="@id/icon_accounts"
@@ -266,37 +271,38 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ic_arrow_accounts"
-                        android:layout_width="@dimen/_9sdp"
-                        android:layout_height="@dimen/_9sdp"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
+                        android:rotation="180"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_left"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/subTextColor"/>
+                        app:tint="@color/subTextColor" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
+                <!-- Currency -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_currency"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_currency"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -308,8 +314,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_currency"
@@ -320,11 +326,11 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/currency"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/txt_currency_value"
                         app:layout_constraintStart_toEndOf="@id/icon_currency"
@@ -334,40 +340,44 @@
                         android:id="@+id/txt_currency_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:fontFamily="@font/medium"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:text="@string/currency_value"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_10ssp"
+                        android:textSize="@dimen/_12ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_currency"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ic_arrow_currency"
-                        android:layout_width="@dimen/_9sdp"
-                        android:layout_height="@dimen/_9sdp"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
+                        android:rotation="180"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_left"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/subTextColor"/>
+                        app:tint="@color/subTextColor" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Data Section -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/lbl_data"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:fontFamily="@font/medium"
-            android:letterSpacing="0.1"
-            android:paddingBottom="@dimen/_7sdp"
+            android:letterSpacing="0.08"
+            android:paddingBottom="@dimen/_4sdp"
             android:text="@string/data"
             android:textAllCaps="true"
             android:textColor="@color/subTextColor"
@@ -381,7 +391,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
             app:layout_constraintTop_toBottomOf="@id/lbl_data"
             app:strokeColor="@color/divider_color"
@@ -392,20 +402,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- Export Data -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_export"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_export"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -417,8 +427,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_export"
@@ -429,22 +439,22 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/export_data"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_export"
                         app:layout_constraintStart_toEndOf="@id/icon_export"
                         app:layout_constraintTop_toTopOf="parent" />
 
-
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ic_arrow_export"
-                        android:layout_width="@dimen/_9sdp"
-                        android:layout_height="@dimen/_9sdp"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
+                        android:rotation="180"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_left"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -456,23 +466,23 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
+                <!-- Clear Data -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_clear_data"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_clear"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -484,8 +494,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_delete"
@@ -494,13 +504,13 @@
                     </FrameLayout>
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:text="@string/clear_all_data"
-                        android:textColor="@color/TextColor"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
-                        android:textSize="@dimen/_11ssp"
+                        android:text="@string/clear_all_data"
+                        android:textColor="@color/TextColor"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_clear"
                         app:layout_constraintStart_toEndOf="@id/icon_clear"
@@ -508,27 +518,32 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ic_arrow_clear"
-                        android:layout_width="@dimen/_9sdp"
-                        android:layout_height="@dimen/_9sdp"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
+                        android:rotation="180"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_left"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:tint="@color/subTextColor" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- More Section -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/lbl_more"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:fontFamily="@font/medium"
-            android:letterSpacing="0.1"
-            android:paddingBottom="@dimen/_7sdp"
+            android:letterSpacing="0.08"
+            android:paddingBottom="@dimen/_4sdp"
             android:text="@string/more"
             android:textAllCaps="true"
             android:textColor="@color/subTextColor"
@@ -542,7 +557,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
             app:layout_constraintTop_toBottomOf="@id/lbl_more"
             app:strokeColor="@color/divider_color"
@@ -553,20 +568,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- About App -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_about"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_about"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -578,8 +593,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_about_us"
@@ -590,11 +605,11 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/about_app"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/icon_about"
@@ -604,23 +619,23 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
+                <!-- Privacy Policy -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_privacy"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_privacy"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -632,8 +647,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_privacy_policy"
@@ -644,11 +659,11 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/privacy_policy"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/icon_privacy"
@@ -658,24 +673,23 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
-
+                <!-- Rate Us -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_rate"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_rate"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -687,8 +701,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_rate_us"
@@ -699,11 +713,11 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/rate_us"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/icon_rate"
@@ -713,23 +727,23 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
+                    android:layout_height="1dp"
                     android:background="@color/divider_color" />
 
+                <!-- Share App -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_share"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_38sdp"
+                    android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingHorizontal="@dimen/_13sdp">
+                    android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
                         android:id="@+id/icon_share"
-                        android:layout_width="@dimen/_23sdp"
-                        android:layout_height="@dimen/_23sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -741,8 +755,8 @@
                             android:backgroundTint="#1A2DCC70" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_gravity="center"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_share"
@@ -753,11 +767,11 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
                         android:fontFamily="@font/semi_bold"
                         android:text="@string/share_app"
                         android:textColor="@color/TextColor"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/icon_share"
