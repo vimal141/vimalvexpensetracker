@@ -16,11 +16,17 @@ import com.tb.example.expensebook.ui.fragment.SettingsFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
+    override val isEdgeToEdgeEnabled: Boolean = false
+    override val isAutoApplyInsetsPadding: Boolean = false
+
     override fun inflateBinding(inflater: LayoutInflater): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigation) { _, insets ->
+            insets
+        }
         setupViewPager()
         setupBottomNavigation()
     }
