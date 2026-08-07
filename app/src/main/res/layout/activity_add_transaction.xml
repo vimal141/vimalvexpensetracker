@@ -6,36 +6,39 @@
     android:layout_height="match_parent"
     android:background="@color/bgColor">
 
-    <!-- Header -->
+    <!-- 1. HEADER (Fixed Top - ThemeActivity Style) -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header"
+        android:id="@+id/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/_13sdp"
-        android:paddingVertical="@dimen/_9sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_10sdp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:fontFamily="@font/medium"
-            android:text="@string/cancel"
-            android:textColor="@color/TextColor"
-            android:textSize="@dimen/_12ssp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bold"
+            android:ellipsize="end"
+            android:fontFamily="@font/semi_bold"
+            android:maxLines="1"
             android:text="@string/add_transaction"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/_13ssp"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,225 +46,285 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btn_delete"
-            android:layout_width="@dimen/_18sdp"
-            android:layout_height="@dimen/_18sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_5sdp"
             android:src="@drawable/ic_delete"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/expense_red" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_save"
-            android:layout_width="@dimen/_18sdp"
-            android:layout_height="@dimen/_18sdp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_done"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/primaryColor" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Type Selector Tabs -->
+    <!-- 2. TYPE TABS (Fixed below Header) -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_tabs"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginHorizontal="@dimen/_13sdp"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_2sdp"
         app:cardBackgroundColor="@color/bgColorCard"
-        app:cardCornerRadius="@dimen/_7sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="0dp"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"
         app:strokeColor="@color/divider_color"
-        app:strokeWidth="1dp">
+        app:strokeWidth="0.8dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tab_expense"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="@drawable/bg_tab"
                 android:backgroundTint="@color/expense_red"
-                android:fontFamily="@font/medium"
+                android:fontFamily="@font/semi_bold"
                 android:gravity="center"
                 android:text="@string/expense"
                 android:textColor="@android:color/white"
-                app:layout_constraintEnd_toStartOf="@id/tab_income"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="@dimen/_11ssp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tab_income"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/medium"
+                android:layout_weight="1"
+                android:fontFamily="@font/semi_bold"
                 android:gravity="center"
                 android:text="@string/income"
                 android:textColor="@color/subTextColor"
-                app:layout_constraintEnd_toStartOf="@id/tab_transfer"
-                app:layout_constraintStart_toEndOf="@id/tab_expense" />
+                android:textSize="@dimen/_11ssp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tab_transfer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/medium"
+                android:layout_weight="1"
+                android:fontFamily="@font/semi_bold"
                 android:gravity="center"
                 android:text="Transfer"
                 android:textColor="@color/subTextColor"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tab_income" />
+                android:textSize="@dimen/_11ssp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <ScrollView
+    <!-- 3. MIDDLE SCROLLABLE CATEGORY LIST -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/semi_bold"
+        android:text="Select Category"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_tabs" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categories"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_tabs">
+        android:layout_marginTop="@dimen/_4sdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom_container"
+        app:layout_constraintTop_toBottomOf="@id/lbl_category"
+        app:spanCount="4"
+        tools:itemCount="12"
+        tools:listitem="@layout/item_category_grid" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- 4. FIXED BOTTOM CONTAINER (Amount, Date, Notes & Save Button) -->
+    <LinearLayout
+        android:id="@+id/layout_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:background="@color/bgColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Amount Card (Static, above layout_meta) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/_16sdp">
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:cardBackgroundColor="@color/bgColorCard"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/divider_color"
+            app:strokeWidth="0.8dp">
 
-            <!-- Amount Input Section -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_13sdp"
-                android:paddingTop="@dimen/_13sdp"
-                app:layout_constraintTop_toTopOf="parent">
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_8sdp">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txt_currency"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_currency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/bold"
-                    android:text="INR"
-                    android:textColor="@color/primaryColor"
-                    android:textSize="@dimen/_12ssp"
+                    app:cardBackgroundColor="@color/primaryColorSurface"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"
                     app:layout_constraintBottom_toBottomOf="@id/et_amount"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/et_amount" />
+                    app:layout_constraintTop_toTopOf="@id/et_amount">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="INR"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="@dimen/_12ssp" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_amount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_9sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/bold"
                     android:hint="0"
                     android:inputType="numberDecimal"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/TextColor"
-                    android:textSize="@dimen/_19ssp"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/_22ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_currency"
+                    app:layout_constraintStart_toEndOf="@id/card_currency"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <View
-                    android:id="@+id/line_amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_2sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@color/divider_color"
-                    app:layout_constraintTop_toBottomOf="@id/et_amount" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-            <!-- Categories Grid -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_categories"
+        <!-- Date & Notes Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_meta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bgColorCard"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/divider_color"
+            app:strokeWidth="0.8dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_9sdp"
-                android:clipToPadding="false"
-                android:paddingHorizontal="@dimen/_9sdp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintTop_toBottomOf="@id/layout_amount"
-                app:spanCount="4"
-                tools:itemCount="12"
-                tools:listitem="@layout/item_category_grid" />
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
 
-            <!-- Meta Data Section (Date & Notes) -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_meta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_13sdp"
-                app:layout_constraintTop_toBottomOf="@id/rv_categories">
-
+                <!-- Date Row Picker -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_date"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/bgColorCard"
-                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/bgColorInput"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:strokeColor="@color/divider_color"
-                    app:strokeWidth="1dp">
+                    app:strokeWidth="0dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="@dimen/_10sdp"
-                        android:paddingVertical="@dimen/_7sdp">
+                        android:paddingVertical="@dimen/_8sdp">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ic_cal"
-                            android:layout_width="@dimen/_12sdp"
-                            android:layout_height="@dimen/_12sdp"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
                             android:src="@drawable/ic_calendar"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:tint="@color/primaryColor" />
 
-                        <TextView
-                            android:id="@+id/txt_date"
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_6sdp"
-                            android:fontFamily="@font/medium"
-                            android:text="Today"
-                            android:textColor="@color/TextColor"
-                            android:textSize="@dimen/_9ssp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:fontFamily="@font/semi_bold"
+                            android:text="Date"
+                            android:textColor="@color/subTextColor"
+                            android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@id/ic_cal"
                             app:layout_constraintTop_toTopOf="parent" />
 
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:fontFamily="@font/semi_bold"
+                            android:text="Today"
+                            android:textColor="@color/TextColor"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/ic_arrow_date"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_arrow_date"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:src="@drawable/ic_arrow_down"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/subTextColor" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- Notes Input -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_notes"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:hint="Notes"
-                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
-                    app:boxCornerRadiusBottomStart="@dimen/_10sdp"
-                    app:boxCornerRadiusTopEnd="@dimen/_10sdp"
-                    app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                    app:layout_constraintTop_toBottomOf="@id/btn_date">
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="Notes (Optional)"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_notes"
@@ -269,26 +332,26 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
                         android:inputType="textMultiLine"
-                        android:maxLines="3"
-                        android:textColor="@color/TextColor" />
+                        android:maxLines="2"
+                        android:textColor="@color/TextColor"
+                        android:textSize="@dimen/_10ssp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Submit Button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_submit"
-                style="@style/Widget.App.PrimaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:fontFamily="@font/bold"
-                android:text="@string/save_transaction"
-                app:cornerRadius="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/layout_meta" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Save / Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            style="@style/Widget.App.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/bold"
+            android:text="@string/save_transaction"
+            android:textSize="@dimen/_12ssp"
+            app:cornerRadius="@dimen/_10sdp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

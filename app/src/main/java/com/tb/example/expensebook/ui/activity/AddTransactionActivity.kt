@@ -70,9 +70,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         categoryAdapter = CategoryAdapter(
             onCategoryClick = { category ->
                 selectedCategory = category
-            },
-            onSettingsClick = {
-                startActivity(Intent(this, ManageCategoriesActivity::class.java))
+                binding.layoutBottomContainer.visibility = android.view.View.VISIBLE
             }
         )
         binding.rvCategories.layoutManager = GridLayoutManager(this, 4)
@@ -80,7 +78,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
     }
 
     private fun setupListeners() {
-        binding.btnCancel.setOnClickListener { finish() }
+        binding.btnBack.setOnClickListener { finish() }
         
         binding.tabExpense.setOnClickListener { 
             selectedType = Constants.TYPE_EXPENSE
@@ -97,28 +95,26 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
 
         binding.btnDate.setOnClickListener { showDatePicker() }
         
-        binding.btnSave.setOnClickListener { saveTransaction() }
         binding.btnSubmit.setOnClickListener { saveTransaction() }
         binding.btnDelete.setOnClickListener { showDeleteConfirmation() }
     }
 
+
     private fun observeData() {
         lifecycleScope.launch {
             viewModel.categories.collectLatest { list ->
-                val displayList = list.toMutableList()
-                displayList.add(Category(id = -100, name = "Settings", iconName = "ic_plus", type = "", isDefault = false))
-                categoryAdapter.submitList(displayList)
+                categoryAdapter.submitList(list) {
+                    binding.rvCategories.post {
+                        binding.rvCategories.scrollToPosition(0)
+                    }
+                }
                 
                 editTransaction?.let { t ->
                     val cat = list.find { it.name == t.category }
                     cat?.let { 
                         selectedCategory = it
                         categoryAdapter.setSelectedCategory(it.id)
-                    }
-                } ?: run {
-                    if (selectedCategory == null && list.isNotEmpty()) {
-                        selectedCategory = list[0]
-                        categoryAdapter.setSelectedCategory(list[0].id)
+                        binding.layoutBottomContainer.visibility = android.view.View.VISIBLE
                     }
                 }
             }
@@ -129,6 +125,10 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         viewModel.setCategoryType(selectedType)
         selectedCategory = null
         categoryAdapter.setSelectedCategory(-1)
+        binding.layoutBottomContainer.visibility = android.view.View.GONE
+        binding.rvCategories.post {
+            binding.rvCategories.scrollToPosition(0)
+        }
         
         val inactiveColor = ContextCompat.getColor(this, R.color.subTextColor)
         val activeTextColor = ContextCompat.getColor(this, android.R.color.white)

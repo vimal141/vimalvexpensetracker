@@ -42,12 +42,6 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.activity.ManageCategoriesActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
             android:name=".ui.activity.AddAccountActivity"
             android:exported="false"
             android:screenOrientation="portrait"
@@ -72,10 +66,7 @@
             android:name=".ui.activity.CurrencyActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.SelectAccountActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.activity.AboutActivity"
             android:exported="false"

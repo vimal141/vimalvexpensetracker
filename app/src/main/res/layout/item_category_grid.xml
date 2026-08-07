@@ -7,20 +7,21 @@
     android:background="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:paddingVertical="@dimen/_9sdp">
+    android:paddingVertical="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_2sdp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/icon_container"
-        android:layout_width="@dimen/_32sdp"
-        android:layout_height="@dimen/_32sdp"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
         app:cardBackgroundColor="@color/bgColorCard"
-        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/divider_color"
-        app:strokeWidth="1dp">
+        app:strokeWidth="0.8dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_category"
@@ -43,7 +44,7 @@
         android:maxLines="1"
         android:text="Category"
         android:textColor="@color/subTextColor"
-        android:textSize="@dimen/_8ssp"
+        android:textSize="@dimen/_9ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon_container" />

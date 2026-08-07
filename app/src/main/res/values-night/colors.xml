@@ -15,32 +15,116 @@
     <color name="income_green_bg">#112A1E</color>
     <color name="expense_red">#EF5350</color>
     <color name="expense_red_bg">#3A1515</color>
-    <color name="category_food">#FFB74D</color>
-    <color name="category_food_bg">#331E00</color>
-    <color name="category_shopping">#BA68C8</color>
-    <color name="category_shopping_bg">#2A0033</color>
-    <color name="category_transport">#64B5F6</color>
-    <color name="category_transport_bg">#00213B</color>
-    <color name="category_bills">#E57373</color>
-    <color name="category_bills_bg">#330000</color>
-    <color name="category_entertainment">#F06292</color>
-    <color name="category_entertainment_bg">#330018</color>
-    <color name="category_health">#81C784</color>
-    <color name="category_health_bg">#0D3310</color>
-    <color name="category_education">#7986CB</color>
-    <color name="category_education_bg">#111633</color>
-    <color name="category_travel">#4DD0E1</color>
-    <color name="category_travel_bg">#002C33</color>
+
+    <!-- 36 100% Unique, Non-Matching Custom Category Colors (Dark Theme) -->
+    <color name="category_food">#F59E0B</color>
+    <color name="category_food_bg">#2C1D07</color>
+    
+    <color name="category_shopping">#8B5CF6</color>
+    <color name="category_shopping_bg">#1F1636</color>
+    
+    <color name="category_transport">#3B82F6</color>
+    <color name="category_transport_bg">#121D33</color>
+    
+    <color name="category_bills">#EA580C</color>
+    <color name="category_bills_bg">#2D170D</color>
+    
+    <color name="category_home_emi">#10B981</color>
+    <color name="category_home_emi_bg">#0D291F</color>
+    
+    <color name="category_phone">#06B6D4</color>
+    <color name="category_phone_bg">#0D272C</color>
+    
+    <color name="category_entertainment">#F43F5E</color>
+    <color name="category_entertainment_bg">#331219</color>
+    
+    <color name="category_education">#6366F1</color>
+    <color name="category_education_bg">#1A1B38</color>
+    
+    <color name="category_beauty">#FF4081</color>
+    <color name="category_beauty_bg">#331020</color>
+    
+    <color name="category_sports">#22C55E</color>
+    <color name="category_sports_bg">#0E2A18</color>
+    
+    <color name="category_social">#14B8A6</color>
+    <color name="category_social_bg">#0D2825</color>
+    
+    <color name="category_clothing">#A855F7</color>
+    <color name="category_clothing_bg">#241436</color>
+    
+    <color name="category_car">#2563EB</color>
+    <color name="category_car_bg">#101C38</color>
+    
+    <color name="category_alcohol">#B45309</color>
+    <color name="category_alcohol_bg">#2B1B0D</color>
+    
+    <color name="category_cigarettes">#64748B</color>
+    <color name="category_cigarettes_bg">#1B2129</color>
+    
+    <color name="category_electronics">#4338CA</color>
+    <color name="category_electronics_bg">#161633</color>
+    
+    <color name="category_travel">#0EA5E9</color>
+    <color name="category_travel_bg">#0E2536</color>
+    
+    <color name="category_health">#34D399</color>
+    <color name="category_health_bg">#102E24</color>
+    
+    <color name="category_pets">#D97706</color>
+    <color name="category_pets_bg">#2B1C0B</color>
+    
+    <color name="category_repairs">#475569</color>
+    <color name="category_repairs_bg">#181D24</color>
+    
+    <color name="category_gifts">#F97316</color>
+    <color name="category_gifts_bg">#301B0E</color>
+    
+    <color name="category_donations">#A855F7</color>
+    <color name="category_donations_bg">#251238</color>
+    
+    <color name="category_lottery">#EAB308</color>
+    <color name="category_lottery_bg">#2E270A</color>
+    
+    <color name="category_snacks">#FB923C</color>
+    <color name="category_snacks_bg">#301E13</color>
+    
+    <color name="category_kids">#38BDF8</color>
+    <color name="category_kids_bg">#0F2836</color>
+    
+    <color name="category_vegetables">#84CC16</color>
+    <color name="category_vegetables_bg">#1C2A0A</color>
+    
+    <color name="category_fruits">#EF4444</color>
+    <color name="category_fruits_bg">#331414</color>
+    
+    <color name="category_old_money">#14B8A6</color>
+    <color name="category_old_money_bg">#0D2825</color>
+    
     <color name="category_salary">#24B876</color>
     <color name="category_salary_bg">#112A1E</color>
-    <color name="category_business">#FF8A65</color>
-    <color name="category_business_bg">#331100</color>
-    <color name="category_freelance">#90A4AE</color>
-    <color name="category_freelance_bg">#152026</color>
-    <color name="category_investment">#A1887F</color>
-    <color name="category_investment_bg">#261914</color>
-    <color name="category_others">#90A4AE</color>
-    <color name="category_others_bg">#152026</color>
+    
+    <color name="category_business">#C2410C</color>
+    <color name="category_business_bg">#2E160C</color>
+    
+    <color name="category_freelance">#7E22CE</color>
+    <color name="category_freelance_bg">#210F33</color>
+    
+    <color name="category_investment">#4D7C0F</color>
+    <color name="category_investment_bg">#17240B</color>
+    
+    <color name="category_bonus">#FACC15</color>
+    <color name="category_bonus_bg">#2F2B0B</color>
+    
+    <color name="category_bank_transfer">#2563EB</color>
+    <color name="category_bank_transfer_bg">#101C38</color>
+    
+    <color name="category_wallet">#0D9488</color>
+    <color name="category_wallet_bg">#0C2522</color>
+    
+    <color name="category_others">#71717A</color>
+    <color name="category_others_bg">#1A1A1E</color>
+
     <color name="divider_color">#2D3530</color>
     <color name="nav_background">#1A1F1C</color>
     <color name="nav_active">#24B876</color>

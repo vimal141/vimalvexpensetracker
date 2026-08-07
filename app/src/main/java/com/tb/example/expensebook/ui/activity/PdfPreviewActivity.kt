@@ -10,18 +10,19 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.ParcelFileDescriptor
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import com.tb.example.expensebook.R
 import com.tb.example.expensebook.databinding.ActivityPdfPreviewBinding
 import com.tb.example.expensebook.ui.viewmodel.TransactionViewModel
-import com.tb.example.expensebook.utility.helper.PdfGenerator
 import com.tb.example.expensebook.utility.Constants
+import com.tb.example.expensebook.utility.helper.PdfGenerator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -32,15 +33,15 @@ import java.io.FileOutputStream
 class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
     private val viewModel: TransactionViewModel by viewModel()
 
-    private var selectedThemeColor: Int = Color.parseColor("#4CAF50")
+    private var selectedThemeColor: Int = Color.parseColor("#1B8A5A")
     private val themeColors = listOf(
-        "#4CAF50",
-        "#2196F3",
-        "#F44336",
-        "#9C27B0",
-        "#FF9800",
-        "#607D8B",
-        "#000000"
+        "#1B8A5A", // App Emerald Green
+        "#2563EB", // Royal Azure
+        "#7C3AED", // Violet
+        "#C2410C", // Terracotta
+        "#E11D48", // Crimson Rose
+        "#0891B2", // Teal Cyan
+        "#111827"  // Onyx Black
     )
 
     private var startTime = 0L
@@ -60,22 +61,19 @@ class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
-        
         startTime = intent.getLongExtra(Constants.EXTRA_START_TIME, 0L)
         endTime = intent.getLongExtra(Constants.EXTRA_END_TIME, 0L)
         periodText = intent.getStringExtra(Constants.EXTRA_PERIOD_TEXT) ?: "All Time"
 
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+        binding.btnBack.setOnClickListener { finish() }
 
         setupColorPicker()
-        
+
         binding.btnExport.setOnClickListener {
             val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
                 type = "application/pdf"
-                putExtra(Intent.EXTRA_TITLE, getString(com.tb.example.expensebook.R.string.default_pdf_name))
+                putExtra(Intent.EXTRA_TITLE, getString(R.string.default_pdf_name))
             }
             createDocumentLauncher.launch(intent)
         }
@@ -88,62 +86,85 @@ class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
     }
 
     private fun setupColorPicker() {
-        val size = (50 * resources.displayMetrics.density).toInt()
-        val margin = (8 * resources.displayMetrics.density).toInt()
+        binding.colorPickerContainer.removeAllViews()
+        val swatchSize = (40 * resources.displayMetrics.density).toInt()
+        val margin = (6 * resources.displayMetrics.density).toInt()
 
         themeColors.forEach { colorHex ->
             val colorInt = Color.parseColor(colorHex)
-            
-            val view = ImageView(this).apply {
-                layoutParams = LinearLayout.LayoutParams(size, size).apply {
-                    setMargins(margin, margin, margin, margin)
+
+            val frameLayout = FrameLayout(this).apply {
+                layoutParams = LinearLayout.LayoutParams(swatchSize, swatchSize).apply {
+                    setMargins(margin, 0, margin, 0)
                 }
-                
-                val shape = GradientDrawable().apply {
-                    shape = GradientDrawable.OVAL
-                    setColor(colorInt)
-                    setStroke(2, Color.LTGRAY)
-                }
-                background = shape
-                
-                setOnClickListener {
+            }
+
+            val swatchView = ImageView(this).apply {
+                layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
+                scaleType = ImageView.ScaleType.CENTER_INSIDE
+                tag = colorInt
+            }
+
+            updateSwatchDrawable(swatchView, colorInt, colorInt == selectedThemeColor)
+
+            frameLayout.setOnClickListener {
+                if (selectedThemeColor != colorInt) {
                     selectedThemeColor = colorInt
+                    updateColorPickerUI()
                     updatePreview()
-                    updateSelectionUI(this)
                 }
             }
-            
-            binding.colorPickerContainer.addView(view)
-            
-            if (colorInt == selectedThemeColor) {
-                updateSelectionUI(view)
-            }
+
+            frameLayout.addView(swatchView)
+            binding.colorPickerContainer.addView(frameLayout)
         }
     }
 
-    private fun updateSelectionUI(selectedView: View) {
-        for (i in 0 until binding.colorPickerContainer.childCount) {
-            val view = binding.colorPickerContainer.getChildAt(i)
-            if (view is ImageView) {
-                if (view == selectedView) {
-                    view.setImageResource(android.R.drawable.ic_menu_edit)
-                    view.setColorFilter(Color.WHITE)
-                } else {
-                    view.setImageDrawable(null)
-                }
+    private fun updateSwatchDrawable(view: ImageView, colorInt: Int, isSelected: Boolean) {
+        val shape = GradientDrawable().apply {
+            shape = GradientDrawable.OVAL
+            setColor(colorInt)
+            if (isSelected) {
+                setStroke((3 * resources.displayMetrics.density).toInt(), ContextCompat.getColor(this@PdfPreviewActivity, R.color.TextColor))
+            } else {
+                setStroke((1 * resources.displayMetrics.density).toInt(), Color.parseColor("#33000000"))
             }
+        }
+        view.background = shape
+
+        if (isSelected) {
+            view.setImageResource(R.drawable.ic_check)
+            view.setColorFilter(Color.WHITE)
+            val padding = (8 * resources.displayMetrics.density).toInt()
+            view.setPadding(padding, padding, padding, padding)
+        } else {
+            view.setImageDrawable(null)
+            view.setPadding(0, 0, 0, 0)
+        }
+    }
+
+    private fun updateColorPickerUI() {
+        for (i in 0 until binding.colorPickerContainer.childCount) {
+            val frame = binding.colorPickerContainer.getChildAt(i) as? FrameLayout
+            val swatchView = frame?.getChildAt(0) as? ImageView
+            val colorInt = swatchView?.tag as? Int ?: continue
+            updateSwatchDrawable(swatchView, colorInt, colorInt == selectedThemeColor)
         }
     }
 
     private fun updatePreview() {
+        binding.progressBar.visibility = View.VISIBLE
+        binding.pdfPreviewImage.visibility = View.INVISIBLE
+
         lifecycleScope.launch {
             val tempFile = File(cacheDir, "preview_statement.pdf")
             try {
                 val account = withContext(Dispatchers.IO) { viewModel.getAccountDetails() }
                 val transactions = withContext(Dispatchers.IO) { viewModel.getTransactionsForExport(startTime, endTime) }
-                
+
                 if (account == null) {
-                    Toast.makeText(this@PdfPreviewActivity, getString(com.tb.example.expensebook.R.string.toast_error_account_missing), Toast.LENGTH_SHORT).show()
+                    binding.progressBar.visibility = View.GONE
+                    Toast.makeText(this@PdfPreviewActivity, getString(R.string.toast_error_account_missing), Toast.LENGTH_SHORT).show()
                     return@launch
                 }
 
@@ -155,25 +176,30 @@ class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
 
                 val fileDescriptor = ParcelFileDescriptor.open(tempFile, ParcelFileDescriptor.MODE_READ_ONLY)
                 val pdfRenderer = PdfRenderer(fileDescriptor)
-                
+
                 if (pdfRenderer.pageCount > 0) {
                     val page = pdfRenderer.openPage(0)
                     val width = 1200
                     val height = (width.toFloat() / page.width * page.height).toInt()
                     val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-                    
+
                     bitmap.eraseColor(Color.WHITE)
-                    
+
                     page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
                     binding.pdfPreviewImage.setImageBitmap(bitmap)
                     page.close()
                 }
-                
+
                 pdfRenderer.close()
                 fileDescriptor.close()
-                
+
+                binding.progressBar.visibility = View.GONE
+                binding.pdfPreviewImage.visibility = View.VISIBLE
+
             } catch (e: Exception) {
                 e.printStackTrace()
+                binding.progressBar.visibility = View.GONE
+                binding.pdfPreviewImage.visibility = View.VISIBLE
             }
         }
     }
@@ -183,23 +209,22 @@ class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
             try {
                 val account = withContext(Dispatchers.IO) { viewModel.getAccountDetails() }
                 val transactions = withContext(Dispatchers.IO) { viewModel.getTransactionsForExport(startTime, endTime) }
-                
+
                 if (account == null) {
                     return@launch
                 }
-                
+
                 withContext(Dispatchers.IO) {
                     contentResolver.openOutputStream(uri)?.use { outputStream ->
                         PdfGenerator.generateStatement(this@PdfPreviewActivity, account, transactions, outputStream, selectedThemeColor, periodText)
                     }
                 }
-                
-                Toast.makeText(this@PdfPreviewActivity, getString(com.tb.example.expensebook.R.string.toast_pdf_exported), Toast.LENGTH_LONG).show()
+
+                Toast.makeText(this@PdfPreviewActivity, getString(R.string.toast_pdf_exported), Toast.LENGTH_LONG).show()
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(this@PdfPreviewActivity, getString(com.tb.example.expensebook.R.string.toast_pdf_failed), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PdfPreviewActivity, getString(R.string.toast_pdf_failed), Toast.LENGTH_SHORT).show()
             }
         }
     }
-
 }

@@ -32,7 +32,8 @@ class AddAccountActivity : BaseActivity<ActivityAddAccountBinding>() {
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
 
-       binding.btnBack.visibility = if (PrefManager.currentAccountId == -1) View.GONE else View.VISIBLE
+        val showBack = PrefManager.currentAccountId != -1
+        binding.btnBack.visibility = if (showBack) View.VISIBLE else View.GONE
 
         binding.btnBack.setOnClickListener {
             if (PrefManager.currentAccountId != -1) {

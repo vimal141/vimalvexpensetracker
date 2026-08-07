@@ -13,4 +13,5 @@ class CategoryRepository(private val dao: CategoryDao) {
     suspend fun update(category: Category) = withContext(Dispatchers.IO) { dao.update(category) }
     suspend fun delete(category: Category) = withContext(Dispatchers.IO) { dao.delete(category) }
     suspend fun getCategoryCount() = withContext(Dispatchers.IO) { dao.getCategoryCount() }
+    suspend fun getAllCategories() = withContext(Dispatchers.IO) { dao.getAllCategories() }
 }

@@ -12,8 +12,7 @@ import com.tb.example.expensebook.databinding.ItemCategoryGridBinding
 import com.tb.example.expensebook.utility.helper.CategoryHelper
 
 class CategoryAdapter(
-    private val onCategoryClick: (Category) -> Unit,
-    private val onSettingsClick: () -> Unit
+    private val onCategoryClick: (Category) -> Unit
 ) : ListAdapter<Category, CategoryAdapter.ViewHolder>(CategoryDiffCallback()) {
 
     private var selectedCategoryId: Int = -1
@@ -36,25 +35,21 @@ class CategoryAdapter(
             binding.imgCategory.setImageResource(iconRes)
 
             if (category.id == selectedCategoryId) {
-                binding.iconContainer.setCardBackgroundColor(ContextCompat.getColor(binding.root.context, R.color.primaryColorSurface))
-                binding.iconContainer.strokeColor = ContextCompat.getColor(binding.root.context, R.color.primaryColor)
-                binding.imgCategory.setColorFilter(ContextCompat.getColor(binding.root.context, R.color.primaryColor))
-                binding.txtCategoryName.setTextColor(ContextCompat.getColor(binding.root.context, R.color.primaryColor))
+                binding.iconContainer.setCardBackgroundColor(CategoryHelper.getColor(binding.root.context, category.name))
+                binding.iconContainer.strokeColor = CategoryHelper.getColor(binding.root.context, category.name)
+                binding.imgCategory.setColorFilter(ContextCompat.getColor(binding.root.context, android.R.color.white))
+                binding.txtCategoryName.setTextColor(CategoryHelper.getColor(binding.root.context, category.name))
             } else {
-                binding.iconContainer.setCardBackgroundColor(ContextCompat.getColor(binding.root.context, R.color.bgColorCard))
+                binding.iconContainer.setCardBackgroundColor(CategoryHelper.getBgColor(binding.root.context, category.name))
                 binding.iconContainer.strokeColor = ContextCompat.getColor(binding.root.context, R.color.divider_color)
-                binding.imgCategory.setColorFilter(ContextCompat.getColor(binding.root.context, R.color.subTextColor))
-                binding.txtCategoryName.setTextColor(ContextCompat.getColor(binding.root.context, R.color.subTextColor))
+                binding.imgCategory.setColorFilter(CategoryHelper.getColor(binding.root.context, category.name))
+                binding.txtCategoryName.setTextColor(ContextCompat.getColor(binding.root.context, R.color.TextColor))
             }
 
             binding.root.setOnClickListener {
-                if (category.id == -100) {
-                    onSettingsClick()
-                } else {
-                    selectedCategoryId = category.id
-                    onCategoryClick(category)
-                    notifyDataSetChanged()
-                }
+                selectedCategoryId = category.id
+                onCategoryClick(category)
+                notifyDataSetChanged()
             }
         }
     }

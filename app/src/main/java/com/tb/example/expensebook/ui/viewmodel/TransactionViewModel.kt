@@ -94,32 +94,50 @@ class TransactionViewModel(
     }
 
     private fun checkAndInsertDefaultCategories() = viewModelScope.launch {
+        val iconMap = mapOf(
+            "Home Emi" to "ic_home", "Shopping" to "ic_shopping", "Food" to "ic_food", "Phone" to "ic_phone",
+            "Entertainment" to "ic_entertainment", "Education" to "ic_education", "Beauty" to "ic_beauty", "Sports" to "ic_sports",
+            "Social" to "ic_social", "Transportation" to "ic_transport", "Clothing" to "ic_clothing", "Car" to "ic_car",
+            "Alcohol" to "ic_alcohol", "Cigarettes" to "ic_cigarette", "Electronics" to "ic_electronics", "Travel" to "ic_travel",
+            "Health" to "ic_health", "Pets" to "ic_pets", "Repairs" to "ic_repairs",
+            "Gifts" to "ic_gift", "Donations" to "ic_donation", "Lottery" to "ic_lottery",
+            "Snacks" to "ic_snacks", "Kids" to "ic_kids", "Vegetables" to "ic_vegetables", "Fruits" to "ic_fruits",
+            "old money" to "ic_round_rupay", "Salary" to "ic_salary", "Investments" to "ic_investment", "Part-Time" to "ic_freelance",
+            "Bonus" to "ic_bonus", "Others" to "ic_others", "Bank Transfer" to "ic_bank_transfer", "Wallet" to "ic_wallet"
+        )
+
         if (categoryRepository.getCategoryCount() == 0) {
             val defaults = mutableListOf<Category>()
             val expenseCats = listOf(
-                "Home Emi" to "ic_wallet", "Shopping" to "ic_shopping", "Food" to "ic_food", "Phone" to "ic_round_rupay",
-                "Entertainment" to "ic_entertainment", "Education" to "ic_education", "Beauty" to "ic_person", "Sports" to "ic_others",
-                "Social" to "ic_person", "Transportation" to "ic_transport", "Clothing" to "ic_shopping", "Car" to "ic_transport",
-                "Alcohol" to "ic_others", "Cigarettes" to "ic_others", "Electronics" to "ic_others", "Travel" to "ic_travel",
-                "Health" to "ic_health", "Pets" to "ic_others", "Repairs" to "ic_settings", "Housing" to "ic_others",
-                "Home" to "ic_others", "Gifts" to "ic_others", "Donations" to "ic_others", "Lottery" to "ic_others",
-                "Snacks" to "ic_food", "Kids" to "ic_person", "Vegetables" to "ic_food", "Fruits" to "ic_food"
+                "Home Emi", "Shopping", "Food", "Phone", "Entertainment", "Education", "Beauty", "Sports",
+                "Social", "Transportation", "Clothing", "Car", "Alcohol", "Cigarettes", "Electronics", "Travel",
+                "Health", "Pets", "Repairs", "Gifts", "Donations", "Lottery",
+                "Snacks", "Kids", "Vegetables", "Fruits"
             )
-            expenseCats.forEach { (name, icon) ->
-                defaults.add(Category(name = name, iconName = icon, type = Constants.TYPE_EXPENSE, isDefault = true))
+            expenseCats.forEach { name ->
+                defaults.add(Category(name = name, iconName = iconMap[name] ?: "ic_others", type = Constants.TYPE_EXPENSE, isDefault = true))
             }
-            val incomeCats = listOf(
-                "old money" to "ic_round_rupay", "Salary" to "ic_salary", "Investments" to "ic_investment", "Part-Time" to "ic_freelance",
-                "Bonus" to "ic_others", "Others" to "ic_others"
-            )
-            incomeCats.forEach { (name, icon) ->
-                defaults.add(Category(name = name, iconName = icon, type = Constants.TYPE_INCOME, isDefault = true))
+            val incomeCats = listOf("old money", "Salary", "Investments", "Part-Time", "Bonus", "Others")
+            incomeCats.forEach { name ->
+                defaults.add(Category(name = name, iconName = iconMap[name] ?: "ic_others", type = Constants.TYPE_INCOME, isDefault = true))
             }
-            val transferCats = listOf("Bank Transfer" to "ic_account", "Wallet" to "ic_wallet", "Others" to "ic_others")
-            transferCats.forEach { (name, icon) ->
-                defaults.add(Category(name = name, iconName = icon, type = Constants.TYPE_TRANSFER, isDefault = true))
+            val transferCats = listOf("Bank Transfer", "Wallet", "Others")
+            transferCats.forEach { name ->
+                defaults.add(Category(name = name, iconName = iconMap[name] ?: "ic_others", type = Constants.TYPE_TRANSFER, isDefault = true))
             }
             defaults.forEach { categoryRepository.insert(it) }
+        } else {
+            val existing = categoryRepository.getAllCategories()
+            existing.forEach { cat ->
+                if (cat.name.equals("Home", ignoreCase = true) || cat.name.equals("Housing", ignoreCase = true)) {
+                    categoryRepository.delete(cat)
+                } else {
+                    val targetIcon = iconMap[cat.name]
+                    if (targetIcon != null && cat.iconName != targetIcon) {
+                        categoryRepository.update(cat.copy(iconName = targetIcon))
+                    }
+                }
+            }
         }
     }
 
