@@ -91,6 +91,7 @@ class ReportsFragment : Fragment() {
                     if (t == tab) {
                         t.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.white))
                         t.setBackgroundResource(R.drawable.bg_tab)
+                        t.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.primaryColor)
                     } else {
                         t.setTextColor(ContextCompat.getColor(requireContext(), R.color.subTextColor))
                         t.background = null
@@ -134,8 +135,7 @@ class ReportsFragment : Fragment() {
                 picker.addOnPositiveButtonClickListener { selectionPair ->
                     val startMillis = selectionPair.first
                     if (startMillis != null) {
-                        val cal = Calendar.getInstance().apply { timeInMillis = startMillis }
-                        viewModel.setReportWeekDate(cal)
+                        viewModel.setReportWeekStartDate(startMillis)
                     }
                 }
                 picker.show(childFragmentManager, "WEEKLY_RANGE_PICKER")
@@ -220,17 +220,24 @@ class ReportsFragment : Fragment() {
     }
 
     private fun updateReportTypeUI() {
+        val inactiveColor = ContextCompat.getColor(requireContext(), R.color.subTextColor)
+        val activeTextColor = ContextCompat.getColor(requireContext(), android.R.color.white)
+
         if (currentReportType == Constants.TYPE_EXPENSE) {
-            binding.tabReportExpense.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.white))
+            binding.tabReportExpense.setTextColor(activeTextColor)
             binding.tabReportExpense.setBackgroundResource(R.drawable.bg_tab)
-            binding.tabReportIncome.setTextColor(ContextCompat.getColor(requireContext(), R.color.subTextColor))
+            binding.tabReportExpense.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.expense_red)
+
+            binding.tabReportIncome.setTextColor(inactiveColor)
             binding.tabReportIncome.background = null
 
             binding.txtCatTitle.text = getString(R.string.expense_breakdown)
         } else {
-            binding.tabReportIncome.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.white))
+            binding.tabReportIncome.setTextColor(activeTextColor)
             binding.tabReportIncome.setBackgroundResource(R.drawable.bg_tab)
-            binding.tabReportExpense.setTextColor(ContextCompat.getColor(requireContext(), R.color.subTextColor))
+            binding.tabReportIncome.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.income_green)
+
+            binding.tabReportExpense.setTextColor(inactiveColor)
             binding.tabReportExpense.background = null
 
             binding.txtCatTitle.text = "Income Breakdown"
@@ -251,15 +258,25 @@ class ReportsFragment : Fragment() {
                         else SimpleDateFormat("dd MMM yyyy", Locale.US).format(cal.time)
                     }
                     Constants.PERIOD_WEEKLY -> {
-                        val c = cal.clone() as Calendar
-                        c.firstDayOfWeek = Calendar.MONDAY
-                        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
-                        val start = SimpleDateFormat("dd MMM", Locale.US).format(c.time)
-                        c.add(Calendar.DAY_OF_YEAR, 6)
-                        val endYear = c.get(Calendar.YEAR)
-                        val endFormat = if (endYear == currentYear) "dd MMM" else "dd MMM yyyy"
-                        val end = SimpleDateFormat(endFormat, Locale.US).format(c.time)
-                        "$start - $end"
+                        val custom = viewModel.reportCustomWeekRange.value
+                        if (custom != null) {
+                            val startCal = Calendar.getInstance().apply { timeInMillis = custom.first }
+                            val endCal = Calendar.getInstance().apply { timeInMillis = custom.second }
+                            val startStr = SimpleDateFormat("dd MMM", Locale.US).format(startCal.time)
+                            val endFormat = if (endCal.get(Calendar.YEAR) == currentYear) "dd MMM" else "dd MMM yyyy"
+                            val endStr = SimpleDateFormat(endFormat, Locale.US).format(endCal.time)
+                            "$startStr - $endStr"
+                        } else {
+                            val c = cal.clone() as Calendar
+                            c.firstDayOfWeek = Calendar.MONDAY
+                            c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+                            val start = SimpleDateFormat("dd MMM", Locale.US).format(c.time)
+                            c.add(Calendar.DAY_OF_YEAR, 6)
+                            val endYear = c.get(Calendar.YEAR)
+                            val endFormat = if (endYear == currentYear) "dd MMM" else "dd MMM yyyy"
+                            val end = SimpleDateFormat(endFormat, Locale.US).format(c.time)
+                            "$start - $end"
+                        }
                     }
                     Constants.PERIOD_YEARLY -> SimpleDateFormat("yyyy", Locale.US).format(cal.time)
                     else -> {

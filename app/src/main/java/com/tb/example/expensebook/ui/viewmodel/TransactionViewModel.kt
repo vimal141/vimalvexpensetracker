@@ -178,6 +178,8 @@ class TransactionViewModel(
         }
     }
 
+    val reportCustomWeekRange = MutableStateFlow<Pair<Long, Long>?>(null)
+
     private fun startOfMonth(cal: Calendar): Long = (cal.clone() as Calendar).apply { set(Calendar.DAY_OF_MONTH, 1) }.toStartOfDay().timeInMillis
     private fun endOfMonth(cal: Calendar): Long = (cal.clone() as Calendar).apply { set(Calendar.DAY_OF_MONTH, getActualMaximum(Calendar.DAY_OF_MONTH)) }.toEndOfDay().timeInMillis
 
@@ -186,11 +188,16 @@ class TransactionViewModel(
         return when (period) {
             Constants.PERIOD_DAILY -> clone.toStartOfDay().timeInMillis to clone.toEndOfDay().timeInMillis
             Constants.PERIOD_WEEKLY -> {
-                clone.firstDayOfWeek = Calendar.MONDAY
-                clone.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
-                val start = clone.toStartOfDay().timeInMillis
-                clone.add(Calendar.DAY_OF_YEAR, 6)
-                start to clone.toEndOfDay().timeInMillis
+                val custom = reportCustomWeekRange.value
+                if (custom != null) {
+                    custom
+                } else {
+                    clone.firstDayOfWeek = Calendar.MONDAY
+                    clone.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+                    val start = clone.toStartOfDay().timeInMillis
+                    clone.add(Calendar.DAY_OF_YEAR, 6)
+                    start to clone.toEndOfDay().timeInMillis
+                }
             }
             Constants.PERIOD_YEARLY -> {
                 clone.set(Calendar.DAY_OF_YEAR, 1)
@@ -212,23 +219,36 @@ class TransactionViewModel(
     }
 
     fun setMonthYear(month: Int, year: Int) { selectedCalendar.value = Calendar.getInstance().apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
-    fun setReportPeriodType(type: String) { reportPeriodType.value = type; reportCalendar.value = Calendar.getInstance() }
-    fun setReportDate(calendar: Calendar) { reportCalendar.value = calendar }
+    fun setReportPeriodType(type: String) { reportCustomWeekRange.value = null; reportPeriodType.value = type; reportCalendar.value = Calendar.getInstance() }
+    fun setReportDate(calendar: Calendar) { reportCustomWeekRange.value = null; reportCalendar.value = calendar }
+    fun setReportWeekStartDate(startMillis: Long) {
+        val startCal = Calendar.getInstance().apply { timeInMillis = startMillis }.toStartOfDay()
+        val endCal = (startCal.clone() as Calendar).apply { add(Calendar.DAY_OF_YEAR, 6) }.toEndOfDay()
+        reportCustomWeekRange.value = startCal.timeInMillis to endCal.timeInMillis
+        reportCalendar.value = startCal
+    }
     fun setReportWeekDate(calendar: Calendar) {
+        reportCustomWeekRange.value = null
         val weekCal = (calendar.clone() as Calendar).apply {
             firstDayOfWeek = Calendar.MONDAY
             set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
         }
         reportCalendar.value = weekCal
     }
-    fun setReportMonthYear(month: Int, year: Int) { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
-    fun setReportYear(year: Int) { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year) } }
-    fun nextReportPeriod() { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { 
-        when (reportPeriodType.value) { Constants.PERIOD_DAILY -> add(Calendar.DAY_OF_YEAR, 1); Constants.PERIOD_WEEKLY -> add(Calendar.WEEK_OF_YEAR, 1); Constants.PERIOD_YEARLY -> add(Calendar.YEAR, 1); else -> add(Calendar.MONTH, 1) } 
-    } }
-    fun previousReportPeriod() { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { 
-        when (reportPeriodType.value) { Constants.PERIOD_DAILY -> add(Calendar.DAY_OF_YEAR, -1); Constants.PERIOD_WEEKLY -> add(Calendar.WEEK_OF_YEAR, -1); Constants.PERIOD_YEARLY -> add(Calendar.YEAR, -1); else -> add(Calendar.MONTH, -1) } 
-    } }
+    fun setReportMonthYear(month: Int, year: Int) { reportCustomWeekRange.value = null; reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
+    fun setReportYear(year: Int) { reportCustomWeekRange.value = null; reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year) } }
+    fun nextReportPeriod() { 
+        reportCustomWeekRange.value = null
+        reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { 
+            when (reportPeriodType.value) { Constants.PERIOD_DAILY -> add(Calendar.DAY_OF_YEAR, 1); Constants.PERIOD_WEEKLY -> add(Calendar.WEEK_OF_YEAR, 1); Constants.PERIOD_YEARLY -> add(Calendar.YEAR, 1); else -> add(Calendar.MONTH, 1) } 
+        } 
+    }
+    fun previousReportPeriod() { 
+        reportCustomWeekRange.value = null
+        reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { 
+            when (reportPeriodType.value) { Constants.PERIOD_DAILY -> add(Calendar.DAY_OF_YEAR, -1); Constants.PERIOD_WEEKLY -> add(Calendar.WEEK_OF_YEAR, -1); Constants.PERIOD_YEARLY -> add(Calendar.YEAR, -1); else -> add(Calendar.MONTH, -1) } 
+        } 
+    }
     fun setSearchQuery(query: String)  { searchQuery.value = query }
     fun setFilterType(type: String)    { filterType.value = type }
     fun clearFilters() { searchQuery.value = ""; filterType.value = Constants.FILTER_ALL; filterCategory.value = Constants.FILTER_ALL }

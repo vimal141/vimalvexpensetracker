@@ -74,7 +74,28 @@ class DashboardFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateCurrencyUI()
+    }
 
+    private fun updateCurrencyUI() {
+        val symbol = PrefManager.currencySymbol
+        val balance = viewModel.totalBalance.value ?: 0.0
+        val sign = if (balance < 0) "-" else ""
+        currentBalanceText = "$sign$symbol ${com.tb.example.expensebook.utility.helper.CurrencyHelper.formatAmount(Math.abs(balance))}"
+        updateBalanceVisibility()
+
+        val income = viewModel.totalIncome.value ?: 0.0
+        binding.txtIncomeValue.text = "$symbol ${com.tb.example.expensebook.utility.helper.CurrencyHelper.formatAmount(income)}"
+
+        val expense = viewModel.totalExpense.value ?: 0.0
+        binding.txtExpenseValue.text = "$symbol ${com.tb.example.expensebook.utility.helper.CurrencyHelper.formatAmount(expense)}"
+
+        if (::adapter.isInitialized) {
+            adapter.notifyDataSetChanged()
+        }
+    }
 
     private fun animateCards() {
         val fadeIn = AnimationUtils.loadAnimation(requireContext(), android.R.anim.fade_in)

@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
+    override val isApplyKeyboardPadding = true
     private val viewModel: TransactionViewModel by viewModel()
     private lateinit var categoryAdapter: CategoryAdapter
     
@@ -172,10 +173,17 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
     }
 
     private fun showDatePicker() {
-        DatePickerDialog(this, { _, y, m, d ->
-            selectedCalendar.set(y, m, d)
+        val picker = com.google.android.material.datepicker.MaterialDatePicker.Builder.datePicker()
+            .setTitleText("Select Date")
+            .setSelection(selectedCalendar.timeInMillis)
+            .build()
+
+        picker.addOnPositiveButtonClickListener { selection ->
+            val cal = Calendar.getInstance().apply { timeInMillis = selection }
+            selectedCalendar.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH))
             updateDateLabel()
-        }, selectedCalendar.get(Calendar.YEAR), selectedCalendar.get(Calendar.MONTH), selectedCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+        picker.show(supportFragmentManager, "MATERIAL_DATE_PICKER")
     }
 
     private fun updateDateLabel() {

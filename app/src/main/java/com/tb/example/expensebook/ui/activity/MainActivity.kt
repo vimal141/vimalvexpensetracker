@@ -1,8 +1,10 @@
 package com.tb.example.expensebook.ui.activity
 
-import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -19,6 +21,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val isEdgeToEdgeEnabled: Boolean = false
     override val isAutoApplyInsetsPadding: Boolean = false
 
+    private var doubleBackToExitPressedOnce = false
+    private val backPressHandler = Handler(Looper.getMainLooper())
+    private val resetBackPressRunnable = Runnable { doubleBackToExitPressedOnce = false }
+
     override fun inflateBinding(inflater: LayoutInflater): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
     }
@@ -32,7 +38,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun onBackPressedAction() {
-        finish()
+        if (binding.viewPager.currentItem != 0) {
+            selectDashboardTab()
+            return
+        }
+
+        if (doubleBackToExitPressedOnce) {
+            backPressHandler.removeCallbacks(resetBackPressRunnable)
+            finish()
+            return
+        }
+
+        doubleBackToExitPressedOnce = true
+        Toast.makeText(this, getString(R.string.toast_press_back_again_to_exit), Toast.LENGTH_SHORT).show()
+        backPressHandler.postDelayed(resetBackPressRunnable, 2000)
     }
 
     private fun setupViewPager() {
@@ -45,7 +64,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 binding.bottomNavigation.menu.getItem(position).isChecked = true
-
             }
         })
     }
@@ -69,7 +87,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-
     fun selectDashboardTab() {
         binding.viewPager.setCurrentItem(0, false)
     }
@@ -78,7 +95,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.viewPager.setCurrentItem(1, false)
     }
 
-    private  class MainPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
+    override fun onDestroy() {
+        super.onDestroy()
+        backPressHandler.removeCallbacks(resetBackPressRunnable)
+    }
+
+    private class MainPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
         override fun getItemCount(): Int = 4
 
         override fun createFragment(position: Int): Fragment {

@@ -181,4 +181,6 @@
     <string name="change_account">Change Account</string>
     <string name="change_account_desc">Are you sure you want to switch to account \'%1$s\'?</string>
     <string name="toast_account_changed">Account changed to %1$s</string>
+    <string name="toast_press_back_again_to_exit">Press back again to exit</string>
+    <string name="toast_no_transactions_period">No transactions found for selected period</string>
 </resources>
