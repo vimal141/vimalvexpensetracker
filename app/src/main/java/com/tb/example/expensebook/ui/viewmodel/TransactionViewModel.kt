@@ -213,6 +213,16 @@ class TransactionViewModel(
 
     fun setMonthYear(month: Int, year: Int) { selectedCalendar.value = Calendar.getInstance().apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
     fun setReportPeriodType(type: String) { reportPeriodType.value = type; reportCalendar.value = Calendar.getInstance() }
+    fun setReportDate(calendar: Calendar) { reportCalendar.value = calendar }
+    fun setReportWeekDate(calendar: Calendar) {
+        val weekCal = (calendar.clone() as Calendar).apply {
+            firstDayOfWeek = Calendar.MONDAY
+            set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+        }
+        reportCalendar.value = weekCal
+    }
+    fun setReportMonthYear(month: Int, year: Int) { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
+    fun setReportYear(year: Int) { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year) } }
     fun nextReportPeriod() { reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { 
         when (reportPeriodType.value) { Constants.PERIOD_DAILY -> add(Calendar.DAY_OF_YEAR, 1); Constants.PERIOD_WEEKLY -> add(Calendar.WEEK_OF_YEAR, 1); Constants.PERIOD_YEARLY -> add(Calendar.YEAR, 1); else -> add(Calendar.MONTH, 1) } 
     } }

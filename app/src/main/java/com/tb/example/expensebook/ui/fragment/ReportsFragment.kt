@@ -9,21 +9,23 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.flow.collectLatest
-import com.tb.example.expensebook.data.model.CategorySum
-import com.tb.example.expensebook.utility.helper.CategoryHelper
-import com.tb.example.expensebook.utility.customview.PieChartView
-import com.tb.example.expensebook.utility.helper.PrefManager
-import com.tb.example.expensebook.data.model.Transaction
-import com.tb.example.expensebook.ui.viewmodel.TransactionViewModel
-import com.tb.example.expensebook.databinding.FragmentReportsBinding
-import com.tb.example.expensebook.utility.Constants
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.tb.example.expensebook.R
+import com.tb.example.expensebook.data.model.CategorySum
+import com.tb.example.expensebook.data.model.Transaction
+import com.tb.example.expensebook.databinding.FragmentReportsBinding
+import com.tb.example.expensebook.ui.viewmodel.TransactionViewModel
+import com.tb.example.expensebook.utility.Constants
+import com.tb.example.expensebook.utility.customview.PieChartView
+import com.tb.example.expensebook.utility.helper.CategoryHelper
+import com.tb.example.expensebook.utility.helper.PrefManager
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
 
 class ReportsFragment : Fragment() {
 
@@ -68,6 +70,12 @@ class ReportsFragment : Fragment() {
         binding.btnPrevMonth.setOnClickListener { viewModel.previousReportPeriod() }
         binding.btnNextMonth.setOnClickListener { viewModel.nextReportPeriod() }
 
+        val periodSelectorClickListener = View.OnClickListener {
+            showPeriodPickerDialog()
+        }
+        binding.cardMonthSelector.setOnClickListener(periodSelectorClickListener)
+        binding.txtSelectedMonth.setOnClickListener(periodSelectorClickListener)
+
         binding.tabReportExpense.setOnClickListener { selectReportType(Constants.TYPE_EXPENSE) }
         binding.tabReportIncome.setOnClickListener { selectReportType(Constants.TYPE_INCOME) }
 
@@ -92,6 +100,117 @@ class ReportsFragment : Fragment() {
             }
         }
         binding.tabMonthly.performClick()
+    }
+
+    private fun showPeriodPickerDialog() {
+        when (viewModel.reportPeriodType.value) {
+            Constants.PERIOD_DAILY -> {
+                val picker = MaterialDatePicker.Builder.datePicker()
+                    .setTitleText("Select Date")
+                    .setSelection(viewModel.reportCalendar.value.timeInMillis)
+                    .build()
+                picker.addOnPositiveButtonClickListener { selection ->
+                    val cal = Calendar.getInstance().apply { timeInMillis = selection }
+                    viewModel.setReportDate(cal)
+                }
+                picker.show(childFragmentManager, "DAILY_PICKER")
+            }
+            Constants.PERIOD_WEEKLY -> {
+                val currentCal = viewModel.reportCalendar.value
+                val mondayCal = (currentCal.clone() as Calendar).apply {
+                    firstDayOfWeek = Calendar.MONDAY
+                    set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+                }
+                val sundayCal = (mondayCal.clone() as Calendar).apply {
+                    firstDayOfWeek = Calendar.MONDAY
+                    set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY)
+                }
+                val initialRange = androidx.core.util.Pair(mondayCal.timeInMillis, sundayCal.timeInMillis)
+
+                val picker = MaterialDatePicker.Builder.dateRangePicker()
+                    .setTitleText("Select 1 Week (7 Days)")
+                    .setSelection(initialRange)
+                    .build()
+                picker.addOnPositiveButtonClickListener { selectionPair ->
+                    val startMillis = selectionPair.first
+                    if (startMillis != null) {
+                        val cal = Calendar.getInstance().apply { timeInMillis = startMillis }
+                        viewModel.setReportWeekDate(cal)
+                    }
+                }
+                picker.show(childFragmentManager, "WEEKLY_RANGE_PICKER")
+            }
+            Constants.PERIOD_YEARLY -> {
+                showYearPickerDialog()
+            }
+            else -> { // PERIOD_MONTHLY
+                showMonthYearPickerDialog()
+            }
+        }
+    }
+
+    private fun showMonthYearPickerDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_month_year_picker, null)
+        val monthPicker = dialogView.findViewById<android.widget.NumberPicker>(R.id.picker_month)
+        val yearPicker = dialogView.findViewById<android.widget.NumberPicker>(R.id.picker_year)
+
+        val months = arrayOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+        monthPicker.minValue = 0
+        monthPicker.maxValue = 11
+        monthPicker.displayedValues = months
+
+        val currentCal = viewModel.reportCalendar.value
+        val currentYear = currentCal.get(Calendar.YEAR)
+
+        yearPicker.minValue = 1900
+        yearPicker.maxValue = 2100
+
+        monthPicker.value = currentCal.get(Calendar.MONTH)
+        yearPicker.value = currentYear
+
+        val dialog = com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.select_month))
+            .setBackground(ContextCompat.getDrawable(requireContext(), R.drawable.bg_dialog))
+            .setView(dialogView)
+            .setPositiveButton(getString(R.string.select)) { _, _ ->
+                viewModel.setReportMonthYear(monthPicker.value, yearPicker.value)
+            }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .create()
+
+        dialog.show()
+        dialog.window?.apply {
+            addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+            setDimAmount(0.65f)
+        }
+    }
+
+    private fun showYearPickerDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_year_picker, null)
+        val yearPicker = dialogView.findViewById<android.widget.NumberPicker>(R.id.picker_year)
+
+        val currentCal = viewModel.reportCalendar.value
+        val currentYear = currentCal.get(Calendar.YEAR)
+
+        yearPicker.minValue = 1900
+        yearPicker.maxValue = 2100
+        yearPicker.value = currentYear
+
+        val dialog = com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Select Year")
+            .setBackground(ContextCompat.getDrawable(requireContext(), R.drawable.bg_dialog))
+            .setView(dialogView)
+            .setPositiveButton(getString(R.string.select)) { _, _ ->
+                viewModel.setReportYear(yearPicker.value)
+            }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .create()
+
+        dialog.show()
+        dialog.window?.apply {
+            addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+            setDimAmount(0.65f)
+        }
     }
 
     private fun selectReportType(type: String) {
