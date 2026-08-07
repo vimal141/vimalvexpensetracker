@@ -7,22 +7,23 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.flow.collectLatest
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.tb.example.expensebook.R
-import com.tb.example.expensebook.ui.adapter.TransactionAdapter
-import com.tb.example.expensebook.ui.viewmodel.TransactionViewModel
+import com.tb.example.expensebook.databinding.DialogBottomSheetDeleteBinding
 import com.tb.example.expensebook.databinding.FragmentHistoryBinding
 import com.tb.example.expensebook.ui.activity.AddTransactionActivity
+import com.tb.example.expensebook.ui.adapter.TransactionAdapter
+import com.tb.example.expensebook.ui.viewmodel.TransactionViewModel
 import com.tb.example.expensebook.utility.Constants
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 class HistoryFragment : Fragment() {
 
@@ -55,22 +56,19 @@ class HistoryFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter =
-            TransactionAdapter { transaction ->
-                val intent =
-                    Intent(requireContext(), AddTransactionActivity::class.java)
-                        .apply {
-                            putExtra(Constants.EXTRA_TRANSACTION, transaction)
-                        }
-                startActivity(intent)
+        adapter = TransactionAdapter { transaction ->
+            val intent = Intent(requireContext(), AddTransactionActivity::class.java).apply {
+                putExtra(Constants.EXTRA_TRANSACTION, transaction)
             }
-        
+            startActivity(intent)
+        }
+
         adapter.onSelectionChanged = { isSelectionMode, count ->
             if (isSelectionMode) {
                 binding.layoutCab.visibility = View.VISIBLE
                 binding.fragmentTittle.visibility = View.INVISIBLE
                 binding.txtCabCount.text = getString(R.string.selected_count, count)
-                
+
                 if (count == adapter.itemCount && adapter.itemCount > 0) {
                     binding.btnCabSelectAll.setImageResource(R.drawable.ic_selected)
                 } else {
@@ -98,23 +96,46 @@ class HistoryFragment : Fragment() {
         binding.btnCabDelete.setOnClickListener {
             val selected = adapter.selectedItems.toList()
             if (selected.isNotEmpty()) {
-                AlertDialog.Builder(requireContext())
-                    .setTitle(getString(R.string.delete_transactions))
-                    .setMessage(getString(R.string.delete_transactions_desc, selected.size))
-                    .setPositiveButton(getString(R.string.delete)) { _, _ ->
-                        selected.forEach { viewModel.delete(it) }
-                        adapter.clearSelection()
-                        Snackbar.make(
-                            binding.root, getString(R.string.toast_transactions_deleted, selected.size), Snackbar.LENGTH_SHORT
-                        ).show()
-                    }
-                    .setNegativeButton(getString(R.string.cancel), null)
-                    .show()
+                showDeleteBottomSheet(selected)
             }
         }
 
         binding.rvHistory.layoutManager = LinearLayoutManager(requireContext())
         binding.rvHistory.adapter = adapter
+    }
+
+    private fun showDeleteBottomSheet(selected: List<com.tb.example.expensebook.data.model.Transaction>) {
+        val dialog = BottomSheetDialog(requireContext())
+        val dialogBinding = DialogBottomSheetDeleteBinding.inflate(layoutInflater)
+        dialog.setContentView(dialogBinding.root)
+
+        (dialogBinding.root.parent as? View)?.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+
+        val count = selected.size
+        if (count == 1) {
+            dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transaction_title, 1)
+            dialogBinding.txtDeleteMessage.text = getString(R.string.delete_single_transaction_desc)
+        } else {
+            dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transactions_title, count)
+            dialogBinding.txtDeleteMessage.text = getString(R.string.delete_transactions_desc, count)
+        }
+
+        dialogBinding.btnCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialogBinding.btnConfirmDelete.setOnClickListener {
+            selected.forEach { viewModel.delete(it) }
+            adapter.clearSelection()
+            dialog.dismiss()
+            Snackbar.make(
+                binding.root,
+                getString(R.string.toast_transactions_deleted, count),
+                Snackbar.LENGTH_SHORT
+            ).show()
+        }
+
+        dialog.show()
     }
 
     private fun setupSearch() {

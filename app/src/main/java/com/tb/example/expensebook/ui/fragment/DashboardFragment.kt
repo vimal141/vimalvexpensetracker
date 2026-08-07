@@ -288,8 +288,12 @@ class DashboardFragment : Fragment() {
             }
             .setNegativeButton(getString(R.string.cancel), null)
             .create()
-            
+
         dialog.show()
+        dialog.window?.apply {
+            addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+            setDimAmount(0.65f)
+        }
     }
 
     private fun showManageAccountsScreen() {
