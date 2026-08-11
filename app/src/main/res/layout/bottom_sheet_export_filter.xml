@@ -46,6 +46,7 @@
         android:textAllCaps="true"
         android:textColor="@color/subTextColor"
         android:textSize="@dimen/_9ssp"
+        android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />

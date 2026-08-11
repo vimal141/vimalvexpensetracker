@@ -34,6 +34,9 @@ import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+import com.tb.example.expensebook.utility.helper.bounceOnClick
+import com.tb.example.expensebook.utility.helper.slideUpFadeIn
+
 class DashboardFragment : Fragment() {
 
     private lateinit var binding: FragmentDashboardBinding
@@ -98,10 +101,8 @@ class DashboardFragment : Fragment() {
     }
 
     private fun animateCards() {
-        val fadeIn = AnimationUtils.loadAnimation(requireContext(), android.R.anim.fade_in)
-        fadeIn.duration = 600
-        binding.cardBalance.startAnimation(fadeIn)
-        binding.cardIncome.startAnimation(fadeIn)
+        binding.cardBalance.slideUpFadeIn(400L, 50L)
+        binding.cardIncome.slideUpFadeIn(400L, 150L)
     }
 
     private fun setupCardAnimation() {
@@ -168,10 +169,6 @@ class DashboardFragment : Fragment() {
                     putExtra(Constants.EXTRA_TRANSACTION, transaction)
                 }
                 startActivity(intent)
-                requireActivity().overridePendingTransition(
-                    android.R.anim.fade_in,
-                    android.R.anim.fade_out
-                )
             }
         binding.rvTransactions.layoutManager = LinearLayoutManager(requireContext())
         binding.rvTransactions.adapter = adapter
@@ -193,12 +190,12 @@ class DashboardFragment : Fragment() {
             showManageAccountsScreen()
         }
 
-        binding.fabAdd.setOnClickListener {
+        binding.fabAdd.bounceOnClick {
             val intent = Intent(requireContext(), AddTransactionActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnAddExpanse.setOnClickListener {
+        binding.btnAddExpanse.bounceOnClick {
             val intent = Intent(requireContext(), AddTransactionActivity::class.java)
             startActivity(intent)
         }

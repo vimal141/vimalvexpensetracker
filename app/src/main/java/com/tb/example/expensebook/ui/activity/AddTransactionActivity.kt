@@ -24,6 +24,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
+import com.tb.example.expensebook.utility.helper.bounceOnClick
+
 class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
     override val isApplyKeyboardPadding = true
     private val viewModel: TransactionViewModel by viewModel()
@@ -96,8 +98,8 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
 
         binding.btnDate.setOnClickListener { showDatePicker() }
         
-        binding.btnSubmit.setOnClickListener { saveTransaction() }
-        binding.btnDelete.setOnClickListener { showDeleteConfirmation() }
+        binding.btnSubmit.bounceOnClick { saveTransaction() }
+        binding.btnDelete.bounceOnClick { showDeleteConfirmation() }
     }
 
 
@@ -231,15 +233,24 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
     }
 
     private fun showDeleteConfirmation() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.delete_transaction))
-            .setMessage(getString(R.string.delete_transaction_desc))
-            .setPositiveButton(getString(R.string.delete)) { _, _ ->
-                editTransaction?.let { viewModel.delete(it) }
-                Toast.makeText(this, getString(R.string.toast_transaction_deleted), Toast.LENGTH_SHORT).show()
-                finish()
-            }
-            .setNegativeButton(getString(R.string.cancel), null)
-            .show()
+        val dialog = com.google.android.material.bottomsheet.BottomSheetDialog(this)
+        val dialogBinding = com.tb.example.expensebook.databinding.DialogBottomSheetDeleteBinding.inflate(layoutInflater)
+        dialog.setContentView(dialogBinding.root)
+
+        dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transaction_title)
+        dialogBinding.txtDeleteMessage.text = getString(R.string.delete_single_transaction_desc)
+
+        dialogBinding.btnCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialogBinding.btnConfirmDelete.setOnClickListener {
+            dialog.dismiss()
+            editTransaction?.let { viewModel.delete(it) }
+            Toast.makeText(this, getString(R.string.toast_transaction_deleted), Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
+        dialog.show()
     }
 }

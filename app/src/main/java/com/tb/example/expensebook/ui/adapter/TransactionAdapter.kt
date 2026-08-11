@@ -33,6 +33,8 @@ class TransactionAdapter(
 
     private val dateFormatCurrentYear = SimpleDateFormat("dd MMM", Locale.US)
     private val dateFormatOtherYear = SimpleDateFormat("dd MMM yyyy", Locale.US)
+    private var lastPosition = -1
+
     inner class ViewHolder(private val binding: ItemTransactionBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -103,10 +105,10 @@ class TransactionAdapter(
                 true
             }
             
-            if (!isSelectionMode) {
-                val anim = AnimationUtils.loadAnimation(binding.root.context, android.R.anim.fade_in)
-                anim.duration = 300
+            if (!isSelectionMode && bindingAdapterPosition > lastPosition) {
+                val anim = AnimationUtils.loadAnimation(binding.root.context, R.anim.item_animation_fall_down)
                 binding.root.startAnimation(anim)
+                lastPosition = bindingAdapterPosition
             }
         }
         
@@ -146,6 +148,7 @@ class TransactionAdapter(
     }
 
     fun updateData(newList: List<Transaction>, newQuery: String = "") {
+        lastPosition = -1
         searchQuery = newQuery
         submitList(newList)
     }

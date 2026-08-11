@@ -13,6 +13,8 @@ class CurrencyAdapter(
     var selectedCode: String
 ) : RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>() {
 
+    private var lastPosition = -1
+
     inner class CurrencyViewHolder(val binding: ItemCurrencyBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {
@@ -35,6 +37,12 @@ class CurrencyAdapter(
             if (oldCode != selectedCode) {
                 notifyDataSetChanged()
             }
+        }
+
+        if (position > lastPosition) {
+            val anim = android.view.animation.AnimationUtils.loadAnimation(holder.binding.root.context, com.tb.example.expensebook.R.anim.item_animation_fall_down)
+            holder.binding.root.startAnimation(anim)
+            lastPosition = position
         }
     }
 

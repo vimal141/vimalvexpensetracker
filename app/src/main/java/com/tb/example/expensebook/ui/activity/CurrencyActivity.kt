@@ -69,15 +69,8 @@ class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
                     startActivity(intent)
                     finish()
                 } else {
-                    com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
-                        .setTitle(getString(R.string.change_currency))
-                        .setMessage(getString(R.string.change_currency_desc, selectedCurrency.name, selectedCurrency.symbol))
-                        .setPositiveButton(getString(R.string.done)) { _, _ ->
-                            Toast.makeText(this, getString(R.string.toast_currency_updated), Toast.LENGTH_SHORT).show()
-                            finish()
-                        }
-                        .setNegativeButton(getString(R.string.cancel), null)
-                        .show()
+                    Toast.makeText(this, getString(R.string.toast_currency_updated), Toast.LENGTH_SHORT).show()
+                    finish()
                 }
             }
         }

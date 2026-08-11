@@ -13,6 +13,8 @@ class LanguageAdapter(
     private val onItemClick: (LanguageModel) -> Unit
 ) : RecyclerView.Adapter<LanguageAdapter.LanguageViewHolder>() {
 
+    private var lastPosition = -1
+
     inner class LanguageViewHolder(val binding: ItemLanguageBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageViewHolder {
@@ -43,6 +45,12 @@ class LanguageAdapter(
                 notifyDataSetChanged()
             }
             onItemClick(item)
+        }
+
+        if (position > lastPosition) {
+            val anim = android.view.animation.AnimationUtils.loadAnimation(holder.binding.root.context, com.tb.example.expensebook.R.anim.item_animation_fall_down)
+            holder.binding.root.startAnimation(anim)
+            lastPosition = position
         }
     }
 
