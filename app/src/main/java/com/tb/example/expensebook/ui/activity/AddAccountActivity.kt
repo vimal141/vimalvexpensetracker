@@ -77,6 +77,7 @@ class AddAccountActivity : BaseActivity<ActivityAddAccountBinding>() {
                     }
 
                     PrefManager.currentAccountId = insertedId.toInt()
+                    PrefManager.isOnboardingDone = true
 
                     Toast.makeText(this@AddAccountActivity, getString(R.string.toast_account_created), Toast.LENGTH_SHORT).show()
 

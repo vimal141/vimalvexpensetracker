@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">हर खर्च मायने रखता है</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">डैशबोर्ड</string>
+    <string name="nav_history">इतिहास</string>
+    <string name="nav_reports">रिपोर्ट</string>
+    <string name="nav_settings">सेटिंग्स</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">कुल शेष</string>
+    <string name="recent_transactions">हाल के लेनदेन</string>
+    <string name="view_all">सभी देखें</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">लेनदेन जोड़ें</string>
+    <string name="edit_transaction">लेनदेन संपादित करें</string>
+    <string name="expense">खर्च</string>
+    <string name="income">आय</string>
+    <string name="amount">राशि</string>
+    <string name="category">श्रेणी</string>
+    <string name="date">दिनांक</string>
+    <string name="notes">नोट्स</string>
+    <string name="notes_hint">विवरण जोड़ें (वैकल्पिक)...</string>
+    <string name="save_transaction">लेनदेन सहेजें</string>
+    <string name="update_transaction">लेनदेन अद्यतन करें</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">भोजन</string>
+    <string name="cat_shopping">खरीदारी</string>
+
+    <!-- History -->
+    <string name="transaction_history">लेनदेन का इतिहास</string>
+    <string name="search_hint">लेनदेन खोजें...</string>
+    <string name="all">सभी</string>
+    <string name="no_results">कोई परिणाम नहीं मिला</string>
+
+    <!-- Reports -->
+    <string name="reports">रिपोर्ट</string>
+    <string name="daily">दैनिक</string>
+    <string name="weekly">साप्ताहिक</string>
+    <string name="monthly">मासिक</string>
+    <string name="yearly">वार्षिक</string>
+    <string name="category_breakdown">श्रेणी विवरण</string>
+    <string name="financial_analysis">आय और खर्च विश्लेषण</string>
+    <string name="total_volume">कुल</string>
+
+    <!-- Settings -->
+    <string name="settings">सेटिंग्स</string>
+    <string name="preferences">प्राथमिकताएं</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="currency">मुद्रा</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">अधिक</string>
+    <string name="categories">श्रेणियां</string>
+    <string name="export_data">डेटा निर्यात करें</string>
+    <string name="about_app">ऐप के बारे में</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="rate_us">हमें रेट करें</string>
+    <string name="share_app">ऐप साझा करें</string>
+    <string name="version">संस्करण 1.0.0</string>
+    <string name="premium">प्रीमियम</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">हर पैसे का हिसाब रखें</string>
+    <string name="onboarding_desc_1">अपने वित्त पर नियंत्रण रखने के लिए अपनी आय और खर्चों को आसानी से दर्ज करें।</string>
+    <string name="onboarding_title_2">स्मार्ट विश्लेषण</string>
+    <string name="onboarding_title_3">अपने लक्ष्यों तक पहुंचें</string>
+    <string name="onboarding_desc_3">स्मार्ट योजना बनाएं, बेहतर बचत करें और अपने वित्तीय सपनों को पूरा करें।</string>
+    <string name="get_started">शुरू करें</string>
+    <string name="next">आगे</string>
+    <string name="skip">छोड़ें</string>
+    <string name="expense_breakdown">खर्च का विवरण</string>
+    <string name="data">डेटा</string>
+    <string name="version_1_0_0">संस्करण 1.0.0</string>
+    <string name="theme">थीम</string>
+    <string name="system_default">सिस्टम डिफ़ॉल्ट</string>
+    <string name="manage_accounts">खाते प्रबंधित करें</string>
+    <string name="clear_all_data">सभी डेटा साफ़ करें</string>
+    <string name="no_transactions_yet">अभी तक कोई लेनदेन नहीं</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">लेनदेन जोड़ने के लिए + दबाएं</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">कृपया पहले एक खाता बनाएं</string>
+    <string name="toast_account_created">खाता सफलतापूर्वक बनाया गया!</string>
+    <string name="toast_switched_to">%1$s पर स्विच किया गया</string>
+    <string name="toast_transaction_deleted">लेनदेन हटा दिया गया</string>
+    <string name="toast_transaction_updated">लेनदेन अद्यतन किया गया!</string>
+    <string name="toast_transaction_saved">लेनदेन सहेजा गया!</string>
+    <string name="toast_currency_set">मुद्रा %1$s पर सेट की गई</string>
+    <string name="toast_currency_updated">मुद्रा अद्यतन की गई</string>
+    <string name="toast_all_data_cleared">सभी डेटा साफ़ कर दिया गया</string>
+    <string name="toast_error_browser">ब्राउज़र नहीं खोला जा सका</string>
+    <string name="toast_thanks_support">Expense Book का समर्थन करने के लिए धन्यवाद!</string>
+    <string name="toast_thanks_rating">हमें 5 सितारे देने के लिए धन्यवाद!</string>
+    <string name="toast_privacy_policy">गोपनीयता नीति पृष्ठ: www.google.com</string>
+    <string name="toast_thanks_support_emoji">समर्थन के लिए धन्यवाद! 😊</string>
+    <string name="toast_error_account_missing">त्रुटि: खाते का विवरण गायब है</string>
+    <string name="toast_pdf_exported">PDF विवरण सफलतापूर्वक निर्यात किया गया!</string>
+    <string name="toast_pdf_failed">PDF निर्यात करने में विफल</string>
+
+    <string name="text_total_expense_center">कुल खर्च</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">कार्ड धारक</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">खाता जोड़ें</string>
+    <string name="text_account_details">खाता विवरण</string>
+    <string name="text_create_account_desc">अपने खर्चों पर नज़र रखने के लिए एक खाता बनाएं।</string>
+    <string name="text_create_account">खाता बनाएं</string>
+    <string name="select_theme">थीम चुनें</string>
+    <string name="light">लाइट</string>
+    <string name="dark">डार्क</string>
+    <string name="agree_amp_continue"><![CDATA[सहमति दें और आगे बढ़ें]]></string>
+    <string name="strAccountExist">इस नाम का खाता पहले से मौजूद है</string>
+    <string name="strEmptyError">खाते का नाम खाली नहीं हो सकता</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">यहां आंकड़े देखने के लिए अपनी आय और खर्चों पर नज़र रखना शुरू करें।</string>
+    <string name="add_first_transaction">पहला लेनदेन जोड़ें</string>
+
+    <string name="warning_clear_all_data">⚠️ सभी डेटा साफ़ करें</string>
+    <string name="desc_clear_all_data">यह स्थायी रूप से सभी लेनदेन को हटा देगा। इसे पूर्ववत नहीं किया जा सकता!</string>
+    <string name="delete_all">सभी हटाएं</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">संस्करण 1.0.0\n\nएक प्रीमियम, ऑफ़लाइन खर्च ट्रैकर।\n\n2026 में ❤️ के साथ निर्मित।</string>
+    <string name="ok">ठीक है</string>
+    <string name="share_via">के माध्यम से साझा करें</string>
+    <string name="share_app_desc">Expense Tracker Pro के साथ अपने खर्चों को बुद्धिमानी से ट्रैक करें! इसे अभी डाउनलोड करें।</string>
+
+    <string name="delete_transactions">लेनदेन हटाएं</string>
+    <string name="delete_transactions_desc">क्या आप निश्चित रूप से %1$d लेनदेन हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
+    <string name="delete_transactions_title">%1$d लेनदेन हटाएं?</string>
+    <string name="delete_transaction_title">लेनदेन हटाएं?</string>
+    <string name="delete_single_transaction_desc">क्या आप निश्चित रूप से इस लेनदेन को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>
+    <string name="delete">हटाएं</string>
+    <string name="toast_transactions_deleted">%1$d लेनदेन हटा दिए गए</string>
+
+    <string name="delete_transaction">लेनदेन हटाएं</string>
+    <string name="delete_transaction_desc">क्या आप निश्चित रूप से इस लेनदेन को हटाना चाहते हैं?</string>
+    <string name="error_enter_amount">कृपया एक राशि दर्ज करें</string>
+    <string name="error_valid_amount">एक मान्य सकारात्मक राशि दर्ज करें</string>
+
+    <string name="default_pdf_name">Expense_Statement.pdf</string>
+    <string name="statement_of_account">खाता विवरण</string>
+    <string name="generated_securely">ExpenseBook द्वारा सुरक्षित रूप से तैयार किया गया</string>
+    <string name="page_number">पृष्ठ %1$d</string>
+    <string name="account_name_label">खाता नाम: %1$s</string>
+    <string name="account_number_label">खाता संख्या: %1$s</string>
+    <string name="period_label">अवधि: %1$s</string>
+    <string name="total_income">कुल आय</string>
+    <string name="closing_balance">अंतिम शेष</string>
+    <string name="sr_no">क्र.</string>
+    <string name="type">प्रकार</string>
+    
+    <string name="select_month">महीना चुनें</string>
+    <string name="select">चुनें</string>
+
+    <string name="privacy_policy_agreement">बॉक्स को चेक करके, आप हमारे ऐप की गोपनीयता नीति से सहमत होते हैं।</string>
+    <string name="all_time">सर्वकालिक</string>
+    <string name="this_month">इस महीने</string>
+    <string name="last_3_months">पिछले 3 महीने</string>
+    <string name="last_6_months">पिछले 6 महीने</string>
+    <string name="this_year">इस वर्ष</string>
+    <string name="selected_count">%1$d चयनित</string>
+    <string name="card_holder">कार्ड धारक</string>
+    <string name="toast_agree_privacy">कृपया गोपनीयता नीति से सहमत हों</string>
+
+    <string name="change_currency">मुद्रा बदलें</string>
+    <string name="change_currency_desc">क्या आप निश्चित रूप से अपनी मुद्रा को %1$s (%2$s) पर सेट करना चाहते हैं?</string>
+    <string name="done">हो गया</string>
+    <string name="change_account">खाता बदलें</string>
+    <string name="change_account_desc">क्या आप निश्चित रूप से खाता \'%1$s\' पर स्विच करना चाहते हैं?</string>
+    <string name="toast_account_changed">खाता %1$s पर बदल दिया गया</string>
+    <string name="toast_press_back_again_to_exit">बाहर निकलने के लिए फिर से वापस दबाएं</string>
+    <string name="toast_no_transactions_period">चयनित अवधि के लिए कोई लेनदेन नहीं मिला</string>
+    <string name="language">भाषा</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="change_language_desc">क्या आप निश्चित रूप से ऐप की भाषा %1$s पर सेट करना चाहते हैं?</string>
+    <string name="toast_language_updated">भाषा सफलतापूर्वक अद्यतन की गई!</string>
+</resources>

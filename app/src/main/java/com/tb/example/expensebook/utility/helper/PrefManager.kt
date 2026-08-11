@@ -16,6 +16,9 @@ object PrefManager {
     private const val KEY_CURRENCY_SYMBOL = "currency_symbol"
     private const val KEY_CURRENT_ACCOUNT_ID = "current_account_id"
     private const val KEY_PRIVACY_ACCEPT = "PRIVACY_ACCEPT"
+    private const val KEY_LANGUAGE = "language_code"
+    private const val KEY_LANGUAGE_SET = "is_language_set"
+    private const val KEY_CURRENCY_SET = "is_currency_set"
     private lateinit var prefs: SharedPreferences
 
     fun init(context: Context) {
@@ -30,6 +33,14 @@ object PrefManager {
         get() = prefs.getBoolean(KEY_ONBOARDING_DONE, false)
         set(value) = prefs.edit { putBoolean(KEY_ONBOARDING_DONE, value) }
 
+    var isLanguageSet: Boolean
+        get() = prefs.getBoolean(KEY_LANGUAGE_SET, false)
+        set(value) = prefs.edit { putBoolean(KEY_LANGUAGE_SET, value) }
+
+    var isCurrencySet: Boolean
+        get() = prefs.getBoolean(KEY_CURRENCY_SET, false)
+        set(value) = prefs.edit { putBoolean(KEY_CURRENCY_SET, value) }
+
     var currency: String
         get() = prefs.getString(KEY_CURRENCY, "INR") ?: "INR"
         set(value) = prefs.edit { putString(KEY_CURRENCY, value) }
@@ -37,6 +48,10 @@ object PrefManager {
     var currencySymbol: String
         get() = prefs.getString(KEY_CURRENCY_SYMBOL, "₹") ?: "₹"
         set(value) = prefs.edit { putString(KEY_CURRENCY_SYMBOL, value) }
+
+    var languageCode: String
+        get() = prefs.getString(KEY_LANGUAGE, "en") ?: "en"
+        set(value) = prefs.edit { putString(KEY_LANGUAGE, value) }
 
     var currentAccountId: Int
         get() = prefs.getInt(KEY_CURRENT_ACCOUNT_ID, -1)

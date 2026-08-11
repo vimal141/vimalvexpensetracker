@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">每笔支出都很重要</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">仪表板</string>
+    <string name="nav_history">历史记录</string>
+    <string name="nav_reports">报表</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">总余额</string>
+    <string name="recent_transactions">最近交易</string>
+    <string name="view_all">查看全部</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">添加交易</string>
+    <string name="edit_transaction">编辑交易</string>
+    <string name="expense">支出</string>
+    <string name="income">收入</string>
+    <string name="amount">金额</string>
+    <string name="category">类别</string>
+    <string name="date">日期</string>
+    <string name="notes">备注</string>
+    <string name="notes_hint">添加描述（选填）...</string>
+    <string name="save_transaction">保存交易</string>
+    <string name="update_transaction">更新交易</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">餐饮</string>
+    <string name="cat_shopping">购物</string>
+
+    <!-- History -->
+    <string name="transaction_history">交易历史记录</string>
+    <string name="search_hint">搜索交易...</string>
+    <string name="all">全部</string>
+    <string name="no_results">未找到结果</string>
+
+    <!-- Reports -->
+    <string name="reports">报表</string>
+    <string name="daily">每日</string>
+    <string name="weekly">每周</string>
+    <string name="monthly">每月</string>
+    <string name="yearly">每年</string>
+    <string name="category_breakdown">类别分析</string>
+    <string name="financial_analysis">收支分析</string>
+    <string name="total_volume">总计</string>
+
+    <!-- Settings -->
+    <string name="settings">设置</string>
+    <string name="preferences">偏好设置</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="currency">货币</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">更多</string>
+    <string name="categories">类别</string>
+    <string name="export_data">导出数据</string>
+    <string name="about_app">关于应用</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="rate_us">评价我们</string>
+    <string name="share_app">分享应用</string>
+    <string name="version">版本 1.0.0</string>
+    <string name="premium">高级版</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">记录每一笔开销</string>
+    <string name="onboarding_desc_1">轻松记录收支，掌控财务。</string>
+    <string name="onboarding_title_2">智能分析</string>
+    <string name="onboarding_desc_2">清晰的图表与报表。</string>
+    <string name="onboarding_title_3">实现目标</string>
+    <string name="onboarding_desc_3">理智规划，储蓄更多。</string>
+    <string name="get_started">开始使用</string>
+    <string name="next">下一步</string>
+    <string name="skip">跳过</string>
+    <string name="expense_breakdown">支出明细</string>
+    <string name="data">数据</string>
+    <string name="version_1_0_0">版本 1.0.0</string>
+    <string name="theme">主题</string>
+    <string name="system_default">系统默认</string>
+    <string name="manage_accounts">管理账户</string>
+    <string name="clear_all_data">清除所有数据</string>
+    <string name="no_transactions_yet">暂无交易记录</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">点击 + 添加第一笔交易</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">请先创建账户</string>
+    <string name="toast_account_created">账户创建成功！</string>
+    <string name="toast_switched_to">已切换至 %1$s</string>
+    <string name="toast_transaction_deleted">交易已删除</string>
+    <string name="toast_transaction_updated">交易已更新！</string>
+    <string name="toast_transaction_saved">交易已保存！</string>
+    <string name="toast_currency_set">货币已设置为 %1$s</string>
+    <string name="toast_currency_updated">货币已更新</string>
+    <string name="toast_all_data_cleared">所有数据已清除</string>
+    <string name="toast_error_browser">无法打开浏览器</string>
+    <string name="toast_thanks_support">感谢支持 Expense Book！</string>
+    <string name="toast_thanks_rating">感谢给予 5 星好评！</string>
+    <string name="toast_privacy_policy">隐私政策页面: www.google.com</string>
+    <string name="toast_thanks_support_emoji">感谢您的支持！ 😊</string>
+    <string name="toast_error_account_missing">错误：缺失账户详情</string>
+    <string name="toast_pdf_exported">PDF 账单导出成功！</string>
+    <string name="toast_pdf_failed">PDF 导出失败</string>
+
+    <string name="text_total_expense_center">总支出</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">持卡人</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">添加账户</string>
+    <string name="text_account_details">账户详情</string>
+    <string name="text_create_account_desc">创建账户以开始追踪支出。</string>
+    <string name="text_create_account">创建账户</string>
+    <string name="select_theme">选择主题</string>
+    <string name="light">浅色</string>
+    <string name="dark">深色</string>
+    <string name="agree_amp_continue"><![CDATA[同意并继续]]></string>
+    <string name="strAccountExist">已有同名账户存在</string>
+    <string name="strEmptyError">账户名称不能为空</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">开始追踪收支以查看分析。</string>
+    <string name="add_first_transaction">添加第一笔交易</string>
+
+    <string name="warning_clear_all_data">⚠️ 清除所有数据</string>
+    <string name="desc_clear_all_data">这将会永久删除所有交易！</string>
+    <string name="delete_all">全部删除</string>
+    <string name="cancel">取消</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">版本 1.0.0\n\n离线记账应用程序。</string>
+    <string name="ok">确定</string>
+    <string name="share_via">分享方式</string>
+    <string name="share_app_desc">使用 Expense Tracker Pro 智慧记账！</string>
+
+    <string name="delete_transactions">删除交易</string>
+    <string name="delete_transactions_desc">确定要删除 %1$d 笔交易吗？</string>
+    <string name="delete_transactions_title">删除 %1$d 笔交易？</string>
+    <string name="delete_transaction_title">删除交易？</string>
+    <string name="delete_single_transaction_desc">确定要删除这笔交易吗？</string>
+    <string name="delete">删除</string>
+    <string name="toast_transactions_deleted">已删除 %1$d 笔交易</string>
+
+    <string name="delete_transaction">删除交易</string>
+    <string name="delete_transaction_desc">确定要删除这笔交易吗？</string>
+    <string name="error_enter_amount">请输入金额</string>
+    <string name="error_valid_amount">请输入有效的正数金额</string>
+
+    <string name="default_pdf_name">对账单.pdf</string>
+    <string name="statement_of_account">账户对账单</string>
+    <string name="generated_securely">由 ExpenseBook 安全生成</string>
+    <string name="page_number">第 %1$d 页</string>
+    <string name="account_name_label">账户名称: %1$s</string>
+    <string name="account_number_label">账户号码: %1$s</string>
+    <string name="period_label">期间: %1$s</string>
+    <string name="total_income">总收入</string>
+    <string name="closing_balance">期末余额</string>
+    <string name="sr_no">序号</string>
+    <string name="type">类型</string>
+    
+    <string name="select_month">选择月份</string>
+    <string name="select">选择</string>
+
+    <string name="privacy_policy_agreement">勾选方框即表示您同意我们的隐私政策。</string>
+    <string name="all_time">所有时间</string>
+    <string name="this_month">本月</string>
+    <string name="last_3_months">最近 3 个月</string>
+    <string name="last_6_months">最近 6 个月</string>
+    <string name="this_year">今年</string>
+    <string name="selected_count">已选择 %1$d 项</string>
+    <string name="card_holder">持卡人</string>
+    <string name="toast_agree_privacy">请同意隐私政策</string>
+
+    <string name="change_currency">更改货币</string>
+    <string name="change_currency_desc">确定要将货币设置为 %1$s (%2$s) 吗？</string>
+    <string name="done">完成</string>
+    <string name="change_account">更改账户</string>
+    <string name="change_account_desc">确定要切换至账户 \'%1$s\' 吗？</string>
+    <string name="toast_account_changed">账户已更改为 %1$s</string>
+    <string name="toast_press_back_again_to_exit">再按一次返回键退出</string>
+    <string name="toast_no_transactions_period">未找到选定期间的交易</string>
+    <string name="language">语言</string>
+    <string name="change_language">更改语言</string>
+    <string name="change_language_desc">确定要将应用程序语言更改为 %1$s 吗？</string>
+    <string name="toast_language_updated">语言更新成功！</string>
+</resources>

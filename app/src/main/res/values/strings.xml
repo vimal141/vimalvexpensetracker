@@ -183,4 +183,8 @@
     <string name="toast_account_changed">Account changed to %1$s</string>
     <string name="toast_press_back_again_to_exit">Press back again to exit</string>
     <string name="toast_no_transactions_period">No transactions found for selected period</string>
+    <string name="language">Language</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_language_desc">Are you sure you want to set app language to %1$s?</string>
+    <string name="toast_language_updated">Language updated successfully!</string>
 </resources>

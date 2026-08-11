@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Chaque dépense compte</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Tableau de bord</string>
+    <string name="nav_history">Historique</string>
+    <string name="nav_reports">Rapports</string>
+    <string name="nav_settings">Paramètres</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Solde Total</string>
+    <string name="recent_transactions">Transactions Récentes</string>
+    <string name="view_all">Tout afficher</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Ajouter une transaction</string>
+    <string name="edit_transaction">Modifier la transaction</string>
+    <string name="expense">Dépense</string>
+    <string name="income">Revenu</string>
+    <string name="amount">Montant</string>
+    <string name="category">Catégorie</string>
+    <string name="date">Date</string>
+    <string name="notes">Notes</string>
+    <string name="notes_hint">Ajouter une description (facultatif)...</string>
+    <string name="save_transaction">Enregistrer la transaction</string>
+    <string name="update_transaction">Mettre à jour la transaction</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Nourriture</string>
+    <string name="cat_shopping">Achats</string>
+
+    <!-- History -->
+    <string name="transaction_history">Historique des transactions</string>
+    <string name="search_hint">Rechercher des transactions...</string>
+    <string name="all">Tous</string>
+    <string name="no_results">Aucun résultat trouvé</string>
+
+    <!-- Reports -->
+    <string name="reports">Rapports</string>
+    <string name="daily">Quotidien</string>
+    <string name="weekly">Hebdomadaire</string>
+    <string name="monthly">Mensuel</string>
+    <string name="yearly">Annuel</string>
+    <string name="category_breakdown">Répartition par catégorie</string>
+    <string name="financial_analysis">Analyse des revenus et dépenses</string>
+    <string name="total_volume">Total</string>
+
+    <!-- Settings -->
+    <string name="settings">Paramètres</string>
+    <string name="preferences">Préférences</string>
+    <string name="dark_mode">Mode sombre</string>
+    <string name="currency">Devise</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Plus</string>
+    <string name="categories">Catégories</string>
+    <string name="export_data">Exporter les données</string>
+    <string name="about_app">À propos de l\'application</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="rate_us">Évaluez-nous</string>
+    <string name="share_app">Partager l\'application</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="premium">Premium</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Suivez chaque centime</string>
+    <string name="onboarding_desc_1">Enregistrez facilement vos revenus et dépenses.</string>
+    <string name="onboarding_title_2">Analyses intelligentes</string>
+    <string name="onboarding_desc_2">De superbes graphiques et rapports.</string>
+    <string name="onboarding_title_3">Atteignez vos objectifs</string>
+    <string name="onboarding_desc_3">Planifiez mieux, économisez davantage.</string>
+    <string name="get_started">Commencer</string>
+    <string name="next">Suivant</string>
+    <string name="skip">Passer</string>
+    <string name="expense_breakdown">Répartition des dépenses</string>
+    <string name="data">Données</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="theme">Thème</string>
+    <string name="system_default">Par défaut du système</string>
+    <string name="manage_accounts">Gérer les comptes</string>
+    <string name="clear_all_data">Effacer toutes les données</string>
+    <string name="no_transactions_yet">Aucune transaction pour le moment</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Appuyez sur + pour ajouter une transaction</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Veuillez d\'abord créer un compte</string>
+    <string name="toast_account_created">Compte créé avec succès !</string>
+    <string name="toast_switched_to">Basculé vers %1$s</string>
+    <string name="toast_transaction_deleted">Transaction supprimée</string>
+    <string name="toast_transaction_updated">Transaction mise à jour !</string>
+    <string name="toast_transaction_saved">Transaction enregistrée !</string>
+    <string name="toast_currency_set">Devise définie sur %1$s</string>
+    <string name="toast_currency_updated">Devise mise à jour</string>
+    <string name="toast_all_data_cleared">Toutes les données ont été effacées</string>
+    <string name="toast_error_browser">Impossible d\'ouvrir le navigateur</string>
+    <string name="toast_thanks_support">Merci de soutenir Expense Book !</string>
+    <string name="toast_thanks_rating">Merci de nous avoir attribué 5 étoiles !</string>
+    <string name="toast_privacy_policy">Page de politique de confidentialité: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Merci pour votre soutien ! 😊</string>
+    <string name="toast_error_account_missing">Erreur : Détails du compte manquants</string>
+    <string name="toast_pdf_exported">Relevé PDF exporté avec succès !</string>
+    <string name="toast_pdf_failed">Échec de l\'exportation du PDF</string>
+
+    <string name="text_total_expense_center">Dépenses Totales</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">TITULAIRE DE LA CARTE</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Ajouter un compte</string>
+    <string name="text_account_details">Détails du compte</string>
+    <string name="text_create_account_desc">Créez un compte pour commencer à suivre vos dépenses.</string>
+    <string name="text_create_account">Créer un compte</string>
+    <string name="select_theme">Sélectionner le thème</string>
+    <string name="light">Clair</string>
+    <string name="dark">Sombre</string>
+    <string name="agree_amp_continue"><![CDATA[Accepter & Continuer]]></string>
+    <string name="strAccountExist">Un compte portant ce nom existe déjà</string>
+    <string name="strEmptyError">Le nom du compte ne peut pas être vide</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Commencez à suivre vos revenus et dépenses.</string>
+    <string name="add_first_transaction">Ajouter une première transaction</string>
+
+    <string name="warning_clear_all_data">⚠️ Effacer toutes les données</string>
+    <string name="desc_clear_all_data">Cela supprimera définitivement TOUTES les transactions.</string>
+    <string name="delete_all">Tout supprimer</string>
+    <string name="cancel">Annuler</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Version 1.0.0\n\nUn suivi de dépenses hors ligne premium.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Partager via</string>
+    <string name="share_app_desc">Suivez vos dépenses intelligemment avec Expense Tracker Pro !</string>
+
+    <string name="delete_transactions">Supprimer les transactions</string>
+    <string name="delete_transactions_desc">Voulez-vous vraiment supprimer %1$d transactions ?</string>
+    <string name="delete_transactions_title">Supprimer %1$d transactions ?</string>
+    <string name="delete_transaction_title">Supprimer la transaction ?</string>
+    <string name="delete_single_transaction_desc">Voulez-vous vraiment supprimer cette transaction ?</string>
+    <string name="delete">Supprimer</string>
+    <string name="toast_transactions_deleted">%1$d transactions supprimées</string>
+
+    <string name="delete_transaction">Supprimer la transaction</string>
+    <string name="delete_transaction_desc">Voulez-vous vraiment supprimer cette transaction ?</string>
+    <string name="error_enter_amount">Veuillez saisir un montant</string>
+    <string name="error_valid_amount">Saisissez un montant positif valide</string>
+
+    <string name="default_pdf_name">Releve_de_Compte.pdf</string>
+    <string name="statement_of_account">RELEVÉ DE COMPTE</string>
+    <string name="generated_securely">Généré en toute sécurité par ExpenseBook</string>
+    <string name="page_number">Page %1$d</string>
+    <string name="account_name_label">Nom du compte : %1$s</string>
+    <string name="account_number_label">Numéro de compte : %1$s</string>
+    <string name="period_label">Période : %1$s</string>
+    <string name="total_income">Revenu total</string>
+    <string name="closing_balance">Solde de clôture</string>
+    <string name="sr_no">N°</string>
+    <string name="type">Type</string>
+    
+    <string name="select_month">Sélectionner le mois</string>
+    <string name="select">Sélectionner</string>
+
+    <string name="privacy_policy_agreement">En cochant la case, vous acceptez notre politique de confidentialité.</string>
+    <string name="all_time">Tout le temps</string>
+    <string name="this_month">Ce mois-ci</string>
+    <string name="last_3_months">3 derniers mois</string>
+    <string name="last_6_months">6 derniers mois</string>
+    <string name="this_year">Cette année</string>
+    <string name="selected_count">%1$d sélectionné(s)</string>
+    <string name="card_holder">TITULAIRE DE LA CARTE</string>
+    <string name="toast_agree_privacy">Veuillez accepter la politique de confidentialité</string>
+
+    <string name="change_currency">Changer de devise</string>
+    <string name="change_currency_desc">Voulez-vous vraiment définir votre devise sur %1$s (%2$s) ?</string>
+    <string name="done">Terminé</string>
+    <string name="change_account">Changer de compte</string>
+    <string name="change_account_desc">Voulez-vous vraiment passer au compte \'%1$s\' ?</string>
+    <string name="toast_account_changed">Compte changé pour %1$s</string>
+    <string name="toast_press_back_again_to_exit">Appuyez à nouveau sur retour pour quitter</string>
+    <string name="toast_no_transactions_period">Aucune transaction trouvée pour la période sélectionnée</string>
+    <string name="language">Langue</string>
+    <string name="change_language">Changer de langue</string>
+    <string name="change_language_desc">Voulez-vous vraiment changer la langue en %1$s ?</string>
+    <string name="toast_language_updated">Langue mise à jour avec succès !</string>
+</resources>

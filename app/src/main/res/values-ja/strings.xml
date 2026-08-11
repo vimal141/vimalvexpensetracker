@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">すべての支出に価値を</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">ダッシュボード</string>
+    <string name="nav_history">履歴</string>
+    <string name="nav_reports">レポート</string>
+    <string name="nav_settings">設定</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">総残高</string>
+    <string name="recent_transactions"> me最近の取引</string>
+    <string name="view_all">すべて見る</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">取引を追加</string>
+    <string name="edit_transaction">取引を編集</string>
+    <string name="expense">支出</string>
+    <string name="income">収入</string>
+    <string name="amount">金額</string>
+    <string name="category">カテゴリ</string>
+    <string name="date">日付</string>
+    <string name="notes">メモ</string>
+    <string name="notes_hint">説明を追加（任意）...</string>
+    <string name="save_transaction">取引を保存</string>
+    <string name="update_transaction">取引を更新</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">食費</string>
+    <string name="cat_shopping">買い物</string>
+
+    <!-- History -->
+    <string name="transaction_history">取引履歴</string>
+    <string name="search_hint">取引を検索...</string>
+    <string name="all">すべて</string>
+    <string name="no_results">結果が見つかりません</string>
+
+    <!-- Reports -->
+    <string name="reports">レポート</string>
+    <string name="daily">日別</string>
+    <string name="weekly">週別</string>
+    <string name="monthly">月別</string>
+    <string name="yearly">年別</string>
+    <string name="category_breakdown">カテゴリ内訳</string>
+    <string name="financial_analysis">収支分析</string>
+    <string name="total_volume">合計</string>
+
+    <!-- Settings -->
+    <string name="settings">設定</string>
+    <string name="preferences">環境設定</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="currency">通貨</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">その他</string>
+    <string name="categories">カテゴリ</string>
+    <string name="export_data">データをエクスポート</string>
+    <string name="about_app">アプリについて</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="rate_us">アプリを評価</string>
+    <string name="share_app">アプリを共有</string>
+    <string name="version">バージョン 1.0.0</string>
+    <string name="premium">プレミアム</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">すべての支出を記録</string>
+    <string name="onboarding_desc_1">収入と支出を簡単に記録して管理。</string>
+    <string name="onboarding_title_2">スマートな分析</string>
+    <string name="onboarding_desc_2">分かりやすいチャートとレポート。</string>
+    <string name="onboarding_title_3">目標の達成</string>
+    <string name="onboarding_desc_3">賢く計画を立てて貯蓄。</string>
+    <string name="get_started">始める</string>
+    <string name="next">次へ</string>
+    <string name="skip">スキップ</string>
+    <string name="expense_breakdown">支出内訳</string>
+    <string name="data">データ</string>
+    <string name="version_1_0_0">バージョン 1.0.0</string>
+    <string name="theme">テーマ</string>
+    <string name="system_default">システムデフォルト</string>
+    <string name="manage_accounts">口座管理</string>
+    <string name="clear_all_data">すべてのデータを消去</string>
+    <string name="no_transactions_yet">まだ取引がありません</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">+ をタップして最初の取引を追加</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">最初に口座を作成してください</string>
+    <string name="toast_account_created">口座が作成されました！</string>
+    <string name="toast_switched_to">%1$s に切り替えました</string>
+    <string name="toast_transaction_deleted">取引を削除しました</string>
+    <string name="toast_transaction_updated">取引を更新しました！</string>
+    <string name="toast_transaction_saved">取引を保存しました！</string>
+    <string name="toast_currency_set">通貨を %1$s に設定しました</string>
+    <string name="toast_currency_updated">通貨を更新しました</string>
+    <string name="toast_all_data_cleared">すべてのデータを消去しました</string>
+    <string name="toast_error_browser">ブラウザを開けませんでした</string>
+    <string name="toast_thanks_support">Expense Bookのご利用ありがとうございます！</string>
+    <string name="toast_thanks_rating">高評価ありがとうございます！</string>
+    <string name="toast_privacy_policy">プライバシーポリシーページ: www.google.com</string>
+    <string name="toast_thanks_support_emoji">応援ありがとうございます！ 😊</string>
+    <string name="toast_error_account_missing">エラー: 口座詳細が見つかりません</string>
+    <string name="toast_pdf_exported">PDF明細書のエクスポートに成功しました！</string>
+    <string name="toast_pdf_failed">PDFのエクスポートに失敗しました</string>
+
+    <string name="text_total_expense_center">総支出</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">カード名義人</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">口座を追加</string>
+    <string name="text_account_details">口座詳細</string>
+    <string name="text_create_account_desc">口座を作成して支出管理を始めましょう。</string>
+    <string name="text_create_account">口座を作成</string>
+    <string name="select_theme">テーマを選択</string>
+    <string name="light">ライト</string>
+    <string name="dark">ダーク</string>
+    <string name="agree_amp_continue"><![CDATA[同意して続行]]></string>
+    <string name="strAccountExist">同じ名前の口座が既に存在します</string>
+    <string name="strEmptyError">口座名を入力してください</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">収支の記録を開始してください。</string>
+    <string name="add_first_transaction">最初の取引を追加</string>
+
+    <string name="warning_clear_all_data">⚠️ すべてのデータを消去</string>
+    <string name="desc_clear_all_data">すべての取引が永久に削除されます！</string>
+    <string name="delete_all">すべて削除</string>
+    <string name="cancel">キャンセル</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">バージョン 1.0.0\n\nオフライン家計簿アプリ。</string>
+    <string name="ok">OK</string>
+    <string name="share_via">共有方法</string>
+    <string name="share_app_desc">Expense Tracker Proでスマートに家計管理！</string>
+
+    <string name="delete_transactions">取引を削除</string>
+    <string name="delete_transactions_desc">%1$d 件の取引を削除してもよろしいですか？</string>
+    <string name="delete_transactions_title">%1$d 件の取引を削除？</string>
+    <string name="delete_transaction_title">取引を削除？</string>
+    <string name="delete_single_transaction_desc">この取引を削除してもよろしいですか？</string>
+    <string name="delete">削除</string>
+    <string name="toast_transactions_deleted">%1$d 件の取引を削除しました</string>
+
+    <string name="delete_transaction">取引を削除</string>
+    <string name="delete_transaction_desc">この取引を削除してもよろしいですか？</string>
+    <string name="error_enter_amount">金額を入力してください</string>
+    <string name="error_valid_amount">正の金額を入力してください</string>
+
+    <string name="default_pdf_name">取引明細書.pdf</string>
+    <string name="statement_of_account">取引明細書</string>
+    <string name="generated_securely">ExpenseBookにより安全に生成されました</string>
+    <string name="page_number">%1$d ページ</string>
+    <string name="account_name_label">口座名: %1$s</string>
+    <string name="account_number_label">口座番号: %1$s</string>
+    <string name="period_label">期間: %1$s</string>
+    <string name="total_income">総収入</string>
+    <string name="closing_balance">最終残高</string>
+    <string name="sr_no">No.</string>
+    <string name="type">種別</string>
+    
+    <string name="select_month">月を選択</string>
+    <string name="select">選択</string>
+
+    <string name="privacy_policy_agreement">チェックボックスをオンにすることで、プライバシーポリシーに同意したことになります。</string>
+    <string name="all_time">全期間</string>
+    <string name="this_month">今月</string>
+    <string name="last_3_months">過去3ヶ月</string>
+    <string name="last_6_months">過去6ヶ月</string>
+    <string name="this_year">今年</string>
+    <string name="selected_count">%1$d 件選択中</string>
+    <string name="card_holder">カード名義人</string>
+    <string name="toast_agree_privacy">プライバシーポリシーに同意してください</string>
+
+    <string name="change_currency">通貨を変更</string>
+    <string name="change_currency_desc">通貨を %1$s (%2$s) に変更してもよろしいですか？</string>
+    <string name="done">完了</string>
+    <string name="change_account">口座を変更</string>
+    <string name="change_account_desc">\'%1$s\' 口座に切り替えてもよろしいですか？</string>
+    <string name="toast_account_changed">口座を %1$s に変更しました</string>
+    <string name="toast_press_back_again_to_exit">終了するにはもう一度戻るを押してください</string>
+    <string name="toast_no_transactions_period">選択した期間の取引が見つかりません</string>
+    <string name="language">言語</string>
+    <string name="change_language">言語を変更</string>
+    <string name="change_language_desc">アプリの言語を %1$s に変更してもよろしいですか？</string>
+    <string name="toast_language_updated">言語が正常に更新されました！</string>
+</resources>

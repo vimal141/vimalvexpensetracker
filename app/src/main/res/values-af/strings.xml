@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Elke uitgawe tel</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_history">Geskiedenis</string>
+    <string name="nav_reports">Verslae</string>
+    <string name="nav_settings">Instellings</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Totale Balans</string>
+    <string name="recent_transactions">Onlangse Transaksies</string>
+    <string name="view_all">Sien alles</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Voeg Transaksie By</string>
+    <string name="edit_transaction">Wysig Transaksie</string>
+    <string name="expense">Uitgawe</string>
+    <string name="income">Inkomste</string>
+    <string name="amount">Bedrag</string>
+    <string name="category">Kategorie</string>
+    <string name="date">Datum</string>
+    <string name="notes">Notas</string>
+    <string name="notes_hint">Voeg beskrywing by (opsioneel)...</string>
+    <string name="save_transaction">Stoor Transaksie</string>
+    <string name="update_transaction">Opdateer Transaksie</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Kos</string>
+    <string name="cat_shopping">Inkopies</string>
+
+    <!-- History -->
+    <string name="transaction_history">Transaksie Geskiedenis</string>
+    <string name="search_hint">Soek transaksies...</string>
+    <string name="all">Alles</string>
+    <string name="no_results">Geen resultate gevind nie</string>
+
+    <!-- Reports -->
+    <string name="reports">Verslae</string>
+    <string name="daily">Daagliks</string>
+    <string name="weekly">Weekliks</string>
+    <string name="monthly">Maandeliks</string>
+    <string name="yearly">Jaarliks</string>
+    <string name="category_breakdown">Kategorie Verdeling</string>
+    <string name="financial_analysis">Inkomste &amp; Uitgawe Analise</string>
+    <string name="total_volume">Totaal</string>
+
+    <!-- Settings -->
+    <string name="settings">Instellings</string>
+    <string name="preferences">Voorkeure</string>
+    <string name="dark_mode">Donker Modus</string>
+    <string name="currency">Geldeenheid</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Meer</string>
+    <string name="categories">Kategorieë</string>
+    <string name="export_data">Voer Data Uit</string>
+    <string name="about_app">Oor die App</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="rate_us">Beoordeel Ons</string>
+    <string name="share_app">Deel App</string>
+    <string name="version">Weergawe 1.0.0</string>
+    <string name="premium">Premium</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Hou Elke Sent Dop</string>
+    <string name="onboarding_desc_1">Teken maklik jou inkomste en uitgawes aan.</string>
+    <string name="onboarding_title_2">Slim Analise</string>
+    <string name="onboarding_desc_2">Mooi grafieke en verslae.</string>
+    <string name="onboarding_title_3">Bereik Jou Doelwitte</string>
+    <string name="onboarding_desc_3">Beplan slimmer, spaar meer.</string>
+    <string name="get_started">Begin</string>
+    <string name="next">Volgende</string>
+    <string name="skip">Slaan oor</string>
+    <string name="expense_breakdown">Uitgawe Verdeling</string>
+    <string name="data">Data</string>
+    <string name="version_1_0_0">Weergawe 1.0.0</string>
+    <string name="theme">Tema</string>
+    <string name="system_default">Stelsel Verstek</string>
+    <string name="manage_accounts">Bestuur Rekeninge</string>
+    <string name="clear_all_data">Vee Alle Data Skoon</string>
+    <string name="no_transactions_yet">Nog geen transaksies nie</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Tik + om \'n transaksie by te voeg</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Skep asseblief eers \'n rekening</string>
+    <string name="toast_account_created">Rekening suksesvol geskep!</string>
+    <string name="toast_switched_to">Oorgeskakel na %1$s</string>
+    <string name="toast_transaction_deleted">Transaksie geskrap</string>
+    <string name="toast_transaction_updated">Transaksie opgedateer!</string>
+    <string name="toast_transaction_saved">Transaksie gestoor!</string>
+    <string name="toast_currency_set">Geldeenheid gestel op %1$s</string>
+    <string name="toast_currency_updated">Geldeenheid opgedateer</string>
+    <string name="toast_all_data_cleared">Alle data is skoongemaak</string>
+    <string name="toast_error_browser">Kon nie blaaier oopmaak nie</string>
+    <string name="toast_thanks_support">Dankie dat jy Expense Book ondersteun!</string>
+    <string name="toast_thanks_rating">Dankie dat jy ons 5 sterre gegee het!</string>
+    <string name="toast_privacy_policy">Privaatheidsbeleid bladsy: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Dankie vir die ondersteuning! 😊</string>
+    <string name="toast_error_account_missing">Fout: Rekeningbesonderhede ontbreek</string>
+    <string name="toast_pdf_exported">PDF Staat suksesvol uitgevoer!</string>
+    <string name="toast_pdf_failed">Kon nie PDF uitvoer nie</string>
+
+    <string name="text_total_expense_center">Totale Uitgawe</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">KAARTHOUER</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Voeg Rekening By</string>
+    <string name="text_account_details">Rekening Besonderhede</string>
+    <string name="text_create_account_desc">Skep \'n rekening om jou uitgawes te begin nagaan.</string>
+    <string name="text_create_account">Skep Rekening</string>
+    <string name="select_theme">Kies Tema</string>
+    <string name="light">Lig</string>
+    <string name="dark">Donker</string>
+    <string name="agree_amp_continue"><![CDATA[Stem In & Gaan Voort]]></string>
+    <string name="strAccountExist">\'n Rekening met hierdie naam bestaan reeds</string>
+    <string name="strEmptyError">Rekeningnaam mag nie leeg wees nie</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Begin jou inkomste en uitgawes nagaan.</string>
+    <string name="add_first_transaction">Voeg Eerste Transaksie By</string>
+
+    <string name="warning_clear_all_data">⚠️ Vee Alle Data Skoon</string>
+    <string name="desc_clear_all_data">Dit sal ALLE transaksies permanent skrap!</string>
+    <string name="delete_all">Skrap Alles</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Weergawe 1.0.0\n\n\'n Gehalte uitgawebestuurder sonder internet.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Deel via</string>
+    <string name="share_app_desc">Bestuur jou geld met Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">Skrap Transaksies</string>
+    <string name="delete_transactions_desc">Is jy seker jy wil %1$d transaksies skrap?</string>
+    <string name="delete_transactions_title">Skrap %1$d Transaksies?</string>
+    <string name="delete_transaction_title">Skrap Transaksie?</string>
+    <string name="delete_single_transaction_desc">Is jy seker jy wil hierdie transaksie skrap?</string>
+    <string name="delete">Skrap</string>
+    <string name="toast_transactions_deleted">%1$d transaksies geskrap</string>
+
+    <string name="delete_transaction">Skrap Transaksie</string>
+    <string name="delete_transaction_desc">Is jy seker jy wil hierdie transaksie skrap?</string>
+    <string name="error_enter_amount">Voer asseblief \'n bedrag in</string>
+    <string name="error_valid_amount">Voer \'n geldige positiewe bedrag in</string>
+
+    <string name="default_pdf_name">Rekening_Staat.pdf</string>
+    <string name="statement_of_account">REKENING STAAT</string>
+    <string name="generated_securely">Veilig gegenereer deur ExpenseBook</string>
+    <string name="page_number">Bladsy %1$d</string>
+    <string name="account_name_label">Rekeningnaam: %1$s</string>
+    <string name="account_number_label">Rekeningnommer: %1$s</string>
+    <string name="period_label">Tydperk: %1$s</string>
+    <string name="total_income">Totale Inkomste</string>
+    <string name="closing_balance">Eindbalans</string>
+    <string name="sr_no">Nr.</string>
+    <string name="type">Tipe</string>
+    
+    <string name="select_month">Kies Maand</string>
+    <string name="select">Kies</string>
+
+    <string name="privacy_policy_agreement">Deur die boksie te merk, stem jy in tot ons privaatheidsbeleid.</string>
+    <string name="all_time">Alle Tyd</string>
+    <string name="this_month">Hierdie Maand</string>
+    <string name="last_3_months">Laaste 3 Maande</string>
+    <string name="last_6_months">Laaste 6 Maande</string>
+    <string name="this_year">Hierdie Jaar</string>
+    <string name="selected_count">%1$d Gekies</string>
+    <string name="card_holder">KAARTHOUER</string>
+    <string name="toast_agree_privacy">Aanvaar asseblief die Privaatheidsbeleid</string>
+
+    <string name="change_currency">Verander Geldeenheid</string>
+    <string name="change_currency_desc">Is jy seker jy wil jou geldeenheid stel op %1$s (%2$s)?</string>
+    <string name="done">Klaar</string>
+    <string name="change_account">Verander Rekening</string>
+    <string name="change_account_desc">Is jy seker jy wil oorskakel na rekening \'%1$s\'?</string>
+    <string name="toast_account_changed">Rekening verander na %1$s</string>
+    <string name="toast_press_back_again_to_exit">Druk weer terug om te verlaat</string>
+    <string name="toast_no_transactions_period">Geen transaksies vir die gekose tydperk gevind nie</string>
+    <string name="language">Taal</string>
+    <string name="change_language">Verander Taal</string>
+    <string name="change_language_desc">Is jy seker jy wil die app-taal verander na %1$s?</string>
+    <string name="toast_language_updated">Taal suksesvol opgedateer!</string>
+</resources>

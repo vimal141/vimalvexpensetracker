@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Кожна витрата має значення</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Дашборд</string>
+    <string name="nav_history">Історія</string>
+    <string name="nav_reports">Звіти</string>
+    <string name="nav_settings">Налаштування</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Загальний баланс</string>
+    <string name="recent_transactions">Останні транзакції</string>
+    <string name="view_all">Переглянути все</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Додати транзакцію</string>
+    <string name="edit_transaction">Редагувати транзакцію</string>
+    <string name="expense">Витрата</string>
+    <string name="income">Дохід</string>
+    <string name="amount">Сума</string>
+    <string name="category">Категорія</string>
+    <string name="date">Дата</string>
+    <string name="notes">Нотатки</string>
+    <string name="notes_hint">Додати опис (необов\'язково)...</string>
+    <string name="save_transaction">Зберегти транзакцію</string>
+    <string name="update_transaction">Оновити транзакцію</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Їжа</string>
+    <string name="cat_shopping">Покупки</string>
+
+    <!-- History -->
+    <string name="transaction_history">Історія транзакцій</string>
+    <string name="search_hint">Пошук транзакцій...</string>
+    <string name="all">Усі</string>
+    <string name="no_results">Результатів не знайдено</string>
+
+    <!-- Reports -->
+    <string name="reports">Звіти</string>
+    <string name="daily">За день</string>
+    <string name="weekly">За тиждень</string>
+    <string name="monthly">За місяць</string>
+    <string name="yearly">За рік</string>
+    <string name="category_breakdown">Розподіл за категоріями</string>
+    <string name="financial_analysis">Аналіз доходів і витрат</string>
+    <string name="total_volume">Усього</string>
+
+    <!-- Settings -->
+    <string name="settings">Налаштування</string>
+    <string name="preferences">Параметри</string>
+    <string name="dark_mode">Темний режим</string>
+    <string name="currency">Валюта</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Більше</string>
+    <string name="categories">Категорії</string>
+    <string name="export_data">Експорт даних</string>
+    <string name="about_app">Про додаток</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
+    <string name="rate_us">Оцінити нас</string>
+    <string name="share_app">Поділитися додатком</string>
+    <string name="version">Версія 1.0.0</string>
+    <string name="premium">Преміум</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Контролюйте кожну копійку</string>
+    <string name="onboarding_desc_1">Легко записуйте свої доходи та витрати.</string>
+    <string name="onboarding_title_2">Розумна аналітика</string>
+    <string name="onboarding_desc_2">Зрозумілі графіки та звіти.</string>
+    <string name="onboarding_title_3">Досягайте цілей</string>
+    <string name="onboarding_desc_3">Плануйте розумніше, заощаджуйте більше.</string>
+    <string name="get_started">Розпочати</string>
+    <string name="next">Далі</string>
+    <string name="skip">Пропустити</string>
+    <string name="expense_breakdown">Розподіл витрат</string>
+    <string name="data">Дані</string>
+    <string name="version_1_0_0">Версія 1.0.0</string>
+    <string name="theme">Тема</string>
+    <string name="system_default">Системна</string>
+    <string name="manage_accounts">Управління рахунками</string>
+    <string name="clear_all_data">Очистити всі дані</string>
+    <string name="no_transactions_yet">Транзакцій поки немає</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Натисніть +, щоб додати транзакцію</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Спочатку створіть рахунок</string>
+    <string name="toast_account_created">Рахунок успішно створено!</string>
+    <string name="toast_switched_to">Переключено на %1$s</string>
+    <string name="toast_transaction_deleted">Транзакцію видалено</string>
+    <string name="toast_transaction_updated">Транзакцію оновлено!</string>
+    <string name="toast_transaction_saved">Транзакцію збережено!</string>
+    <string name="toast_currency_set">Валюту встановлено на %1$s</string>
+    <string name="toast_currency_updated">Валюту оновлено</string>
+    <string name="toast_all_data_cleared">Усі дані очищено</string>
+    <string name="toast_error_browser">Не вдалося відкрити браузер</string>
+    <string name="toast_thanks_support">Дякуємо за підтримку Expense Book!</string>
+    <string name="toast_thanks_rating">Дякуємо за оцінку 5 зірок!</string>
+    <string name="toast_privacy_policy">Сторінка політики конфіденційності: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Дякуємо за підтримку! 😊</string>
+    <string name="toast_error_account_missing">Помилка: Відсутні дані рахунку</string>
+    <string name="toast_pdf_exported">Виписку PDF успішно експортовано!</string>
+    <string name="toast_pdf_failed">Не вдалося експортувати PDF</string>
+
+    <string name="text_total_expense_center">Загальні витрати</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">ВЛАСНИК КАРТКИ</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Додати рахунок</string>
+    <string name="text_account_details">Деталі рахунку</string>
+    <string name="text_create_account_desc">Створіть рахунок, щоб почати відстежувати витрати.</string>
+    <string name="text_create_account">Створити рахунок</string>
+    <string name="select_theme">Оберіть тему</string>
+    <string name="light">Світла</string>
+    <string name="dark">Темна</string>
+    <string name="agree_amp_continue"><![CDATA[Прийняти та продовжити]]></string>
+    <string name="strAccountExist">Рахунок з такою назвою вже існує</string>
+    <string name="strEmptyError">Назва рахунку не може бути порожньою</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Почніть відстежувати свої доходи та витрати.</string>
+    <string name="add_first_transaction">Додати першу транзакцію</string>
+
+    <string name="warning_clear_all_data">⚠️ Очистити всі дані</string>
+    <string name="desc_clear_all_data">Це назавжди видалить УСІ транзакції!</string>
+    <string name="delete_all">Видалити все</string>
+    <string name="cancel">Скасувати</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Версія 1.0.0\n\nПреміум менеджера витрат без інтернету.</string>
+    <string name="ok">ОК</string>
+    <string name="share_via">Поділитися через</string>
+    <string name="share_app_desc">Керуйте витратами з Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">Видалити транзакції</string>
+    <string name="delete_transactions_desc">Ви дійсно бажаєте видалити %1$d транзакцій?</string>
+    <string name="delete_transactions_title">Видалити %1$d транзакцій?</string>
+    <string name="delete_transaction_title">Видалити транзакцію?</string>
+    <string name="delete_single_transaction_desc">Ви дійсно бажаєте видалити цю транзакцію?</string>
+    <string name="delete">Видалити</string>
+    <string name="toast_transactions_deleted">%1$d транзакцій видалено</string>
+
+    <string name="delete_transaction">Видалити транзакцію</string>
+    <string name="delete_transaction_desc">Ви дійсно бажаєте видалити цю транзакцію?</string>
+    <string name="error_enter_amount">Будь ласка, введіть суму</string>
+    <string name="error_valid_amount">Введіть коректну позитивну суму</string>
+
+    <string name="default_pdf_name">Виписка_по_рахунку.pdf</string>
+    <string name="statement_of_account">ВИПИСКА ПО РАХУНКУ</string>
+    <string name="generated_securely">Безпечно створено в ExpenseBook</string>
+    <string name="page_number">Сторінка %1$d</string>
+    <string name="account_name_label">Назва рахунку: %1$s</string>
+    <string name="account_number_label">Номер рахунку: %1$s</string>
+    <string name="period_label">Період: %1$s</string>
+    <string name="total_income">Загальний дохід</string>
+    <string name="closing_balance">Кінцевий баланс</string>
+    <string name="sr_no">№</string>
+    <string name="type">Тип</string>
+    
+    <string name="select_month">Оберіть місяць</string>
+    <string name="select">Обрати</string>
+
+    <string name="privacy_policy_agreement">Відмічаючи галочку, ви погоджуєтеся з нашою політикою конфіденційності.</string>
+    <string name="all_time">За весь час</string>
+    <string name="this_month">Цього місяця</string>
+    <string name="last_3_months">За 3 місяці</string>
+    <string name="last_6_months">За 6 місяців</string>
+    <string name="this_year">Цього року</string>
+    <string name="selected_count">Обрано: %1$d</string>
+    <string name="card_holder">ВЛАСНИК КАРТКИ</string>
+    <string name="toast_agree_privacy">Будь ласка, прийміть політику конфіденційності</string>
+
+    <string name="change_currency">Змінити валюту</string>
+    <string name="change_currency_desc">Ви дійсно бажаєте встановити валюту на %1$s (%2$s)?</string>
+    <string name="done">Готово</string>
+    <string name="change_account">Змінити рахунок</string>
+    <string name="change_account_desc">Ви дійсно бажаєте перейти на рахунок \'%1$s\'?</string>
+    <string name="toast_account_changed">Рахунок змінено на %1$s</string>
+    <string name="toast_press_back_again_to_exit">Натисніть ще раз Назад для виходу</string>
+    <string name="toast_no_transactions_period">Транзакцій за обраний період не знайдено</string>
+    <string name="language">Мова</string>
+    <string name="change_language">Змінити мову</string>
+    <string name="change_language_desc">Ви дійсно бажаєте змінити мову додатка на %1$s?</string>
+    <string name="toast_language_updated">Мову успішно оновлено!</string>
+</resources>

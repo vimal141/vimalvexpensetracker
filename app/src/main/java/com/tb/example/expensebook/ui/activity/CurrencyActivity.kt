@@ -26,10 +26,23 @@ class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
     }
 
     override fun onBackPressedAction() {
-        finish()
+        val isFirstLaunch = intent.getBooleanExtra("isFirstLaunch", false)
+        if (isFirstLaunch) {
+            PrefManager.isCurrencySet = true
+            val intent = android.content.Intent(this, AddAccountActivity::class.java).apply {
+                putExtra("isFirstLaunch", true)
+            }
+            startActivity(intent)
+            finish()
+        } else {
+            finish()
+        }
     }
 
     private fun setupUI() {
+        val isFirstLaunch = intent.getBooleanExtra("isFirstLaunch", false)
+        binding.btnBack.visibility = if (isFirstLaunch) View.GONE else View.VISIBLE
+
         val symbols = arrayOf("₹", "$", "€", "£", "¥", "A$", "C$", "₣", "₩")
         val codes = arrayOf("INR", "USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "KRW")
         val names = arrayOf("Indian Rupee", "US Dollar", "Euro", "British Pound", "Japanese Yen", "Australian Dollar", "Canadian Dollar", "Swiss Franc", "South Korean Won")
@@ -42,22 +55,30 @@ class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
         val adapter = CurrencyAdapter(currencies, currentSelectedCode)
         binding.rvCurrency.adapter = adapter
 
-        findViewById<
-                View>(R.id.btn_done).setOnClickListener {
+        binding.btnDone.setOnClickListener {
             val selectedCurrency = currencies.find { it.code == adapter.selectedCode }
             if (selectedCurrency != null) {
-                com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
-                    .setTitle(getString(R.string.change_currency))
-                    .setMessage(getString(R.string.change_currency_desc, selectedCurrency.name, selectedCurrency.symbol))
-                    .setPositiveButton(getString(R.string.done)) { _, _ ->
-                        PrefManager.currencySymbol = selectedCurrency.symbol
-                        PrefManager.currency = selectedCurrency.code
-                        
-                        Toast.makeText(this, getString(R.string.toast_currency_updated), Toast.LENGTH_SHORT).show()
-                        finish()
+                PrefManager.currencySymbol = selectedCurrency.symbol
+                PrefManager.currency = selectedCurrency.code
+
+                if (isFirstLaunch) {
+                    PrefManager.isCurrencySet = true
+                    val intent = android.content.Intent(this, AddAccountActivity::class.java).apply {
+                        putExtra("isFirstLaunch", true)
                     }
-                    .setNegativeButton(getString(R.string.cancel), null)
-                    .show()
+                    startActivity(intent)
+                    finish()
+                } else {
+                    com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
+                        .setTitle(getString(R.string.change_currency))
+                        .setMessage(getString(R.string.change_currency_desc, selectedCurrency.name, selectedCurrency.symbol))
+                        .setPositiveButton(getString(R.string.done)) { _, _ ->
+                            Toast.makeText(this, getString(R.string.toast_currency_updated), Toast.LENGTH_SHORT).show()
+                            finish()
+                        }
+                        .setNegativeButton(getString(R.string.cancel), null)
+                        .show()
+                }
             }
         }
     }

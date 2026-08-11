@@ -76,6 +76,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
     override fun onBackPressedAction() {
+        finish()
     }
 
     private fun setPolicyTxt() {
@@ -121,15 +122,31 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
 
-    fun moveNext(){
-        val next = if (PrefManager.isOnboardingDone) {
-            if (PrefManager.currentAccountId != -1) {
-                Intent(this, MainActivity::class.java)
-            } else {
-                Intent(this, AddAccountActivity::class.java)
+    fun moveNext() {
+        val next = when {
+            !PrefManager.isLanguageSet -> {
+                Intent(this, LanguageActivity::class.java).apply {
+                    putExtra("isFirstLaunch", true)
+                }
             }
-        } else {
-            Intent(this, OnBoardingActivity::class.java)
+            !PrefManager.isOnboardingDone -> {
+                Intent(this, OnBoardingActivity::class.java).apply {
+                    putExtra("isFirstLaunch", true)
+                }
+            }
+            !PrefManager.isCurrencySet -> {
+                Intent(this, CurrencyActivity::class.java).apply {
+                    putExtra("isFirstLaunch", true)
+                }
+            }
+            PrefManager.currentAccountId == -1 -> {
+                Intent(this, AddAccountActivity::class.java).apply {
+                    putExtra("isFirstLaunch", true)
+                }
+            }
+            else -> {
+                Intent(this, MainActivity::class.java)
+            }
         }
         startActivity(next)
         finish()

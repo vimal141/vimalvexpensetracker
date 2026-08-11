@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">ทุกรายจ่ายมีความหมาย</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">แผงควบคุม</string>
+    <string name="nav_history">ประวัติ</string>
+    <string name="nav_reports">รายงาน</string>
+    <string name="nav_settings">การตั้งค่า</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">ยอดคงเหลือทั้งหมด</string>
+    <string name="recent_transactions">รายการล่าสุด</string>
+    <string name="view_all">ดูทั้งหมด</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">เพิ่มรายการ</string>
+    <string name="edit_transaction">แก้ไขรายการ</string>
+    <string name="expense">รายจ่าย</string>
+    <string name="income">รายรับ</string>
+    <string name="amount">จำนวนเงิน</string>
+    <string name="category">หมวดหมู่</string>
+    <string name="date">วันที่</string>
+    <string name="notes">บันทึก</string>
+    <string name="notes_hint">เพิ่มคำอธิบาย (ไม่บังคับ)...</string>
+    <string name="save_transaction">บันทึกรายการ</string>
+    <string name="update_transaction">อัปเดตรายการ</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">อาหาร</string>
+    <string name="cat_shopping">ช้อปปิ้ง</string>
+
+    <!-- History -->
+    <string name="transaction_history">ประวัติรายการ</string>
+    <string name="search_hint">ค้นหารายการ...</string>
+    <string name="all">ทั้งหมด</string>
+    <string name="no_results">ไม่พบผลลัพธ์</string>
+
+    <!-- Reports -->
+    <string name="reports">รายงาน</string>
+    <string name="daily">รายวัน</string>
+    <string name="weekly">รายสัปดาห์</string>
+    <string name="monthly">รายเดือน</string>
+    <string name="yearly">รายปี</string>
+    <string name="category_breakdown">การสัดส่วนหมวดหมู่</string>
+    <string name="financial_analysis">วิเคราะห์รายรับรายจ่าย</string>
+    <string name="total_volume">รวม</string>
+
+    <!-- Settings -->
+    <string name="settings">การตั้งค่า</string>
+    <string name="preferences">การตั้งค่าทั่วไป</string>
+    <string name="dark_mode">โหมดมืด</string>
+    <string name="currency">สกุลเงิน</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">เพิ่มเติม</string>
+    <string name="categories">หมวดหมู่</string>
+    <string name="export_data">ส่งออกข้อมูล</string>
+    <string name="about_app">เกี่ยวกับแอป</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="share_app">แชร์แอป</string>
+    <string name="version">เวอร์ชัน 1.0.0</string>
+    <string name="premium">พรีเมียม</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">ติดตามทุกค่าใช้จ่าย</string>
+    <string name="onboarding_desc_1">บันทึกรายรับและรายจ่ายได้ง่ายๆ</string>
+    <string name="onboarding_title_2">วิเคราะห์อัจฉริยะ</string>
+    <string name="onboarding_desc_2">แผนภูมิและรายงานที่ชัดเจน</string>
+    <string name="onboarding_title_3">บรรลุเป้าหมาย</string>
+    <string name="onboarding_desc_3">วางแผนดีขึ้น ออมเงินได้มากขึ้น</string>
+    <string name="get_started">เริ่มต้นใช้งาน</string>
+    <string name="next">ถัดไป</string>
+    <string name="skip">ข้าม</string>
+    <string name="expense_breakdown">รายละเอียดค่าใช้จ่าย</string>
+    <string name="data">ข้อมูล</string>
+    <string name="version_1_0_0">เวอร์ชัน 1.0.0</string>
+    <string name="theme">ธีม</string>
+    <string name="system_default">ตามระบบ</string>
+    <string name="manage_accounts">จัดการบัญชี</string>
+    <string name="clear_all_data">ล้างข้อมูลทั้งหมด</string>
+    <string name="no_transactions_yet">ยังไม่มีรายการ</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">แตะ + เพื่อเพิ่มรายการ</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">โปรดสร้างบัญชีก่อน</string>
+    <string name="toast_account_created">สร้างบัญชีสำเร็จ!</string>
+    <string name="toast_switched_to">เปลี่ยนเป็น %1$s แล้ว</string>
+    <string name="toast_transaction_deleted">ลบรายการแล้ว</string>
+    <string name="toast_transaction_updated">อัปเดตรายการแล้ว!</string>
+    <string name="toast_transaction_saved">บันทึกรายการแล้ว!</string>
+    <string name="toast_currency_set">ตั้งค่าสกุลเงินเป็น %1$s แล้ว</string>
+    <string name="toast_currency_updated">อัปเดตสกุลเงินแล้ว</string>
+    <string name="toast_all_data_cleared">ล้างข้อมูลทั้งหมดแล้ว</string>
+    <string name="toast_error_browser">ไม่สามารถเปิดเบราว์เซอร์ได้</string>
+    <string name="toast_thanks_support">ขอบคุณที่สนับสนุน Expense Book!</string>
+    <string name="toast_thanks_rating">ขอบคุณที่ให้คะแนน 5 ดาว!</string>
+    <string name="toast_privacy_policy">หน้านโยบายความเป็นส่วนตัว: www.google.com</string>
+    <string name="toast_thanks_support_emoji">ขอบคุณสำหรับการสนับสนุน! 😊</string>
+    <string name="toast_error_account_missing">ข้อผิดพลาด: ข้อมูลบัญชีไม่ครบถ้วน</string>
+    <string name="toast_pdf_exported">ส่งออกรายงาน PDF สำเร็จ!</string>
+    <string name="toast_pdf_failed">ส่งออก PDF ล้มเหลว</string>
+
+    <string name="text_total_expense_center">รายจ่ายทั้งหมด</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">ชื่อผู้ถือบัตร</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">เพิ่มบัญชี</string>
+    <string name="text_account_details">รายละเอียดบัญชี</string>
+    <string name="text_create_account_desc">สร้างบัญชีเพื่อเริ่มติดตามค่าใช้จ่ายของคุณ</string>
+    <string name="text_create_account">สร้างบัญชี</string>
+    <string name="select_theme">เลือกธีม</string>
+    <string name="light">สว่าง</string>
+    <string name="dark">มืด</string>
+    <string name="agree_amp_continue"><![CDATA[ยอมรับและดำเนินการต่อ]]></string>
+    <string name="strAccountExist">มีบัญชีชื่อนี้อยู่แล้ว</string>
+    <string name="strEmptyError">ชื่อบัญชีต้องไม่ว่างเปล่า</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">เริ่มติดตามรายรับรายจ่ายของคุณ</string>
+    <string name="add_first_transaction">เพิ่มรายการแรก</string>
+
+    <string name="warning_clear_all_data">⚠️ ล้างข้อมูลทั้งหมด</string>
+    <string name="desc_clear_all_data">การดำเนินการนี้จะลบรายการทั้งหมดอย่างถาวร!</string>
+    <string name="delete_all">ลบทั้งหมด</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">เวอร์ชัน 1.0.0\n\nแอปจัดการรายรับรายจ่ายแบบออฟไลน์</string>
+    <string name="ok">ตกลง</string>
+    <string name="share_via">แชร์ผ่าน</string>
+    <string name="share_app_desc">จัดการค่าใช้จ่ายอย่างชาญฉลาดด้วย Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">ลบรายการ</string>
+    <string name="delete_transactions_desc">คุณแน่ใจหรือไม่ว่าต้องการลบ %1$d รายการ?</string>
+    <string name="delete_transactions_title">ลบ %1$d รายการ?</string>
+    <string name="delete_transaction_title">ลบรายการ?</string>
+    <string name="delete_single_transaction_desc">คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?</string>
+    <string name="delete">ลบ</string>
+    <string name="toast_transactions_deleted">ลบ %1$d รายการแล้ว</string>
+
+    <string name="delete_transaction">ลบรายการ</string>
+    <string name="delete_transaction_desc">คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?</string>
+    <string name="error_enter_amount">โปรดป้อนจำนวนเงิน</string>
+    <string name="error_valid_amount">ป้อนจำนวนเงินที่เป็นบวกที่ถูกต้อง</string>
+
+    <string name="default_pdf_name">รายงานบัญชี.pdf</string>
+    <string name="statement_of_account">รายงานสรุปบัญชี</string>
+    <string name="generated_securely">สร้างอย่างปลอดภัยโดย ExpenseBook</string>
+    <string name="page_number">หน้า %1$d</string>
+    <string name="account_name_label">ชื่อบัญชี: %1$s</string>
+    <string name="account_number_label">เลขที่บัญชี: %1$s</string>
+    <string name="period_label">ระยะเวลา: %1$s</string>
+    <string name="total_income">รายรับทั้งหมด</string>
+    <string name="closing_balance">ยอดยกไป</string>
+    <string name="sr_no">ลำดับ</string>
+    <string name="type">ประเภท</string>
+    
+    <string name="select_month">เลือกเดือน</string>
+    <string name="select">เลือก</string>
+
+    <string name="privacy_policy_agreement">การทำเครื่องหมายที่ช่อง แสดงว่าคุณยอมรับนโยบายความเป็นส่วนตัวของเรา</string>
+    <string name="all_time">ช่วงเวลาทั้งหมด</string>
+    <string name="this_month">เดือนนี้</string>
+    <string name="last_3_months">3 เดือนที่แล้ว</string>
+    <string name="last_6_months">6 เดือนที่แล้ว</string>
+    <string name="this_year">ปีนี้</string>
+    <string name="selected_count">เลือกแล้ว %1$d รายการ</string>
+    <string name="card_holder">ชื่อผู้ถือบัตร</string>
+    <string name="toast_agree_privacy">โปรดยอมรับนโยบายความเป็นส่วนตัว</string>
+
+    <string name="change_currency">เปลี่ยนสกุลเงิน</string>
+    <string name="change_currency_desc">คุณแน่ใจหรือไม่ว่าต้องการตั้งสกุลเงินเป็น %1$s (%2$s)?</string>
+    <string name="done">เสร็จสิ้น</string>
+    <string name="change_account">เปลี่ยนบัญชี</string>
+    <string name="change_account_desc">คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนเป็นบัญชี \'%1$s\'?</string>
+    <string name="toast_account_changed">เปลี่ยนบัญชีเป็น %1$s แล้ว</string>
+    <string name="toast_press_back_again_to_exit">กดย้อนกลับอีกครั้งเพื่อออกจากแอป</string>
+    <string name="toast_no_transactions_period">ไม่พบรายการในช่วงเวลาที่เลือก</string>
+    <string name="language">ภาษา</string>
+    <string name="change_language">เปลี่ยนภาษา</string>
+    <string name="change_language_desc">คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนภาษาแอปเป็น %1$s?</string>
+    <string name="toast_language_updated">อัปเดตภาษาสำเร็จแล้ว!</string>
+</resources>

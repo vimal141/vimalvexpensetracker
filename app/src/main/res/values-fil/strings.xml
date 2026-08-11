@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Bawat gastos ay mahalaga</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_history">Kasaysayan</string>
+    <string name="nav_reports">Ulat</string>
+    <string name="nav_settings">Mga Setting</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Kabuuan ng Balanse</string>
+    <string name="recent_transactions">Mga Bagong Transaksyon</string>
+    <string name="view_all">Tingnan lahat</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Magdagdag ng Transaksyon</string>
+    <string name="edit_transaction">I-edit ang Transaksyon</string>
+    <string name="expense">Gastos</string>
+    <string name="income">Kikita</string>
+    <string name="amount">Halaga</string>
+    <string name="category">Kategorya</string>
+    <string name="date">Petsa</string>
+    <string name="notes">Mga Tala</string>
+    <string name="notes_hint">Magdagdag ng paglalarawan (opsyonal)...</string>
+    <string name="save_transaction">I-save ang Transaksyon</string>
+    <string name="update_transaction">I-update ang Transaksyon</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Pagkain</string>
+    <string name="cat_shopping">Pamimili</string>
+
+    <!-- History -->
+    <string name="transaction_history">Kasaysayan ng Transaksyon</string>
+    <string name="search_hint">Maghanap ng mga transaksyon...</string>
+    <string name="all">Lahat</string>
+    <string name="no_results">Walang nahanap na resulta</string>
+
+    <!-- Reports -->
+    <string name="reports">Mga Ulat</string>
+    <string name="daily">Araw-araw</string>
+    <string name="weekly">Lingguhan</string>
+    <string name="monthly">Buwanan</string>
+    <string name="yearly">Taunan</string>
+    <string name="category_breakdown">Pagkakabahagi ng Kategorya</string>
+    <string name="financial_analysis">Pagsusuri ng Kita at Gastos</string>
+    <string name="total_volume">Kabuuan</string>
+
+    <!-- Settings -->
+    <string name="settings">Mga Setting</string>
+    <string name="preferences">Mga Kagustuhan</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="currency">Pera</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Higit pa</string>
+    <string name="categories">Mga Kategorya</string>
+    <string name="export_data">I-export ang Data</string>
+    <string name="about_app">Tungkol sa App</string>
+    <string name="privacy_policy">Kebijakan ng Privacy</string>
+    <string name="rate_us">I-rate Kami</string>
+    <string name="share_app">Ibahagi ang App</string>
+    <string name="version">Bersyon 1.0.0</string>
+    <string name="premium">Premium</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Subaybayan ang Bawat Barya</string>
+    <string name="onboarding_desc_1">Madaling i-record ang iyong kita at gastos.</string>
+    <string name="onboarding_title_2">Matalinong Pagsusuri</string>
+    <string name="onboarding_desc_2">Magagandang tsart at ulat.</string>
+    <string name="onboarding_title_3">Abutin ang Iyong Mga Layunin</string>
+    <string name="onboarding_desc_3">Magplano nang mas mabuti, mag-ipon nang mas marami.</string>
+    <string name="get_started">Magsimula</string>
+    <string name="next">Susunod</string>
+    <string name="skip">Laktawan</string>
+    <string name="expense_breakdown">Pagkakabahagi ng Gastos</string>
+    <string name="data">Data</string>
+    <string name="version_1_0_0">Bersyon 1.0.0</string>
+    <string name="theme">Tema</string>
+    <string name="system_default">Default ng Sistema</string>
+    <string name="manage_accounts">Pamahalaan ang mga Account</string>
+    <string name="clear_all_data">Burahin ang Lahat ng Data</string>
+    <string name="no_transactions_yet">Wala pang transaksyon</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">I-tap ang + upang magdagdag ng transaksyon</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Mangyaring gumawa muna ng account</string>
+    <string name="toast_account_created">Tagumpay na nakagawa ng account!</string>
+    <string name="toast_switched_to">Lumipat sa %1$s</string>
+    <string name="toast_transaction_deleted">Nabura ang transaksyon</string>
+    <string name="toast_transaction_updated">Na-update ang transaksyon!</string>
+    <string name="toast_transaction_saved">Na-save ang transaksyon!</string>
+    <string name="toast_currency_set">Nakatakda ang pera sa %1$s</string>
+    <string name="toast_currency_updated">Na-update ang pera</string>
+    <string name="toast_all_data_cleared">Nabura ang lahat ng data</string>
+    <string name="toast_error_browser">Hindi mabuksan ang browser</string>
+    <string name="toast_thanks_support">Salamat sa pagsuporta sa Expense Book!</string>
+    <string name="toast_thanks_rating">Salamat sa pagbibigay sa amin ng 5 bituin!</string>
+    <string name="toast_privacy_policy">Pahina ng Kebijakan ng Privacy: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Salamat sa suporta! 😊</string>
+    <string name="toast_error_account_missing">Error: Nawawala ang mga detalye ng account</string>
+    <string name="toast_pdf_exported">Tagumpay na na-export ang PDF statement!</string>
+    <string name="toast_pdf_failed">Bumagsak ang pag-export ng PDF</string>
+
+    <string name="text_total_expense_center">Kabuuan ng Gastos</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">MAY-HAWAK NG KARD</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Magdagdag ng Account</string>
+    <string name="text_account_details">Mga Detalye ng Account</string>
+    <string name="text_create_account_desc">Gumawa ng account para simulan ang pagsubaybay sa mga gastos.</string>
+    <string name="text_create_account">Gumawa ng Account</string>
+    <string name="select_theme">Pumili ng Tema</string>
+    <string name="light">Maliwanag</string>
+    <string name="dark">Madilim</string>
+    <string name="agree_amp_continue"><![CDATA[Sumang-ayon at Magpatuloy]]></string>
+    <string name="strAccountExist">Mayroon nang account na may ganitong pangalan</string>
+    <string name="strEmptyError">Hindi maaaring walang laman ang pangalan ng account</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Simulang subaybayan ang iyong kita at gastos.</string>
+    <string name="add_first_transaction">Magdagdag ng Unang Transaksyon</string>
+
+    <string name="warning_clear_all_data">⚠️ Burahin ang Lahat ng Data</string>
+    <string name="desc_clear_all_data">Permanente nitong buburahin ang LAHAT ng transaksyon!</string>
+    <string name="delete_all">Burahin Lahat</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Bersyon 1.0.0\n\nIsang offline expense manager app.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Ibahagi sa pamamagitan ng</string>
+    <string name="share_app_desc">Pamahalaan ang gastos gamit ang Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">Burahin ang mga Transaksyon</string>
+    <string name="delete_transactions_desc">Sigurado ka bang gusto mong burahin ang %1$d transaksyon?</string>
+    <string name="delete_transactions_title">Burahin ang %1$d Transaksyon?</string>
+    <string name="delete_transaction_title">Burahin ang Transaksyon?</string>
+    <string name="delete_single_transaction_desc">Sigurado ka bang gusto mong burahin ang transaksyong ito?</string>
+    <string name="delete">Burahin</string>
+    <string name="toast_transactions_deleted">%1$d transaksyon ang nabura</string>
+
+    <string name="delete_transaction">Burahin ang Transaksyon</string>
+    <string name="delete_transaction_desc">Sigurado ka bang gusto mong burahin ang transaksyong ito?</string>
+    <string name="error_enter_amount">Mangyaring maglagay ng halaga</string>
+    <string name="error_valid_amount">Maglagay ng balidong positibong halaga</string>
+
+    <string name="default_pdf_name">Statement_ng_Account.pdf</string>
+    <string name="statement_of_account">STATEMENT NG ACCOUNT</string>
+    <string name="generated_securely">Ligtas na ginawa ng ExpenseBook</string>
+    <string name="page_number">Pahina %1$d</string>
+    <string name="account_name_label">Pangalan ng Account: %1$s</string>
+    <string name="account_number_label">Numero ng Account: %1$s</string>
+    <string name="period_label">Panahon: %1$s</string>
+    <string name="total_income">Kabuuan ng Kita</string>
+    <string name="closing_balance">Huling Balanse</string>
+    <string name="sr_no">Blg.</string>
+    <string name="type">Uri</string>
+    
+    <string name="select_month">Pumili ng Buwan</string>
+    <string name="select">Pumili</string>
+
+    <string name="privacy_policy_agreement">Sa pag-check sa kahon, sumasang-ayon ka sa aming kebijakan ng privacy.</string>
+    <string name="all_time">Lahat ng Oras</string>
+    <string name="this_month">Ngayong Buwan</string>
+    <string name="last_3_months">Huling 3 Buwan</string>
+    <string name="last_6_months">Huling 6 Buwan</string>
+    <string name="this_year">Ngayong Taon</string>
+    <string name="selected_count">%1$d ang Nakuha</string>
+    <string name="card_holder">MAY-HAWAK NG KARD</string>
+    <string name="toast_agree_privacy">Mangyaring sumang-ayon sa Kebijakan ng Privacy</string>
+
+    <string name="change_currency">Palitan ang Pera</string>
+    <string name="change_currency_desc">Sigurado ka bang gusto mong itakda ang pera sa %1$s (%2$s)?</string>
+    <string name="done">Tapos na</string>
+    <string name="change_account">Palitan ang Account</string>
+    <string name="change_account_desc">Sigurado ka bang gusto mong lumipat sa account na \'%1$s\'?</string>
+    <string name="toast_account_changed">Pinalitan ang account sa %1$s</string>
+    <string name="toast_press_back_again_to_exit">Pindutin muli ang pabalik upang lumabas</string>
+    <string name="toast_no_transactions_period">Walang nahanap na transaksyon para sa napiling panahon</string>
+    <string name="language">Wika</string>
+    <string name="change_language">Palitan ang Wika</string>
+    <string name="change_language_desc">Sigurado ka bang gusto mong palitan ang wika ng app sa %1$s?</string>
+    <string name="toast_language_updated">Tagumpay na na-update ang wika!</string>
+</resources>

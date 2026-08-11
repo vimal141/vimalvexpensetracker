@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Fiecare cheltuială contează</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Tablou de bord</string>
+    <string name="nav_history">Istoric</string>
+    <string name="nav_reports">Rapoarte</string>
+    <string name="nav_settings">Setări</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Sold total</string>
+    <string name="recent_transactions">Tranzacții recente</string>
+    <string name="view_all">Vezi tot</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Adaugă tranzacție</string>
+    <string name="edit_transaction">Editează tranzacția</string>
+    <string name="expense">Cheltuială</string>
+    <string name="income">Venit</string>
+    <string name="amount">Sumă</string>
+    <string name="category">Categorie</string>
+    <string name="date">Dată</string>
+    <string name="notes">Note</string>
+    <string name="notes_hint">Adaugă o descriere (opțional)...</string>
+    <string name="save_transaction">Salvează tranzacția</string>
+    <string name="update_transaction">Actualizează tranzacția</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Mâncare</string>
+    <string name="cat_shopping">Cumpărături</string>
+
+    <!-- History -->
+    <string name="transaction_history">Istoric tranzacții</string>
+    <string name="search_hint">Caută tranzacții...</string>
+    <string name="all">Toate</string>
+    <string name="no_results">Niciun rezultat găsit</string>
+
+    <!-- Reports -->
+    <string name="reports">Rapoarte</string>
+    <string name="daily">Zilnic</string>
+    <string name="weekly">Săptămânal</string>
+    <string name="monthly">Lunar</string>
+    <string name="yearly">Anual</string>
+    <string name="category_breakdown">Defalcare pe categorii</string>
+    <string name="financial_analysis">Analiză venituri și cheltuieli</string>
+    <string name="total_volume">Total</string>
+
+    <!-- Settings -->
+    <string name="settings">Setări</string>
+    <string name="preferences">Preferințe</string>
+    <string name="dark_mode">Mod întunecat</string>
+    <string name="currency">Monedă</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Mai mult</string>
+    <string name="categories">Categorii</string>
+    <string name="export_data">Exportă date</string>
+    <string name="about_app">Despre aplicație</string>
+    <string name="privacy_policy">Politica de confidențialitate</string>
+    <string name="rate_us">Evaluează-ne</string>
+    <string name="share_app">Distribuie aplicația</string>
+    <string name="version">Versiunea 1.0.0</string>
+    <string name="premium">Premium</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Urmărește fiecare ban</string>
+    <string name="onboarding_desc_1">Înregistrează veniturile și cheltuielile cu ușurință.</string>
+    <string name="onboarding_title_2">Analiză inteligentă</string>
+    <string name="onboarding_desc_2">Grafice și rapoarte intuitive.</string>
+    <string name="onboarding_title_3">Atinge-ți obiectivele</string>
+    <string name="onboarding_desc_3">Planifică mai bine, economisește mai mult.</string>
+    <string name="get_started">Începe</string>
+    <string name="next">Înainte</string>
+    <string name="skip">Omite</string>
+    <string name="expense_breakdown">Defalcare cheltuieli</string>
+    <string name="data">Date</string>
+    <string name="version_1_0_0">Versiunea 1.0.0</string>
+    <string name="theme">Temă</string>
+    <string name="system_default">Implicit din sistem</string>
+    <string name="manage_accounts">Gestionează conturi</string>
+    <string name="clear_all_data">Șterge toate datele</string>
+    <string name="no_transactions_yet">Nicio tranzacție încă</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Apasă + pentru a adăuga o tranzacție</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Creează mai întâi un cont</string>
+    <string name="toast_account_created">Cont creat cu succes!</string>
+    <string name="toast_switched_to">Comutat la %1$s</string>
+    <string name="toast_transaction_deleted">Tranzacție ștearsă</string>
+    <string name="toast_transaction_updated">Tranzacție actualizată!</string>
+    <string name="toast_transaction_saved">Tranzacție salvată!</string>
+    <string name="toast_currency_set">Monedă setată la %1$s</string>
+    <string name="toast_currency_updated">Monedă actualizată</string>
+    <string name="toast_all_data_cleared">Toate datele au fost șterse</string>
+    <string name="toast_error_browser">Nu s-a putut deschide browserul</string>
+    <string name="toast_thanks_support">Îți mulțumim că susții Expense Book!</string>
+    <string name="toast_thanks_rating">Îți mulțumim pentru evaluarea de 5 stele!</string>
+    <string name="toast_privacy_policy">Pagina de confidențialitate: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Îți mulțumim pentru susținere! 😊</string>
+    <string name="toast_error_account_missing">Eroare: Lipsesc detaliile contului</string>
+    <string name="toast_pdf_exported">Extras PDF exportat cu succes!</string>
+    <string name="toast_pdf_failed">Exportul PDF a eșuat</string>
+
+    <string name="text_total_expense_center">Cheltuieli totale</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">TITULAR CARD</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Adaugă cont</string>
+    <string name="text_account_details">Detalii cont</string>
+    <string name="text_create_account_desc">Creează un cont pentru a urmări cheltuielile.</string>
+    <string name="text_create_account">Creează cont</string>
+    <string name="select_theme">Selectează tema</string>
+    <string name="light">Luminos</string>
+    <string name="dark">Întunecat</string>
+    <string name="agree_amp_continue"><![CDATA[De acord & Continuă]]></string>
+    <string name="strAccountExist">Un cont cu acest nume există deja</string>
+    <string name="strEmptyError">Numele contului nu poate fi gol</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Începe să-ți urmărești veniturile și cheltuielile.</string>
+    <string name="add_first_transaction">Adaugă prima tranzacție</string>
+
+    <string name="warning_clear_all_data">⚠️ Șterge toate datele</string>
+    <string name="desc_clear_all_data">Aceasta va șterge definitiv TOATE tranzacțiile!</string>
+    <string name="delete_all">Șterge tot</string>
+    <string name="cancel">Anulează</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Versiunea 1.0.0\n\nAplicație premium de gestiune a cheltuielilor offline.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Distribuie prin</string>
+    <string name="share_app_desc">Urmărește-ți cheltuielile cu Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">Șterge tranzacții</string>
+    <string name="delete_transactions_desc">Sigur dorești să ștergi %1$d tranzacții?</string>
+    <string name="delete_transactions_title">Ștergi %1$d tranzacții?</string>
+    <string name="delete_transaction_title">Ștergi tranzacția?</string>
+    <string name="delete_single_transaction_desc">Sigur dorești să ștergi această tranzacție?</string>
+    <string name="delete">Șterge</string>
+    <string name="toast_transactions_deleted">%1$d tranzacții șterse</string>
+
+    <string name="delete_transaction">Șterge tranzacția</string>
+    <string name="delete_transaction_desc">Sigur dorești să ștergi această tranzacție?</string>
+    <string name="error_enter_amount">Te rugăm să introduci o sumă</string>
+    <string name="error_valid_amount">Introdu o sumă pozitivă validă</string>
+
+    <string name="default_pdf_name">Extras_de_cont.pdf</string>
+    <string name="statement_of_account">EXTRAS DE CONT</string>
+    <string name="generated_securely">Generat în siguranță de ExpenseBook</string>
+    <string name="page_number">Pagina %1$d</string>
+    <string name="account_name_label">Nume cont: %1$s</string>
+    <string name="account_number_label">Număr cont: %1$s</string>
+    <string name="period_label">Perioadă: %1$s</string>
+    <string name="total_income">Venit total</string>
+    <string name="closing_balance">Sold final</string>
+    <string name="sr_no">Nr.</string>
+    <string name="type">Tip</string>
+    
+    <string name="select_month">Selectează luna</string>
+    <string name="select">Selectează</string>
+
+    <string name="privacy_policy_agreement">Bifând caseta, ești de acord cu politica noastră de confidențialitate.</string>
+    <string name="all_time">Tot timpul</string>
+    <string name="this_month">Luna aceasta</string>
+    <string name="last_3_months">Ultimele 3 luni</string>
+    <string name="last_6_months">Ultimele 6 luni</string>
+    <string name="this_year">Anul acesta</string>
+    <string name="selected_count">%1$d selectate</string>
+    <string name="card_holder">TITULAR CARD</string>
+    <string name="toast_agree_privacy">Te rugăm să accepți politica de confidențialitate</string>
+
+    <string name="change_currency">Schimbă moneda</string>
+    <string name="change_currency_desc">Sigur dorești să setezi moneda la %1$s (%2$s)?</string>
+    <string name="done">Gata</string>
+    <string name="change_account">Schimbă contul</string>
+    <string name="change_account_desc">Sigur dorești să comuți la contul \'%1$s\'?</string>
+    <string name="toast_account_changed">Cont schimbat la %1$s</string>
+    <string name="toast_press_back_again_to_exit">Apasă din nou înapoi pentru a ieși</string>
+    <string name="toast_no_transactions_period">Nu s-au găsit tranzacții pentru perioada selectată</string>
+    <string name="language">Limbă</string>
+    <string name="change_language">Schimbă limba</string>
+    <string name="change_language_desc">Sigur dorești să schimbi limba aplicației la %1$s?</string>
+    <string name="toast_language_updated">Limbă actualizată cu succes!</string>
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Minden kiadás számít</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Kezdőlap</string>
+    <string name="nav_history">Előzmények</string>
+    <string name="nav_reports">Jelentések</string>
+    <string name="nav_settings">Beállítások</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Teljes egyenleg</string>
+    <string name="recent_transactions">Legutóbbi tranzakciók</string>
+    <string name="view_all">Összes megtekintése</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Tranzakció hozzáadása</string>
+    <string name="edit_transaction">Tranzakció szerkesztése</string>
+    <string name="expense">Kiadás</string>
+    <string name="income">Bevétel</string>
+    <string name="amount">Összeg</string>
+    <string name="category">Kategória</string>
+    <string name="date">Dátum</string>
+    <string name="notes">Megjegyzések</string>
+    <string name="notes_hint">Leírás hozzáadása (opcionális)...</string>
+    <string name="save_transaction">Tranzakció mentése</string>
+    <string name="update_transaction">Tranzakció frissítése</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Étel</string>
+    <string name="cat_shopping">Vásárlás</string>
+
+    <!-- History -->
+    <string name="transaction_history">Tranzakciók előzményei</string>
+    <string name="search_hint">Tranzakciók keresése...</string>
+    <string name="all">Mind</string>
+    <string name="no_results">Nincs találat</string>
+
+    <!-- Reports -->
+    <string name="reports">Jelentések</string>
+    <string name="daily">Napi</string>
+    <string name="weekly">Heti</string>
+    <string name="monthly">Havi</string>
+    <string name="yearly">Éves</string>
+    <string name="category_breakdown">Kategóriák szerinti bontás</string>
+    <string name="financial_analysis">Bevételek és kiadások elemzése</string>
+    <string name="total_volume">Összesen</string>
+
+    <!-- Settings -->
+    <string name="settings">Beállítások</string>
+    <string name="preferences">Beállítások</string>
+    <string name="dark_mode">Sötét mód</string>
+    <string name="currency">Pénznem</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Egyéb</string>
+    <string name="categories">Kategóriák</string>
+    <string name="export_data">Adatok exportálása</string>
+    <string name="about_app">Az alkalmazásról</string>
+    <string name="privacy_policy">Adatvédelmi irányelvek</string>
+    <string name="rate_us">Értékelj minket</string>
+    <string name="share_app">Alkalmazás megosztása</string>
+    <string name="version">Verzió 1.0.0</string>
+    <string name="premium">Prémium</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Kövesd nyomon minden filléred</string>
+    <string name="onboarding_desc_1">Könnyen rögzítheted bevételeidet és kiadásaidat.</string>
+    <string name="onboarding_title_2">Okos elemzések</string>
+    <string name="onboarding_desc_2">Átlátható grafikonok és jelentések.</string>
+    <string name="onboarding_title_3">Érd el a céljaidat</string>
+    <string name="onboarding_desc_3">Tervezz okosabban, takaríts meg többet.</string>
+    <string name="get_started">Kezdés</string>
+    <string name="next">Tovább</string>
+    <string name="skip">Kihagyás</string>
+    <string name="expense_breakdown">Kiadások bontása</string>
+    <string name="data">Adatok</string>
+    <string name="version_1_0_0">Verzió 1.0.0</string>
+    <string name="theme">Téma</string>
+    <string name="system_default">Rendszeralapértelmezett</string>
+    <string name="manage_accounts">Fiókok kezelése</string>
+    <string name="clear_all_data">Összes adat törlése</string>
+    <string name="no_transactions_yet">Még nincsenek tranzakciók</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Koppints a + gombra tranzakció hozzáadásához</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Kérjük, először hozz létre egy fiókot</string>
+    <string name="toast_account_created">Fiók sikeresen létrehozva!</string>
+    <string name="toast_switched_to">Váltás erre: %1$s</string>
+    <string name="toast_transaction_deleted">Tranzakció törölve</string>
+    <string name="toast_transaction_updated">Tranzakció frissítve!</string>
+    <string name="toast_transaction_saved">Tranzakció elmentve!</string>
+    <string name="toast_currency_set">Pénznem beállítva erre: %1$s</string>
+    <string name="toast_currency_updated">Pénznem frissítve</string>
+    <string name="toast_all_data_cleared">Minden adat törölve lett</string>
+    <string name="toast_error_browser">Nem sikerült megnyitni a böngészőt</string>
+    <string name="toast_thanks_support">Köszönjük, hogy támogatod az Expense Bookot!</string>
+    <string name="toast_thanks_rating">Köszönjük az 5 csillagos értékelést!</string>
+    <string name="toast_privacy_policy">Adatvédelmi oldal: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Köszönjük a támogatást! 😊</string>
+    <string name="toast_error_account_missing">Hiba: Fiók részletei hiányoznak</string>
+    <string name="toast_pdf_exported">PDF kivonat sikeresen exportálva!</string>
+    <string name="toast_pdf_failed">PDF exportálása sikertelen</string>
+
+    <string name="text_total_expense_center">Teljes kiadás</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">KÁRTYABIRTOKOS</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Fiók hozzáadása</string>
+    <string name="text_account_details">Fiók részletei</string>
+    <string name="text_create_account_desc">Hozz létre egy fiókot a kiadások nyomon követéséhez.</string>
+    <string name="text_create_account">Fiók létrehozása</string>
+    <string name="select_theme">Válassz témát</string>
+    <string name="light">Világos</string>
+    <string name="dark">Sötét</string>
+    <string name="agree_amp_continue"><![CDATA[Elfogadom és folytatás]]></string>
+    <string name="strAccountExist">Már létezik fiók ezzel a névvel</string>
+    <string name="strEmptyError">A fiók neve nem lehet üres</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Kezdd el rögzíteni bevételeidet és kiadásaidat.</string>
+    <string name="add_first_transaction">Első tranzakció hozzáadása</string>
+
+    <string name="warning_clear_all_data">⚠️ Összes adat törlése</string>
+    <string name="desc_clear_all_data">Ez véglegesen törli az ÖSSZES tranzakciót!</string>
+    <string name="delete_all">Összes törlése</string>
+    <string name="cancel">Mégse</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Verzió 1.0.0\n\nPrémium offline kiadáskezelő alkalmazás.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Megosztás ezzel:</string>
+    <string name="share_app_desc">Kezeld a pénzed okosan az Expense Tracker Pro segítségével!</string>
+
+    <string name="delete_transactions">Tranzakciók törlése</string>
+    <string name="delete_transactions_desc">Biztosan törölni szeretnél %1$d tranzakciót?</string>
+    <string name="delete_transactions_title">%1$d tranzakció törlése?</string>
+    <string name="delete_transaction_title">Tranzakció törlése?</string>
+    <string name="delete_single_transaction_desc">Biztosan törölni szeretnéd ezt a tranzakciót?</string>
+    <string name="delete">Törlés</string>
+    <string name="toast_transactions_deleted">%1$d tranzakció törölve</string>
+
+    <string name="delete_transaction">Tranzakció törlése</string>
+    <string name="delete_transaction_desc">Biztosan törölni szeretnéd ezt a tranzakciót?</string>
+    <string name="error_enter_amount">Kérjük, adj meg egy összeget</string>
+    <string name="error_valid_amount">Adj meg egy érvényes pozitív összeget</string>
+
+    <string name="default_pdf_name">Szamlakivonat.pdf</string>
+    <string name="statement_of_account">SZÁMLAKIVONAT</string>
+    <string name="generated_securely">Biztonságosan generálva az ExpenseBook által</string>
+    <string name="page_number">%1$d. oldal</string>
+    <string name="account_name_label">Fiók neve: %1$s</string>
+    <string name="account_number_label">Fiók száma: %1$s</string>
+    <string name="period_label">Időszak: %1$s</string>
+    <string name="total_income">Teljes bevétel</string>
+    <string name="closing_balance">Záró egyenleg</string>
+    <string name="sr_no">Ssz.</string>
+    <string name="type">Típus</string>
+    
+    <string name="select_month">Válassz hónapot</string>
+    <string name="select">Kiválasztás</string>
+
+    <string name="privacy_policy_agreement">A négyzet bejelölésével elfogadod az adatvédelmi irányelveinket.</string>
+    <string name="all_time">Mindenkori</string>
+    <string name="this_month">Ebben a hónapban</string>
+    <string name="last_3_months">Elmúlt 3 hónap</string>
+    <string name="last_6_months">Elmúlt 6 hónap</string>
+    <string name="this_year">Ebben az évben</string>
+    <string name="selected_count">%1$d kiválasztva</string>
+    <string name="card_holder">KÁRTYABIRTOKOS</string>
+    <string name="toast_agree_privacy">Kérjük, fogadd el az Adatvédelmi Irányelveket</string>
+
+    <string name="change_currency">Pénznem módosítása</string>
+    <string name="change_currency_desc">Biztosan át szeretnéd állítani a pénznemet erre: %1$s (%2$s)?</string>
+    <string name="done">Kész</string>
+    <string name="change_account">Fiók módosítása</string>
+    <string name="change_account_desc">Biztosan át szeretnél váltani erre a fiókra: \'%1$s\'?</string>
+    <string name="toast_account_changed">Fiók átállítva erre: %1$s</string>
+    <string name="toast_press_back_again_to_exit">Nyomd meg újra a vissza gombot a kilépéshez</string>
+    <string name="toast_no_transactions_period">Nem találhatók tranzakciók a kiválasztott időszakban</string>
+    <string name="language">Nyelv</string>
+    <string name="change_language">Nyelv módosítása</string>
+    <string name="change_language_desc">Biztosan át szeretnéd állítani az alkalmazás nyelvét erre: %1$s?</string>
+    <string name="toast_language_updated">Nyelv sikeresen frissítve!</string>
+</resources>

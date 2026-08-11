@@ -31,7 +31,12 @@ class OnBoardingActivity : BaseActivity<ActivityOnBoardingBinding>() {
     }
 
     override fun onBackPressedAction() {
-        finish()
+        val isFirstLaunch = intent.getBooleanExtra("isFirstLaunch", false)
+        if (isFirstLaunch) {
+            navigateToMain()
+        } else {
+            finish()
+        }
     }
 
     private fun setupViewPager() {
@@ -87,8 +92,14 @@ class OnBoardingActivity : BaseActivity<ActivityOnBoardingBinding>() {
     }
 
     private fun navigateToMain() {
+        val isFirstLaunch = intent.getBooleanExtra("isFirstLaunch", false)
         PrefManager.isOnboardingDone = true
-        startActivity(Intent(this, AddAccountActivity::class.java))
+        val intent = Intent(this, CurrencyActivity::class.java).apply {
+            if (isFirstLaunch) {
+                putExtra("isFirstLaunch", true)
+            }
+        }
+        startActivity(intent)
         finish()
     }
 }

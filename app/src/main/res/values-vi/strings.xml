@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expense Book</string>
+    <string name="app_tagline">Mỗi chi tiêu đều quan trọng</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Trang chủ</string>
+    <string name="nav_history">Lịch sử</string>
+    <string name="nav_reports">Báo cáo</string>
+    <string name="nav_settings">Cài đặt</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Tổng số dư</string>
+    <string name="recent_transactions">Giao dịch gần đây</string>
+    <string name="view_all">Xem tất cả</string>
+
+    <!-- Add Transaction -->
+    <string name="add_transaction">Thêm giao dịch</string>
+    <string name="edit_transaction">Sửa giao dịch</string>
+    <string name="expense">Chi tiêu</string>
+    <string name="income">Thu nhập</string>
+    <string name="amount">Số tiền</string>
+    <string name="category">Danh mục</string>
+    <string name="date">Ngày</string>
+    <string name="notes">Ghi chú</string>
+    <string name="notes_hint">Thêm mô tả (không bắt buộc)...</string>
+    <string name="save_transaction">Lưu giao dịch</string>
+    <string name="update_transaction">Cập nhật giao dịch</string>
+
+    <!-- Categories - Expense -->
+    <string name="cat_food">Ăn uống</string>
+    <string name="cat_shopping">Mua sắm</string>
+
+    <!-- History -->
+    <string name="transaction_history">Lịch sử giao dịch</string>
+    <string name="search_hint">Tìm kiếm giao dịch...</string>
+    <string name="all">Tất cả</string>
+    <string name="no_results">Không tìm thấy kết quả</string>
+
+    <!-- Reports -->
+    <string name="reports">Báo cáo</string>
+    <string name="daily">Hàng ngày</string>
+    <string name="weekly">Hàng tuần</string>
+    <string name="monthly">Hàng tháng</string>
+    <string name="yearly">Hàng năm</string>
+    <string name="category_breakdown">Phân tích danh mục</string>
+    <string name="financial_analysis">Phân tích Thu &amp; Chi</string>
+    <string name="total_volume">Tổng cộng</string>
+
+    <!-- Settings -->
+    <string name="settings">Cài đặt</string>
+    <string name="preferences">Tùy chọn</string>
+    <string name="dark_mode">Chế độ tối</string>
+    <string name="currency">Tiền tệ</string>
+    <string name="currency_value">₹ INR</string>
+    <string name="more">Thêm</string>
+    <string name="categories">Danh mục</string>
+    <string name="export_data">Xuất dữ liệu</string>
+    <string name="about_app">Về ứng dụng</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="share_app">Chia sẻ ứng dụng</string>
+    <string name="version">Phiên bản 1.0.0</string>
+    <string name="premium">Cao cấp</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_title_1">Theo dõi từng đồng</string>
+    <string name="onboarding_desc_1">Ghi lại thu nhập và chi tiêu dễ dàng.</string>
+    <string name="onboarding_title_2">Phân tích thông minh</string>
+    <string name="onboarding_desc_2">Biểu đồ và báo cáo trực quan.</string>
+    <string name="onboarding_title_3">Đạt mục tiêu tài chính</string>
+    <string name="onboarding_desc_3">Lập kế hoạch thông minh và tiết kiệm nhiều hơn.</string>
+    <string name="get_started">Bắt đầu</string>
+    <string name="next">Tiếp theo</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="expense_breakdown">Chi tiết chi tiêu</string>
+    <string name="data">Dữ liệu</string>
+    <string name="version_1_0_0">Phiên bản 1.0.0</string>
+    <string name="theme">Giao diện</string>
+    <string name="system_default">Mặc định hệ thống</string>
+    <string name="manage_accounts">Quản lý tài khoản</string>
+    <string name="clear_all_data">Xóa tất cả dữ liệu</string>
+    <string name="no_transactions_yet">Chưa có giao dịch nào</string>
+    <string name="tap_the_button_below_to_add_your_first_transaction">Nhấn + để thêm giao dịch</string>
+
+    <!-- Validation & Toasts -->
+    <string name="toast_account_first">Vui lòng tạo tài khoản trước</string>
+    <string name="toast_account_created">Tạo tài khoản thành công!</string>
+    <string name="toast_switched_to">Đã chuyển sang %1$s</string>
+    <string name="toast_transaction_deleted">Đã xóa giao dịch</string>
+    <string name="toast_transaction_updated">Đã cập nhật giao dịch!</string>
+    <string name="toast_transaction_saved">Đã lưu giao dịch!</string>
+    <string name="toast_currency_set">Đã đặt tiền tệ thành %1$s</string>
+    <string name="toast_currency_updated">Đã cập nhật tiền tệ</string>
+    <string name="toast_all_data_cleared">Đã xóa tất cả dữ liệu</string>
+    <string name="toast_error_browser">Không thể mở trình duyệt</string>
+    <string name="toast_thanks_support">Cảm ơn bạn đã ủng hộ Expense Book!</string>
+    <string name="toast_thanks_rating">Cảm ơn bạn đã đánh giá 5 sao!</string>
+    <string name="toast_privacy_policy">Trang chính sách bảo mật: www.google.com</string>
+    <string name="toast_thanks_support_emoji">Cảm ơn bạn đã ủng hộ! 😊</string>
+    <string name="toast_error_account_missing">Lỗi: Thiếu thông tin tài khoản</string>
+    <string name="toast_pdf_exported">Đã xuất sao kê PDF thành công!</string>
+    <string name="toast_pdf_failed">Xuất PDF thất bại</string>
+
+    <string name="text_total_expense_center">Tổng chi tiêu</string>
+    <string name="format_card_number">**** **** **** %1$s</string>
+    <string name="default_card_number">**** **** **** 4589</string>
+    <string name="text_card_holder">CHỦ THẺ</string>
+    <string name="text_balance_hidden">********</string>
+    <string name="text_not_applicable">--</string>
+    
+    <string name="text_add_account">Thêm tài khoản</string>
+    <string name="text_account_details">Chi tiết tài khoản</string>
+    <string name="text_create_account_desc">Tạo tài khoản để bắt đầu theo dõi chi tiêu.</string>
+    <string name="text_create_account">Tạo tài khoản</string>
+    <string name="select_theme">Chọn giao diện</string>
+    <string name="light">Sáng</string>
+    <string name="dark">Tối</string>
+    <string name="agree_amp_continue"><![CDATA[Đồng ý & Tiếp tục]]></string>
+    <string name="strAccountExist">Tài khoản với tên này đã tồn tại</string>
+    <string name="strEmptyError">Tên tài khoản không được để trống</string>
+    <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Bắt đầu theo dõi thu chi của bạn.</string>
+    <string name="add_first_transaction">Thêm giao dịch đầu tiên</string>
+
+    <string name="warning_clear_all_data">⚠️ Xóa tất cả dữ liệu</string>
+    <string name="desc_clear_all_data">Hành động này sẽ xóa vĩnh viễn TẤT CẢ giao dịch!</string>
+    <string name="delete_all">Xóa tất cả</string>
+    <string name="cancel">Hủy</string>
+    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_about_desc">Phiên bản 1.0.0\n\nỨng dụng quản lý chi tiêu ngoại tuyến cao cấp.</string>
+    <string name="ok">OK</string>
+    <string name="share_via">Chia sẻ qua</string>
+    <string name="share_app_desc">Quản lý chi tiêu thông minh với Expense Tracker Pro!</string>
+
+    <string name="delete_transactions">Xóa giao dịch</string>
+    <string name="delete_transactions_desc">Bạn có chắc chắn muốn xóa %1$d giao dịch?</string>
+    <string name="delete_transactions_title">Xóa %1$d giao dịch?</string>
+    <string name="delete_transaction_title">Xóa giao dịch?</string>
+    <string name="delete_single_transaction_desc">Bạn có chắc chắn muốn xóa giao dịch này?</string>
+    <string name="delete">Xóa</string>
+    <string name="toast_transactions_deleted">Đã xóa %1$d giao dịch</string>
+
+    <string name="delete_transaction">Xóa giao dịch</string>
+    <string name="delete_transaction_desc">Bạn có chắc chắn muốn xóa giao dịch này?</string>
+    <string name="error_enter_amount">Vui lòng nhập số tiền</string>
+    <string name="error_valid_amount">Nhập số tiền hợp lệ lớn hơn 0</string>
+
+    <string name="default_pdf_name">Sao_ke_tai_khoan.pdf</string>
+    <string name="statement_of_account">SAO KÊ TÀI KHOẢN</string>
+    <string name="generated_securely">Được tạo an toàn bởi ExpenseBook</string>
+    <string name="page_number">Trang %1$d</string>
+    <string name="account_name_label">Tên tài khoản: %1$s</string>
+    <string name="account_number_label">Số tài khoản: %1$s</string>
+    <string name="period_label">Kỳ: %1$s</string>
+    <string name="total_income">Tổng thu nhập</string>
+    <string name="closing_balance">Số dư cuối kỳ</string>
+    <string name="sr_no">STT</string>
+    <string name="type">Loại</string>
+    
+    <string name="select_month">Chọn tháng</string>
+    <string name="select">Chọn</string>
+
+    <string name="privacy_policy_agreement">Bằng cách tích vào ô, bạn đồng ý với chính sách bảo mật của chúng tôi.</string>
+    <string name="all_time">Tất cả thời gian</string>
+    <string name="this_month">Tháng này</string>
+    <string name="last_3_months">3 tháng qua</string>
+    <string name="last_6_months">6 tháng qua</string>
+    <string name="this_year">Năm nay</string>
+    <string name="selected_count">Đã chọn %1$d</string>
+    <string name="card_holder">CHỦ THẺ</string>
+    <string name="toast_agree_privacy">Vui lòng đồng ý với Chính sách bảo mật</string>
+
+    <string name="change_currency">Đổi tiền tệ</string>
+    <string name="change_currency_desc">Bạn có chắc chắn muốn đổi tiền tệ thành %1$s (%2$s)?</string>
+    <string name="done">Xong</string>
+    <string name="change_account">Đổi tài khoản</string>
+    <string name="change_account_desc">Bạn có chắc chắn muốn chuyển sang tài khoản \'%1$s\'?</string>
+    <string name="toast_account_changed">Đã đổi tài khoản thành %1$s</string>
+    <string name="toast_press_back_again_to_exit">Nhấn quay lại lần nữa để thoát</string>
+    <string name="toast_no_transactions_period">Không tìm thấy giao dịch nào trong khoảng thời gian đã chọn</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="change_language">Đổi ngôn ngữ</string>
+    <string name="change_language_desc">Bạn có chắc chắn muốn đổi ngôn ngữ ứng dụng thành %1$s?</string>
+    <string name="toast_language_updated">Đã cập nhật ngôn ngữ thành công!</string>
+</resources>

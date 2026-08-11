@@ -56,6 +56,11 @@ class SettingsFragment : Fragment() {
         }
         binding.txtThemeValue.text = themeText
         binding.txtCurrencyValue.text = "${PrefManager.currencySymbol} ${PrefManager.currency}"
+
+        val selectedLang = com.tb.example.expensebook.utility.helper.LanguageHelper.getLanguageList(PrefManager.languageCode)
+            .find { it.code.equals(PrefManager.languageCode, ignoreCase = true) }
+        binding.txtLanguageValue.text = selectedLang?.englishName ?: "English"
+
         binding.txtAppVersion.text = getString(R.string.version)
     }
 
@@ -72,6 +77,10 @@ class SettingsFragment : Fragment() {
             startActivity(Intent(requireContext(), com.tb.example.expensebook.ui.activity.CurrencyActivity::class.java))
         }
 
+        binding.layoutLanguage.setOnClickListener {
+            startActivity(Intent(requireContext(), com.tb.example.expensebook.ui.activity.LanguageActivity::class.java))
+        }
+
         binding.layoutExport.setOnClickListener {
             ExportFilterBottomSheet().show(parentFragmentManager, "ExportFilterBottomSheet")
         }
@@ -83,7 +92,7 @@ class SettingsFragment : Fragment() {
             }.show(parentFragmentManager, "ClearDataBottomSheet")
         }
 
-        binding.layoutAbout.setOnClickListener {
+        binding.cardProfile.setOnClickListener {
             startActivity(Intent(requireContext(), com.tb.example.expensebook.ui.activity.AboutActivity::class.java))
         }
 
