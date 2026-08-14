@@ -72,7 +72,8 @@
                 android:text="@string/this_month"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_13ssp"
-                app:buttonTint="@color/radio_button_tint" />
+                app:buttonTint="@color/radio_button_tint"
+                app:rippleColor="@android:color/transparent" />
 
             <View
                 android:layout_width="match_parent"
@@ -90,7 +91,8 @@
                 android:text="@string/last_3_months"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_13ssp"
-                app:buttonTint="@color/radio_button_tint" />
+                app:buttonTint="@color/radio_button_tint"
+                app:rippleColor="@android:color/transparent" />
 
             <View
                 android:layout_width="match_parent"
@@ -108,7 +110,8 @@
                 android:text="@string/last_6_months"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_13ssp"
-                app:buttonTint="@color/radio_button_tint" />
+                app:buttonTint="@color/radio_button_tint"
+                app:rippleColor="@android:color/transparent" />
 
             <View
                 android:layout_width="match_parent"
@@ -126,7 +129,8 @@
                 android:text="@string/this_year"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_13ssp"
-                app:buttonTint="@color/radio_button_tint" />
+                app:buttonTint="@color/radio_button_tint"
+                app:rippleColor="@android:color/transparent" />
 
             <View
                 android:layout_width="match_parent"
@@ -145,7 +149,8 @@
                 android:text="@string/all_time"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_13ssp"
-                app:buttonTint="@color/radio_button_tint" />
+                app:buttonTint="@color/radio_button_tint"
+                app:rippleColor="@android:color/transparent" />
 
         </RadioGroup>
 

@@ -17,13 +17,28 @@ class AccountsActivity : BaseActivity<ActivityAccountsBinding>() {
 
     private val accountDao: AccountDao by inject()
     private lateinit var adapter: AccountAdapter
+    private var selectedAccountId: Int = -1
 
     override fun inflateBinding(inflater: LayoutInflater): ActivityAccountsBinding {
         return ActivityAccountsBinding.inflate(layoutInflater)
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
+        selectedAccountId = PrefManager.currentAccountId
+
         binding.btnBack.setOnClickListener { finish() }
+
+        binding.btnDone.setOnClickListener {
+            if (selectedAccountId != -1) {
+                PrefManager.currentAccountId = selectedAccountId
+            }
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("target_tab", 3)
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            }
+            startActivity(intent)
+            finish()
+        }
 
         binding.rvAccounts.layoutManager = LinearLayoutManager(this)
 
@@ -41,13 +56,12 @@ class AccountsActivity : BaseActivity<ActivityAccountsBinding>() {
     private fun loadAccounts() {
         lifecycleScope.launch {
             accountDao.getAllAccounts().collectLatest { accounts ->
-                val currentAccountId = PrefManager.currentAccountId
-                adapter = AccountAdapter(currentAccountId) { selectedAccount ->
-                    PrefManager.currentAccountId = selectedAccount.id
-                    val intent = Intent(this@AccountsActivity, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                    finish()
+                if (selectedAccountId == -1 && accounts.isNotEmpty()) {
+                    selectedAccountId = PrefManager.currentAccountId.takeIf { id -> accounts.any { it.id == id } }
+                        ?: accounts.first().id
+                }
+                adapter = AccountAdapter(selectedAccountId) { selectedAccount ->
+                    selectedAccountId = selectedAccount.id
                 }
                 adapter.submitList(accounts)
                 binding.rvAccounts.adapter = adapter

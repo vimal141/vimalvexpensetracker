@@ -9,9 +9,16 @@ import com.tb.example.expensebook.data.model.Account
 import com.tb.example.expensebook.databinding.ItemAccountBinding
 
 class AccountAdapter(
-    private var currentAccountId: Int,
+    var selectedAccountId: Int,
     private val onAccountClick: (Account) -> Unit
 ) : ListAdapter<Account, AccountAdapter.AccountViewHolder>(AccountDiffCallback()) {
+
+    fun updateSelectedAccountId(newAccountId: Int) {
+        if (selectedAccountId != newAccountId) {
+            selectedAccountId = newAccountId
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccountViewHolder {
         val binding = ItemAccountBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -22,20 +29,16 @@ class AccountAdapter(
         holder.bind(getItem(position))
     }
 
-    fun updateData(newList: List<Account>, newCurrentAccountId: Int) {
-        currentAccountId = newCurrentAccountId
-        submitList(newList)
-    }
-
     inner class AccountViewHolder(private val binding: ItemAccountBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(account: Account) {
             binding.tvAccountName.text = account.name
             val formattedNumber = account.accountNumber.chunked(4).joinToString(" ")
             binding.tvAccountNumber.text = formattedNumber
-            
-            binding.rbSelected.isChecked = account.id == currentAccountId
+
+            binding.rbSelected.isChecked = account.id == selectedAccountId
 
             binding.root.setOnClickListener {
+                updateSelectedAccountId(account.id)
                 onAccountClick(account)
             }
         }

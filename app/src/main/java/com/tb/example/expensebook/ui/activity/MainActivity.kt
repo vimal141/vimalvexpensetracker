@@ -35,6 +35,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
         setupViewPager()
         setupBottomNavigation()
+        handleIntent(intent)
+    }
+
+    override fun onNewIntent(intent: android.content.Intent) {
+        super.onNewIntent(intent)
+        handleIntent(intent)
+    }
+
+    private fun handleIntent(intent: android.content.Intent?) {
+        val targetTab = intent?.getIntExtra("target_tab", -1) ?: -1
+        if (targetTab in 0..3) {
+            binding.viewPager.setCurrentItem(targetTab, false)
+        }
     }
 
     override fun onBackPressedAction() {
@@ -58,7 +71,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val adapter = MainPagerAdapter(this)
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = 4
-        binding.viewPager.isUserInputEnabled = false
+        binding.viewPager.isUserInputEnabled = true
 
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {

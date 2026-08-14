@@ -2,22 +2,20 @@ package com.tb.example.expensebook.ui.activity
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.tb.example.expensebook.utility.helper.PrefManager
 import com.tb.example.expensebook.databinding.ActivityThemeBinding
+import com.tb.example.expensebook.utility.helper.PrefManager
 
 class ThemeActivity : BaseActivity<ActivityThemeBinding>() {
+
+    private var selectedThemeMode: Int = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
 
     override fun inflateBinding(inflater: LayoutInflater): ActivityThemeBinding {
         return ActivityThemeBinding.inflate(layoutInflater)
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
+        selectedThemeMode = PrefManager.themeMode
         setupUI()
         setupListeners()
     }
@@ -27,10 +25,14 @@ class ThemeActivity : BaseActivity<ActivityThemeBinding>() {
     }
 
     private fun setupUI() {
-        val currentMode = PrefManager.themeMode
-        binding.radioLight.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_NO)
-        binding.radioDark.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_YES)
-        binding.radioSystem.isChecked = (currentMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        updateRadioSelection(selectedThemeMode)
+    }
+
+    private fun updateRadioSelection(mode: Int) {
+        selectedThemeMode = mode
+        binding.radioLight.isChecked = (mode == AppCompatDelegate.MODE_NIGHT_NO)
+        binding.radioDark.isChecked = (mode == AppCompatDelegate.MODE_NIGHT_YES)
+        binding.radioSystem.isChecked = (mode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     }
 
     private fun setupListeners() {
@@ -39,23 +41,23 @@ class ThemeActivity : BaseActivity<ActivityThemeBinding>() {
         }
 
         binding.layoutLight.setOnClickListener {
-            setThemeMode(AppCompatDelegate.MODE_NIGHT_NO)
+            updateRadioSelection(AppCompatDelegate.MODE_NIGHT_NO)
         }
 
         binding.layoutDark.setOnClickListener {
-            setThemeMode(AppCompatDelegate.MODE_NIGHT_YES)
+            updateRadioSelection(AppCompatDelegate.MODE_NIGHT_YES)
         }
 
         binding.layoutSystem.setOnClickListener {
-            setThemeMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            updateRadioSelection(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
-    }
 
-    private fun setThemeMode(mode: Int) {
-        if (PrefManager.themeMode != mode) {
-            PrefManager.themeMode = mode
-            AppCompatDelegate.setDefaultNightMode(mode)
-            setupUI()
+        binding.btnDone.setOnClickListener {
+            if (PrefManager.themeMode != selectedThemeMode) {
+                PrefManager.themeMode = selectedThemeMode
+                AppCompatDelegate.setDefaultNightMode(selectedThemeMode)
+            }
+            finish()
         }
     }
 }

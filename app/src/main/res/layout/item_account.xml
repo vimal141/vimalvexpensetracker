@@ -83,9 +83,11 @@
             android:id="@+id/rbSelected"
             android:layout_width="@dimen/_23sdp"
             android:layout_height="@dimen/_23sdp"
+            android:background="@android:color/transparent"
             android:clickable="false"
             android:focusable="false"
             app:buttonTint="@color/radio_button_tint"
+            app:rippleColor="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

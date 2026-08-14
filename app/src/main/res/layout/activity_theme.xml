@@ -19,17 +19,20 @@
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="@dimen/_4sdp"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
             android:ellipsize="end"
             android:fontFamily="@font/semi_bold"
             android:maxLines="1"
@@ -37,8 +40,26 @@
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_done"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,8 +88,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
@@ -112,9 +131,9 @@
                     android:id="@+id/radio_light"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
-                    android:clickable="false"
-                    android:focusable="false"
+                    android:background="@android:color/transparent"
                     app:buttonTint="@color/radio_button_tint"
+                    app:rippleColor="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -132,8 +151,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
@@ -177,9 +194,9 @@
                     android:id="@+id/radio_dark"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
-                    android:clickable="false"
-                    android:focusable="false"
+                    android:background="@android:color/transparent"
                     app:buttonTint="@color/radio_button_tint"
+                    app:rippleColor="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -197,8 +214,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
@@ -242,9 +257,9 @@
                     android:id="@+id/radio_system"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
-                    android:clickable="false"
-                    android:focusable="false"
+                    android:background="@android:color/transparent"
                     app:buttonTint="@color/radio_button_tint"
+                    app:rippleColor="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
