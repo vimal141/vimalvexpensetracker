@@ -131,4 +131,8 @@
     <color name="nav_inactive">#9CA3AF</color>
     <color name="indicatorInactive">#D1D5DB</color>
     <color name="card_bg">#FFFFFF</color>
+    <color name="shimmer_base_color">#E5E7EB</color>
+    <color name="shimmer_highlight_color">#F9FAFB</color>
+    <color name="ad_card_bg">#FFFFFF</color>
+    <color name="ad_card_stroke">#DDE2E5</color>
 </resources>

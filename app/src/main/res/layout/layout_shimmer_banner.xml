@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer_view_banner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_color="@color/shimmer_base_color"
+    app:shimmer_highlight_color="@color/shimmer_highlight_color"
+    app:shimmer_duration="1200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:background="@color/ad_card_bg"
+        android:paddingHorizontal="@dimen/_14sdp">
+
+        <View
+            android:id="@+id/shim_ad_badge"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/shim_banner_icon"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shim_ad_badge" />
+
+        <View
+            android:id="@+id/shim_banner_line1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintEnd_toStartOf="@id/shim_banner_btn"
+            app:layout_constraintStart_toEndOf="@id/shim_banner_icon"
+            app:layout_constraintTop_toTopOf="@id/shim_banner_icon" />
+
+        <View
+            android:id="@+id/shim_banner_line2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintEnd_toStartOf="@id/shim_banner_btn"
+            app:layout_constraintStart_toEndOf="@id/shim_banner_icon"
+            app:layout_constraintTop_toBottomOf="@id/shim_banner_line1" />
+
+        <View
+            android:id="@+id/shim_banner_btn"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

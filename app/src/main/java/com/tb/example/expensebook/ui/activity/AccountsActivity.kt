@@ -32,6 +32,13 @@ class AccountsActivity : BaseActivity<ActivityAccountsBinding>() {
         }
 
         loadAccounts()
+
+        // Load adaptive banner ad
+        com.tb.example.expensebook.utility.ads.AdManager.loadAdaptiveBanner(
+            this,
+            binding.flAdContainer,
+            com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_ACCOUNTS_NATIVE_AD
+        )
     }
 
     override fun onBackPressedAction() {

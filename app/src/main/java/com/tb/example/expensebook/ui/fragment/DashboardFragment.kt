@@ -55,8 +55,8 @@ class DashboardFragment : Fragment() {
         setupRecyclerView()
         setupListeners()
         observeViewModel()
-        setupCardAnimation()
         animateCards()
+        loadNativeAd()
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -316,5 +316,16 @@ class DashboardFragment : Fragment() {
 
     private fun showManageAccountsScreen() {
         startActivity(Intent(requireContext(), AccountsActivity::class.java))
+    }
+
+    private fun loadNativeAd() {
+        activity?.let { act ->
+            com.tb.example.expensebook.utility.ads.AdManager.loadNativeAd(
+                activity = act,
+                container = binding.flNativeAd,
+                layoutResId = R.layout.layout_native_ad_card,
+                screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_DASHBOARD_NATIVE_AD
+            )
+        }
     }
 }

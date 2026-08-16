@@ -1,0 +1,165 @@
+{
+  "version": {
+    "versionNumber": "1",
+    "updateTime": "2026-08-14T00:00:00Z",
+    "description": "Expense Book Remote Config Ads Configuration"
+  },
+  "parameterGroups": {
+    "AdMob_Controls": {
+      "description": "Master and per-screen ad controls",
+      "parameters": {
+        "is_ads_enabled": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Global master switch to turn all ads ON or OFF instantly without updating app",
+          "valueType": "BOOLEAN"
+        },
+        "show_splash_app_open_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show App Open Ad on Splash Screen launch",
+          "valueType": "BOOLEAN"
+        },
+        "show_dashboard_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native Card Ad on Dashboard screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_history_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native / Banner Ad on History screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_reports_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native Ad on Reports screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_add_transaction_banner_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Banner Ad on Add/Edit Transaction screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_save_transaction_interstitial": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Interstitial Ad on saving/updating transaction based on count/interval",
+          "valueType": "BOOLEAN"
+        },
+        "show_export_report_interstitial": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Interstitial Ad when generating/exporting PDF statement report",
+          "valueType": "BOOLEAN"
+        },
+        "show_pdf_preview_banner_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Banner Ad on PDF Preview screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_accounts_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native Ad on Accounts screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_settings_banner_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Banner Ad on Settings screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_language_screen_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native Ad on Language selection screen",
+          "valueType": "BOOLEAN"
+        },
+        "show_currency_screen_native_ad": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Show Native Ad on Currency selection screen",
+          "valueType": "BOOLEAN"
+        }
+      }
+    },
+    "AdMob_Frequency_Capping": {
+      "description": "Anti-Ad Limit Frequency & Interval Settings",
+      "parameters": {
+        "interstitial_click_interval": {
+          "defaultValue": {
+            "value": "3"
+          },
+          "description": "Number of action/save events before showing an interstitial ad (e.g. every 3 actions)",
+          "valueType": "NUMBER"
+        },
+        "interstitial_time_interval_seconds": {
+          "defaultValue": {
+            "value": "30"
+          },
+          "description": "Minimum delay in seconds between any two interstitial ads to prevent ad limit/policy issues",
+          "valueType": "NUMBER"
+        }
+      }
+    },
+    "AdMob_Unit_IDs": {
+      "description": "Dynamic AdMob Ad Unit IDs (defaults are Google official test IDs)",
+      "parameters": {
+        "admob_app_open_id": {
+          "defaultValue": {
+            "value": "ca-app-pub-3940256099942544/9257395921"
+          },
+          "description": "AdMob App Open Ad Unit ID",
+          "valueType": "STRING"
+        },
+        "admob_interstitial_id": {
+          "defaultValue": {
+            "value": "ca-app-pub-3940256099942544/1033173712"
+          },
+          "description": "AdMob Interstitial Ad Unit ID",
+          "valueType": "STRING"
+        },
+        "admob_native_id": {
+          "defaultValue": {
+            "value": "ca-app-pub-3940256099942544/2247696110"
+          },
+          "description": "AdMob Native Advanced Ad Unit ID",
+          "valueType": "STRING"
+        },
+        "admob_banner_id": {
+          "defaultValue": {
+            "value": "ca-app-pub-3940256099942544/9214589741"
+          },
+          "description": "AdMob Adaptive Banner Ad Unit ID",
+          "valueType": "STRING"
+        },
+        "admob_rewarded_id": {
+          "defaultValue": {
+            "value": "ca-app-pub-3940256099942544/5224354917"
+          },
+          "description": "AdMob Rewarded Ad Unit ID",
+          "valueType": "STRING"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

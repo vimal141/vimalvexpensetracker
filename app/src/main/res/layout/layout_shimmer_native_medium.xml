@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer_view_native_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_color="@color/shimmer_base_color"
+    app:shimmer_highlight_color="@color/shimmer_highlight_color"
+    app:shimmer_duration="1200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ad_card_bg"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_8sdp">
+
+        <!-- Top Header: Ad Badge & Media Shimmer -->
+        <View
+            android:id="@+id/shim_ad_badge"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/shim_media"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintTop_toBottomOf="@id/shim_ad_badge" />
+
+        <!-- Icon, Title, Rating, CTA -->
+        <View
+            android:id="@+id/shim_app_icon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shim_media" />
+
+        <View
+            android:id="@+id/shim_headline"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintEnd_toStartOf="@+id/shim_cta_btn"
+            app:layout_constraintStart_toEndOf="@id/shim_app_icon"
+            app:layout_constraintTop_toTopOf="@id/shim_app_icon" />
+
+        <View
+            android:id="@+id/shim_body"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintEnd_toStartOf="@+id/shim_cta_btn"
+            app:layout_constraintStart_toEndOf="@id/shim_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/shim_headline" />
+
+        <View
+            android:id="@+id/shim_cta_btn"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            app:layout_constraintBottom_toBottomOf="@id/shim_app_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/shim_app_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

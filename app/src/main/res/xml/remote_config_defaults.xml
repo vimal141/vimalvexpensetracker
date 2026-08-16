@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <!-- Master Global Switch -->
+    <entry>
+        <key>is_ads_enabled</key>
+        <value>true</value>
+    </entry>
+
+    <!-- Screen-wise / Feature-wise Placement Toggles -->
+    <entry>
+        <key>show_splash_app_open_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_dashboard_native_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_history_native_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_reports_native_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_add_transaction_banner_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_save_transaction_interstitial</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_export_report_interstitial</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_pdf_preview_banner_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_accounts_native_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_settings_banner_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_language_screen_native_ad</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>show_currency_screen_native_ad</key>
+        <value>true</value>
+    </entry>
+
+    <!-- Click Counter & Interval Capping (Prevents Policy Violations & Ad Limits) -->
+    <entry>
+        <key>interstitial_click_interval</key>
+        <value>3</value>
+    </entry>
+    <entry>
+        <key>interstitial_time_interval_seconds</key>
+        <value>30</value>
+    </entry>
+
+    <!-- Dynamic Ad Unit IDs (Fallback to official AdMob test IDs) -->
+    <entry>
+        <key>admob_app_open_id</key>
+        <value>ca-app-pub-3940256099942544/9257395921</value>
+    </entry>
+    <entry>
+        <key>admob_interstitial_id</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+    <entry>
+        <key>admob_native_id</key>
+        <value>ca-app-pub-3940256099942544/2247696110</value>
+    </entry>
+    <entry>
+        <key>admob_banner_id</key>
+        <value>ca-app-pub-3940256099942544/9214589741</value>
+    </entry>
+    <entry>
+        <key>admob_rewarded_id</key>
+        <value>ca-app-pub-3940256099942544/5224354917</value>
+    </entry>
+</defaultsMap>

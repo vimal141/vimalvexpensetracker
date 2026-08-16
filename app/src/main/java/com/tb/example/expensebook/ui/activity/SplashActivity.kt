@@ -22,15 +22,20 @@ import com.tb.example.expensebook.R
 import com.tb.example.expensebook.utility.helper.PrefManager
 import com.tb.example.expensebook.databinding.ActivitySplashBinding
 import androidx.core.net.toUri
+import com.tb.example.expensebook.utility.ads.AdManager
 import com.tb.example.expensebook.utility.helper.Const
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
+
+    private var hasMovedNext = false
 
     override fun inflateBinding(inflater: LayoutInflater): ActivitySplashBinding {
         return ActivitySplashBinding.inflate(layoutInflater)
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
+        // Preload App Open Ad
+        AdManager.loadAppOpenAd(this)
 
         val fadeIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in).apply {
             duration = 800
@@ -52,7 +57,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
                     if (PrefManager.isPrivacyAccepted) {
                         moveNext()
                     }
-                }, 200)
+                }, 300)
             }
         })
 
@@ -69,7 +74,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
                     PrefManager.isPrivacyAccepted = true
                     moveNext()
                 } else {
-                    Toast.makeText(this@SplashActivity, getString(R.string.toast_agree_privacy),Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SplashActivity, getString(R.string.toast_agree_privacy), Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -80,9 +85,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
     private fun setPolicyTxt() {
-
         val fullText = getString(R.string.privacy_policy_agreement)
-
         val spannableString = SpannableString(fullText)
 
         val privacyText = "Privacy policy"
@@ -121,8 +124,16 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         binding.txtPolicy.text = spannableString
     }
 
-
     fun moveNext() {
+        if (hasMovedNext) return
+        hasMovedNext = true
+
+        AdManager.showSplashAppOpenAd(this) {
+            navigateToNextDestination()
+        }
+    }
+
+    private fun navigateToNextDestination() {
         val next = when {
             !PrefManager.isLanguageSet -> {
                 Intent(this, LanguageActivity::class.java).apply {
@@ -151,5 +162,4 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         startActivity(next)
         finish()
     }
-
 }

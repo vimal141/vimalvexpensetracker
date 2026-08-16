@@ -47,6 +47,15 @@ class ReportsFragment : Fragment() {
         setupListeners()
         updateReportTypeUI()
         observeViewModel()
+
+        activity?.let { act ->
+            com.tb.example.expensebook.utility.ads.AdManager.loadNativeAd(
+                activity = act,
+                container = binding.flNativeAd,
+                layoutResId = R.layout.layout_native_ad_card,
+                screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_REPORTS_NATIVE_AD
+            )
+        }
     }
 
     override fun onResume() {

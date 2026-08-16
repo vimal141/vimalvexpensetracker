@@ -58,6 +58,13 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         } else {
             updateTypeUI()
         }
+
+        // Load adaptive banner ad
+        com.tb.example.expensebook.utility.ads.AdManager.loadAdaptiveBanner(
+            this,
+            binding.flAdContainer,
+            com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_ADD_TRANSACTION_BANNER_AD
+        )
     }
 
     override fun onBackPressedAction() {
@@ -229,7 +236,13 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
             viewModel.insert(transaction)
             Toast.makeText(this, getString(R.string.toast_transaction_saved), Toast.LENGTH_SHORT).show()
         }
-        finish()
+
+        com.tb.example.expensebook.utility.ads.AdManager.showInterstitialWithCounter(
+            activity = this,
+            screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_SAVE_TRANSACTION_INTERSTITIAL
+        ) {
+            finish()
+        }
     }
 
     private fun showDeleteConfirmation() {
@@ -248,7 +261,12 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
             dialog.dismiss()
             editTransaction?.let { viewModel.delete(it) }
             Toast.makeText(this, getString(R.string.toast_transaction_deleted), Toast.LENGTH_SHORT).show()
-            finish()
+            com.tb.example.expensebook.utility.ads.AdManager.showInterstitialWithCounter(
+                activity = this@AddTransactionActivity,
+                screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_SAVE_TRANSACTION_INTERSTITIAL
+            ) {
+                finish()
+            }
         }
 
         dialog.show()

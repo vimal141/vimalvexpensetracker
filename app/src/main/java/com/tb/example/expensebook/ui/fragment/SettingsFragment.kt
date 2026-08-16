@@ -40,6 +40,14 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
+
+        activity?.let { act ->
+            com.tb.example.expensebook.utility.ads.AdManager.loadAdaptiveBanner(
+                activity = act,
+                container = binding.flAdContainer,
+                screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_SETTINGS_BANNER_AD
+            )
+        }
     }
 
     override fun onResume() {

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/native_ad_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ad_card_bg"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_8sdp">
+
+        <!-- Top Row: Ad Badge & Advertiser -->
+        <TextView
+            android:id="@+id/ad_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ad_badge"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_1sdp"
+            android:text="@string/ad_badge"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_7ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ad_advertiser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/medium"
+            android:maxLines="1"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/_8ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ad_badge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ad_badge"
+            app:layout_constraintTop_toTopOf="@id/ad_badge" />
+
+        <!-- Media View -->
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/ad_media"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/bg_shimmer_rect"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/ad_badge" />
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/ad_app_icon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ad_media" />
+
+        <!-- Headline -->
+        <TextView
+            android:id="@+id/ad_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@+id/ad_call_to_action"
+            app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+            app:layout_constraintTop_toTopOf="@id/ad_app_icon" />
+
+        <!-- Rating bar -->
+        <RatingBar
+            android:id="@+id/ad_stars"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/ad_headline"
+            app:layout_constraintTop_toBottomOf="@id/ad_headline" />
+
+        <!-- Body -->
+        <TextView
+            android:id="@+id/ad_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toStartOf="@+id/ad_call_to_action"
+            app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/ad_stars" />
+
+        <!-- Call to Action Button -->
+        <Button
+            android:id="@+id/ad_call_to_action"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/bg_ad_cta"
+            android:fontFamily="@font/bold"
+            android:includeFontPadding="false"
+            android:minWidth="@dimen/_65sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_9ssp"
+            app:backgroundTint="@color/primaryColor"
+            app:cornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="@id/ad_app_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ad_app_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

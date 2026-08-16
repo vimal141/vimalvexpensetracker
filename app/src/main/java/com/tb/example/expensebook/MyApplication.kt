@@ -3,6 +3,7 @@ package com.tb.example.expensebook
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import com.tb.example.expensebook.di.appModule
+import com.tb.example.expensebook.utility.ads.AdManager
 import com.tb.example.expensebook.utility.helper.PrefManager
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -16,6 +17,9 @@ class MyApplication : Application() {
             androidContext(this@MyApplication)
             modules(appModule)
         }
+
+        // Initialize AdMob Ads and Firebase Remote Config
+        AdManager.init(this)
 
         val mode = PrefManager.themeMode
         AppCompatDelegate.setDefaultNightMode(mode)

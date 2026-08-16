@@ -83,14 +83,20 @@ class ExportFilterBottomSheet : BottomSheetDialogFragment() {
                 if (list.isEmpty()) {
                     dismiss()
                     Toast.makeText(requireContext(), getString(R.string.toast_no_transactions_period), Toast.LENGTH_SHORT).show()
-                } else {
                     val intent = Intent(requireContext(), PdfPreviewActivity::class.java).apply {
                         putExtra(Constants.EXTRA_START_TIME, startTime)
                         putExtra(Constants.EXTRA_END_TIME, endTime)
                         putExtra(Constants.EXTRA_PERIOD_TEXT, periodText)
                     }
-                    startActivity(intent)
                     dismiss()
+                    activity?.let { act ->
+                        com.tb.example.expensebook.utility.ads.AdManager.showInterstitialDirect(
+                            activity = act,
+                            screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_EXPORT_REPORT_INTERSTITIAL
+                        ) {
+                            act.startActivity(intent)
+                        }
+                    } ?: startActivity(intent)
                 }
             }
         }

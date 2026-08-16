@@ -162,7 +162,7 @@
         android:paddingTop="@dimen/_4sdp"
         android:background="@color/bgColor"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/fl_ad_container">
 
         <!-- Amount Card (Static, above layout_meta) -->
         <com.google.android.material.card.MaterialCardView
@@ -352,5 +352,15 @@
             app:cornerRadius="@dimen/_10sdp" />
 
     </LinearLayout>
+
+    <!-- Bottom Banner Ad Container -->
+    <FrameLayout
+        android:id="@+id/fl_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

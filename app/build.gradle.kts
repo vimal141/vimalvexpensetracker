@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("com.google.devtools.ksp") version "2.3.9"
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -56,5 +57,17 @@ dependencies {
     implementation("com.intuit.ssp:ssp-android:1.1.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.11.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.8.7")
     implementation("io.insert-koin:koin-android:4.2.2")
+
+    // Firebase (BOM, Remote Config, Analytics)
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+    implementation("com.google.firebase:firebase-config-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
+
+    // Google Mobile Ads SDK (AdMob)
+    implementation("com.google.android.gms:play-services-ads:23.6.0")
+
+    // Facebook Shimmer for loading placeholders
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }

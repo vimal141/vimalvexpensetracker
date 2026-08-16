@@ -46,6 +46,14 @@ class HistoryFragment : Fragment() {
         setupSearch()
         setupFilters()
         observeTransactions()
+
+        activity?.let { act ->
+            com.tb.example.expensebook.utility.ads.AdManager.loadAdaptiveBanner(
+                activity = act,
+                container = binding.flAdContainer,
+                screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_HISTORY_NATIVE_AD
+            )
+        }
     }
 
     override fun onResume() {

@@ -26,6 +26,13 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     override fun onCreateActivity(savedInstanceState: Bundle?) {
         setupUI()
         setupListeners()
+
+        com.tb.example.expensebook.utility.ads.AdManager.loadNativeAd(
+            activity = this,
+            container = binding.flAdContainer,
+            layoutResId = R.layout.layout_native_ad_card,
+            screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_LANGUAGE_SCREEN_NATIVE_AD
+        )
     }
 
     override fun onBackPressedAction() {

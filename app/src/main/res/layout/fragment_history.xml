@@ -220,7 +220,7 @@
         android:nestedScrollingEnabled="true"
         android:paddingHorizontal="@dimen/_14sdp"
         android:paddingBottom="@dimen/_70sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fl_ad_container"
         app:layout_constraintTop_toBottomOf="@id/scroll_chips"
         tools:listitem="@layout/item_transaction" />
 
@@ -230,7 +230,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fl_ad_container"
         app:layout_constraintTop_toBottomOf="@id/card_search">
 
         <com.google.android.material.textview.MaterialTextView
@@ -248,5 +248,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Banner Ad Container -->
+    <FrameLayout
+        android:id="@+id/fl_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

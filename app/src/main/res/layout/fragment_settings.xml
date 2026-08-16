@@ -814,6 +814,16 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Banner / Native Ad Container -->
+        <FrameLayout
+            android:id="@+id/fl_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_70sdp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/card_more" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

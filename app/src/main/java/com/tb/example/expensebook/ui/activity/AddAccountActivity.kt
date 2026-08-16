@@ -87,8 +87,13 @@ class AddAccountActivity : BaseActivity<ActivityAddAccountBinding>() {
 
                     val intent = Intent(this@AddAccountActivity, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                    finish()
+                    com.tb.example.expensebook.utility.ads.AdManager.showInterstitialWithCounter(
+                        activity = this@AddAccountActivity,
+                        screenFlagKey = com.tb.example.expensebook.utility.ads.RemoteConfigHelper.KEY_SHOW_SAVE_TRANSACTION_INTERSTITIAL
+                    ) {
+                        startActivity(intent)
+                        finish()
+                    }
                 }
             }
         }
