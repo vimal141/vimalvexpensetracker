@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Every Expense Matters</string>
 
     <!-- Navigation -->
@@ -98,7 +98,7 @@
     <string name="toast_currency_updated">Currency updated</string>
     <string name="toast_all_data_cleared">All data cleared</string>
     <string name="toast_error_browser">Could not open browser</string>
-    <string name="toast_thanks_support">Thank you for supporting Expense Book!</string>
+    <string name="toast_thanks_support">Thank you for supporting FinTrack!</string>
     <string name="toast_thanks_rating">Thank you for rating us 5 stars!</string>
     <string name="toast_privacy_policy">Privacy Policy page: www.google.com</string>
     <string name="toast_thanks_support_emoji">Thanks for the support! 😊</string>

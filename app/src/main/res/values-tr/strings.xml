@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Her harcama önemlidir</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Para birimi güncellendi</string>
     <string name="toast_all_data_cleared">Tüm veriler temizlendi</string>
     <string name="toast_error_browser">Tarayıcı açılamadı</string>
-    <string name="toast_thanks_support">Expense Book\'u desteklediğiniz için teşekkürler!</string>
+    <string name="toast_thanks_support">FinTrack\'u desteklediğiniz için teşekkürler!</string>
     <string name="toast_thanks_rating">Bizi 5 yıldızla değerlendirdiğiniz için teşekkürler!</string>
     <string name="toast_privacy_policy">Gizlilik Politikası sayfası: www.google.com</string>
     <string name="toast_thanks_support_emoji">Destek için teşekkürler! 😊</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Setiap pengeluaran itu penting</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Mata uang diperbarui</string>
     <string name="toast_all_data_cleared">Semua data telah dihapus</string>
     <string name="toast_error_browser">Tidak dapat membuka peramban</string>
-    <string name="toast_thanks_support">Terima kasih telah mendukung Expense Book!</string>
+    <string name="toast_thanks_support">Terima kasih telah mendukung FinTrack!</string>
     <string name="toast_thanks_rating">Terima kasih telah memberi nilai 5 bintang!</string>
     <string name="toast_privacy_policy">Halaman Kebijakan Privasi: www.google.com</string>
     <string name="toast_thanks_support_emoji">Terima kasih atas dukungannya! 😊</string>

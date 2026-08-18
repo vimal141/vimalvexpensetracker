@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Elke uitgawe tel</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Geldeenheid opgedateer</string>
     <string name="toast_all_data_cleared">Alle data is skoongemaak</string>
     <string name="toast_error_browser">Kon nie blaaier oopmaak nie</string>
-    <string name="toast_thanks_support">Dankie dat jy Expense Book ondersteun!</string>
+    <string name="toast_thanks_support">Dankie dat jy FinTrack ondersteun!</string>
     <string name="toast_thanks_rating">Dankie dat jy ons 5 sterre gegee het!</string>
     <string name="toast_privacy_policy">Privaatheidsbeleid bladsy: www.google.com</string>
     <string name="toast_thanks_support_emoji">Dankie vir die ondersteuning! 😊</string>

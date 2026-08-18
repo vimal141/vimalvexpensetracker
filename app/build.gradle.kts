@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tb.example.expensebook"
+    namespace = "com.fintrack.expensetracker"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.tb.example.expensebook"
+        applicationId = "com.fintrack.expensetracker"
         minSdk = 30
         targetSdk = 36
         versionCode = 1
@@ -57,4 +57,5 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.11.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
     implementation("io.insert-koin:koin-android:4.2.2")
+    implementation("com.airbnb.android:lottie:6.6.3")
 }

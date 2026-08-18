@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">すべての支出に価値を</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">通貨を更新しました</string>
     <string name="toast_all_data_cleared">すべてのデータを消去しました</string>
     <string name="toast_error_browser">ブラウザを開けませんでした</string>
-    <string name="toast_thanks_support">Expense Bookのご利用ありがとうございます！</string>
+    <string name="toast_thanks_support">FinTrackのご利用ありがとうございます！</string>
     <string name="toast_thanks_rating">高評価ありがとうございます！</string>
     <string name="toast_privacy_policy">プライバシーポリシーページ: www.google.com</string>
     <string name="toast_thanks_support_emoji">応援ありがとうございます！ 😊</string>

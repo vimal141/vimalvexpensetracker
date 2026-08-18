@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Minden kiadás számít</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Pénznem frissítve</string>
     <string name="toast_all_data_cleared">Minden adat törölve lett</string>
     <string name="toast_error_browser">Nem sikerült megnyitni a böngészőt</string>
-    <string name="toast_thanks_support">Köszönjük, hogy támogatod az Expense Bookot!</string>
+    <string name="toast_thanks_support">Köszönjük, hogy támogatod az FinTrackot!</string>
     <string name="toast_thanks_rating">Köszönjük az 5 csillagos értékelést!</string>
     <string name="toast_privacy_policy">Adatvédelmi oldal: www.google.com</string>
     <string name="toast_thanks_support_emoji">Köszönjük a támogatást! 😊</string>

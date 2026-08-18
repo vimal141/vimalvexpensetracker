@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">ทุกรายจ่ายมีความหมาย</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">อัปเดตสกุลเงินแล้ว</string>
     <string name="toast_all_data_cleared">ล้างข้อมูลทั้งหมดแล้ว</string>
     <string name="toast_error_browser">ไม่สามารถเปิดเบราว์เซอร์ได้</string>
-    <string name="toast_thanks_support">ขอบคุณที่สนับสนุน Expense Book!</string>
+    <string name="toast_thanks_support">ขอบคุณที่สนับสนุน FinTrack!</string>
     <string name="toast_thanks_rating">ขอบคุณที่ให้คะแนน 5 ดาว!</string>
     <string name="toast_privacy_policy">หน้านโยบายความเป็นส่วนตัว: www.google.com</string>
     <string name="toast_thanks_support_emoji">ขอบคุณสำหรับการสนับสนุน! 😊</string>

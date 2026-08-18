@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Bawat gastos ay mahalaga</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Na-update ang pera</string>
     <string name="toast_all_data_cleared">Nabura ang lahat ng data</string>
     <string name="toast_error_browser">Hindi mabuksan ang browser</string>
-    <string name="toast_thanks_support">Salamat sa pagsuporta sa Expense Book!</string>
+    <string name="toast_thanks_support">Salamat sa pagsuporta sa FinTrack!</string>
     <string name="toast_thanks_rating">Salamat sa pagbibigay sa amin ng 5 bituin!</string>
     <string name="toast_privacy_policy">Pahina ng Kebijakan ng Privacy: www.google.com</string>
     <string name="toast_thanks_support_emoji">Salamat sa suporta! 😊</string>

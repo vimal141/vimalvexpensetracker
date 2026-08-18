@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">हर खर्च मायने रखता है</string>
 
     <!-- Navigation -->
@@ -93,7 +93,7 @@
     <string name="toast_currency_updated">मुद्रा अद्यतन की गई</string>
     <string name="toast_all_data_cleared">सभी डेटा साफ़ कर दिया गया</string>
     <string name="toast_error_browser">ब्राउज़र नहीं खोला जा सका</string>
-    <string name="toast_thanks_support">Expense Book का समर्थन करने के लिए धन्यवाद!</string>
+    <string name="toast_thanks_support">FinTrack का समर्थन करने के लिए धन्यवाद!</string>
     <string name="toast_thanks_rating">हमें 5 सितारे देने के लिए धन्यवाद!</string>
     <string name="toast_privacy_policy">गोपनीयता नीति पृष्ठ: www.google.com</string>
     <string name="toast_thanks_support_emoji">समर्थन के लिए धन्यवाद! 😊</string>

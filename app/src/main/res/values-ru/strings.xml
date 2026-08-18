@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Каждый расход имеет значение</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Валюта обновлена</string>
     <string name="toast_all_data_cleared">Все данные очищены</string>
     <string name="toast_error_browser">Не удалось открыть браузер</string>
-    <string name="toast_thanks_support">Спасибо за поддержку Expense Book!</string>
+    <string name="toast_thanks_support">Спасибо за поддержку FinTrack!</string>
     <string name="toast_thanks_rating">Спасибо за оценку 5 звезд!</string>
     <string name="toast_privacy_policy">Страница политики конфиденциальности: www.google.com</string>
     <string name="toast_thanks_support_emoji">Спасибо за поддержку! 😊</string>

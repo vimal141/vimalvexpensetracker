@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">Mỗi chi tiêu đều quan trọng</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">Đã cập nhật tiền tệ</string>
     <string name="toast_all_data_cleared">Đã xóa tất cả dữ liệu</string>
     <string name="toast_error_browser">Không thể mở trình duyệt</string>
-    <string name="toast_thanks_support">Cảm ơn bạn đã ủng hộ Expense Book!</string>
+    <string name="toast_thanks_support">Cảm ơn bạn đã ủng hộ FinTrack!</string>
     <string name="toast_thanks_rating">Cảm ơn bạn đã đánh giá 5 sao!</string>
     <string name="toast_privacy_policy">Trang chính sách bảo mật: www.google.com</string>
     <string name="toast_thanks_support_emoji">Cảm ơn bạn đã ủng hộ! 😊</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Expense Book</string>
+    <string name="app_name">FinTrack</string>
     <string name="app_tagline">كل مصورف يفرق</string>
 
     <!-- Navigation -->
@@ -94,7 +94,7 @@
     <string name="toast_currency_updated">تم تحديث العملة</string>
     <string name="toast_all_data_cleared">تم مسح جميع البيانات</string>
     <string name="toast_error_browser">تعذر فتح المتصفح</string>
-    <string name="toast_thanks_support">شكراً لدعمك Expense Book!</string>
+    <string name="toast_thanks_support">شكراً لدعمك FinTrack!</string>
     <string name="toast_thanks_rating">شكراً لتقييمنا بـ 5 نجوم!</string>
     <string name="toast_privacy_policy">صفحة سياسة الخصوصية: www.google.com</string>
     <string name="toast_thanks_support_emoji">شكراً على الدعم! 😊</string>

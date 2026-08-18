@@ -1,0 +1,50 @@
+package com.fintrack.expensetracker.ui.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import androidx.recyclerview.widget.RecyclerView
+import com.fintrack.expensetracker.databinding.ItemCurrencyBinding
+
+data class CurrencyItem(val symbol: String, val code: String, val name: String)
+
+class CurrencyAdapter(
+    private val currencies: List<CurrencyItem>,
+    var selectedCode: String
+) : RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>() {
+
+    private var lastPosition = -1
+
+    inner class CurrencyViewHolder(val binding: ItemCurrencyBinding) : RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {
+        val binding = ItemCurrencyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CurrencyViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
+        val currency = currencies[position]
+        
+        holder.binding.txtCurrencySymbol.text = currency.symbol
+        holder.binding.txtCurrencyCode.text = currency.code
+        holder.binding.txtCurrencyName.text = currency.name
+        
+        holder.binding.rbSelected.isChecked = (currency.code == selectedCode)
+
+        holder.binding.root.setOnClickListener {
+            val oldCode = selectedCode
+            selectedCode = currency.code
+            if (oldCode != selectedCode) {
+                notifyDataSetChanged()
+            }
+        }
+
+        if (position > lastPosition) {
+            val anim = AnimationUtils.loadAnimation(holder.binding.root.context, com.fintrack.expensetracker.R.anim.item_animation_fall_down)
+            holder.binding.root.startAnimation(anim)
+            lastPosition = position
+        }
+    }
+
+    override fun getItemCount(): Int = currencies.size
+}
