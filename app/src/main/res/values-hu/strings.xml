@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FinTrack</string>
+    <string name="app_name">Költségkövető</string>
     <string name="app_tagline">Minden kiadás számít</string>
 
     <!-- Navigation -->
@@ -60,7 +60,7 @@
     <string name="privacy_policy">Adatvédelmi irányelvek</string>
     <string name="rate_us">Értékelj minket</string>
     <string name="share_app">Alkalmazás megosztása</string>
-    <string name="version">Verzió 1.0.0</string>
+    <string name="version">Verzió %1$s</string>
     <string name="premium">Prémium</string>
 
     <!-- OnBoarding -->
@@ -78,14 +78,14 @@
     <string name="version_1_0_0">Verzió 1.0.0</string>
     <string name="theme">Téma</string>
     <string name="system_default">Rendszeralapértelmezett</string>
-    <string name="manage_accounts">Fiókok kezelése</string>
+    <string name="manage_accounts">Profilok kezelése</string>
     <string name="clear_all_data">Összes adat törlése</string>
     <string name="no_transactions_yet">Még nincsenek tranzakciók</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Koppints a + gombra tranzakció hozzáadásához</string>
 
     <!-- Validation & Toasts -->
-    <string name="toast_account_first">Kérjük, először hozz létre egy fiókot</string>
-    <string name="toast_account_created">Fiók sikeresen létrehozva!</string>
+    <string name="toast_account_first">Kérjük, először hozz létre egy profilot</string>
+    <string name="toast_account_created">Profil sikeresen létrehozva!</string>
     <string name="toast_switched_to">Váltás erre: %1$s</string>
     <string name="toast_transaction_deleted">Tranzakció törölve</string>
     <string name="toast_transaction_updated">Tranzakció frissítve!</string>
@@ -94,11 +94,11 @@
     <string name="toast_currency_updated">Pénznem frissítve</string>
     <string name="toast_all_data_cleared">Minden adat törölve lett</string>
     <string name="toast_error_browser">Nem sikerült megnyitni a böngészőt</string>
-    <string name="toast_thanks_support">Köszönjük, hogy támogatod az FinTrackot!</string>
+    <string name="toast_thanks_support">Köszönjük, hogy támogatod az Expense Trackerot!</string>
     <string name="toast_thanks_rating">Köszönjük az 5 csillagos értékelést!</string>
     <string name="toast_privacy_policy">Adatvédelmi oldal: www.google.com</string>
     <string name="toast_thanks_support_emoji">Köszönjük a támogatást! 😊</string>
-    <string name="toast_error_account_missing">Hiba: Fiók részletei hiányoznak</string>
+    <string name="toast_error_account_missing">Hiba: Profil részletei hiányoznak</string>
     <string name="toast_pdf_exported">PDF kivonat sikeresen exportálva!</string>
     <string name="toast_pdf_failed">PDF exportálása sikertelen</string>
 
@@ -109,16 +109,16 @@
     <string name="text_balance_hidden">********</string>
     <string name="text_not_applicable">--</string>
     
-    <string name="text_add_account">Fiók hozzáadása</string>
-    <string name="text_account_details">Fiók részletei</string>
-    <string name="text_create_account_desc">Hozz létre egy fiókot a kiadások nyomon követéséhez.</string>
-    <string name="text_create_account">Fiók létrehozása</string>
+    <string name="text_add_account">Profil hozzáadása</string>
+    <string name="text_account_details">Profil részletei</string>
+    <string name="text_create_account_desc">Hozz létre egy profilot a kiadások nyomon követéséhez.</string>
+    <string name="text_create_account">Profil létrehozása</string>
     <string name="select_theme">Válassz témát</string>
     <string name="light">Világos</string>
     <string name="dark">Sötét</string>
     <string name="agree_amp_continue"><![CDATA[Elfogadom és folytatás]]></string>
-    <string name="strAccountExist">Már létezik fiók ezzel a névvel</string>
-    <string name="strEmptyError">A fiók neve nem lehet üres</string>
+    <string name="strAccountExist">Már létezik profil ezzel a névvel</string>
+    <string name="strEmptyError">A profil neve nem lehet üres</string>
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Kezdd el rögzíteni bevételeidet és kiadásaidat.</string>
     <string name="add_first_transaction">Első tranzakció hozzáadása</string>
 
@@ -126,7 +126,7 @@
     <string name="desc_clear_all_data">Ez véglegesen törli az ÖSSZES tranzakciót!</string>
     <string name="delete_all">Összes törlése</string>
     <string name="cancel">Mégse</string>
-    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_title">Költségkövető Pro</string>
     <string name="app_about_desc">Verzió 1.0.0\n\nPrémium offline kiadáskezelő alkalmazás.</string>
     <string name="ok">OK</string>
     <string name="share_via">Megosztás ezzel:</string>
@@ -149,8 +149,8 @@
     <string name="statement_of_account">SZÁMLAKIVONAT</string>
     <string name="generated_securely">Biztonságosan generálva az ExpenseBook által</string>
     <string name="page_number">%1$d. oldal</string>
-    <string name="account_name_label">Fiók neve: %1$s</string>
-    <string name="account_number_label">Fiók száma: %1$s</string>
+    <string name="account_name_label">Profil neve: %1$s</string>
+    <string name="account_number_label">Profil száma: %1$s</string>
     <string name="period_label">Időszak: %1$s</string>
     <string name="total_income">Teljes bevétel</string>
     <string name="closing_balance">Záró egyenleg</string>
@@ -173,13 +173,23 @@
     <string name="change_currency">Pénznem módosítása</string>
     <string name="change_currency_desc">Biztosan át szeretnéd állítani a pénznemet erre: %1$s (%2$s)?</string>
     <string name="done">Kész</string>
-    <string name="change_account">Fiók módosítása</string>
-    <string name="change_account_desc">Biztosan át szeretnél váltani erre a fiókra: \'%1$s\'?</string>
-    <string name="toast_account_changed">Fiók átállítva erre: %1$s</string>
+    <string name="change_account">Profil módosítása</string>
+    <string name="change_account_desc">Biztosan át szeretnél váltani erre a profilra: \'%1$s\'?</string>
+    <string name="toast_account_changed">Profil átállítva erre: %1$s</string>
     <string name="toast_press_back_again_to_exit">Nyomd meg újra a vissza gombot a kilépéshez</string>
     <string name="toast_no_transactions_period">Nem találhatók tranzakciók a kiválasztott időszakban</string>
     <string name="language">Nyelv</string>
     <string name="change_language">Nyelv módosítása</string>
     <string name="change_language_desc">Biztosan át szeretnéd állítani az alkalmazás nyelvét erre: %1$s?</string>
     <string name="toast_language_updated">Nyelv sikeresen frissítve!</string>
+    <!-- About App -->
+    <string name="about_tagline">Okos és egyszerű költségkövető</string>
+    <string name="about_key_features">Főbb jellemzők</string>
+    <string name="about_features_desc" formatted="false">• Napi bevételi és kiadási tranzakciók nyomon követése\n• Több profil és egyéni kategória kezelése\n• PDF kimutatások és részletes jelentések exportálása\n• 100% offline, gyors és biztonságos</string>
+    <string name="about_check_update">Frissítések keresése</string>
+    <string name="about_latest_version">A legfrissebb verziót használja (v%1$s)</string>
+    <string name="hint_profile_name">Profilnév (pl. Személyes, Üzleti)</string>
+    <string name="exit">Kilépés</string>
+    <string name="exit_dialog_title">Kilép a programból?</string>
+    <string name="exit_dialog_desc">A kiadások nyomon követéséhez létre kell hoznia egy profilt. Biztosan ki szeretne lépni az alkalmazásból?</string>
 </resources>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FinTrack</string>
     <string name="app_tagline">Ogni spesa conta</string>
@@ -60,7 +60,7 @@
     <string name="privacy_policy">Informativa sulla Privacy</string>
     <string name="rate_us">Valutaci</string>
     <string name="share_app">Condividi App</string>
-    <string name="version">Versione 1.0.0</string>
+    <string name="version">Versione %1$s</string>
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
@@ -146,7 +146,7 @@
     <string name="error_valid_amount">Inserisci un importo positivo valido</string>
 
     <string name="default_pdf_name">Estratto_Conto.pdf</string>
-    <string name="statement_of_account">ESTRATTO CONTO</string>
+    <string name="statement_of_account">ESTRATTO PROFILO</string>
     <string name="generated_securely">Generato in modo sicuro da ExpenseBook</string>
     <string name="page_number">Pagina %1$d</string>
     <string name="account_name_label">Nome Account: %1$s</string>
@@ -182,4 +182,14 @@
     <string name="change_language">Cambia Lingua</string>
     <string name="change_language_desc">Sei sicuro di voler cambiare la lingua dell\'app in %1$s?</string>
     <string name="toast_language_updated">Lingua aggiornata con successo!</string>
+    <!-- About App -->
+    <string name="about_tagline">Tracciamento spese semplice e intelligente</string>
+    <string name="about_key_features">Funzionalità chiave</string>
+    <string name="about_features_desc" formatted="false">• Monitora le transazioni giornaliere di entrate e uscite\n• Gestisci account multipli e categorie personalizzate\n• Esporta estratti profilo in PDF e report dettagliati\n• 100% offline, veloce e sicuro</string>
+    <string name="about_check_update">Verifica aggiornamenti</string>
+    <string name="about_latest_version">Stai utilizzando l\'ultima versione (v%1$s)</string>
+    <string name="hint_profile_name">Nome del profilo (es. Personale, Business)</string>
+    <string name="exit">Esci</string>
+    <string name="exit_dialog_title">Uscire dall\'applicazione?</string>
+    <string name="exit_dialog_desc">Per iniziare a monitorare le tue spese, devi creare un profilo. Sei sicuro di voler uscire dall\'applicazione?</string>
 </resources>

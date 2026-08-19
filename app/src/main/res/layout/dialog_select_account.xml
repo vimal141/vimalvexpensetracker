@@ -9,7 +9,7 @@
         android:id="@+id/txt_dialog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Account"
+        android:text="Select Profile"
         android:textSize="@dimen/_13ssp"
         android:textColor="?android:attr/textColorPrimary"
         android:textStyle="bold"

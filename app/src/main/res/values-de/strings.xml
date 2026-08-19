@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FinTrack</string>
+    <string name="app_name">Ausgaben-Tracker</string>
     <string name="app_tagline">Jede Ausgabe zählt</string>
 
     <!-- Navigation -->
@@ -44,7 +44,7 @@
     <string name="monthly">Monatlich</string>
     <string name="yearly">Jährlich</string>
     <string name="category_breakdown">Kategorieaufschlüsselung</string>
-    <string name="financial_analysis">Einnahmen- &amp; Ausgabenanalyse</string>
+    <string name="financial_analysis">Einnahmen- Smarter &amp; einfacher Ausgaben-Trackeramp; Ausgabenanalyse</string>
     <string name="total_volume">Gesamt</string>
 
     <!-- Settings -->
@@ -60,7 +60,7 @@
     <string name="privacy_policy">Datenschutzbestimmungen</string>
     <string name="rate_us">Bewerten Sie uns</string>
     <string name="share_app">App teilen</string>
-    <string name="version">Version 1.0.0</string>
+    <string name="version">Version %1$s</string>
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
@@ -78,14 +78,14 @@
     <string name="version_1_0_0">Version 1.0.0</string>
     <string name="theme">Design</string>
     <string name="system_default">Systemstandard</string>
-    <string name="manage_accounts">Konten verwalten</string>
+    <string name="manage_accounts">Profile verwalten</string>
     <string name="clear_all_data">Alle Daten löschen</string>
     <string name="no_transactions_yet">Noch keine Transaktionen</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Tippen Sie auf +, um eine Transaktion hinzuzufügen</string>
 
-    <!-- Validation & Toasts -->
-    <string name="toast_account_first">Bitte erstellen Sie zuerst ein Konto</string>
-    <string name="toast_account_created">Konto erfolgreich erstellt!</string>
+    <!-- Validation Smarter &amp; einfacher Ausgaben-Tracker Toasts -->
+    <string name="toast_account_first">Bitte erstellen Sie zuerst ein Profil</string>
+    <string name="toast_account_created">Profil erfolgreich erstellt!</string>
     <string name="toast_switched_to">Gewechselt zu %1$s</string>
     <string name="toast_transaction_deleted">Transaktion gelöscht</string>
     <string name="toast_transaction_updated">Transaktion aktualisiert!</string>
@@ -98,7 +98,7 @@
     <string name="toast_thanks_rating">Vielen Dank für 5 Sterne!</string>
     <string name="toast_privacy_policy">Datenschutzseite: www.google.com</string>
     <string name="toast_thanks_support_emoji">Vielen Dank! 😊</string>
-    <string name="toast_error_account_missing">Fehler: Kontodaten fehlen</string>
+    <string name="toast_error_account_missing">Fehler: Profildaten fehlen</string>
     <string name="toast_pdf_exported">PDF-Kontoauszug erfolgreich exportiert!</string>
     <string name="toast_pdf_failed">PDF-Export fehlgeschlagen</string>
 
@@ -109,16 +109,16 @@
     <string name="text_balance_hidden">********</string>
     <string name="text_not_applicable">--</string>
     
-    <string name="text_add_account">Konto hinzufügen</string>
-    <string name="text_account_details">Kontodetails</string>
-    <string name="text_create_account_desc">Erstellen Sie ein Konto, um Ausgaben zu verfolgen.</string>
-    <string name="text_create_account">Konto erstellen</string>
+    <string name="text_add_account">Profil hinzufügen</string>
+    <string name="text_account_details">Profildetails</string>
+    <string name="text_create_account_desc">Erstellen Sie ein Profil, um Ausgaben zu verfolgen.</string>
+    <string name="text_create_account">Profil erstellen</string>
     <string name="select_theme">Design auswählen</string>
     <string name="light">Hell</string>
     <string name="dark">Dunkel</string>
-    <string name="agree_amp_continue"><![CDATA[Zustimmen & Weiter]]></string>
-    <string name="strAccountExist">Ein Konto mit diesem Namen existiert bereits</string>
-    <string name="strEmptyError">Kontoname darf nicht leer sein</string>
+    <string name="agree_amp_continue"><![CDATA[Zustimmen Smarter &amp; einfacher Ausgaben-Tracker Weiter]]></string>
+    <string name="strAccountExist">Ein Profil mit diesem Namen existiert bereits</string>
+    <string name="strEmptyError">Profilname darf nicht leer sein</string>
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Beginnen Sie mit der Verfolgung Ihrer Finanzen.</string>
     <string name="add_first_transaction">Erste Transaktion hinzufügen</string>
 
@@ -126,7 +126,7 @@
     <string name="desc_clear_all_data">Dadurch werden ALLE Transaktionen dauerhaft gelöscht.</string>
     <string name="delete_all">Alle löschen</string>
     <string name="cancel">Abbrechen</string>
-    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_title">Ausgaben-Tracker Pro</string>
     <string name="app_about_desc">Version 1.0.0\n\nEin meisterhafter Offline-Finanzmanager.</string>
     <string name="ok">OK</string>
     <string name="share_via">Teilen über</string>
@@ -146,11 +146,11 @@
     <string name="error_valid_amount">Geben Sie einen gültigen positiven Betrag ein</string>
 
     <string name="default_pdf_name">Kontoauszug.pdf</string>
-    <string name="statement_of_account">KONTOAUSZUG</string>
+    <string name="statement_of_account">PROFILAUSZUG</string>
     <string name="generated_securely">Sicher erstellt von ExpenseBook</string>
     <string name="page_number">Seite %1$d</string>
-    <string name="account_name_label">Kontoname: %1$s</string>
-    <string name="account_number_label">Kontonummer: %1$s</string>
+    <string name="account_name_label">Profilname: %1$s</string>
+    <string name="account_number_label">Profilnummer: %1$s</string>
     <string name="period_label">Zeitraum: %1$s</string>
     <string name="total_income">Gesamteinnahmen</string>
     <string name="closing_balance">Schlusssaldo</string>
@@ -173,13 +173,23 @@
     <string name="change_currency">Währung ändern</string>
     <string name="change_currency_desc">Möchten Sie Ihre Währung wirklich auf %1$s (%2$s) ändern?</string>
     <string name="done">Fertig</string>
-    <string name="change_account">Konto wechseln</string>
-    <string name="change_account_desc">Möchten Sie wirklich zum Konto \'%1$s\' wechseln?</string>
-    <string name="toast_account_changed">Konto zu %1$s gewechselt</string>
+    <string name="change_account">Profil wechseln</string>
+    <string name="change_account_desc">Möchten Sie wirklich zum Profil \'%1$s\' wechseln?</string>
+    <string name="toast_account_changed">Profil zu %1$s gewechselt</string>
     <string name="toast_press_back_again_to_exit">Zum Beenden erneut Zurück drücken</string>
     <string name="toast_no_transactions_period">Keine Transaktionen für den ausgewählten Zeitraum gefunden</string>
     <string name="language">Sprache</string>
     <string name="change_language">Sprache ändern</string>
     <string name="change_language_desc">Möchten Sie die Sprache wirklich auf %1$s ändern?</string>
     <string name="toast_language_updated">Sprache erfolgreich aktualisiert!</string>
+    <!-- About App -->
+    <string name="about_tagline">Smarter Smarter &amp; einfacher Ausgaben-Tracker einfacher Ausgaben-Tracker</string>
+    <string name="about_key_features">Hauptmerkmale</string>
+    <string name="about_features_desc" formatted="false">• Verfolgen Sie tägliche Einnahmen- und Ausgabentransaktionen\n• Verwalten Sie mehrere Profile Smarter &amp; einfacher Ausgaben-Tracker benutzerdefinierte Kategorien\n• Exportieren Sie PDF-Profilauszüge Smarter &amp; einfacher Ausgaben-Tracker detaillierte Berichte\n• 100 % offline, schnell Smarter &amp; einfacher Ausgaben-Tracker sicher</string>
+    <string name="about_check_update">Auf Updates prüfen</string>
+    <string name="about_latest_version">Sie verwenden die neueste Version (v%1$s)</string>
+    <string name="hint_profile_name">Profilname (z. B. Privat, Geschäftlich)</string>
+    <string name="exit">Beenden</string>
+    <string name="exit_dialog_title">Anwendung beenden?</string>
+    <string name="exit_dialog_desc">Um Ihre Ausgaben zu verfolgen, müssen Sie ein Profil erstellen. Möchten Sie die Anwendung wirklich beenden?</string>
 </resources>

@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Select Account"
+            android:text="Select Profile"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_13ssp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplication"
+        android:name="cashvexa.expensetracker.budget.money.MyApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ExpenseBook">
 
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,55 +24,55 @@
         </activity>
 
         <activity
-            android:name=".ui.activity.OnBoardingActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.OnBoardingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.activity.AddTransactionActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.AddTransactionActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.activity.AddAccountActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.AddAccountActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.activity.AccountsActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.AccountsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.ThemeActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.ThemeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.PdfPreviewActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.PdfPreviewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.CurrencyActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.CurrencyActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.AboutActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.AboutActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.LanguageActivity"
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.LanguageActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

@@ -41,7 +41,7 @@
         android:fontFamily="@font/regular"
         android:text="@string/onboarding_desc_1"
         android:textColor="@color/subTextColor"
-        android:textSize="@dimen/_10ssp"
+        android:textSize="@dimen/_11ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

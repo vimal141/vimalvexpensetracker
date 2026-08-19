@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FinTrack</string>
+    <string name="app_name">Gider Takibi</string>
     <string name="app_tagline">Her harcama önemlidir</string>
 
     <!-- Navigation -->
@@ -60,7 +60,7 @@
     <string name="privacy_policy">Gizlilik Politikası</string>
     <string name="rate_us">Bizi Değerlendirin</string>
     <string name="share_app">Uygulamayı Paylaş</string>
-    <string name="version">Sürüm 1.0.0</string>
+    <string name="version">Sürüm %1$s</string>
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
@@ -78,14 +78,14 @@
     <string name="version_1_0_0">Sürüm 1.0.0</string>
     <string name="theme">Tema</string>
     <string name="system_default">Sistem Varsayılanı</string>
-    <string name="manage_accounts">Hesapları Yönet</string>
+    <string name="manage_accounts">Profilları Yönet</string>
     <string name="clear_all_data">Tüm Verileri Temizle</string>
     <string name="no_transactions_yet">Henüz işlem yok</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">İşlem eklemek için + butonuna dokunun</string>
 
-    <!-- Validation & Toasts -->
-    <string name="toast_account_first">Lütfen önce bir hesap oluşturun</string>
-    <string name="toast_account_created">Hesap başarıyla oluşturuldu!</string>
+    <!-- Validation Akıllı &amp; Kolay Gider Takibi Toasts -->
+    <string name="toast_account_first">Lütfen önce bir profil oluşturun</string>
+    <string name="toast_account_created">Profil başarıyla oluşturuldu!</string>
     <string name="toast_switched_to">%1$s hesabına geçildi</string>
     <string name="toast_transaction_deleted">İşlem silindi</string>
     <string name="toast_transaction_updated">İşlem güncellendi!</string>
@@ -94,11 +94,11 @@
     <string name="toast_currency_updated">Para birimi güncellendi</string>
     <string name="toast_all_data_cleared">Tüm veriler temizlendi</string>
     <string name="toast_error_browser">Tarayıcı açılamadı</string>
-    <string name="toast_thanks_support">FinTrack\'u desteklediğiniz için teşekkürler!</string>
+    <string name="toast_thanks_support">Expense Tracker\'u desteklediğiniz için teşekkürler!</string>
     <string name="toast_thanks_rating">Bizi 5 yıldızla değerlendirdiğiniz için teşekkürler!</string>
     <string name="toast_privacy_policy">Gizlilik Politikası sayfası: www.google.com</string>
     <string name="toast_thanks_support_emoji">Destek için teşekkürler! 😊</string>
-    <string name="toast_error_account_missing">Hata: Hesap detayları eksik</string>
+    <string name="toast_error_account_missing">Hata: Profil detayları eksik</string>
     <string name="toast_pdf_exported">PDF Ekstresi başarıyla dışa aktarıldı!</string>
     <string name="toast_pdf_failed">PDF dışa aktarılamadı</string>
 
@@ -109,16 +109,16 @@
     <string name="text_balance_hidden">********</string>
     <string name="text_not_applicable">--</string>
     
-    <string name="text_add_account">Hesap Ekle</string>
-    <string name="text_account_details">Hesap Detayları</string>
-    <string name="text_create_account_desc">Giderlerinizi takip etmek için bir hesap oluşturun.</string>
-    <string name="text_create_account">Hesap Oluştur</string>
+    <string name="text_add_account">Profil Ekle</string>
+    <string name="text_account_details">Profil Detayları</string>
+    <string name="text_create_account_desc">Giderlerinizi takip etmek için bir profil oluşturun.</string>
+    <string name="text_create_account">Profil Oluştur</string>
     <string name="select_theme">Tema Seçin</string>
     <string name="light">Açık</string>
     <string name="dark">Koyu</string>
     <string name="agree_amp_continue"><![CDATA[Kabul Et ve Devam Et]]></string>
-    <string name="strAccountExist">Bu isimde bir hesap zaten var</string>
-    <string name="strEmptyError">Hesap adı boş olamaz</string>
+    <string name="strAccountExist">Bu isimde bir profil zaten var</string>
+    <string name="strEmptyError">Profil adı boş olamaz</string>
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Gelir ve giderlerinizi takip etmeye başlayın.</string>
     <string name="add_first_transaction">İlk İşlemi Ekle</string>
 
@@ -126,7 +126,7 @@
     <string name="desc_clear_all_data">Bu işlem TÜM işlemleri kalıcı olarak silecektir!</string>
     <string name="delete_all">Tümünü Sil</string>
     <string name="cancel">İptal</string>
-    <string name="app_title">Expense Tracker Pro</string>
+    <string name="app_title">Gider Takibi Pro</string>
     <string name="app_about_desc">Sürüm 1.0.0\n\nÇevrimdışı harcama takip uygulaması.</string>
     <string name="ok">Tamam</string>
     <string name="share_via">Şununla paylaş</string>
@@ -146,11 +146,11 @@
     <string name="error_valid_amount">Geçerli bir pozitif tutar girin</string>
 
     <string name="default_pdf_name">Hesap_Ekstresi.pdf</string>
-    <string name="statement_of_account">HESAP EKSTRESİ</string>
+    <string name="statement_of_account">PROFIL EKSTRESİ</string>
     <string name="generated_securely">ExpenseBook tarafından güvenle oluşturuldu</string>
     <string name="page_number">Sayfa %1$d</string>
-    <string name="account_name_label">Hesap Adı: %1$s</string>
-    <string name="account_number_label">Hesap Numarası: %1$s</string>
+    <string name="account_name_label">Profil Adı: %1$s</string>
+    <string name="account_number_label">Profil Numarası: %1$s</string>
     <string name="period_label">Dönem: %1$s</string>
     <string name="total_income">Toplam Gelir</string>
     <string name="closing_balance">Kapanış Bakiyesi</string>
@@ -175,11 +175,21 @@
     <string name="done">Tamam</string>
     <string name="change_account">Hesabı Değiştir</string>
     <string name="change_account_desc">\'%1$s\' hesabına geçmek istediğinizden emin misiniz?</string>
-    <string name="toast_account_changed">Hesap %1$s olarak değiştirildi</string>
+    <string name="toast_account_changed">Profil %1$s olarak değiştirildi</string>
     <string name="toast_press_back_again_to_exit">Çıkmak için tekrar geri basın</string>
     <string name="toast_no_transactions_period">Seçilen dönem için işlem bulunamadı</string>
     <string name="language">Dil</string>
     <string name="change_language">Dili Değiştir</string>
     <string name="change_language_desc">Uygulama dilini %1$s olarak değiştirmek istediğinizden emin misiniz?</string>
     <string name="toast_language_updated">Dil başarıyla güncellendi!</string>
+    <!-- About App -->
+    <string name="about_tagline">Akıllı Akıllı &amp; Kolay Gider Takibi Kolay Gider Takibi</string>
+    <string name="about_key_features">Temel Özellikler</string>
+    <string name="about_features_desc" formatted="false">• Günlük gelir ve gider işlemlerini takip edin\n• Birden fazla profil ve özel kategori yönetin\n• PDF ekstreleri ve detaylı raporlar dışa aktarın\n• %100 Çevrimdışı, Hızlı ve Güvenli</string>
+    <string name="about_check_update">Güncellemeleri Denetle</string>
+    <string name="about_latest_version">En son sürümü kullanıyorsunuz (v%1$s)</string>
+    <string name="hint_profile_name">Profil Adı (ör. Kişisel, İş)</string>
+    <string name="exit">Çıkış</string>
+    <string name="exit_dialog_title">Uygulamadan Çıkılsın mı?</string>
+    <string name="exit_dialog_desc">Harcamalarınızı takip etmeye başlamak için bir profil oluşturmanız gerekir. Uygulamadan çıkmak istediğinizden emin misiniz?</string>
 </resources>

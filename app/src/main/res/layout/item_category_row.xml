@@ -40,6 +40,7 @@
         android:maxLines="1"
         android:text="@string/amount"
         android:textColor="@color/TextColor"
+        android:textDirection="ltr"
         android:textSize="@dimen/_13ssp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_category_name"
         app:layout_constraintEnd_toStartOf="@+id/txt_category_percent"

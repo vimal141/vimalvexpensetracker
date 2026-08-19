@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.fintrack.expensetracker"
+    namespace = "cashvexa.expensetracker.budget.money"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.fintrack.expensetracker"
+        applicationId = "cashvexa.expensetracker.budget.money"
         minSdk = 30
         targetSdk = 36
         versionCode = 1

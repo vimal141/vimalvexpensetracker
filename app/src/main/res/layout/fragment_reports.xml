@@ -295,6 +295,7 @@
                             android:paddingHorizontal="@dimen/_2sdp"
                             android:text="@string/amount"
                             android:textColor="@color/income_green"
+                            android:textDirection="ltr"
                             android:textSize="@dimen/_15ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/lbl_income"
@@ -373,6 +374,7 @@
                             android:paddingHorizontal="@dimen/_2sdp"
                             android:text="@string/amount"
                             android:textColor="@color/expense_red"
+                            android:textDirection="ltr"
                             android:textSize="@dimen/_15ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/lbl_expense"
@@ -463,7 +465,7 @@
 
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.fintrack.expensetracker.utility.customview.PieChartView
+                    <cashvexa.expensetracker.budget.money.utility.customview.PieChartView
                         android:id="@+id/pie_chart_view"
                         android:layout_width="@dimen/_180sdp"
                         android:layout_height="@dimen/_180sdp"

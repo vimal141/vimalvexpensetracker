@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FinTrack"
+rootProject.name = "Cashvexa"
 include(":app")

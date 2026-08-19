@@ -117,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:fontFamily="@font/medium"
-                        android:text="Smart &amp; Simple Expense Tracker"
+                        android:text="@string/about_tagline"
                         android:textColor="@color/subTextColor"
                         android:textSize="@dimen/_11ssp" />
 
@@ -149,7 +149,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
-                        android:text="Key Features"
+                        android:text="@string/about_key_features"
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp" />
 
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
                         android:lineSpacingExtra="4dp"
-                        android:text="• Track daily Income &amp; Expense transactions\n• Manage multiple accounts &amp; custom categories\n• Export PDF statements &amp; detailed reports\n• 100% Offline, Fast &amp; Secure"
+                        android:text="@string/about_features_desc"
                         android:textColor="@color/subTextColor"
                         android:textSize="@dimen/_10ssp" />
 
@@ -179,7 +179,7 @@
                 android:layout_height="@dimen/_46sdp"
                 android:layout_marginTop="@dimen/_18sdp"
                 android:fontFamily="@font/bold"
-                android:text="Check for Update"
+                android:text="@string/about_check_update"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_13ssp"
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_16sdp"
                 android:fontFamily="@font/medium"
-                android:text="Expense Tracker • All Rights Reserved"
+                android:text="@string/app_name"
                 android:textColor="@color/subTextColor"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintEnd_toEndOf="parent"

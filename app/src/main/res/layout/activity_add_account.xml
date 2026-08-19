@@ -92,7 +92,7 @@
             style="@style/CustomTextInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Account Name (e.g. Personal, Business)"
+            android:hint="@string/hint_profile_name"
             app:layout_constraintTop_toBottomOf="@id/txtAccountDesc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
