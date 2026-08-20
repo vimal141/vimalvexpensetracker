@@ -103,6 +103,7 @@ class DashboardFragment : Fragment() {
     private fun animateCards() {
         binding.cardBalance.slideUpFadeIn(400L, 50L)
         binding.cardIncome.slideUpFadeIn(400L, 150L)
+        binding.cardExpense.slideUpFadeIn(400L, 250L)
     }
 
     private fun setupCardAnimation() {
