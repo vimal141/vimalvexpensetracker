@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tagasubaybay ng Gastos</string>
     <string name="app_tagline">Bawat gastos ay mahalaga</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Pamimili</string>
 
     <!-- History -->
-    <string name="transaction_history">Kasaysayan ng Transaksyon</string>
+    <string name="transaction_history">Kasaysayan</string>
     <string name="search_hint">Maghanap ng mga transaksyon...</string>
     <string name="all">Lahat</string>
     <string name="no_results">Walang nahanap na resulta</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Mga Setting</string>
-    <string name="preferences">Mga Kagustuhan</string>
+    <string name="preferences">Pangkalahatan</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="currency">Pera</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Subaybayan ang Bawat Barya</string>
-    <string name="onboarding_desc_1">Madaling i-record ang iyong kita at gastos.</string>
-    <string name="onboarding_title_2">Matalinong Pagsusuri</string>
-    <string name="onboarding_desc_2">Magagandang tsart at ulat.</string>
-    <string name="onboarding_title_3">Abutin ang Iyong Mga Layunin</string>
-    <string name="onboarding_desc_3">Magplano nang mas mabuti, mag-ipon nang mas marami.</string>
+    <string name="onboarding_title_1">Subaybayan ang Kita at Gastos</string>
+    <string name="onboarding_desc_1">Panatilihing kontrolado ang iyong pera</string>
+    <string name="onboarding_title_2">Tingnan ang Mga Ulat at Kasaysayan</string>
+    <string name="onboarding_desc_2">Suriin ang iyong paggastos</string>
+    <string name="onboarding_title_3">Pamahalaan ang Mga Profile at I-export</string>
+    <string name="onboarding_desc_3">I-backup and i-export ang iyong data</string>
     <string name="get_started">Magsimula</string>
     <string name="next">Susunod</string>
     <string name="skip">Laktawan</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Pamahalaan ang mga Profile</string>
     <string name="clear_all_data">Burahin ang Lahat ng Data</string>
     <string name="no_transactions_yet">Wala pang transaksyon</string>
+    <string name="no_data">Walang data</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">I-tap ang + upang magdagdag ng transaksyon</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Simulang subaybayan ang iyong kita at gastos.</string>
     <string name="add_first_transaction">Magdagdag ng Unang Transaksyon</string>
 
-    <string name="warning_clear_all_data">⚠️ Burahin ang Lahat ng Data</string>
+    <string name="warning_clear_all_data">Burahin ang Lahat ng Data ⚠️</string>
     <string name="desc_clear_all_data">Permanente nitong buburahin ang LAHAT ng transaksyon!</string>
     <string name="delete_all">Burahin Lahat</string>
     <string name="cancel">Kanselahin</string>
-    <string name="app_title">Tagasubaybay ng Gastos Pro</string>
     <string name="app_about_desc">Bersyon 1.0.0\n\nIsang offline expense manager app.</string>
     <string name="ok">OK</string>
     <string name="share_via">Ibahagi sa pamamagitan ng</string>
-    <string name="share_app_desc">Pamahalaan ang gastos gamit ang Expense Tracker Pro!</string>
+    <string name="share_app_desc">Pamahalaan ang gastos gamit ang Expense Tracker!</string>
 
     <string name="delete_transactions">Burahin ang mga Transaksyon</string>
     <string name="delete_transactions_desc">Sigurado ka bang gusto mong burahin ang %1$d transaksyon?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Lumabas</string>
     <string name="exit_dialog_title">Lumabas sa Application?</string>
     <string name="exit_dialog_desc">Upang simulan ang pagsubaybay sa iyong mga gastos, kailangan mong gumawa ng profile. Sigurado ka bang gusto mong lumabas sa application?</string>
+    <string name="select_category">Pumili ng Kategorya</string>
+    <string name="label_date">Petsa</string>
+    <string name="hint_notes_optional">Mga Tala (Opsyonal)</string>
 </resources>

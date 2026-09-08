@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Suivi des dépenses</string>
     <string name="app_tagline">Chaque dépense compte</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Achats</string>
 
     <!-- History -->
-    <string name="transaction_history">Historique des transactions</string>
+    <string name="transaction_history">Historique</string>
     <string name="search_hint">Rechercher des transactions...</string>
     <string name="all">Tous</string>
     <string name="no_results">Aucun résultat trouvé</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>
-    <string name="preferences">Préférences</string>
+    <string name="preferences">Général</string>
     <string name="dark_mode">Mode sombre</string>
     <string name="currency">Devise</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Suivez chaque centime</string>
-    <string name="onboarding_desc_1">Enregistrez facilement vos revenus et dépenses.</string>
-    <string name="onboarding_title_2">Analyses intelligentes</string>
-    <string name="onboarding_desc_2">De superbes graphiques et rapports.</string>
-    <string name="onboarding_title_3">Atteignez vos objectifs</string>
-    <string name="onboarding_desc_3">Planifiez mieux, économisez davantage.</string>
+    <string name="onboarding_title_1">Suivi des revenus et dépenses</string>
+    <string name="onboarding_desc_1">Gardez le contrôle de votre argent</string>
+    <string name="onboarding_title_2">Voir les rapports et l\'historique</string>
+    <string name="onboarding_desc_2">Analysez vos dépenses</string>
+    <string name="onboarding_title_3">Gérer les profils et exporter</string>
+    <string name="onboarding_desc_3">Sauvegardez et exportez vos données</string>
     <string name="get_started">Commencer</string>
     <string name="next">Suivant</string>
     <string name="skip">Passer</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gérer les profils</string>
     <string name="clear_all_data">Effacer toutes les données</string>
     <string name="no_transactions_yet">Aucune transaction pour le moment</string>
+    <string name="no_data">Aucune donnée</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Appuyez sur + pour ajouter une transaction</string>
 
     <!-- Validation Suivi des dépenses intelligent &amp; simple Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Commencez à suivre vos revenus et dépenses.</string>
     <string name="add_first_transaction">Ajouter une première transaction</string>
 
-    <string name="warning_clear_all_data">⚠️ Effacer toutes les données</string>
+    <string name="warning_clear_all_data">Effacer toutes les données ⚠️</string>
     <string name="desc_clear_all_data">Cela supprimera définitivement TOUTES les transactions.</string>
     <string name="delete_all">Tout supprimer</string>
     <string name="cancel">Annuler</string>
-    <string name="app_title">Suivi des dépenses Pro</string>
     <string name="app_about_desc">Version 1.0.0\n\nUn suivi de dépenses hors ligne premium.</string>
     <string name="ok">OK</string>
     <string name="share_via">Partager via</string>
-    <string name="share_app_desc">Suivez vos dépenses intelligemment avec Expense Tracker Pro !</string>
+    <string name="share_app_desc">Suivez vos dépenses intelligemment avec Expense Tracker !</string>
 
     <string name="delete_transactions">Supprimer les transactions</string>
     <string name="delete_transactions_desc">Voulez-vous vraiment supprimer %1$d transactions ?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Quitter</string>
     <string name="exit_dialog_title">Quitter l\'application ?</string>
     <string name="exit_dialog_desc">Pour commencer à suivre vos dépenses, vous devez créer un profil. Êtes-vous sûr de vouloir quitter l\'application ?</string>
+    <string name="select_category">Choisir la catégorie</string>
+    <string name="label_date">Date</string>
+    <string name="hint_notes_optional">Notes (Facultatif)</string>
 </resources>

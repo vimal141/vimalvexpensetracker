@@ -8,7 +8,6 @@ import kotlinx.coroutines.withContext
 
 class CategoryRepository(private val dao: CategoryDao) {
     fun getCategoriesByType(type: String): Flow<List<Category>> = dao.getCategoriesByType(type)
-    
     suspend fun insert(category: Category) = withContext(Dispatchers.IO) { dao.insert(category) }
     suspend fun update(category: Category) = withContext(Dispatchers.IO) { dao.update(category) }
     suspend fun delete(category: Category) = withContext(Dispatchers.IO) { dao.delete(category) }

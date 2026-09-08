@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">家計簿</string>
     <string name="app_tagline">すべての支出に価値を</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">買い物</string>
 
     <!-- History -->
-    <string name="transaction_history">取引履歴</string>
+    <string name="transaction_history">履歴</string>
     <string name="search_hint">取引を検索...</string>
     <string name="all">すべて</string>
     <string name="no_results">結果が見つかりません</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">設定</string>
-    <string name="preferences">環境設定</string>
+    <string name="preferences">一般</string>
     <string name="dark_mode">ダークモード</string>
     <string name="currency">通貨</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">プレミアム</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">すべての支出を記録</string>
-    <string name="onboarding_desc_1">収入と支出を簡単に記録して管理。</string>
-    <string name="onboarding_title_2">スマートな分析</string>
-    <string name="onboarding_desc_2">分かりやすいチャートとレポート。</string>
-    <string name="onboarding_title_3">目標の達成</string>
-    <string name="onboarding_desc_3">賢く計画を立てて貯蓄。</string>
+    <string name="onboarding_title_1">収支の追跡</string>
+    <string name="onboarding_desc_1">お金をしっかり管理</string>
+    <string name="onboarding_title_2">レポートと履歴の表示</string>
+    <string name="onboarding_desc_2">支出を分析する</string>
+    <string name="onboarding_title_3">プロファイルの管理とエクスポート</string>
+    <string name="onboarding_desc_3">データのバックアップとエクスポート</string>
     <string name="get_started">始める</string>
     <string name="next">次へ</string>
     <string name="skip">スキップ</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">プロフィール管理</string>
     <string name="clear_all_data">すべてのデータを消去</string>
     <string name="no_transactions_yet">まだ取引がありません</string>
+    <string name="no_data">データなし</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">+ をタップして最初の取引を追加</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">収支の記録を開始してください。</string>
     <string name="add_first_transaction">最初の取引を追加</string>
 
-    <string name="warning_clear_all_data">⚠️ すべてのデータを消去</string>
+    <string name="warning_clear_all_data">すべてのデータを消去 ⚠️</string>
     <string name="desc_clear_all_data">すべての取引が永久に削除されます！</string>
     <string name="delete_all">すべて削除</string>
     <string name="cancel">キャンセル</string>
-    <string name="app_title">家計簿 Pro</string>
     <string name="app_about_desc">バージョン 1.0.0\n\nオフライン家計簿アプリ。</string>
     <string name="ok">OK</string>
     <string name="share_via">共有方法</string>
-    <string name="share_app_desc">Expense Tracker Proでスマートに家計管理！</string>
+    <string name="share_app_desc">Expense Trackerでスマートに家計管理！</string>
 
     <string name="delete_transactions">取引を削除</string>
     <string name="delete_transactions_desc">%1$d 件の取引を削除してもよろしいですか？</string>
@@ -192,4 +192,7 @@
     <string name="exit">終了する</string>
     <string name="exit_dialog_title">アプリを終了しますか？</string>
     <string name="exit_dialog_desc">支出の管理を開始するには、プロフィールを作成する必要があります。アプリを終了してもよろしいですか？</string>
+    <string name="select_category">カテゴリを選択</string>
+    <string name="label_date">日付</string>
+    <string name="hint_notes_optional">メモ（任意）</string>
 </resources>

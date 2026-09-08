@@ -1,12 +1,9 @@
 package cashvexa.expensetracker.budget.money.utility.helper
 
-import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.view.MotionEvent
 import android.view.View
 import android.view.animation.DecelerateInterpolator
-import android.widget.TextView
-import java.util.Locale
 
 @SuppressLint("ClickableViewAccessibility")
 fun View.bounceOnClick(onClick: (() -> Unit)? = null) {
@@ -48,19 +45,3 @@ fun View.slideUpFadeIn(duration: Long = 350L, delay: Long = 0L, startYOffset: Fl
         .start()
 }
 
-fun TextView.animateNumber(
-    fromValue: Double,
-    toValue: Double,
-    prefix: String = "",
-    suffix: String = "",
-    duration: Long = 500L
-) {
-    val animator = ValueAnimator.ofFloat(fromValue.toFloat(), toValue.toFloat())
-    animator.duration = duration
-    animator.interpolator = DecelerateInterpolator()
-    animator.addUpdateListener { animation ->
-        val value = animation.animatedValue as Float
-        this.text = String.format(Locale.US, "%s%.2f%s", prefix, value, suffix)
-    }
-    animator.start()
-}

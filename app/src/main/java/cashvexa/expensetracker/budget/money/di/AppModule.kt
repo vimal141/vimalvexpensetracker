@@ -13,9 +13,7 @@ val appModule = module {
     single { get<AppDatabase>().transactionDao() }
     single { get<AppDatabase>().accountDao() }
     single { get<AppDatabase>().categoryDao() }
-    
     single { TransactionRepository(get()) }
     single { CategoryRepository(get()) }
-    
     viewModel { TransactionViewModel(get(), get(), get(), androidApplication()) }
 }

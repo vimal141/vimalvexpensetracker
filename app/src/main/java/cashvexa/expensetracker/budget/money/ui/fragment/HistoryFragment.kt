@@ -115,7 +115,7 @@ class HistoryFragment : Fragment() {
 
         val count = selected.size
         if (count == 1) {
-            dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transaction_title, 1)
+            dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transaction_title)
             dialogBinding.txtDeleteMessage.text = getString(R.string.delete_single_transaction_desc)
         } else {
             dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transactions_title, count)
@@ -180,18 +180,29 @@ class HistoryFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
                     viewModel.filteredTransactions.collectLatest { list ->
-                        val safeList = list ?: emptyList()
-                        if (safeList.isEmpty()) {
+                        if (list.isEmpty()) {
                             binding.rvHistory.visibility = View.GONE
                             binding.layoutEmpty.visibility = View.VISIBLE
                         } else {
                             binding.layoutEmpty.visibility = View.GONE
                             binding.rvHistory.visibility = View.VISIBLE
-                            adapter.updateData(safeList, viewModel.searchQuery.value)
+                            adapter.updateData(list, viewModel.searchQuery.value)
                         }
                     }
                 }
             }
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        hideKeyboard()
+    }
+
+    private fun hideKeyboard() {
+        _binding?.let { b ->
+            val imm = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as android.view.inputmethod.InputMethodManager
+            imm.hideSoftInputFromWindow(b.etSearch.windowToken, 0)
         }
     }
 

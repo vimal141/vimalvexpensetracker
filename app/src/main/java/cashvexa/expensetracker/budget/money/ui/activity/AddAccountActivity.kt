@@ -6,20 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.lifecycleScope
+import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.data.local.AccountDao
 import cashvexa.expensetracker.budget.money.data.model.Account
-import cashvexa.expensetracker.budget.money.utility.helper.PrefManager
-import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.ActivityAddAccountBinding
+import cashvexa.expensetracker.budget.money.ui.fragment.ExitAppBottomSheet
+import cashvexa.expensetracker.budget.money.utility.helper.PrefManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
-import cashvexa.expensetracker.budget.money.ui.fragment.ExitAppBottomSheet
 import kotlin.random.Random
 
 class AddAccountActivity : BaseActivity<ActivityAddAccountBinding>() {

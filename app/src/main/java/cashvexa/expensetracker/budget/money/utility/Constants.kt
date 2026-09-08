@@ -3,7 +3,6 @@ package cashvexa.expensetracker.budget.money.utility
 object Constants {
     const val TYPE_INCOME = "Income"
     const val TYPE_EXPENSE = "Expense"
-    const val TYPE_TRANSFER = "Transfer"
     const val PERIOD_DAILY = "Daily"
     const val PERIOD_WEEKLY = "Weekly"
     const val PERIOD_MONTHLY = "Monthly"

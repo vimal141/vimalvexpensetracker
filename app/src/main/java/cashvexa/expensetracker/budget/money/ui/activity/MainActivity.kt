@@ -18,6 +18,8 @@ import cashvexa.expensetracker.budget.money.ui.fragment.ReportsFragment
 import cashvexa.expensetracker.budget.money.ui.fragment.SettingsFragment
 import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.ActivityMainBinding
+import androidx.core.view.get
+import androidx.core.view.size
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -79,7 +81,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                binding.bottomNavigation.menu.getItem(position).isChecked = true
+                binding.bottomNavigation.menu[position].isChecked = true
             }
         })
     }
@@ -96,8 +98,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
 
         val menu = binding.bottomNavigation.menu
-        for (i in 0 until menu.size()) {
-            val menuItem = menu.getItem(i)
+        for (i in 0 until menu.size) {
+            val menuItem = menu[i]
             val view = binding.bottomNavigation.findViewById<View>(menuItem.itemId)
             view?.setOnLongClickListener { true }
         }

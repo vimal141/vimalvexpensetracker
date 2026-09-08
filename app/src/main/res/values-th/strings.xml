@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">บันทึกรายรับรายจ่าย</string>
     <string name="app_tagline">ทุกรายจ่ายมีความหมาย</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">ช้อปปิ้ง</string>
 
     <!-- History -->
-    <string name="transaction_history">ประวัติรายการ</string>
+    <string name="transaction_history">ประวัติ</string>
     <string name="search_hint">ค้นหารายการ...</string>
     <string name="all">ทั้งหมด</string>
     <string name="no_results">ไม่พบผลลัพธ์</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">การตั้งค่า</string>
-    <string name="preferences">การตั้งค่าทั่วไป</string>
+    <string name="preferences">ทั่วไป</string>
     <string name="dark_mode">โหมดมืด</string>
     <string name="currency">สกุลเงิน</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">พรีเมียม</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">ติดตามทุกค่าใช้จ่าย</string>
-    <string name="onboarding_desc_1">บันทึกรายรับและรายจ่ายได้ง่ายๆ</string>
-    <string name="onboarding_title_2">วิเคราะห์อัจฉริยะ</string>
-    <string name="onboarding_desc_2">แผนภูมิและรายงานที่ชัดเจน</string>
-    <string name="onboarding_title_3">บรรลุเป้าหมาย</string>
-    <string name="onboarding_desc_3">วางแผนดีขึ้น ออมเงินได้มากขึ้น</string>
+    <string name="onboarding_title_1">ติดตามรายรับและรายจ่าย</string>
+    <string name="onboarding_desc_1">ควบคุมการเงินของคุณอยู่หมัด</string>
+    <string name="onboarding_title_2">ดูรายงานและประวัติ</string>
+    <string name="onboarding_desc_2">วิเคราะห์การใช้จ่ายของคุณ</string>
+    <string name="onboarding_title_3">จัดการโปรไฟล์และส่งออก</string>
+    <string name="onboarding_desc_3">สำรองข้อมูลและส่งออกข้อมูลของคุณ</string>
     <string name="get_started">เริ่มต้นใช้งาน</string>
     <string name="next">ถัดไป</string>
     <string name="skip">ข้าม</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">จัดการโปรไฟล์</string>
     <string name="clear_all_data">ล้างข้อมูลทั้งหมด</string>
     <string name="no_transactions_yet">ยังไม่มีรายการ</string>
+    <string name="no_data">ไม่มีข้อมูล</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">แตะ + เพื่อเพิ่มรายการ</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">เริ่มติดตามรายรับรายจ่ายของคุณ</string>
     <string name="add_first_transaction">เพิ่มรายการแรก</string>
 
-    <string name="warning_clear_all_data">⚠️ ล้างข้อมูลทั้งหมด</string>
+    <string name="warning_clear_all_data">ล้างข้อมูลทั้งหมด ⚠️</string>
     <string name="desc_clear_all_data">การดำเนินการนี้จะลบรายการทั้งหมดอย่างถาวร!</string>
     <string name="delete_all">ลบทั้งหมด</string>
     <string name="cancel">ยกเลิก</string>
-    <string name="app_title">บันทึกรายรับรายจ่าย Pro</string>
     <string name="app_about_desc">เวอร์ชัน 1.0.0\n\nแอปจัดการรายรับรายจ่ายแบบออฟไลน์</string>
     <string name="ok">ตกลง</string>
     <string name="share_via">แชร์ผ่าน</string>
-    <string name="share_app_desc">จัดการค่าใช้จ่ายอย่างชาญฉลาดด้วย Expense Tracker Pro!</string>
+    <string name="share_app_desc">จัดการค่าใช้จ่ายอย่างชาญฉลาดด้วย Expense Tracker!</string>
 
     <string name="delete_transactions">ลบรายการ</string>
     <string name="delete_transactions_desc">คุณแน่ใจหรือไม่ว่าต้องการลบ %1$d รายการ?</string>
@@ -192,4 +192,7 @@
     <string name="exit">ออก</string>
     <string name="exit_dialog_title">ออกจากแอปพลิเคชันหรือไม่?</string>
     <string name="exit_dialog_desc">หากต้องการเริ่มติดตามค่าใช้จ่าย คุณต้องสร้างโปรไฟล์ก่อน คุณแน่ใจหรือไม่ว่าต้องการออกจากแอปพลิเคชัน?</string>
+    <string name="select_category">เลือกหมวดหมู่</string>
+    <string name="label_date">วันที่</string>
+    <string name="hint_notes_optional">หมายเหตุ (ไม่บังคับ)</string>
 </resources>

@@ -5,17 +5,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Toast
+import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.data.model.LanguageModel
+import cashvexa.expensetracker.budget.money.databinding.ActivityLanguageBinding
 import cashvexa.expensetracker.budget.money.ui.adapter.LanguageAdapter
 import cashvexa.expensetracker.budget.money.utility.helper.LanguageHelper
 import cashvexa.expensetracker.budget.money.utility.helper.PrefManager
-import cashvexa.expensetracker.budget.money.R
-import cashvexa.expensetracker.budget.money.databinding.ActivityLanguageBinding
+import androidx.core.view.isVisible
 
-class
-
-LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
+class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 
     private lateinit var adapter: LanguageAdapter
     private var isFirstLaunch: Boolean = false
@@ -35,7 +33,7 @@ LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
             val deviceLanguageCode = LanguageHelper.getDeviceLanguageCode()
             PrefManager.languageCode = deviceLanguageCode
             PrefManager.isLanguageSet = true
-            LanguageHelper.applyAppLanguage(this, deviceLanguageCode)
+            LanguageHelper.applyAppLanguage(deviceLanguageCode)
 
             val intent = Intent(this, OnBoardingActivity::class.java).apply {
                 putExtra("isFirstLaunch", true)
@@ -82,7 +80,7 @@ LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
             val selectedItem = languages.find { it.code.equals(selectedCode, ignoreCase = true) } ?: languages.first()
 
             PrefManager.languageCode = selectedItem.code
-            LanguageHelper.applyAppLanguage(this, selectedItem.code)
+            LanguageHelper.applyAppLanguage(selectedItem.code)
 
             if (isFirstLaunch) {
                 PrefManager.isLanguageSet = true
@@ -98,7 +96,7 @@ LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     private fun startButtonAnimation() {
-        if (isFirstLaunch && binding.btnDone.visibility == View.VISIBLE) {
+        if (isFirstLaunch && binding.btnDone.isVisible) {
             if (binding.btnDone.animation == null) {
                 val pulseAnim = AnimationUtils.loadAnimation(this, R.anim.anim_btn_pulse)
                 binding.btnDone.startAnimation(pulseAnim)

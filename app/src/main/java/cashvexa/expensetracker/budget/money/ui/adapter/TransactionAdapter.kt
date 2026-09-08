@@ -184,7 +184,7 @@ class TransactionAdapter(
     fun clearSelection() {
         selectedItems.clear()
         isSelectionMode = false
-        onSelectionChanged?.invoke(isSelectionMode, selectedItems.size)
+        onSelectionChanged?.invoke(false, selectedItems.size)
         notifyDataSetChanged()
     }
 }

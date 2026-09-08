@@ -18,8 +18,6 @@ class TransactionRepository(private val dao: TransactionDao) {
     fun searchWithFilters(accountId: Int, query: String, type: String, category: String): Flow<List<Transaction>> =
         dao.searchWithFilters(accountId, query, type, category)
 
-    fun getCategoryBreakdown(accountId: Int, start: Long, end: Long): Flow<List<CategorySum>> =
-        dao.getCategoryBreakdown(accountId, start, end)
 
     suspend fun insert(transaction: Transaction) =
         withContext(Dispatchers.IO) { dao.insert(transaction) }

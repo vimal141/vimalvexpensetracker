@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Uitgawespoorder</string>
     <string name="app_tagline">Elke uitgawe tel</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Inkopies</string>
 
     <!-- History -->
-    <string name="transaction_history">Transaksie Geskiedenis</string>
+    <string name="transaction_history">Geskiedenis</string>
     <string name="search_hint">Soek transaksies...</string>
     <string name="all">Alles</string>
     <string name="no_results">Geen resultate gevind nie</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Instellings</string>
-    <string name="preferences">Voorkeure</string>
+    <string name="preferences">Algemeen</string>
     <string name="dark_mode">Donker Modus</string>
     <string name="currency">Geldeenheid</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Hou Elke Sent Dop</string>
-    <string name="onboarding_desc_1">Teken maklik jou inkomste en uitgawes aan.</string>
-    <string name="onboarding_title_2">Slim Analise</string>
-    <string name="onboarding_desc_2">Mooi grafieke en verslae.</string>
-    <string name="onboarding_title_3">Bereik Jou Doelwitte</string>
-    <string name="onboarding_desc_3">Beplan slimmer, spaar meer.</string>
+    <string name="onboarding_title_1">Volg Inkomste &amp; Uitgawes</string>
+    <string name="onboarding_desc_1">Hou jou geld onder beheer</string>
+    <string name="onboarding_title_2">Bekyk Verslae &amp; Geskiedenis</string>
+    <string name="onboarding_desc_2">Ontleed jou besteding</string>
+    <string name="onboarding_title_3">Bestuur Profiele &amp; Uitvoer</string>
+    <string name="onboarding_desc_3">Rugsteun en voer jou data uit</string>
     <string name="get_started">Begin</string>
     <string name="next">Volgende</string>
     <string name="skip">Slaan oor</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Bestuur Profiele</string>
     <string name="clear_all_data">Vee Alle Data Skoon</string>
     <string name="no_transactions_yet">Nog geen transaksies nie</string>
+    <string name="no_data">Geen data</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Tik + om \'n transaksie by te voeg</string>
 
     <!-- Validation • Spoor daaglikse inkomste- en uitgawetransaksies na\n• Bestuur verskeie rekeninge &amp; pasgemaakte kategorieë\n• Voer PDF-state &amp; gedetailleerde verslae uit\n• 100% Vanlyn, Vinnig &amp; Veilig Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Begin jou inkomste en uitgawes nagaan.</string>
     <string name="add_first_transaction">Voeg Eerste Transaksie By</string>
 
-    <string name="warning_clear_all_data">⚠️ Vee Alle Data Skoon</string>
+    <string name="warning_clear_all_data">Vee Alle Data Skoon ⚠️</string>
     <string name="desc_clear_all_data">Dit sal ALLE transaksies permanent skrap!</string>
     <string name="delete_all">Skrap Alles</string>
     <string name="cancel">Kanselleer</string>
-    <string name="app_title">Uitgawespoorder Pro</string>
     <string name="app_about_desc">Weergawe 1.0.0\n\n\'n Gehalte uitgawebestuurder sonder internet.</string>
     <string name="ok">OK</string>
     <string name="share_via">Deel via</string>
-    <string name="share_app_desc">Bestuur jou geld met Expense Tracker Pro!</string>
+    <string name="share_app_desc">Bestuur jou geld met Expense Tracker!</string>
 
     <string name="delete_transactions">Skrap Transaksies</string>
     <string name="delete_transactions_desc">Is jy seker jy wil %1$d transaksies skrap?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Sluit</string>
     <string name="exit_dialog_title">Sluit die toepassing?</string>
     <string name="exit_dialog_desc">Om u uitgawes te begin dop, moet u \'n profiel skep. Wil u regtig die toepassing sluit?</string>
+    <string name="select_category">Kies Kategorie</string>
+    <string name="label_date">Datum</string>
+    <string name="hint_notes_optional">Notas (Opsioneel)</string>
 </resources>

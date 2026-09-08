@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Control de gastos</string>
     <string name="app_tagline">Cada gasto importa</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Compras</string>
 
     <!-- History -->
-    <string name="transaction_history">Historial de Transacciones</string>
+    <string name="transaction_history">Historial</string>
     <string name="search_hint">Buscar transacciones...</string>
     <string name="all">Todos</string>
     <string name="no_results">Sin resultados</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
-    <string name="preferences">Preferencias</string>
+    <string name="preferences">General</string>
     <string name="dark_mode">Modo Oscuro</string>
     <string name="currency">Moneda</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Rastrea Cada Centavo</string>
-    <string name="onboarding_desc_1">Registra fácilmente tus ingresos y gastos para controlar tus finanzas.</string>
-    <string name="onboarding_title_2">Análisis Inteligente</string>
-    <string name="onboarding_desc_2">Hermosos gráficos e informes para entender a dónde va tu dinero.</string>
-    <string name="onboarding_title_3">Alcanza tus Metas</string>
-    <string name="onboarding_desc_3">Planifica mejor, ahorra más y alcanza tus sueños financieros.</string>
+    <string name="onboarding_title_1">Seguimiento de Ingresos y Gastos</string>
+    <string name="onboarding_desc_1">Mantén tu dinero bajo control</string>
+    <string name="onboarding_title_2">Ver Informes e Historial</string>
+    <string name="onboarding_desc_2">Analiza tus gastos</string>
+    <string name="onboarding_title_3">Gestionar Perfiles y Exportar</string>
+    <string name="onboarding_desc_3">Copia de seguridad y exportación de datos</string>
     <string name="get_started">Comenzar</string>
     <string name="next">Siguiente</string>
     <string name="skip">Omitir</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gestionar Perfils</string>
     <string name="clear_all_data">Borrar Todos los Datos</string>
     <string name="no_transactions_yet">Aún no hay transacciones</string>
+    <string name="no_data">Sin datos</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Toca + para añadir una transacción</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Comienza a rastrear tus ingresos y gastos para ver estadísticas aquí.</string>
     <string name="add_first_transaction">Añadir Primera Transacción</string>
 
-    <string name="warning_clear_all_data">⚠️ Borrar Todos los Datos</string>
+    <string name="warning_clear_all_data">Borrar Todos los Datos ⚠️</string>
     <string name="desc_clear_all_data">¡Esto eliminará permanentemente TODAS las transacciones!</string>
     <string name="delete_all">Eliminar Todo</string>
     <string name="cancel">Cancelar</string>
-    <string name="app_title">Control de gastos Pro</string>
     <string name="app_about_desc">Versión 1.0.0\n\nUn rastreador de gastos fuera de línea premium.</string>
     <string name="ok">Aceptar</string>
     <string name="share_via">Compartir vía</string>
-    <string name="share_app_desc">¡Rastrea tus gastos de manera inteligente con Expense Tracker Pro! Descárgalo ahora.</string>
+    <string name="share_app_desc">¡Rastrea tus gastos de manera inteligente con Expense Tracker! Descárgalo ahora.</string>
 
     <string name="delete_transactions">Eliminar Transacciones</string>
     <string name="delete_transactions_desc">¿Estás seguro de que deseas eliminar %1$d transacciones?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Salir</string>
     <string name="exit_dialog_title">¿Salir de la aplicación?</string>
     <string name="exit_dialog_desc">Para empezar a rastrear tus gastos, necesitas crear un perfil. ¿Estás seguro de que quieres salir de la aplicación?</string>
+    <string name="select_category">Seleccionar categoría</string>
+    <string name="label_date">Fecha</string>
+    <string name="hint_notes_optional">Notas (Opcional)</string>
 </resources>

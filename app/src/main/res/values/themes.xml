@@ -45,4 +45,27 @@
         <item name="fontFamily">@font/bold</item>
     </style>
 
+    <style name="CustomDatePickerTheme" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorOnSurface">@color/TextColor</item>
+        <item name="backgroundColor">@color/bgColorCard</item>
+        <item name="background">@color/bgColorCard</item>
+        <item name="shapeAppearanceCornerExtraLarge">@style/CustomDatePickerCorners</item>
+    </style>
+
+    <style name="CustomDatePickerCorners" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Shape overlay for circular ShapeableImageView -->
+    <style name="ShapeAppearanceOverlay.App.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Shape overlay for rounded corners ShapeableImageView -->
+    <style name="ShapeAppearanceOverlay.App.Rounded" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+
 </resources>

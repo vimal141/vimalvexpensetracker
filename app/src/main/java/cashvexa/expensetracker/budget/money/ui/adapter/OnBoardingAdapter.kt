@@ -22,7 +22,7 @@ class OnBoardingAdapter(private val items: List<OnBoardingItem>) :
 
     override fun getItemCount(): Int = items.size
 
-    inner class OnBoardingViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class OnBoardingViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val ivOnboarding: ImageView = view.findViewById(R.id.ivOnboarding)
         private val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         private val tvDescription: TextView = view.findViewById(R.id.tvDescription)

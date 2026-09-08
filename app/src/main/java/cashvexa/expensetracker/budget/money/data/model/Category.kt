@@ -9,7 +9,7 @@ data class Category(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
-    val iconName: String, // Resource name like "ic_food"
-    val type: String, // "Expense" or "Income"
+    val iconName: String,
+    val type: String,
     val isDefault: Boolean = false
 ) : Serializable

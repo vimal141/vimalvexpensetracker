@@ -1,6 +1,5 @@
 package cashvexa.expensetracker.budget.money.utility.helper
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
 import cashvexa.expensetracker.budget.money.data.model.LanguageModel
@@ -84,7 +83,7 @@ object LanguageHelper {
         return match?.code ?: "hi"
     }
 
-    fun applyAppLanguage(context: Context, languageCode: String) {
+    fun applyAppLanguage(languageCode: String) {
         val normalizedTag = when (languageCode.lowercase()) {
             "fr-rca" -> "fr-CA"
             "pt-rbr" -> "pt-BR"

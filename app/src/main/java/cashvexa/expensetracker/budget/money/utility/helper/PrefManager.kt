@@ -19,6 +19,7 @@ object PrefManager {
     private const val KEY_LANGUAGE = "language_code"
     private const val KEY_LANGUAGE_SET = "is_language_set"
     private const val KEY_CURRENCY_SET = "is_currency_set"
+    private const val KEY_BALANCE_VISIBLE = "balance_visible"
     private lateinit var prefs: SharedPreferences
 
     fun init(context: Context) {
@@ -60,6 +61,10 @@ object PrefManager {
     var isPrivacyAccepted: Boolean
         get() = prefs.getBoolean(KEY_PRIVACY_ACCEPT, false)
         set(value) = prefs.edit { putBoolean(KEY_PRIVACY_ACCEPT, value) }
+
+    var isBalanceVisible: Boolean
+        get() = prefs.getBoolean(KEY_BALANCE_VISIBLE, true)
+        set(value) = prefs.edit { putBoolean(KEY_BALANCE_VISIBLE, value) }
 
     fun currentAccountIdFlow(): Flow<Int> = callbackFlow {
         val listener = SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->

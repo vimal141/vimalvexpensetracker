@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import cashvexa.expensetracker.budget.money.data.local.AccountDao
 import cashvexa.expensetracker.budget.money.data.model.Account
 import cashvexa.expensetracker.budget.money.data.model.Category
-import cashvexa.expensetracker.budget.money.data.model.CategorySum
 import cashvexa.expensetracker.budget.money.data.model.Transaction
 import cashvexa.expensetracker.budget.money.data.repo.CategoryRepository
 import cashvexa.expensetracker.budget.money.data.repo.TransactionRepository
@@ -71,12 +70,6 @@ class TransactionViewModel(
         repository.getTransactionsForRange(state.accId, start, end)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    val reportCategoryBreakdown: StateFlow<List<CategorySum>> = transactionsForReport.map { list ->
-        list.groupBy { it.category }
-            .map { (cat, trans) -> CategorySum(cat, trans.sumOf { it.amount }) }
-            .sortedByDescending { it.total }
-    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-
     val reportTotalIncome: StateFlow<Double> = transactionsForReport.map { list ->
         list.filter { it.type.trim().equals(Constants.TYPE_INCOME, ignoreCase = true) }.sumOf { it.amount }
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0.0)
@@ -86,8 +79,12 @@ class TransactionViewModel(
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0.0)
 
     val selectedCategoryType = MutableStateFlow(Constants.TYPE_EXPENSE)
-    val categories: StateFlow<List<Category>> = selectedCategoryType.flatMapLatest { type ->
-        categoryRepository.getCategoriesByType(type)
+    val categories: StateFlow<List<Category>> = combine(
+        selectedCategoryType.flatMapLatest { type -> categoryRepository.getCategoriesByType(type) },
+        currentAccountId.flatMapLatest { accId -> repository.getAllTransactions(accId) }
+    ) { categoryList, transactionList ->
+        val amountSums = transactionList.groupBy { it.category }.mapValues { entry -> entry.value.sumOf { it.amount } }
+        categoryList.sortedByDescending { amountSums[it.name] ?: 0.0 }
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     init {
@@ -113,7 +110,7 @@ class TransactionViewModel(
                 "Home Emi", "Shopping", "Food", "Phone", "Entertainment", "Education", "Beauty", "Sports",
                 "Social", "Transportation", "Clothing", "Car", "Alcohol", "Cigarettes", "Electronics", "Travel",
                 "Health", "Pets", "Repairs", "Gifts", "Donations", "Lottery",
-                "Snacks", "Kids", "Vegetables", "Fruits"
+                "Snacks", "Kids", "Vegetables", "Fruits", "Bank Transfer", "Wallet"
             )
             expenseCats.forEach { name ->
                 defaults.add(
@@ -136,23 +133,18 @@ class TransactionViewModel(
                     )
                 )
             }
-            val transferCats = listOf("Bank Transfer", "Wallet", "Others")
-            transferCats.forEach { name ->
-                defaults.add(
-                    Category(
-                        name = name,
-                        iconName = iconMap[name] ?: "ic_others",
-                        type = Constants.TYPE_TRANSFER,
-                        isDefault = true
-                    )
-                )
-            }
             defaults.forEach { categoryRepository.insert(it) }
         } else {
             val existing = categoryRepository.getAllCategories()
             existing.forEach { cat ->
                 if (cat.name.equals("Home", ignoreCase = true) || cat.name.equals("Housing", ignoreCase = true)) {
                     categoryRepository.delete(cat)
+                } else if (cat.type == "Transfer") {
+                    if (cat.name == "Bank Transfer" || cat.name == "Wallet") {
+                        categoryRepository.update(cat.copy(type = Constants.TYPE_EXPENSE))
+                    } else {
+                        categoryRepository.delete(cat)
+                    }
                 } else {
                     val targetIcon = iconMap[cat.name]
                     if (targetIcon != null && cat.iconName != targetIcon) {
@@ -164,9 +156,6 @@ class TransactionViewModel(
     }
 
     fun setCategoryType(type: String) { selectedCategoryType.value = type }
-    fun addCategory(category: Category) = viewModelScope.launch { categoryRepository.insert(category) }
-    fun updateCategory(category: Category) = viewModelScope.launch { categoryRepository.update(category) }
-    fun deleteCategory(category: Category) = viewModelScope.launch { categoryRepository.delete(category) }
     fun insert(transaction: Transaction) = viewModelScope.launch { repository.insert(transaction.copy(accountId = currentAccountId.value)) }
     fun update(transaction: Transaction) = viewModelScope.launch { repository.update(transaction) }
     fun delete(transaction: Transaction) = viewModelScope.launch { repository.delete(transaction) }
@@ -249,14 +238,7 @@ class TransactionViewModel(
         reportCustomWeekRange.value = startCal.timeInMillis to endCal.timeInMillis
         reportCalendar.value = startCal
     }
-    fun setReportWeekDate(calendar: Calendar) {
-        reportCustomWeekRange.value = null
-        val weekCal = (calendar.clone() as Calendar).apply {
-            firstDayOfWeek = Calendar.MONDAY
-            set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
-        }
-        reportCalendar.value = weekCal
-    }
+
     fun setReportMonthYear(month: Int, year: Int) { reportCustomWeekRange.value = null; reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year); set(Calendar.MONTH, month) } }
     fun setReportYear(year: Int) { reportCustomWeekRange.value = null; reportCalendar.value = (reportCalendar.value.clone() as Calendar).apply { set(Calendar.YEAR, year) } }
     fun nextReportPeriod() { 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Śledzenie wydatków</string>
     <string name="app_tagline">Każdy wydatek ma znaczenie</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Zakupy</string>
 
     <!-- History -->
-    <string name="transaction_history">Historia Transakcji</string>
+    <string name="transaction_history">Historia</string>
     <string name="search_hint">Szukaj transakcji...</string>
     <string name="all">Wszystkie</string>
     <string name="no_results">Brak wyników</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
-    <string name="preferences">Preferencje</string>
+    <string name="preferences">Ogólne</string>
     <string name="dark_mode">Tryb Ciemny</string>
     <string name="currency">Waluta</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Śledź Każdy Grosz</string>
-    <string name="onboarding_desc_1">Łatwo rejestruj przychody i wydatki.</string>
-    <string name="onboarding_title_2">Inteligentna Analiza</string>
-    <string name="onboarding_desc_2">Przejrzyste wykresy i raporty.</string>
-    <string name="onboarding_title_3">Osiągaj Cele</string>
-    <string name="onboarding_desc_3">Planuj mądrzej, oszczędzaj więcej.</string>
+    <string name="onboarding_title_1">Śledź dochody i wydatki</string>
+    <string name="onboarding_desc_1">Miej swoje pieniądze pod kontrolą</string>
+    <string name="onboarding_title_2">Zobacz raporty i historię</string>
+    <string name="onboarding_desc_2">Analizuj swoje wydatki</string>
+    <string name="onboarding_title_3">Zarządzaj profilami i eksportuj</string>
+    <string name="onboarding_desc_3">Utwórz kopię zapasową i eksportuj dane</string>
     <string name="get_started">Rozpocznij</string>
     <string name="next">Dalej</string>
     <string name="skip">Pomiń</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Zarządzaj Kontami</string>
     <string name="clear_all_data">Wyczyść Wszystkie Dane</string>
     <string name="no_transactions_yet">Brak transakcji</string>
+    <string name="no_data">Brak danych</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Dotknij +, aby dodać transakcję</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Zacznij śledzić swoje przychody i wydatki.</string>
     <string name="add_first_transaction">Dodaj Pierwszą Transakcję</string>
 
-    <string name="warning_clear_all_data">⚠️ Wyczyść Wszystkie Dane</string>
+    <string name="warning_clear_all_data">Wyczyść Wszystkie Dane ⚠️</string>
     <string name="desc_clear_all_data">To trwale usunie WSZYSTKIE transakcje!</string>
     <string name="delete_all">Usuń Wszystko</string>
     <string name="cancel">Anuluj</string>
-    <string name="app_title">Śledzenie wydatków Pro</string>
     <string name="app_about_desc">Wersja 1.0.0\n\nAplikacja do zarządzania wydatkami offline.</string>
     <string name="ok">OK</string>
     <string name="share_via">Udostępnij przez</string>
-    <string name="share_app_desc">Zarządzaj wydatkami z Expense Tracker Pro!</string>
+    <string name="share_app_desc">Zarządzaj wydatkami z Expense Tracker!</string>
 
     <string name="delete_transactions">Usuń Transakcje</string>
     <string name="delete_transactions_desc">Czy na pewno chcesz usunąć %1$d transakcji?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Wyjdź</string>
     <string name="exit_dialog_title">Wyjąć z aplikacji?</string>
     <string name="exit_dialog_desc">Aby rozpocząć śledzenie wydatków, musisz utworzyć profil. Czy na pewno chcesz wyjść z aplikacji?</string>
+    <string name="select_category">Wybierz kategorię</string>
+    <string name="label_date">Data</string>
+    <string name="hint_notes_optional">Notatki (Opcjonalnie)</string>
 </resources>

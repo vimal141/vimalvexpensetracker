@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">记账</string>
     <string name="app_tagline">每笔支出都很重要</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">购物</string>
 
     <!-- History -->
-    <string name="transaction_history">交易历史记录</string>
+    <string name="transaction_history">历史</string>
     <string name="search_hint">搜索交易...</string>
     <string name="all">全部</string>
     <string name="no_results">未找到结果</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">设置</string>
-    <string name="preferences">偏好设置</string>
+    <string name="preferences">通用</string>
     <string name="dark_mode">深色模式</string>
     <string name="currency">货币</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">高级版</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">记录每一笔开销</string>
-    <string name="onboarding_desc_1">轻松记录收支，掌控财务。</string>
-    <string name="onboarding_title_2">智能分析</string>
-    <string name="onboarding_desc_2">清晰的图表与报表。</string>
-    <string name="onboarding_title_3">实现目标</string>
-    <string name="onboarding_desc_3">理智规划，储蓄更多。</string>
+    <string name="onboarding_title_1">追踪收入与支出</string>
+    <string name="onboarding_desc_1">掌控您的财务状况</string>
+    <string name="onboarding_title_2">查看报告与历史记录</string>
+    <string name="onboarding_desc_2">分析您的消费情况</string>
+    <string name="onboarding_title_3">管理个人档案与导出</string>
+    <string name="onboarding_desc_3">备份与导出您的数据</string>
     <string name="get_started">开始使用</string>
     <string name="next">下一步</string>
     <string name="skip">跳过</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">管理个人资料</string>
     <string name="clear_all_data">清除所有数据</string>
     <string name="no_transactions_yet">暂无交易记录</string>
+    <string name="no_data">暂无数据</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">点击 + 添加第一笔交易</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">开始追踪收支以查看分析。</string>
     <string name="add_first_transaction">添加第一笔交易</string>
 
-    <string name="warning_clear_all_data">⚠️ 清除所有数据</string>
+    <string name="warning_clear_all_data">清除所有数据 ⚠️</string>
     <string name="desc_clear_all_data">这将会永久删除所有交易！</string>
     <string name="delete_all">全部删除</string>
     <string name="cancel">取消</string>
-    <string name="app_title">记账 Pro</string>
     <string name="app_about_desc">版本 1.0.0\n\n离线记账应用程序。</string>
     <string name="ok">确定</string>
     <string name="share_via">分享方式</string>
-    <string name="share_app_desc">使用 Expense Tracker Pro 智慧记账！</string>
+    <string name="share_app_desc">使用 Expense Tracker 智慧记账！</string>
 
     <string name="delete_transactions">删除交易</string>
     <string name="delete_transactions_desc">确定要删除 %1$d 笔交易吗？</string>
@@ -192,4 +192,7 @@
     <string name="exit">退出</string>
     <string name="exit_dialog_title">退出应用？</string>
     <string name="exit_dialog_desc">要开始跟踪您的支出，您需要创建一个个人资料。您确定要退出应用吗？</string>
+    <string name="select_category">选择类别</string>
+    <string name="label_date">日期</string>
+    <string name="hint_notes_optional">备注（选填）</string>
 </resources>

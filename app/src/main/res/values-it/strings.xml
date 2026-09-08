@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FinTrack</string>
     <string name="app_tagline">Ogni spesa conta</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Shopping</string>
 
     <!-- History -->
-    <string name="transaction_history">Cronologia Transazioni</string>
+    <string name="transaction_history">Cronologia</string>
     <string name="search_hint">Cerca transazioni...</string>
     <string name="all">Tutte</string>
     <string name="no_results">Nessun risultato trovato</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
-    <string name="preferences">Preferenze</string>
+    <string name="preferences">Generale</string>
     <string name="dark_mode">Modalità Scura</string>
     <string name="currency">Valuta</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Traccia ogni centesimo</string>
-    <string name="onboarding_desc_1">Registra facilmente entrate e uscite.</string>
-    <string name="onboarding_title_2">Analisi Intelligenti</string>
-    <string name="onboarding_desc_2">Grafici e report dettagliati.</string>
-    <string name="onboarding_title_3">Raggiungi i tuoi obiettivi</string>
-    <string name="onboarding_desc_3">Pianifica meglio e risparmia di più.</string>
+    <string name="onboarding_title_1">Traccia entrate e uscite</string>
+    <string name="onboarding_desc_1">Tieni sotto controllo i tuoi soldi</string>
+    <string name="onboarding_title_2">Visualizza rapporti e cronologia</string>
+    <string name="onboarding_desc_2">Analizza le tue spese</string>
+    <string name="onboarding_title_3">Gestisci profili ed esporta</string>
+    <string name="onboarding_desc_3">Esegui il backup ed esporta i tuoi dati</string>
     <string name="get_started">Inizia</string>
     <string name="next">Avanti</string>
     <string name="skip">Salta</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gestisci Account</string>
     <string name="clear_all_data">Cancella tutti i dati</string>
     <string name="no_transactions_yet">Nessuna transazione ancora</string>
+    <string name="no_data">Nessun dato</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Premi + per aggiungere una transazione</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Inizia a tracciare entrate e uscite.</string>
     <string name="add_first_transaction">Aggiungi Prima Transazione</string>
 
-    <string name="warning_clear_all_data">⚠️ Cancella tutti i dati</string>
+    <string name="warning_clear_all_data">Cancella tutti i dati ⚠️</string>
     <string name="desc_clear_all_data">Questo eliminerà permanentemente TUTTE le transazioni!</string>
     <string name="delete_all">Elimina Tutto</string>
     <string name="cancel">Annulla</string>
-    <string name="app_title">Expense Tracker Pro</string>
     <string name="app_about_desc">Versione 1.0.0\n\nUn gestore spese offline premium.</string>
     <string name="ok">OK</string>
     <string name="share_via">Condividi tramite</string>
-    <string name="share_app_desc">Traccia le tue spese con Expense Tracker Pro!</string>
+    <string name="share_app_desc">Traccia le tue spese con Expense Tracker!</string>
 
     <string name="delete_transactions">Elimina Transazioni</string>
     <string name="delete_transactions_desc">Sei sicuro di voler eliminare %1$d transazioni?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Esci</string>
     <string name="exit_dialog_title">Uscire dall\'applicazione?</string>
     <string name="exit_dialog_desc">Per iniziare a monitorare le tue spese, devi creare un profilo. Sei sicuro di voler uscire dall\'applicazione?</string>
+    <string name="select_category">Seleziona categoria</string>
+    <string name="label_date">Data</string>
+    <string name="hint_notes_optional">Note (Opzionale)</string>
 </resources>

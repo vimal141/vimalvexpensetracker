@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">지출 추적기</string>
     <string name="app_tagline">모든 지출이 중요합니다</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">쇼핑</string>
 
     <!-- History -->
-    <string name="transaction_history">거래 내역</string>
+    <string name="transaction_history">기록</string>
     <string name="search_hint">거래 검색...</string>
     <string name="all">전체</string>
     <string name="no_results">검색 결과가 없습니다</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">설정</string>
-    <string name="preferences">환경설정</string>
+    <string name="preferences">일반</string>
     <string name="dark_mode">다크 모드</string>
     <string name="currency">통화</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">프리미엄</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">모든 지출을 기록하세요</string>
-    <string name="onboarding_desc_1">수입과 지출을 쉽게 기록하여 자산을 관리하세요.</string>
-    <string name="onboarding_title_2">스마트한 분석</string>
-    <string name="onboarding_desc_2">직관적인 차트와 보고서.</string>
-    <string name="onboarding_title_3">목표 달성</string>
-    <string name="onboarding_desc_3">더 똑똑하게 계획하고 절약하세요.</string>
+    <string name="onboarding_title_1">수입 및 지출 추적</string>
+    <string name="onboarding_desc_1">돈을 스마트하게 관리하세요</string>
+    <string name="onboarding_title_2">보고서 및 내역 보기</string>
+    <string name="onboarding_desc_2">지출을 분석하세요</string>
+    <string name="onboarding_title_3">프로필 관리 및 내보내기</string>
+    <string name="onboarding_desc_3">데이터 백업 및 내보내기</string>
     <string name="get_started">시작하기</string>
     <string name="next">다음</string>
     <string name="skip">건너뛰기</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">프로필 관리</string>
     <string name="clear_all_data">모든 데이터 삭제</string>
     <string name="no_transactions_yet">아직 거래 내역이 없습니다</string>
+    <string name="no_data">데이터 없음</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">+ 버튼을 눌러 거래를 추가하세요</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">수입과 지출을 기록해보세요.</string>
     <string name="add_first_transaction">첫 거래 추가하기</string>
 
-    <string name="warning_clear_all_data">⚠️ 모든 데이터 삭제</string>
+    <string name="warning_clear_all_data">모든 데이터 삭제 ⚠️</string>
     <string name="desc_clear_all_data">모든 거래 내역이 영구적으로 삭제됩니다!</string>
     <string name="delete_all">모두 삭제</string>
     <string name="cancel">취소</string>
-    <string name="app_title">지출 추적기 Pro</string>
     <string name="app_about_desc">버전 1.0.0\n\n오프라인 가계부 앱.</string>
     <string name="ok">확인</string>
     <string name="share_via">공유하기</string>
-    <string name="share_app_desc">Expense Tracker Pro로 지출을 똑똑하게 관리하세요!</string>
+    <string name="share_app_desc">Expense Tracker로 지출을 똑똑하게 관리하세요!</string>
 
     <string name="delete_transactions">거래 삭제</string>
     <string name="delete_transactions_desc">%1$d개의 거래 내역을 삭제하시겠습니까?</string>
@@ -192,4 +192,7 @@
     <string name="exit">종료</string>
     <string name="exit_dialog_title">앱을 종료하시겠습니까?</string>
     <string name="exit_dialog_desc">지출 추적을 시작하려면 프로필을 생성해야 합니다. 정말로 앱을 종료하시겠습니까?</string>
+    <string name="select_category">카테고리 선택</string>
+    <string name="label_date">날짜</string>
+    <string name="hint_notes_optional">메모 (선택 사항)</string>
 </resources>

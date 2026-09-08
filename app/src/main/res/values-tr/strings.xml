@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gider Takibi</string>
     <string name="app_tagline">Her harcama önemlidir</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Alışveriş</string>
 
     <!-- History -->
-    <string name="transaction_history">İşlem Geçmişi</string>
+    <string name="transaction_history">Geçmiş</string>
     <string name="search_hint">İşlemlerde ara...</string>
     <string name="all">Tümü</string>
     <string name="no_results">Sonuç bulunamadı</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
-    <string name="preferences">Tercihler</string>
+    <string name="preferences">Genel</string>
     <string name="dark_mode">Karanlık Mod</string>
     <string name="currency">Para Birimi</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Her Kuruşu Takip Edin</string>
-    <string name="onboarding_desc_1">Gelir ve giderlerinizi kolayca kaydedin.</string>
-    <string name="onboarding_title_2">Akıllı Analizler</string>
-    <string name="onboarding_desc_2">Harika grafikler ve raporlar.</string>
-    <string name="onboarding_title_3">Hedeflerinize Ulaşın</string>
-    <string name="onboarding_desc_3">Daha akıllıca planlayın, daha fazla tasarruf edin.</string>
+    <string name="onboarding_title_1">Gelir ve Gider Takibi</string>
+    <string name="onboarding_desc_1">Paranızı kontrol altında tutun</string>
+    <string name="onboarding_title_2">Raporları ve Geçmişi Görüntüle</string>
+    <string name="onboarding_desc_2">Harcamalarınızı analiz edin</string>
+    <string name="onboarding_title_3">Profilleri Yönet ve Dışa Aktar</string>
+    <string name="onboarding_desc_3">Verilerinizi yedekleyin ve dışa aktarın</string>
     <string name="get_started">Başla</string>
     <string name="next">İleri</string>
     <string name="skip">Atla</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Profilları Yönet</string>
     <string name="clear_all_data">Tüm Verileri Temizle</string>
     <string name="no_transactions_yet">Henüz işlem yok</string>
+    <string name="no_data">Veri Yok</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">İşlem eklemek için + butonuna dokunun</string>
 
     <!-- Validation Akıllı &amp; Kolay Gider Takibi Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Gelir ve giderlerinizi takip etmeye başlayın.</string>
     <string name="add_first_transaction">İlk İşlemi Ekle</string>
 
-    <string name="warning_clear_all_data">⚠️ Tüm Verileri Temizle</string>
+    <string name="warning_clear_all_data">Tüm Verileri Temizle ⚠️</string>
     <string name="desc_clear_all_data">Bu işlem TÜM işlemleri kalıcı olarak silecektir!</string>
     <string name="delete_all">Tümünü Sil</string>
     <string name="cancel">İptal</string>
-    <string name="app_title">Gider Takibi Pro</string>
     <string name="app_about_desc">Sürüm 1.0.0\n\nÇevrimdışı harcama takip uygulaması.</string>
     <string name="ok">Tamam</string>
     <string name="share_via">Şununla paylaş</string>
-    <string name="share_app_desc">Expense Tracker Pro ile harcamalarınızı akıllıca takip edin!</string>
+    <string name="share_app_desc">Expense Tracker ile harcamalarınızı akıllıca takip edin!</string>
 
     <string name="delete_transactions">İşlemleri Sil</string>
     <string name="delete_transactions_desc">%1$d işlemi silmek istediğinizden emin misiniz?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Çıkış</string>
     <string name="exit_dialog_title">Uygulamadan Çıkılsın mı?</string>
     <string name="exit_dialog_desc">Harcamalarınızı takip etmeye başlamak için bir profil oluşturmanız gerekir. Uygulamadan çıkmak istediğinizden emin misiniz?</string>
+    <string name="select_category">Kategori Seç</string>
+    <string name="label_date">Tarih</string>
+    <string name="hint_notes_optional">Notlar (İsteğe bağlı)</string>
 </resources>

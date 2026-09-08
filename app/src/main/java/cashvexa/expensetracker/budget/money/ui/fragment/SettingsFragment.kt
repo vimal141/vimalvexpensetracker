@@ -1,7 +1,6 @@
 package cashvexa.expensetracker.budget.money.ui.fragment
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +20,7 @@ import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.FragmentSettingsBinding
 import kotlin.text.equals
+import androidx.core.net.toUri
 
 class SettingsFragment : Fragment() {
 
@@ -58,12 +58,12 @@ class SettingsFragment : Fragment() {
 
         val selectedLang = LanguageHelper.getLanguageList(PrefManager.languageCode)
             .find { it.code.equals(PrefManager.languageCode, ignoreCase = true) }
-        binding.txtLanguageValue.text = selectedLang?.englishName ?: "English"
+        binding.txtLanguageValue.text = selectedLang?.nativeName ?: "English"
 
         val versionName = try {
             val packageInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
             packageInfo.versionName ?: "1.0.0"
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             "1.0.0"
         }
         binding.txtAppVersion.text = getString(R.string.version, versionName)
@@ -103,16 +103,17 @@ class SettingsFragment : Fragment() {
 
         binding.layoutPrivacy.setOnClickListener {
             try {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com")))
-            } catch (e: Exception) {
+                startActivity(Intent(Intent.ACTION_VIEW, "https://www.google.com".toUri()))
+            } catch (_: Exception) {
                 Toast.makeText(requireContext(), getString(R.string.toast_error_browser), Toast.LENGTH_SHORT).show()
             }
         }
 
         binding.layoutRate.setOnClickListener {
             try {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${requireContext().packageName}")))
-            } catch (e: Exception) {
+                startActivity(Intent(Intent.ACTION_VIEW,
+                    "market://details?id=${requireContext().packageName}".toUri()))
+            } catch (_: Exception) {
                 Toast.makeText(requireContext(), getString(R.string.toast_thanks_support_emoji), Toast.LENGTH_SHORT).show()
             }
         }
@@ -120,8 +121,9 @@ class SettingsFragment : Fragment() {
         binding.layoutShare.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_title))
-                putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_desc))
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+                val shareMessage = "${getString(R.string.share_app_desc)}\n\nhttps://play.google.com/store/apps/details?id=${requireContext().packageName}"
+                putExtra(Intent.EXTRA_TEXT, shareMessage)
             }
             startActivity(Intent.createChooser(shareIntent, getString(R.string.share_via)))
         }

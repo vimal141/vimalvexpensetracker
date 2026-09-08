@@ -25,7 +25,7 @@ class AboutActivity : BaseActivity<ActivityAboutBinding>() {
         return try {
             val packageInfo = packageManager.getPackageInfo(packageName, 0)
             packageInfo.versionName ?: "1.0.0"
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             "1.0.0"
         }
     }

@@ -6,14 +6,13 @@
     android:background="@color/bgColor"
     android:clipToPadding="false"
     android:fillViewport="true"
-    android:paddingBottom="@dimen/_75sdp"
+    android:paddingBottom="@dimen/_70sdp"
     android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/_14sdp"
-        android:paddingBottom="@dimen/_20sdp">
+        android:paddingHorizontal="@dimen/_14sdp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fragmentTittle"
@@ -196,10 +195,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        android:fontFamily="@font/bold"
+                        android:fontFamily="@font/regular"
                         android:maxLines="1"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_language"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -276,11 +275,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        android:fontFamily="@font/bold"
+                        android:fontFamily="@font/regular"
                         android:maxLines="1"
                         android:text="@string/system_default"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_theme"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -424,11 +423,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        android:fontFamily="@font/bold"
+                        android:fontFamily="@font/regular"
                         android:maxLines="1"
                         android:text="@string/currency_value"
                         android:textColor="@color/primaryColor"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/ic_arrow_currency"
                         app:layout_constraintTop_toTopOf="parent" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Ausgaben-Tracker</string>
     <string name="app_tagline">Jede Ausgabe zählt</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Einkaufen</string>
 
     <!-- History -->
-    <string name="transaction_history">Transaktionsverlauf</string>
+    <string name="transaction_history">Verlauf</string>
     <string name="search_hint">Transaktionen suchen...</string>
     <string name="all">Alle</string>
     <string name="no_results">Keine Ergebnisse gefunden</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
-    <string name="preferences">Einstellungen</string>
+    <string name="preferences">Allgemein</string>
     <string name="dark_mode">Dunkelmodus</string>
     <string name="currency">Währung</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Jeden Cent verfolgen</string>
-    <string name="onboarding_desc_1">Erfassen Sie Ihre Einnahmen und Ausgaben ganz einfach.</string>
-    <string name="onboarding_title_2">Intelligente Analysen</string>
-    <string name="onboarding_desc_2">Schöne Diagramme und Berichte.</string>
-    <string name="onboarding_title_3">Ziele erreichen</string>
-    <string name="onboarding_desc_3">Besser planen, mehr sparen.</string>
+    <string name="onboarding_title_1">Einnahmen &amp; Ausgaben verfolgen</string>
+    <string name="onboarding_desc_1">Behalten Sie Ihr Geld unter Kontrolle</string>
+    <string name="onboarding_title_2">Berichte &amp; Verlauf anzeigen</string>
+    <string name="onboarding_desc_2">Analysieren Sie Ihre Ausgaben</string>
+    <string name="onboarding_title_3">Profile verwalten &amp; exportieren</string>
+    <string name="onboarding_desc_3">Sichern &amp; Exportieren Ihrer Daten</string>
     <string name="get_started">Loslegen</string>
     <string name="next">Weiter</string>
     <string name="skip">Überspringen</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Profile verwalten</string>
     <string name="clear_all_data">Alle Daten löschen</string>
     <string name="no_transactions_yet">Noch keine Transaktionen</string>
+    <string name="no_data">Keine Daten</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Tippen Sie auf +, um eine Transaktion hinzuzufügen</string>
 
     <!-- Validation Smarter &amp; einfacher Ausgaben-Tracker Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Beginnen Sie mit der Verfolgung Ihrer Finanzen.</string>
     <string name="add_first_transaction">Erste Transaktion hinzufügen</string>
 
-    <string name="warning_clear_all_data">⚠️ Alle Daten löschen</string>
+    <string name="warning_clear_all_data">Alle Daten löschen ⚠️</string>
     <string name="desc_clear_all_data">Dadurch werden ALLE Transaktionen dauerhaft gelöscht.</string>
     <string name="delete_all">Alle löschen</string>
     <string name="cancel">Abbrechen</string>
-    <string name="app_title">Ausgaben-Tracker Pro</string>
     <string name="app_about_desc">Version 1.0.0\n\nEin meisterhafter Offline-Finanzmanager.</string>
     <string name="ok">OK</string>
     <string name="share_via">Teilen über</string>
-    <string name="share_app_desc">Verfolgen Sie Ihre Ausgaben intelligent mit Expense Tracker Pro!</string>
+    <string name="share_app_desc">Verfolgen Sie Ihre Ausgaben intelligent mit Expense Tracker!</string>
 
     <string name="delete_transactions">Transaktionen löschen</string>
     <string name="delete_transactions_desc">Möchten Sie %1$d Transaktionen wirklich löschen?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Beenden</string>
     <string name="exit_dialog_title">Anwendung beenden?</string>
     <string name="exit_dialog_desc">Um Ihre Ausgaben zu verfolgen, müssen Sie ein Profil erstellen. Möchten Sie die Anwendung wirklich beenden?</string>
+    <string name="select_category">Kategorie auswählen</string>
+    <string name="label_date">Datum</string>
+    <string name="hint_notes_optional">Notizen (Optional)</string>
 </resources>

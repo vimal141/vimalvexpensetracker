@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Трекер расходов</string>
     <string name="app_tagline">Каждый расход имеет значение</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Покупки</string>
 
     <!-- History -->
-    <string name="transaction_history">История транзакций</string>
+    <string name="transaction_history">История</string>
     <string name="search_hint">Поиск транзакций...</string>
     <string name="all">Все</string>
     <string name="no_results">Результаты не найдены</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Настройки</string>
-    <string name="preferences">Предпочтения</string>
+    <string name="preferences">Общие</string>
     <string name="dark_mode">Темная тема</string>
     <string name="currency">Валюта</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Премиум</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Учитывайте каждую копейку</string>
-    <string name="onboarding_desc_1">Легко записывайте свои доходы и расходы.</string>
-    <string name="onboarding_title_2">Умная аналитика</string>
-    <string name="onboarding_desc_2">Красивые графики и отчеты.</string>
-    <string name="onboarding_title_3">Достигайте целей</string>
-    <string name="onboarding_desc_3">Планируйте лучше, экономьте больше.</string>
+    <string name="onboarding_title_1">Отслеживание доходов и расходов</string>
+    <string name="onboarding_desc_1">Держите свои деньги под контролем</string>
+    <string name="onboarding_title_2">Просмотр отчетов и истории</string>
+    <string name="onboarding_desc_2">Анализируйте свои расходы</string>
+    <string name="onboarding_title_3">Управление профилями и экспорт</string>
+    <string name="onboarding_desc_3">Резервное копирование и экспорт данных</string>
     <string name="get_started">Начать</string>
     <string name="next">Далее</string>
     <string name="skip">Пропустить</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Управление профильами</string>
     <string name="clear_all_data">Очистить все данные</string>
     <string name="no_transactions_yet">Пока нет транзакций</string>
+    <string name="no_data">Нет данных</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Нажмите +, чтобы добавить транзакцию</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Начните отслеживать доходы и расходы.</string>
     <string name="add_first_transaction">Добавить первую транзакцию</string>
 
-    <string name="warning_clear_all_data">⚠️ Очистить все данные</string>
+    <string name="warning_clear_all_data">Очистить все данные ⚠️</string>
     <string name="desc_clear_all_data">Это навсегда удалит ВСЕ транзакции!</string>
     <string name="delete_all">Удалить все</string>
     <string name="cancel">Отмена</string>
-    <string name="app_title">Трекер расходов Pro</string>
     <string name="app_about_desc">Версия 1.0.0\n\nПремиум менеджер расходов без интернета.</string>
     <string name="ok">ОК</string>
     <string name="share_via">Поделиться через</string>
-    <string name="share_app_desc">Управляйте расходами с Expense Tracker Pro!</string>
+    <string name="share_app_desc">Управляйте расходами с Expense Tracker!</string>
 
     <string name="delete_transactions">Удалить транзакции</string>
     <string name="delete_transactions_desc">Вы уверены, что хотите удалить %1$d транзакций?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Выйти</string>
     <string name="exit_dialog_title">Выйти из приложения?</string>
     <string name="exit_dialog_desc">Чтобы начать отслеживать свои расходы, вам необходимо создать профиль. Вы уверены, что хотите выйти из приложения?</string>
+    <string name="select_category">Выберите категорию</string>
+    <string name="label_date">Дата</string>
+    <string name="hint_notes_optional">Заметки (Необязательно)</string>
 </resources>

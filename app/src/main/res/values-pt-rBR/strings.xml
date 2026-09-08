@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Controle de despesas</string>
     <string name="app_tagline">Cada despesa importa</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Compras</string>
 
     <!-- History -->
-    <string name="transaction_history">Histórico de Transações</string>
+    <string name="transaction_history">Histórico</string>
     <string name="search_hint">Buscar transações...</string>
     <string name="all">Todas</string>
     <string name="no_results">Nenhum resultado encontrado</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Configurações</string>
-    <string name="preferences">Preferências</string>
+    <string name="preferences">Geral</string>
     <string name="dark_mode">Modo Escuro</string>
     <string name="currency">Moeda</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Controle Cada Centavo</string>
-    <string name="onboarding_desc_1">Registre facilmente suas receitas e despesas.</string>
-    <string name="onboarding_title_2">Análises Inteligentes</string>
-    <string name="onboarding_desc_2">Gráficos e relatórios incríveis.</string>
-    <string name="onboarding_title_3">Alcance suas Metas</string>
-    <string name="onboarding_desc_3">Planeje melhor e economize mais.</string>
+    <string name="onboarding_title_1">Acompanhar Receitas e Despesas</string>
+    <string name="onboarding_desc_1">Mantenha seu dinheiro sob controle</string>
+    <string name="onboarding_title_2">Ver Relatórios e Histórico</string>
+    <string name="onboarding_desc_2">Analise seus gastos</string>
+    <string name="onboarding_title_3">Gerenciar Perfis e Exportar</string>
+    <string name="onboarding_desc_3">Faça backup e exporte seus dados</string>
     <string name="get_started">Começar</string>
     <string name="next">Avançar</string>
     <string name="skip">Pular</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gerenciar Perfils</string>
     <string name="clear_all_data">Limpar Todos os Dados</string>
     <string name="no_transactions_yet">Sem transações ainda</string>
+    <string name="no_data">Sem dados</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Toque em + para adicionar uma transação</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Comece a controlar suas receitas e despesas.</string>
     <string name="add_first_transaction">Adicionar Primeira Transação</string>
 
-    <string name="warning_clear_all_data">⚠️ Limpar Todos os Dados</string>
+    <string name="warning_clear_all_data">Limpar Todos os Dados ⚠️</string>
     <string name="desc_clear_all_data">Isso excluirá permanentemente TODAS as transações!</string>
     <string name="delete_all">Excluir Tudo</string>
     <string name="cancel">Cancelar</string>
-    <string name="app_title">Controle de despesas Pro</string>
     <string name="app_about_desc">Versão 1.0.0\n\nUm gerenciador financeiro offline premium.</string>
     <string name="ok">OK</string>
     <string name="share_via">Compartilhar via</string>
-    <string name="share_app_desc">Controle suas despesas com o Expense Tracker Pro!</string>
+    <string name="share_app_desc">Controle suas despesas com o Expense Tracker!</string>
 
     <string name="delete_transactions">Excluir Transações</string>
     <string name="delete_transactions_desc">Tem certeza de que deseja excluir %1$d transações?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Sair</string>
     <string name="exit_dialog_title">Sair do aplicativo?</string>
     <string name="exit_dialog_desc">Para começar a acompanhar suas despesas, você precisa criar um perfil. Tem certeza de que deseja sair do aplicativo?</string>
+    <string name="select_category">Selecionar categoria</string>
+    <string name="label_date">Data</string>
+    <string name="hint_notes_optional">Notas (Opcional)</string>
 </resources>

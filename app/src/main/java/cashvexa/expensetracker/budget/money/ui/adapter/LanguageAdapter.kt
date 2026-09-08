@@ -1,5 +1,6 @@
 package cashvexa.expensetracker.budget.money.ui.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,14 +19,14 @@ class LanguageAdapter(
 
     private var lastPosition = -1
 
-    inner class LanguageViewHolder(val binding: ItemLanguageBinding) : RecyclerView.ViewHolder(binding.root)
+    class LanguageViewHolder(val binding: ItemLanguageBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageViewHolder {
         val binding = ItemLanguageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return LanguageViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: LanguageViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: LanguageViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val item = languages[position]
 
         holder.binding.imgFlag.setImageResource(item.flagRes)

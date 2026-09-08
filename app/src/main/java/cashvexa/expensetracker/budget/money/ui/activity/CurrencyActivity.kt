@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Toast
+import cashvexa.expensetracker.budget.money.R
+import cashvexa.expensetracker.budget.money.databinding.ActivityCurrencyBinding
 import cashvexa.expensetracker.budget.money.ui.adapter.CurrencyAdapter
 import cashvexa.expensetracker.budget.money.ui.adapter.CurrencyItem
 import cashvexa.expensetracker.budget.money.utility.helper.PrefManager
-import cashvexa.expensetracker.budget.money.R
-import cashvexa.expensetracker.budget.money.databinding.ActivityCurrencyBinding
 import java.util.Locale
+import androidx.core.view.isVisible
 
 class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
 
@@ -92,7 +92,6 @@ class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
             CurrencyItem(symbols[i], codes[i], names[i])
         }
 
-        // Place matching device region currency at the top
         val deviceCurrency = getDeviceCurrencyCode()
         val mutableCurrencies = rawCurrencies.toMutableList()
         val matchIndex = mutableCurrencies.indexOfFirst { it.code.equals(deviceCurrency, ignoreCase = true) }
@@ -149,7 +148,7 @@ class CurrencyActivity : BaseActivity<ActivityCurrencyBinding>() {
     }
 
     private fun startButtonAnimation() {
-        if (isFirstLaunch && binding.btnDone.visibility == View.VISIBLE) {
+        if (isFirstLaunch && binding.btnDone.isVisible) {
             if (binding.btnDone.animation == null) {
                 val pulseAnim = AnimationUtils.loadAnimation(this, R.anim.anim_btn_pulse)
                 binding.btnDone.startAnimation(pulseAnim)

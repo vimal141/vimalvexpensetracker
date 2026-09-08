@@ -32,11 +32,6 @@ class AccountsActivity : BaseActivity<ActivityAccountsBinding>() {
             if (selectedAccountId != -1) {
                 PrefManager.currentAccountId = selectedAccountId
             }
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra("target_tab", 3)
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            }
-            startActivity(intent)
             finish()
         }
 

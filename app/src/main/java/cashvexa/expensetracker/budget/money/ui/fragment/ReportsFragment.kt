@@ -32,6 +32,7 @@ import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
+import kotlin.math.roundToInt
 
 class ReportsFragment : Fragment() {
 
@@ -246,7 +247,7 @@ class ReportsFragment : Fragment() {
             binding.tabReportExpense.setTextColor(inactiveColor)
             binding.tabReportExpense.background = null
 
-            binding.txtCatTitle.text = "Income Breakdown"
+            binding.txtCatTitle.text = getString(R.string.income_breakdown)
         }
     }
 
@@ -314,7 +315,7 @@ class ReportsFragment : Fragment() {
     }
 
     private fun updateReportData() {
-        val allTransactions = viewModel.transactionsForReport.value ?: emptyList()
+        val allTransactions = viewModel.transactionsForReport.value
         val filtered = allTransactions.filter {
             it.type.trim().equals(currentReportType, ignoreCase = true)
         }
@@ -365,7 +366,7 @@ class ReportsFragment : Fragment() {
         categorySums.take(10).forEach { item ->
             val pctDouble = if (totalVolume > 0) (item.total / totalVolume * 100.0) else 0.0
             val pctText = "${df.format(pctDouble)}%"
-            val pctInt = Math.round(pctDouble).toInt()
+            val pctInt = pctDouble.roundToInt()
             val row = layoutInflater.inflate(R.layout.item_category_row, binding.layoutCategories, false)
 
             row.findViewById<View>(R.id.view_color_dot)

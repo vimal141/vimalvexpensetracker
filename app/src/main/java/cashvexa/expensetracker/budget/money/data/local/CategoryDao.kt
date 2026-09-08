@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface CategoryDao {
-    @Query("SELECT * FROM categories WHERE type = :type ORDER BY isDefault DESC, name ASC")
+    @Query("SELECT * FROM categories WHERE type = :type ORDER BY isDefault DESC, id ASC")
     fun getCategoriesByType(type: String): Flow<List<Category>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

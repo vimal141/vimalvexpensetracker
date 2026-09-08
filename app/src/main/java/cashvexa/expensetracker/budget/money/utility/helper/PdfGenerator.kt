@@ -157,10 +157,8 @@ object PdfGenerator {
         
         yPosition = summaryBoxBottom + 30f
 
-        val vCol2 = leftMargin + 30f
         val vCol3 = leftMargin + 105f
         val vCol4 = rightMargin - 150f
-        val vCol5 = rightMargin
 
         val drawTableHeader = { c: Canvas, y: Float ->
             paint.color = themeColor
@@ -172,7 +170,7 @@ object PdfGenerator {
             c.drawText(context.getString(R.string.type), vCol4, y + 17f, tableHeaderPaint)
             val aHeader = context.getString(R.string.amount)
             val aW = tableHeaderPaint.measureText(aHeader)
-            c.drawText(aHeader, vCol5 - aW - 5f, y + 17f, tableHeaderPaint)
+            c.drawText(aHeader, rightMargin - aW - 5f, y + 17f, tableHeaderPaint)
         }
 
         drawTableHeader(canvas, yPosition)
@@ -231,7 +229,7 @@ object PdfGenerator {
             canvas.drawText(typeStr, vCol4, yPosition + 15f, textPaint)
 
             val aW = amtPaint.measureText(amtStr)
-            canvas.drawText(amtStr, vCol5 - aW - 5f, yPosition + 15f, amtPaint)
+            canvas.drawText(amtStr, rightMargin - aW - 5f, yPosition + 15f, amtPaint)
 
             canvas.drawLine(leftMargin, yPosition + itemRowHeight, rightMargin, yPosition + itemRowHeight, gridPaint)
             yPosition += itemRowHeight

@@ -1,5 +1,6 @@
 package cashvexa.expensetracker.budget.money.ui.fragment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,13 +37,14 @@ import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.FragmentDashboardBinding
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.abs
 
 class DashboardFragment : Fragment() {
 
     private lateinit var binding: FragmentDashboardBinding
     private val viewModel: TransactionViewModel by activityViewModel()
     private lateinit var adapter: TransactionAdapter
-    private var isBalanceVisible = true
+    private var isBalanceVisible = PrefManager.isBalanceVisible
     private var currentBalanceText = ""
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -82,17 +84,18 @@ class DashboardFragment : Fragment() {
         updateCurrencyUI()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun updateCurrencyUI() {
         val symbol = PrefManager.currencySymbol
-        val balance = viewModel.totalBalance.value ?: 0.0
+        val balance = viewModel.totalBalance.value
         val sign = if (balance < 0) "-" else ""
-        currentBalanceText = "$sign$symbol ${CurrencyHelper.formatAmount(Math.abs(balance))}"
+        currentBalanceText = "$sign$symbol ${CurrencyHelper.formatAmount(abs(balance))}"
         updateBalanceVisibility()
 
-        val income = viewModel.totalIncome.value ?: 0.0
+        val income = viewModel.totalIncome.value
         binding.txtIncomeValue.text = "$symbol ${CurrencyHelper.formatAmount(income)}"
 
-        val expense = viewModel.totalExpense.value ?: 0.0
+        val expense = viewModel.totalExpense.value
         binding.txtExpenseValue.text = "$symbol ${CurrencyHelper.formatAmount(expense)}"
 
         if (::adapter.isInitialized) {
@@ -185,6 +188,7 @@ class DashboardFragment : Fragment() {
         }
         binding.ivVisibility.setOnClickListener {
             isBalanceVisible = !isBalanceVisible
+            PrefManager.isBalanceVisible = isBalanceVisible
             updateBalanceVisibility()
         }
         binding.ivMore.setOnClickListener {
@@ -214,6 +218,7 @@ class DashboardFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun observeViewModel() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -232,9 +237,10 @@ class DashboardFragment : Fragment() {
 
                 launch {
                     viewModel.totalBalance.collectLatest { balance ->
-                        val b = balance ?: 0.0
-                        val sign = if (b < 0) "-" else ""
-                        currentBalanceText = "$sign${PrefManager.currencySymbol} ${CurrencyHelper.formatAmount(Math.abs(b))}"
+                        val sign = if (balance < 0) "-" else ""
+                        currentBalanceText = "$sign${PrefManager.currencySymbol} ${CurrencyHelper.formatAmount(
+                            abs(balance)
+                        )}"
                         updateBalanceVisibility()
                     }
                 }
@@ -247,13 +253,15 @@ class DashboardFragment : Fragment() {
 
                 launch {
                     viewModel.totalExpense.collectLatest { expense ->
-                        binding.txtExpenseValue.text = "${PrefManager.currencySymbol} ${CurrencyHelper.formatAmount(expense ?: 0.0)}"
+                        binding.txtExpenseValue.text = "${PrefManager.currencySymbol} ${CurrencyHelper.formatAmount(
+                            expense
+                        )}"
                     }
                 }
 
                 launch {
                     viewModel.transactionsForSelectedMonth.collectLatest { list ->
-                        updateList(list ?: emptyList())
+                        updateList(list)
                     }
                 }
             }

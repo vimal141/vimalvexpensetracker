@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
@@ -30,7 +31,6 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
     override val isApplyKeyboardPadding = true
     private val viewModel: TransactionViewModel by viewModel()
     private lateinit var categoryAdapter: CategoryAdapter
-    
     private var selectedType = Constants.TYPE_EXPENSE
     private var selectedCategory: Category? = null
     private val selectedCalendar = Calendar.getInstance()
@@ -56,6 +56,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         if (editTransaction != null) {
             setupEditMode(editTransaction!!)
         } else {
+            binding.btnDelete.visibility = View.GONE
             updateTypeUI()
         }
     }
@@ -74,6 +75,11 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
             onCategoryClick = { category ->
                 selectedCategory = category
                 binding.layoutBottomContainer.visibility = View.VISIBLE
+                binding.etAmount.post {
+                    binding.etAmount.requestFocus()
+                    val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.showSoftInput(binding.etAmount, InputMethodManager.SHOW_IMPLICIT)
+                }
             }
         )
         binding.rvCategories.layoutManager = GridLayoutManager(this, 4)
@@ -89,10 +95,6 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         }
         binding.tabIncome.setOnClickListener { 
             selectedType = Constants.TYPE_INCOME
-            updateTypeUI()
-        }
-        binding.tabTransfer.setOnClickListener { 
-            selectedType = Constants.TYPE_TRANSFER
             updateTypeUI()
         }
 
@@ -140,8 +142,6 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         binding.tabExpense.background = null
         binding.tabIncome.setTextColor(inactiveColor)
         binding.tabIncome.background = null
-        binding.tabTransfer.setTextColor(inactiveColor)
-        binding.tabTransfer.background = null
 
         when (selectedType) {
             Constants.TYPE_EXPENSE -> {
@@ -153,11 +153,6 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
                 binding.tabIncome.setTextColor(activeTextColor)
                 binding.tabIncome.setBackgroundResource(R.drawable.bg_tab)
                 binding.tabIncome.backgroundTintList = ContextCompat.getColorStateList(this, R.color.income_green)
-            }
-            Constants.TYPE_TRANSFER -> {
-                binding.tabTransfer.setTextColor(activeTextColor)
-                binding.tabTransfer.setBackgroundResource(R.drawable.bg_tab)
-                binding.tabTransfer.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primaryColor)
             }
         }
     }
@@ -178,6 +173,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         val picker = MaterialDatePicker.Builder.datePicker()
             .setTitleText("Select Date")
             .setSelection(selectedCalendar.timeInMillis)
+            .setTheme(R.style.CustomDatePickerTheme)
             .build()
 
         picker.addOnPositiveButtonClickListener { selection ->
@@ -195,7 +191,12 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
             now.get(Calendar.YEAR) == selectedCalendar.get(Calendar.YEAR)) {
             binding.txtDate.text = "Today"
         } else {
-            binding.txtDate.text = SimpleDateFormat("dd MMM yyyy", Locale.US).format(selectedCalendar.time)
+            val currentYear = now.get(Calendar.YEAR)
+            if (selectedCalendar.get(Calendar.YEAR) == currentYear) {
+                binding.txtDate.text = SimpleDateFormat("dd MMM", Locale.US).format(selectedCalendar.time)
+            } else {
+                binding.txtDate.text = SimpleDateFormat("dd MMM yyyy", Locale.US).format(selectedCalendar.time)
+            }
         }
     }
 

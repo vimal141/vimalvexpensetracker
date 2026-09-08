@@ -107,18 +107,6 @@
                 android:text="@string/income"
                 android:textColor="@color/subTextColor"
                 android:textSize="@dimen/_11ssp" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tab_transfer"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/semi_bold"
-                android:gravity="center"
-                android:text="Transfer"
-                android:textColor="@color/subTextColor"
-                android:textSize="@dimen/_11ssp" />
-
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -130,7 +118,7 @@
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/semi_bold"
-        android:text="Select Category"
+        android:text="@string/select_category"
         android:textColor="@color/TextColor"
         android:textSize="@dimen/_11ssp"
         app:layout_constraintStart_toStartOf="parent"
@@ -216,6 +204,7 @@
                     android:fontFamily="@font/bold"
                     android:hint="0"
                     android:inputType="numberDecimal"
+                    android:maxLength="15"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/TextColor"
                     android:textColorHint="@color/hintColor"
@@ -279,7 +268,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_8sdp"
                             android:fontFamily="@font/semi_bold"
-                            android:text="Date"
+                            android:text="@string/label_date"
                             android:textColor="@color/subTextColor"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -319,7 +308,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:hint="Notes (Optional)"
+                    android:hint="@string/hint_notes_optional"
                     app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_8sdp"
                     app:boxCornerRadiusTopEnd="@dimen/_8sdp"
@@ -330,8 +319,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
-                        android:inputType="textMultiLine"
-                        android:maxLines="2"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_10ssp" />
                 </com.google.android.material.textfield.TextInputLayout>

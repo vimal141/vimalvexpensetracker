@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">تعقب المصاريف</string>
     <string name="app_tagline">كل مصورف يفرق</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">تسوق</string>
 
     <!-- History -->
-    <string name="transaction_history">سجل المعاملات</string>
+    <string name="transaction_history">السجل</string>
     <string name="search_hint">بحث في المعاملات...</string>
     <string name="all">الكل</string>
     <string name="no_results">لم يتم العثور على نتائج</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">الإعدادات</string>
-    <string name="preferences">التفضيلات</string>
+    <string name="preferences">عام</string>
     <string name="dark_mode">الوضع الداكن</string>
     <string name="currency">العملة</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">المميز</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">تتبع كل فلس</string>
-    <string name="onboarding_desc_1">سجل دخلك ومصاريفك بسهولة للتحكم في أموالك.</string>
-    <string name="onboarding_title_2">تحليلات ذكية</string>
-    <string name="onboarding_desc_2">رسوم بيانية وتقارير جميلة لفهم أين تذهب أموالك.</string>
-    <string name="onboarding_title_3">حقوق أهدافك</string>
-    <string name="onboarding_desc_3">خطط بذكاء ووفر أكثر وحقق أحلامك المالية.</string>
+    <string name="onboarding_title_1">تتبع الدخل والمصاريف</string>
+    <string name="onboarding_desc_1">حافظ على التحكم في أموالك</string>
+    <string name="onboarding_title_2">عرض التقارير والسجل</string>
+    <string name="onboarding_desc_2">حلل نفقاتك</string>
+    <string name="onboarding_title_3">إدارة الملفات الشخصية والتصدير</string>
+    <string name="onboarding_desc_3">نسخ احتياطي وتصدير بياناتك</string>
     <string name="get_started">ابدأ الآن</string>
     <string name="next">التالي</string>
     <string name="skip">تخطي</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">إدارة الملف شخصيات</string>
     <string name="clear_all_data">مسح جميع البيانات</string>
     <string name="no_transactions_yet">لا توجد معاملات بعد</string>
+    <string name="no_data">لا توجد بيانات</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">اضغط + لإضافة معاملة</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">ابدأ بتتبع دخلك ومصاريفك لرؤية الإحصاءات هنا.</string>
     <string name="add_first_transaction">إضافة أول معاملة</string>
 
-    <string name="warning_clear_all_data">⚠️ مسح جميع البيانات</string>
+    <string name="warning_clear_all_data">مسح جميع البيانات ⚠️</string>
     <string name="desc_clear_all_data">سيؤدي هذا إلى حذف جميع المعاملات نهائياً!</string>
     <string name="delete_all">حذف الكل</string>
     <string name="cancel">إلغاء</string>
-    <string name="app_title">تعقب المصاريف Pro</string>
     <string name="app_about_desc">الإصدار 1.0.0\n\nمدير مالي ممتاز بدون إنترنت.</string>
     <string name="ok">موافق</string>
     <string name="share_via">مشاركة عبر</string>
-    <string name="share_app_desc">تتبع مصاريفك بذكاء مع Expense Tracker Pro!</string>
+    <string name="share_app_desc">تتبع مصاريفك بذكاء مع Expense Tracker!</string>
 
     <string name="delete_transactions">حذف المعاملات</string>
     <string name="delete_transactions_desc">هل أنت تأكد من أنك تريد حذف %1$d معاملة؟</string>
@@ -192,4 +192,7 @@
     <string name="exit">خروج</string>
     <string name="exit_dialog_title">هل تريد الخروج؟</string>
     <string name="exit_dialog_desc">لبدء تتبع نفقاتك، تحتاج إلى إنشاء ملف شخصي. هل أنت متأكد أنك تريد الخروج من التطبيق؟</string>
+    <string name="select_category">اختر الفئة</string>
+    <string name="label_date">التاريخ</string>
+    <string name="hint_notes_optional">ملاحظات (اختياري)</string>
 </resources>

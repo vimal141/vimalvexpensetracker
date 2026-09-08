@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rastreador de despesas</string>
     <string name="app_tagline">Cada despesa importa</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Compras</string>
 
     <!-- History -->
-    <string name="transaction_history">Histórico de Transações</string>
+    <string name="transaction_history">Histórico</string>
     <string name="search_hint">Pesquisar transações...</string>
     <string name="all">Todas</string>
     <string name="no_results">Nenhum resultado encontrado</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Definições</string>
-    <string name="preferences">Preferências</string>
+    <string name="preferences">Geral</string>
     <string name="dark_mode">Modo Escuro</string>
     <string name="currency">Moeda</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Controle Cada Cêntimo</string>
-    <string name="onboarding_desc_1">Registe facilmente as suas receitas e despesas.</string>
-    <string name="onboarding_title_2">Análises Inteligentes</string>
-    <string name="onboarding_desc_2">Gráficos e relatórios incríveis.</string>
-    <string name="onboarding_title_3">Alcance as suas Metas</string>
-    <string name="onboarding_desc_3">Planeie melhor e poupe mais.</string>
+    <string name="onboarding_title_1">Acompanhar Receitas e Despesas</string>
+    <string name="onboarding_desc_1">Mantenha o seu dinheiro sob controlo</string>
+    <string name="onboarding_title_2">Ver Relatórios e Histórico</string>
+    <string name="onboarding_desc_2">Analise os seus gastos</string>
+    <string name="onboarding_title_3">Gerir Perfis e Exportar</string>
+    <string name="onboarding_desc_3">Faça backup e exporte os seus dados</string>
     <string name="get_started">Começar</string>
     <string name="next">Seguinte</string>
     <string name="skip">Saltar</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gerir Perfils</string>
     <string name="clear_all_data">Limpar Todos os Dados</string>
     <string name="no_transactions_yet">Sem transações ainda</string>
+    <string name="no_data">Sem dados</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Toque em + para adicionar uma transação</string>
 
     <!-- Validation Rastreador de despesas inteligente &amp; simples Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Comece a controlar as suas receitas e despesas.</string>
     <string name="add_first_transaction">Adicionar Primeira Transação</string>
 
-    <string name="warning_clear_all_data">⚠️ Limpar Todos os Dados</string>
+    <string name="warning_clear_all_data">Limpar Todos os Dados ⚠️</string>
     <string name="desc_clear_all_data">Isto eliminará permanentemente TODAS as transações!</string>
     <string name="delete_all">Eliminar Tudo</string>
     <string name="cancel">Cancelar</string>
-    <string name="app_title">Rastreador de despesas Pro</string>
     <string name="app_about_desc">Versão 1.0.0\n\nUm gestor financeiro offline premium.</string>
     <string name="ok">OK</string>
     <string name="share_via">Partilhar via</string>
-    <string name="share_app_desc">Controle as suas despesas com o Expense Tracker Pro!</string>
+    <string name="share_app_desc">Controle as suas despesas com o Expense Tracker!</string>
 
     <string name="delete_transactions">Eliminar Transações</string>
     <string name="delete_transactions_desc">Tem a certeza de que deseja eliminar %1$d transações?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Sair</string>
     <string name="exit_dialog_title">Sair do aplicativo?</string>
     <string name="exit_dialog_desc">Para começar a acompanhar suas despesas, você precisa criar um perfil. Tem certeza de que deseja sair do aplicativo?</string>
+    <string name="select_category">Selecionar categoria</string>
+    <string name="label_date">Data</string>
+    <string name="hint_notes_optional">Notas (Opcional)</string>
 </resources>

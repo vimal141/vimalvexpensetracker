@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Költségkövető</string>
     <string name="app_tagline">Minden kiadás számít</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Vásárlás</string>
 
     <!-- History -->
-    <string name="transaction_history">Tranzakciók előzményei</string>
+    <string name="transaction_history">Előzmények</string>
     <string name="search_hint">Tranzakciók keresése...</string>
     <string name="all">Mind</string>
     <string name="no_results">Nincs találat</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Beállítások</string>
-    <string name="preferences">Beállítások</string>
+    <string name="preferences">Általános</string>
     <string name="dark_mode">Sötét mód</string>
     <string name="currency">Pénznem</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Prémium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Kövesd nyomon minden filléred</string>
-    <string name="onboarding_desc_1">Könnyen rögzítheted bevételeidet és kiadásaidat.</string>
-    <string name="onboarding_title_2">Okos elemzések</string>
-    <string name="onboarding_desc_2">Átlátható grafikonok és jelentések.</string>
-    <string name="onboarding_title_3">Érd el a céljaidat</string>
-    <string name="onboarding_desc_3">Tervezz okosabban, takaríts meg többet.</string>
+    <string name="onboarding_title_1">Bevételek és kiadások követése</string>
+    <string name="onboarding_desc_1">Tartsa kézben a pénzét</string>
+    <string name="onboarding_title_2">Jelentések és előzmények megtekintése</string>
+    <string name="onboarding_desc_2">Elemezze a költéseit</string>
+    <string name="onboarding_title_3">Profilok kezelése és exportálás</string>
+    <string name="onboarding_desc_3">Mentse és exportálja az adatait</string>
     <string name="get_started">Kezdés</string>
     <string name="next">Tovább</string>
     <string name="skip">Kihagyás</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Profilok kezelése</string>
     <string name="clear_all_data">Összes adat törlése</string>
     <string name="no_transactions_yet">Még nincsenek tranzakciók</string>
+    <string name="no_data">Nincs adat</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Koppints a + gombra tranzakció hozzáadásához</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Kezdd el rögzíteni bevételeidet és kiadásaidat.</string>
     <string name="add_first_transaction">Első tranzakció hozzáadása</string>
 
-    <string name="warning_clear_all_data">⚠️ Összes adat törlése</string>
+    <string name="warning_clear_all_data">Összes adat törlése ⚠️</string>
     <string name="desc_clear_all_data">Ez véglegesen törli az ÖSSZES tranzakciót!</string>
     <string name="delete_all">Összes törlése</string>
     <string name="cancel">Mégse</string>
-    <string name="app_title">Költségkövető Pro</string>
     <string name="app_about_desc">Verzió 1.0.0\n\nPrémium offline kiadáskezelő alkalmazás.</string>
     <string name="ok">OK</string>
     <string name="share_via">Megosztás ezzel:</string>
-    <string name="share_app_desc">Kezeld a pénzed okosan az Expense Tracker Pro segítségével!</string>
+    <string name="share_app_desc">Kezeld a pénzed okosan az Expense Tracker segítségével!</string>
 
     <string name="delete_transactions">Tranzakciók törlése</string>
     <string name="delete_transactions_desc">Biztosan törölni szeretnél %1$d tranzakciót?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Kilépés</string>
     <string name="exit_dialog_title">Kilép a programból?</string>
     <string name="exit_dialog_desc">A kiadások nyomon követéséhez létre kell hoznia egy profilt. Biztosan ki szeretne lépni az alkalmazásból?</string>
+    <string name="select_category">Kategória kiválasztása</string>
+    <string name="label_date">Dátum</string>
+    <string name="hint_notes_optional">Jegyzetek (Opcionális)</string>
 </resources>

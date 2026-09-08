@@ -1,5 +1,7 @@
 package cashvexa.expensetracker.budget.money.utility.customview
 
+import android.text.TextPaint
+import android.text.TextUtils
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
@@ -60,7 +62,25 @@ class PieChartView @JvmOverloads constructor(context: Context, attrs: AttributeS
             paint.textSize = context.resources.getDimension(com.intuit.ssp.R.dimen._14ssp)
             paint.color = ContextCompat.getColor(context, R.color.subTextColor)
             paint.textAlign = Paint.Align.CENTER
-            canvas.drawText("No Data", cx, cy + context.resources.getDimension(com.intuit.sdp.R.dimen._5sdp), paint)
+
+            val noDataText = context.getString(R.string.no_data)
+            val noDataYOffset = context.resources.getDimension(com.intuit.sdp.R.dimen._5sdp)
+            val innerRadiusEmpty = (radius - (60f / 2f)).coerceAtLeast(0f)
+            val horizontalMargin = context.resources.getDimension(com.intuit.sdp.R.dimen._12sdp)
+            val noDataChordHalfWidth = if (innerRadiusEmpty > noDataYOffset) {
+                kotlin.math.sqrt(innerRadiusEmpty * innerRadiusEmpty - noDataYOffset * noDataYOffset)
+            } else {
+                innerRadiusEmpty
+            }
+            val maxTextWidth = ((noDataChordHalfWidth - horizontalMargin) * 2f).coerceAtLeast(0f)
+            val ellipsizedText = TextUtils.ellipsize(
+                noDataText,
+                TextPaint(paint),
+                maxTextWidth,
+                TextUtils.TruncateAt.END
+            ).toString()
+
+            canvas.drawText(ellipsizedText, cx, cy + noDataYOffset, paint)
             return
         }
 
@@ -90,16 +110,94 @@ class PieChartView @JvmOverloads constructor(context: Context, attrs: AttributeS
         paint.textAlign = Paint.Align.CENTER
         paint.strokeWidth = 0f
 
+        val innerRadius = (radius - (strokeWidth / 2f)).coerceAtLeast(0f)
+        val horizontalMargin = context.resources.getDimension(com.intuit.sdp.R.dimen._12sdp)
+
+        // Draw centerTitle
+        val titleYOffset = context.resources.getDimension(com.intuit.sdp.R.dimen._6sdp)
+        val titleChordHalfWidth = if (innerRadius > titleYOffset) {
+            kotlin.math.sqrt(innerRadius * innerRadius - titleYOffset * titleYOffset)
+        } else {
+            innerRadius
+        }
+        val maxTitleWidth = ((titleChordHalfWidth - horizontalMargin) * 2f).coerceAtLeast(0f)
+
         paint.typeface = ResourcesCompat.getFont(context, R.font.medium)
-        paint.textSize = context.resources.getDimension(com.intuit.ssp.R.dimen._12ssp)
         paint.color = ContextCompat.getColor(context, R.color.subTextColor)
-        canvas.drawText(centerTitle, cx, cy - context.resources.getDimension(com.intuit.sdp.R.dimen._6sdp), paint)
+        val origCenterTitleSize = context.resources.getDimension(com.intuit.ssp.R.dimen._12ssp)
+        val minCenterTitleSize = context.resources.getDimension(com.intuit.ssp.R.dimen._9ssp)
+
+        drawTextAutoFitAndEllipsize(
+            canvas = canvas,
+            text = centerTitle,
+            cx = cx,
+            cy = cy - titleYOffset,
+            paint = paint,
+            originalTextSize = origCenterTitleSize,
+            minTextSize = minCenterTitleSize,
+            maxWidth = maxTitleWidth
+        )
+
+        // Draw totalText (number inside the chart)
+        val numberYOffset = context.resources.getDimension(com.intuit.sdp.R.dimen._18sdp)
+        val numberChordHalfWidth = if (innerRadius > numberYOffset) {
+            kotlin.math.sqrt(innerRadius * innerRadius - numberYOffset * numberYOffset)
+        } else {
+            innerRadius
+        }
+        val maxNumberWidth = ((numberChordHalfWidth - horizontalMargin) * 2f).coerceAtLeast(0f)
 
         paint.typeface = ResourcesCompat.getFont(context, R.font.bold)
-        paint.textSize = context.resources.getDimension(com.intuit.ssp.R.dimen._16ssp)
         paint.color = ContextCompat.getColor(context, R.color.TextColor)
+        val origTotalTextSize = context.resources.getDimension(com.intuit.ssp.R.dimen._16ssp)
+        val minTotalTextSize = context.resources.getDimension(com.intuit.ssp.R.dimen._11ssp)
+
         val symbol = PrefManager.currencySymbol
         val totalText = "$symbol ${CurrencyHelper.formatAmount(total.toDouble())}"
-        canvas.drawText(totalText, cx, cy + context.resources.getDimension(com.intuit.sdp.R.dimen._18sdp), paint)
+
+        drawTextAutoFitAndEllipsize(
+            canvas = canvas,
+            text = totalText,
+            cx = cx,
+            cy = cy + numberYOffset,
+            paint = paint,
+            originalTextSize = origTotalTextSize,
+            minTextSize = minTotalTextSize,
+            maxWidth = maxNumberWidth
+        )
+    }
+
+    private fun drawTextAutoFitAndEllipsize(
+        canvas: Canvas,
+        text: String,
+        cx: Float,
+        cy: Float,
+        paint: Paint,
+        originalTextSize: Float,
+        minTextSize: Float,
+        maxWidth: Float
+    ) {
+        paint.textSize = originalTextSize
+        var currentSize = originalTextSize
+        var textWidth = paint.measureText(text)
+
+        while (textWidth > maxWidth && currentSize > minTextSize) {
+            currentSize -= 1f
+            paint.textSize = currentSize
+            textWidth = paint.measureText(text)
+        }
+
+        val ellipsizedText = if (textWidth > maxWidth) {
+            TextUtils.ellipsize(
+                text,
+                TextPaint(paint),
+                maxWidth,
+                TextUtils.TruncateAt.END
+            ).toString()
+        } else {
+            text
+        }
+
+        canvas.drawText(ellipsizedText, cx, cy, paint)
     }
 }

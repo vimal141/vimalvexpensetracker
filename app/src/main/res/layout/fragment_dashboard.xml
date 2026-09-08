@@ -170,7 +170,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/card1" />
+                    android:src="@drawable/card_bg" />
 
                 <View
                     android:layout_width="match_parent"
@@ -239,6 +239,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_6sdp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/bold"
                         android:maxLines="1"
                         android:shadowColor="#99000000"
@@ -250,6 +251,10 @@
                         android:textColor="#FFFFFF"
                         android:textDirection="ltr"
                         android:textSize="@dimen/_25ssp"
+                        app:autoSizeMaxTextSize="@dimen/_25ssp"
+                        app:autoSizeMinTextSize="@dimen/_14ssp"
+                        app:autoSizeStepGranularity="1sp"
+                        app:autoSizeTextType="uniform"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/img_wallet" />
@@ -320,6 +325,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_10sdp">
 
@@ -335,9 +341,8 @@
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="@dimen/_14sdp"
                         android:layout_height="@dimen/_14sdp"
-                        android:rotation="90"
                         android:scaleType="centerInside"
-                        android:src="@drawable/ic_back"
+                        android:src="@drawable/ic_arrow_up"
                         app:layout_constraintBottom_toBottomOf="@id/ic_income_bg"
                         app:layout_constraintEnd_toEndOf="@id/ic_income_bg"
                         app:layout_constraintStart_toStartOf="@id/ic_income_bg"
@@ -374,6 +379,10 @@
                         android:textColor="@color/income_green"
                         android:textDirection="ltr"
                         android:textSize="@dimen/_13ssp"
+                        app:autoSizeMaxTextSize="@dimen/_13ssp"
+                        app:autoSizeMinTextSize="@dimen/_9ssp"
+                        app:autoSizeStepGranularity="1sp"
+                        app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/ic_income_bg"
@@ -401,6 +410,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_10sdp">
 
@@ -416,9 +426,8 @@
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="@dimen/_14sdp"
                         android:layout_height="@dimen/_14sdp"
-                        android:rotation="-90"
                         android:scaleType="centerInside"
-                        android:src="@drawable/ic_back"
+                        android:src="@drawable/ic_arrow_down"
                         app:layout_constraintBottom_toBottomOf="@id/ic_expense_bg"
                         app:layout_constraintEnd_toEndOf="@id/ic_expense_bg"
                         app:layout_constraintStart_toStartOf="@id/ic_expense_bg"
@@ -455,6 +464,10 @@
                         android:textColor="@color/expense_red"
                         android:textDirection="ltr"
                         android:textSize="@dimen/_13ssp"
+                        app:autoSizeMaxTextSize="@dimen/_13ssp"
+                        app:autoSizeMinTextSize="@dimen/_9ssp"
+                        app:autoSizeStepGranularity="1sp"
+                        app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/ic_expense_bg"

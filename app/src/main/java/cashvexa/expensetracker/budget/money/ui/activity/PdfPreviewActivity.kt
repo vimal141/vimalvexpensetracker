@@ -34,13 +34,13 @@ class PdfPreviewActivity : BaseActivity<ActivityPdfPreviewBinding>() {
 
     private var selectedThemeColor: Int = Color.parseColor("#1B8A5A")
     private val themeColors = listOf(
-        "#1B8A5A", // App Emerald Green
-        "#2563EB", // Royal Azure
-        "#7C3AED", // Violet
-        "#C2410C", // Terracotta
-        "#E11D48", // Crimson Rose
-        "#0891B2", // Teal Cyan
-        "#111827"  // Onyx Black
+        "#1B8A5A",
+        "#2563EB",
+        "#7C3AED",
+        "#C2410C",
+        "#E11D48",
+        "#0891B2",
+        "#111827"
     )
 
     private var startTime = 0L

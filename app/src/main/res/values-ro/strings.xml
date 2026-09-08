@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tracker cheltuieli</string>
     <string name="app_tagline">Fiecare cheltuială contează</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Cumpărături</string>
 
     <!-- History -->
-    <string name="transaction_history">Istoric tranzacții</string>
+    <string name="transaction_history">Istoric</string>
     <string name="search_hint">Caută tranzacții...</string>
     <string name="all">Toate</string>
     <string name="no_results">Niciun rezultat găsit</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Setări</string>
-    <string name="preferences">Preferințe</string>
+    <string name="preferences">General</string>
     <string name="dark_mode">Mod întunecat</string>
     <string name="currency">Monedă</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Urmărește fiecare ban</string>
-    <string name="onboarding_desc_1">Înregistrează veniturile și cheltuielile cu ușurință.</string>
-    <string name="onboarding_title_2">Analiză inteligentă</string>
-    <string name="onboarding_desc_2">Grafice și rapoarte intuitive.</string>
-    <string name="onboarding_title_3">Atinge-ți obiectivele</string>
-    <string name="onboarding_desc_3">Planifică mai bine, economisește mai mult.</string>
+    <string name="onboarding_title_1">Urmărește veniturile și cheltuielile</string>
+    <string name="onboarding_desc_1">Ține-ți banii sub control</string>
+    <string name="onboarding_title_2">Vizualizează rapoarte și istoric</string>
+    <string name="onboarding_desc_2">Analizează-ți cheltuielile</string>
+    <string name="onboarding_title_3">Gestionează profilurile și exportă</string>
+    <string name="onboarding_desc_3">Fă backup și exportă datele</string>
     <string name="get_started">Începe</string>
     <string name="next">Înainte</string>
     <string name="skip">Omite</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Gestionează profiluri</string>
     <string name="clear_all_data">Șterge toate datele</string>
     <string name="no_transactions_yet">Nicio tranzacție încă</string>
+    <string name="no_data">Fără date</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Apasă + pentru a adăuga o tranzacție</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Începe să-ți urmărești veniturile și cheltuielile.</string>
     <string name="add_first_transaction">Adaugă prima tranzacție</string>
 
-    <string name="warning_clear_all_data">⚠️ Șterge toate datele</string>
+    <string name="warning_clear_all_data">Șterge toate datele ⚠️</string>
     <string name="desc_clear_all_data">Aceasta va șterge definitiv TOATE tranzacțiile!</string>
     <string name="delete_all">Șterge tot</string>
     <string name="cancel">Anulează</string>
-    <string name="app_title">Tracker cheltuieli Pro</string>
     <string name="app_about_desc">Versiunea 1.0.0\n\nAplicație premium de gestiune a cheltuielilor offline.</string>
     <string name="ok">OK</string>
     <string name="share_via">Distribuie prin</string>
-    <string name="share_app_desc">Urmărește-ți cheltuielile cu Expense Tracker Pro!</string>
+    <string name="share_app_desc">Urmărește-ți cheltuielile cu Expense Tracker!</string>
 
     <string name="delete_transactions">Șterge tranzacții</string>
     <string name="delete_transactions_desc">Sigur dorești să ștergi %1$d tranzacții?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Ieșire</string>
     <string name="exit_dialog_title">Ieșiți din aplicație?</string>
     <string name="exit_dialog_desc">Pentru a începe să vă urmăriți cheltuielile, trebuie să creați un profil. Sigur doriți să ieșiți din aplicație?</string>
+    <string name="select_category">Selectați categoria</string>
+    <string name="label_date">Data</string>
+    <string name="hint_notes_optional">Note (Opțional)</string>
 </resources>

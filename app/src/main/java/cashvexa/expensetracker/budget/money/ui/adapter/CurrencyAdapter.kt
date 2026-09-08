@@ -1,5 +1,6 @@
 package cashvexa.expensetracker.budget.money.ui.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,14 +20,14 @@ class CurrencyAdapter(
 
     private var lastPosition = -1
 
-    inner class CurrencyViewHolder(val binding: ItemCurrencyBinding) : RecyclerView.ViewHolder(binding.root)
+    class CurrencyViewHolder(val binding: ItemCurrencyBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {
         val binding = ItemCurrencyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CurrencyViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CurrencyViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val currency = currencies[position]
         
         holder.binding.txtCurrencySymbol.text = currency.symbol

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Трекер витрат</string>
     <string name="app_tagline">Кожна витрата має значення</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Покупки</string>
 
     <!-- History -->
-    <string name="transaction_history">Історія транзакцій</string>
+    <string name="transaction_history">Історія</string>
     <string name="search_hint">Пошук транзакцій...</string>
     <string name="all">Усі</string>
     <string name="no_results">Результатів не знайдено</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Налаштування</string>
-    <string name="preferences">Параметри</string>
+    <string name="preferences">Загальні</string>
     <string name="dark_mode">Темний режим</string>
     <string name="currency">Валюта</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Преміум</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Контролюйте кожну копійку</string>
-    <string name="onboarding_desc_1">Легко записуйте свої доходи та витрати.</string>
-    <string name="onboarding_title_2">Розумна аналітика</string>
-    <string name="onboarding_desc_2">Зрозумілі графіки та звіти.</string>
-    <string name="onboarding_title_3">Досягайте цілей</string>
-    <string name="onboarding_desc_3">Плануйте розумніше, заощаджуйте більше.</string>
+    <string name="onboarding_title_1">Відстеження доходів і витрат</string>
+    <string name="onboarding_desc_1">Тримайте свої гроші під контролем</string>
+    <string name="onboarding_title_2">Перегляд звітів та історії</string>
+    <string name="onboarding_desc_2">Аналізуйте свої витрати</string>
+    <string name="onboarding_title_3">Керування профілями та експорт</string>
+    <string name="onboarding_desc_3">Резервне копіювання та експорт даних</string>
     <string name="get_started">Розпочати</string>
     <string name="next">Далі</string>
     <string name="skip">Пропустити</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Управління рахунками</string>
     <string name="clear_all_data">Очистити всі дані</string>
     <string name="no_transactions_yet">Транзакцій поки немає</string>
+    <string name="no_data">Немає даних</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Натисніть +, щоб додати транзакцію</string>
 
     <!-- Validation & Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Почніть відстежувати свої доходи та витрати.</string>
     <string name="add_first_transaction">Додати першу транзакцію</string>
 
-    <string name="warning_clear_all_data">⚠️ Очистити всі дані</string>
+    <string name="warning_clear_all_data">Очистити всі дані ⚠️</string>
     <string name="desc_clear_all_data">Це назавжди видалить УСІ транзакції!</string>
     <string name="delete_all">Видалити все</string>
     <string name="cancel">Скасувати</string>
-    <string name="app_title">Трекер витрат Pro</string>
     <string name="app_about_desc">Версія 1.0.0\n\nПреміум менеджера витрат без інтернету.</string>
     <string name="ok">ОК</string>
     <string name="share_via">Поділитися через</string>
-    <string name="share_app_desc">Керуйте витратами з Expense Tracker Pro!</string>
+    <string name="share_app_desc">Керуйте витратами з Expense Tracker!</string>
 
     <string name="delete_transactions">Видалити транзакції</string>
     <string name="delete_transactions_desc">Ви дійсно бажаєте видалити %1$d транзакцій?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Вийти</string>
     <string name="exit_dialog_title">Вийти з додатка?</string>
     <string name="exit_dialog_desc">Щоб почати відстежувати свої витрати, вам потрібно створити профіль. Ви впевнені, що хочете вийти з додатка?</string>
+    <string name="select_category">Виберіть категорію</string>
+    <string name="label_date">Дата</string>
+    <string name="hint_notes_optional">Примітки (Необов\'язково)</string>
 </resources>

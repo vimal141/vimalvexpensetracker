@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Pelacak Pengeluaran</string>
     <string name="app_tagline">Setiap pengeluaran itu penting</string>
@@ -32,7 +32,7 @@
     <string name="cat_shopping">Belanja</string>
 
     <!-- History -->
-    <string name="transaction_history">Riwayat Transaksi</string>
+    <string name="transaction_history">Riwayat</string>
     <string name="search_hint">Cari transaksi...</string>
     <string name="all">Semua</string>
     <string name="no_results">Tidak ada hasil ditemukan</string>
@@ -49,7 +49,7 @@
 
     <!-- Settings -->
     <string name="settings">Pengaturan</string>
-    <string name="preferences">Preferensi</string>
+    <string name="preferences">Umum</string>
     <string name="dark_mode">Mode Gelap</string>
     <string name="currency">Mata Uang</string>
     <string name="currency_value">₹ INR</string>
@@ -64,12 +64,12 @@
     <string name="premium">Premium</string>
 
     <!-- OnBoarding -->
-    <string name="onboarding_title_1">Catat Setiap Rupiah</string>
-    <string name="onboarding_desc_1">Catat pemasukan dan pengeluaran Anda dengan mudah.</string>
-    <string name="onboarding_title_2">Analisis Pintar</string>
-    <string name="onboarding_desc_2">Grafik dan laporan yang menarik.</string>
-    <string name="onboarding_title_3">Capai Target Anda</string>
-    <string name="onboarding_desc_3">Rencanakan lebih baik, hemat lebih banyak.</string>
+    <string name="onboarding_title_1">Lacak Pemasukan &amp; Pengeluaran</string>
+    <string name="onboarding_desc_1">Jaga uang Anda tetap terkendali</string>
+    <string name="onboarding_title_2">Lihat Laporan &amp; Riwayat</string>
+    <string name="onboarding_desc_2">Analisis pengeluaran Anda</string>
+    <string name="onboarding_title_3">Kelola Profil &amp; Ekspor</string>
+    <string name="onboarding_desc_3">Cadangkan &amp; ekspor data Anda</string>
     <string name="get_started">Mulai</string>
     <string name="next">Lanjut</string>
     <string name="skip">Lewati</string>
@@ -81,6 +81,7 @@
     <string name="manage_accounts">Kelola Profil</string>
     <string name="clear_all_data">Hapus Semua Data</string>
     <string name="no_transactions_yet">Belum ada transaksi</string>
+    <string name="no_data">Tidak ada data</string>
     <string name="tap_the_button_below_to_add_your_first_transaction">Ketuk + untuk menambah transaksi</string>
 
     <!-- Validation Pelacak Pengeluaran Cerdas &amp; Sederhana Toasts -->
@@ -122,15 +123,14 @@
     <string name="start_tracking_your_income_and_nexpenses_to_see_insights_here">Mulai catat pemasukan dan pengeluaran Anda.</string>
     <string name="add_first_transaction">Tambah Transaksi Pertama</string>
 
-    <string name="warning_clear_all_data">⚠️ Hapus Semua Data</string>
+    <string name="warning_clear_all_data">Hapus Semua Data ⚠️</string>
     <string name="desc_clear_all_data">Ini akan menghapus SEMUA transaksi secara permanen!</string>
     <string name="delete_all">Hapus Semua</string>
     <string name="cancel">Batal</string>
-    <string name="app_title">Pelacak Pengeluaran Pro</string>
     <string name="app_about_desc">Versi 1.0.0\n\nAplikasi pengelola keuangan offline premium.</string>
     <string name="ok">OK</string>
     <string name="share_via">Bagikan via</string>
-    <string name="share_app_desc">Kelola keuangan Anda secara pintar dengan Expense Tracker Pro!</string>
+    <string name="share_app_desc">Kelola keuangan Anda secara pintar dengan Expense Tracker!</string>
 
     <string name="delete_transactions">Hapus Transaksi</string>
     <string name="delete_transactions_desc">Apakah Anda yakin ingin menghapus %1$d transaksi?</string>
@@ -192,4 +192,7 @@
     <string name="exit">Keluar</string>
     <string name="exit_dialog_title">Keluar dari Aplikasi?</string>
     <string name="exit_dialog_desc">Untuk mulai melacak pengeluaran Anda, Anda perlu membuat profil. Apakah Anda yakin ingin keluar dari aplikasi?</string>
+    <string name="select_category">Pilih Kategori</string>
+    <string name="label_date">Tanggal</string>
+    <string name="hint_notes_optional">Catatan (Opsional)</string>
 </resources>

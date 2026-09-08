@@ -9,6 +9,7 @@ data class LanguageModel(
     val subTitle: String = "",
     var isSelected: Boolean = false
 ) {
-    val englishName: String
-        get() = name.substringBefore(" (").trim()
+
+    val nativeName: String
+        get() = if (name.contains(" (")) name.substringAfter(" (").substringBefore(")").trim() else name
 }
