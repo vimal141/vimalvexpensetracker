@@ -189,7 +189,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         if (now.get(Calendar.DATE) == selectedCalendar.get(Calendar.DATE) && 
             now.get(Calendar.MONTH) == selectedCalendar.get(Calendar.MONTH) &&
             now.get(Calendar.YEAR) == selectedCalendar.get(Calendar.YEAR)) {
-            binding.txtDate.text = "Today"
+            binding.txtDate.text = getString(R.string.today)
         } else {
             val currentYear = now.get(Calendar.YEAR)
             if (selectedCalendar.get(Calendar.YEAR) == currentYear) {
@@ -208,7 +208,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
             return
         }
         if (selectedCategory == null) {
-            Toast.makeText(this, "Please select a category", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.error_select_category), Toast.LENGTH_SHORT).show()
             return
         }
 

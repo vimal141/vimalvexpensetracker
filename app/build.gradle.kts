@@ -13,17 +13,12 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "0.0.1"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
@@ -43,11 +38,11 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.16.0")
-    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("androidx.core:core-ktx:1.17.0")
+    implementation("androidx.appcompat:appcompat:1.8.0")
     implementation("com.google.android.material:material:1.14.0")
     implementation("androidx.activity:activity-ktx:1.13.0")
-    implementation("androidx.fragment:fragment-ktx:1.8.9")
+    implementation("androidx.fragment:fragment-ktx:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.2")
     implementation("androidx.room:room-runtime:2.8.4")
     implementation("androidx.room:room-ktx:2.8.4")
@@ -57,5 +52,5 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.11.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
     implementation("io.insert-koin:koin-android:4.2.2")
-    implementation("com.airbnb.android:lottie:6.6.3")
+    implementation("com.airbnb.android:lottie:6.7.1")
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <style name="Base.Theme.ExpenseBook" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryColor</item>
@@ -58,10 +58,6 @@
         <item name="cornerSize">16dp</item>
     </style>
 
-    <!-- Shape overlay for circular ShapeableImageView -->
-    <style name="ShapeAppearanceOverlay.App.Circle" parent="">
-        <item name="cornerSize">50%</item>
-    </style>
 
     <!-- Shape overlay for rounded corners ShapeableImageView -->
     <style name="ShapeAppearanceOverlay.App.Rounded" parent="">

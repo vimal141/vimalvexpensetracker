@@ -19,7 +19,7 @@
         android:paddingHorizontal="@dimen/_14sdp">
 
         <FrameLayout
-            android:id="@+id/icon_container"
+            android:id="@+id/iconContainer"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
             android:textSize="@dimen/_13ssp"
             app:layout_constraintBottom_toTopOf="@+id/tvAccountNumber"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/icon_container"
+            app:layout_constraintStart_toEndOf="@id/iconContainer"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
@@ -76,7 +76,7 @@
             android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/icon_container"
+            app:layout_constraintStart_toEndOf="@id/iconContainer"
             app:layout_constraintTop_toBottomOf="@id/tvAccountName" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton

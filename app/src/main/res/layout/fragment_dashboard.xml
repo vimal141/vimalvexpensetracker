@@ -35,25 +35,25 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_month_selector"
+                android:id="@+id/layoutMonthSelector"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_14sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toEndOf="@+id/card_balance"
-                app:layout_constraintStart_toStartOf="@+id/card_balance"
+                app:layout_constraintEnd_toEndOf="@+id/cardBalance"
+                app:layout_constraintStart_toStartOf="@+id/cardBalance"
                 app:layout_constraintTop_toBottomOf="@+id/fragmentTittle">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_prev_month"
+                    android:id="@+id/btnPrevMonth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="0dp"
                     app:cardBackgroundColor="@color/bgColorCard"
                     app:cardCornerRadius="@dimen/_57ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/card_month_selector"
+                    app:layout_constraintEnd_toStartOf="@+id/cardMonthSelector"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:rippleColor="@android:color/transparent"
@@ -71,23 +71,23 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/card_month_selector"
+                    android:id="@+id/cardMonthSelector"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:paddingVertical="@dimen/_4sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_next_month"
-                    app:layout_constraintStart_toEndOf="@id/btn_prev_month"
+                    app:layout_constraintEnd_toStartOf="@+id/btnNextMonth"
+                    app:layout_constraintStart_toEndOf="@id/btnPrevMonth"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/ic_calendar_icon"
+                        android:id="@+id/icCalendarIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardBackgroundColor="#1A2DCC70"
                         app:cardCornerRadius="@dimen/_78sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/txt_selected_month"
+                        app:layout_constraintEnd_toStartOf="@+id/txtSelectedMonth"
                         app:layout_constraintHorizontal_chainStyle="packed"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -103,7 +103,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_selected_month"
+                        android:id="@+id/txtSelectedMonth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_8sdp"
@@ -116,13 +116,13 @@
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/ic_calendar_icon"
+                        app:layout_constraintStart_toEndOf="@+id/icCalendarIcon"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_next_month"
+                    android:id="@+id/btnNextMonth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elevation="0dp"
@@ -130,7 +130,7 @@
                     app:cardCornerRadius="@dimen/_57ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/card_month_selector"
+                    app:layout_constraintStart_toEndOf="@id/cardMonthSelector"
                     app:layout_constraintTop_toTopOf="parent"
                     app:rippleColor="@android:color/transparent"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
@@ -151,7 +151,7 @@
 
             <!-- ATM Card Balance Section -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_balance"
+                android:id="@+id/cardBalance"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginHorizontal="@dimen/_14sdp"
@@ -162,7 +162,7 @@
                 app:layout_constraintDimensionRatio="H,1.68:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout_month_selector"
+                app:layout_constraintTop_toBottomOf="@id/layoutMonthSelector"
                 app:strokeColor="#33FFFFFF"
                 app:strokeWidth="1dp">
 
@@ -184,17 +184,17 @@
 
                     <!-- Top Row: Wallet Icon + Balance Label + Visibility + More -->
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/img_wallet"
+                        android:id="@+id/imgWallet"
                         android:layout_width="@dimen/_18sdp"
                         android:layout_height="@dimen/_18sdp"
                         android:src="@drawable/ic_wallet"
-                        app:layout_constraintBottom_toBottomOf="@id/txt_balance_label"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBalanceLabel"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/txt_balance_label"
+                        app:layout_constraintTop_toTopOf="@id/txtBalanceLabel"
                         app:tint="#D0D8E0" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_balance_label"
+                        android:id="@+id/txtBalanceLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
@@ -204,7 +204,7 @@
                         android:textAllCaps="true"
                         android:textColor="#D0D8E0"
                         android:textSize="@dimen/_10ssp"
-                        app:layout_constraintStart_toEndOf="@id/img_wallet"
+                        app:layout_constraintStart_toEndOf="@id/imgWallet"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
@@ -217,9 +217,9 @@
                         android:focusable="true"
                         android:padding="@dimen/_2sdp"
                         android:src="@drawable/ic_visibility"
-                        app:layout_constraintBottom_toBottomOf="@id/txt_balance_label"
-                        app:layout_constraintStart_toEndOf="@id/txt_balance_label"
-                        app:layout_constraintTop_toTopOf="@id/txt_balance_label"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBalanceLabel"
+                        app:layout_constraintStart_toEndOf="@id/txtBalanceLabel"
+                        app:layout_constraintTop_toTopOf="@id/txtBalanceLabel"
                         app:tint="#D0D8E0" />
 
                     <com.google.android.material.imageview.ShapeableImageView
@@ -235,7 +235,7 @@
 
                     <!-- Middle Section: Balance Amount directly below Wallet Icon -->
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_balance_value"
+                        android:id="@+id/txtBalanceValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_6sdp"
@@ -257,7 +257,7 @@
                         app:autoSizeTextType="uniform"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/img_wallet" />
+                        app:layout_constraintTop_toBottomOf="@id/imgWallet" />
 
                     <!-- Bottom Section: Cardholder Name + Account/Card Number + Payment Network Logo -->
                     <com.google.android.material.textview.MaterialTextView
@@ -307,7 +307,7 @@
 
             <!-- Income & Expense Summary Cards -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_income"
+                android:id="@+id/cardIncome"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_14sdp"
@@ -316,9 +316,9 @@
                 app:cardBackgroundColor="@color/bgColorCard"
                 app:cardCornerRadius="@dimen/_12sdp"
                 app:cardElevation="0dp"
-                app:layout_constraintEnd_toStartOf="@+id/card_expense"
+                app:layout_constraintEnd_toStartOf="@+id/cardExpense"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_balance"
+                app:layout_constraintTop_toBottomOf="@id/cardBalance"
                 app:strokeColor="@color/divider_color"
                 app:strokeWidth="0.8dp">
 
@@ -330,7 +330,7 @@
                     android:paddingVertical="@dimen/_10sdp">
 
                     <View
-                        android:id="@+id/ic_income_bg"
+                        android:id="@+id/icIncomeBg"
                         android:layout_width="@dimen/_24sdp"
                         android:layout_height="@dimen/_24sdp"
                         android:background="@drawable/bg_circle"
@@ -343,14 +343,14 @@
                         android:layout_height="@dimen/_14sdp"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_arrow_up"
-                        app:layout_constraintBottom_toBottomOf="@id/ic_income_bg"
-                        app:layout_constraintEnd_toEndOf="@id/ic_income_bg"
-                        app:layout_constraintStart_toStartOf="@id/ic_income_bg"
-                        app:layout_constraintTop_toTopOf="@id/ic_income_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icIncomeBg"
+                        app:layout_constraintEnd_toEndOf="@id/icIncomeBg"
+                        app:layout_constraintStart_toStartOf="@id/icIncomeBg"
+                        app:layout_constraintTop_toTopOf="@id/icIncomeBg"
                         app:tint="@color/income_green" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_income_label"
+                        android:id="@+id/txtIncomeLabel"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
@@ -361,13 +361,13 @@
                         android:textAllCaps="true"
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="@id/ic_income_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icIncomeBg"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ic_income_bg"
-                        app:layout_constraintTop_toTopOf="@id/ic_income_bg" />
+                        app:layout_constraintStart_toEndOf="@id/icIncomeBg"
+                        app:layout_constraintTop_toTopOf="@id/icIncomeBg" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_income_value"
+                        android:id="@+id/txtIncomeValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -385,14 +385,14 @@
                         app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/ic_income_bg"
-                        app:layout_constraintTop_toBottomOf="@+id/ic_income_bg" />
+                        app:layout_constraintStart_toStartOf="@+id/icIncomeBg"
+                        app:layout_constraintTop_toBottomOf="@+id/icIncomeBg" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_expense"
+                android:id="@+id/cardExpense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_4sdp"
@@ -402,8 +402,8 @@
                 app:cardCornerRadius="@dimen/_12sdp"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/card_income"
-                app:layout_constraintTop_toBottomOf="@id/card_balance"
+                app:layout_constraintStart_toEndOf="@id/cardIncome"
+                app:layout_constraintTop_toBottomOf="@id/cardBalance"
                 app:strokeColor="@color/divider_color"
                 app:strokeWidth="0.8dp">
 
@@ -415,7 +415,7 @@
                     android:paddingVertical="@dimen/_10sdp">
 
                     <View
-                        android:id="@+id/ic_expense_bg"
+                        android:id="@+id/icExpenseBg"
                         android:layout_width="@dimen/_24sdp"
                         android:layout_height="@dimen/_24sdp"
                         android:background="@drawable/bg_circle"
@@ -428,14 +428,14 @@
                         android:layout_height="@dimen/_14sdp"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_arrow_down"
-                        app:layout_constraintBottom_toBottomOf="@id/ic_expense_bg"
-                        app:layout_constraintEnd_toEndOf="@id/ic_expense_bg"
-                        app:layout_constraintStart_toStartOf="@id/ic_expense_bg"
-                        app:layout_constraintTop_toTopOf="@id/ic_expense_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icExpenseBg"
+                        app:layout_constraintEnd_toEndOf="@id/icExpenseBg"
+                        app:layout_constraintStart_toStartOf="@id/icExpenseBg"
+                        app:layout_constraintTop_toTopOf="@id/icExpenseBg"
                         app:tint="@color/expense_red" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_expense_label"
+                        android:id="@+id/txtExpenseLabel"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
@@ -446,13 +446,13 @@
                         android:textAllCaps="true"
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="@id/ic_expense_bg"
+                        app:layout_constraintBottom_toBottomOf="@id/icExpenseBg"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ic_expense_bg"
-                        app:layout_constraintTop_toTopOf="@id/ic_expense_bg" />
+                        app:layout_constraintStart_toEndOf="@id/icExpenseBg"
+                        app:layout_constraintTop_toTopOf="@id/icExpenseBg" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_expense_value"
+                        android:id="@+id/txtExpenseValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -470,15 +470,15 @@
                         app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/ic_expense_bg"
-                        app:layout_constraintTop_toBottomOf="@+id/ic_expense_bg" />
+                        app:layout_constraintStart_toStartOf="@+id/icExpenseBg"
+                        app:layout_constraintTop_toBottomOf="@+id/icExpenseBg" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <!-- Recent Transactions Section -->
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_recent"
+                android:id="@+id/txtRecent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_14sdp"
@@ -491,22 +491,22 @@
                 android:textAlignment="viewStart"
                 android:textColor="@color/TextColor"
                 android:textSize="@dimen/_14ssp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_view_all"
+                app:layout_constraintEnd_toStartOf="@+id/btnViewAll"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_income"
+                app:layout_constraintTop_toBottomOf="@id/cardIncome"
                 tools:visibility="gone" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/btn_view_all"
+                android:id="@+id/btnViewAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_14sdp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:layout_constraintBottom_toBottomOf="@id/txt_recent"
+                app:layout_constraintBottom_toBottomOf="@id/txtRecent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txt_recent"
-                app:layout_constraintTop_toTopOf="@id/txt_recent"
+                app:layout_constraintStart_toEndOf="@+id/txtRecent"
+                app:layout_constraintTop_toTopOf="@id/txtRecent"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
                 app:strokeWidth="0dp"
                 tools:visibility="gone">
@@ -524,7 +524,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_transactions"
+                android:id="@+id/rvTransactions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
@@ -538,7 +538,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_recent"
+                app:layout_constraintTop_toBottomOf="@id/txtRecent"
                 app:layout_constraintVertical_bias="0"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_transaction"
@@ -552,7 +552,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_recent"
+                app:layout_constraintTop_toBottomOf="@id/txtRecent"
                 app:layout_constraintVertical_chainStyle="packed">
 
                 <com.google.android.material.textview.MaterialTextView
@@ -642,7 +642,7 @@
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add"
+        android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

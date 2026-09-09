@@ -7,7 +7,7 @@
     android:padding="@dimen/_19sdp">
 
     <NumberPicker
-        android:id="@+id/picker_year"
+        android:id="@+id/pickerYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants" />

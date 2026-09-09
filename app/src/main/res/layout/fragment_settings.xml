@@ -51,7 +51,7 @@
                 android:paddingVertical="@dimen/_12sdp">
 
                 <FrameLayout
-                    android:id="@+id/icon_profile_container"
+                    android:id="@+id/iconProfileContainer"
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +75,7 @@
                 </FrameLayout>
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txt_app_name"
+                    android:id="@+id/txtAppName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_12sdp"
@@ -85,14 +85,14 @@
                     android:text="@string/app_name"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_16ssp"
-                    app:layout_constraintBottom_toTopOf="@+id/txt_app_version"
+                    app:layout_constraintBottom_toTopOf="@+id/txtAppVersion"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/icon_profile_container"
+                    app:layout_constraintStart_toEndOf="@id/iconProfileContainer"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_chainStyle="packed" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txt_app_version"
+                    android:id="@+id/txtAppVersion"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_12sdp"
@@ -103,8 +103,8 @@
                     android:textSize="@dimen/_11ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/icon_profile_container"
-                    app:layout_constraintTop_toBottomOf="@id/txt_app_name" />
+                    app:layout_constraintStart_toEndOf="@id/iconProfileContainer"
+                    app:layout_constraintTop_toBottomOf="@id/txtAppName" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -112,7 +112,7 @@
 
         <!-- Preferences Section -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/lbl_preferences"
+            android:id="@+id/lblPreferences"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_14sdp"
@@ -128,13 +128,13 @@
             app:layout_constraintTop_toBottomOf="@id/cardProfile" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_preferences"
+            android:id="@+id/cardPreferences"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
             app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
-            app:layout_constraintTop_toBottomOf="@id/lbl_preferences"
+            app:layout_constraintTop_toBottomOf="@id/lblPreferences"
             app:strokeColor="@color/divider_color"
             app:strokeWidth="0.8dp">
 
@@ -145,7 +145,7 @@
 
                 <!-- Language -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_language"
+                    android:id="@+id/layoutLanguage"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -154,7 +154,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_language"
+                        android:id="@+id/iconLanguage"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,12 +186,12 @@
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/txt_language_value"
-                        app:layout_constraintStart_toEndOf="@id/icon_language"
+                        app:layout_constraintEnd_toStartOf="@+id/txtLanguageValue"
+                        app:layout_constraintStart_toEndOf="@id/iconLanguage"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_language_value"
+                        android:id="@+id/txtLanguageValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
@@ -200,11 +200,11 @@
                         android:textColor="@color/primaryColor"
                         android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_language"
+                        app:layout_constraintEnd_toStartOf="@+id/icArrowLanguage"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_language"
+                        android:id="@+id/icArrowLanguage"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -225,7 +225,7 @@
 
                 <!-- Theme -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_theme"
+                    android:id="@+id/layoutTheme"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -234,7 +234,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_theme"
+                        android:id="@+id/iconTheme"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -266,12 +266,12 @@
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/txt_theme_value"
-                        app:layout_constraintStart_toEndOf="@id/icon_theme"
+                        app:layout_constraintEnd_toStartOf="@+id/txtThemeValue"
+                        app:layout_constraintStart_toEndOf="@id/iconTheme"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_theme_value"
+                        android:id="@+id/txtThemeValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
@@ -281,11 +281,11 @@
                         android:textColor="@color/primaryColor"
                         android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_theme"
+                        app:layout_constraintEnd_toStartOf="@+id/icArrowTheme"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_theme"
+                        android:id="@+id/icArrowTheme"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -306,7 +306,7 @@
 
                 <!-- Manage Accounts -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_manage_accounts"
+                    android:id="@+id/layoutManageAccounts"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -315,7 +315,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_accounts"
+                        android:id="@+id/iconAccounts"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -348,11 +348,11 @@
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/icon_accounts"
+                        app:layout_constraintStart_toEndOf="@id/iconAccounts"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_accounts"
+                        android:id="@+id/icArrowAccounts"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -373,7 +373,7 @@
 
                 <!-- Currency -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_currency"
+                    android:id="@+id/layoutCurrency"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -382,7 +382,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_currency"
+                        android:id="@+id/iconCurrency"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -414,12 +414,12 @@
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/txt_currency_value"
-                        app:layout_constraintStart_toEndOf="@id/icon_currency"
+                        app:layout_constraintEnd_toStartOf="@+id/txtCurrencyValue"
+                        app:layout_constraintStart_toEndOf="@id/iconCurrency"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_currency_value"
+                        android:id="@+id/txtCurrencyValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_8sdp"
@@ -429,11 +429,11 @@
                         android:textColor="@color/primaryColor"
                         android:textSize="@dimen/_11ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_currency"
+                        app:layout_constraintEnd_toStartOf="@+id/icArrowCurrency"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_currency"
+                        android:id="@+id/icArrowCurrency"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -453,7 +453,7 @@
 
         <!-- Data Section -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/lbl_data"
+            android:id="@+id/lblData"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_14sdp"
@@ -466,16 +466,16 @@
             android:textSize="@dimen/_9ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_preferences" />
+            app:layout_constraintTop_toBottomOf="@id/cardPreferences" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_data"
+            android:id="@+id/cardData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
             app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
-            app:layout_constraintTop_toBottomOf="@id/lbl_data"
+            app:layout_constraintTop_toBottomOf="@id/lblData"
             app:strokeColor="@color/divider_color"
             app:strokeWidth="0.8dp">
 
@@ -486,7 +486,7 @@
 
                 <!-- Export Data -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_export"
+                    android:id="@+id/layoutExport"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -495,7 +495,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_export"
+                        android:id="@+id/iconExport"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -527,12 +527,12 @@
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_export"
-                        app:layout_constraintStart_toEndOf="@id/icon_export"
+                        app:layout_constraintEnd_toStartOf="@+id/icArrowExport"
+                        app:layout_constraintStart_toEndOf="@id/iconExport"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_export"
+                        android:id="@+id/icArrowExport"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -553,7 +553,7 @@
 
                 <!-- Clear Data -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_clear_data"
+                    android:id="@+id/layoutClearData"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -562,7 +562,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_clear"
+                        android:id="@+id/iconClear"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -594,12 +594,12 @@
                         android:textColor="@color/TextColor"
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_clear"
-                        app:layout_constraintStart_toEndOf="@id/icon_clear"
+                        app:layout_constraintEnd_toStartOf="@+id/icArrowClear"
+                        app:layout_constraintStart_toEndOf="@id/iconClear"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ic_arrow_clear"
+                        android:id="@+id/icArrowClear"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:importantForAccessibility="no"
@@ -619,7 +619,7 @@
 
         <!-- More Section -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/lbl_more"
+            android:id="@+id/lblMore"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_14sdp"
@@ -632,16 +632,16 @@
             android:textSize="@dimen/_9ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_data" />
+            app:layout_constraintTop_toBottomOf="@id/cardData" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_more"
+            android:id="@+id/cardMore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
             app:cardCornerRadius="@dimen/_14sdp"
             app:cardElevation="0dp"
-            app:layout_constraintTop_toBottomOf="@id/lbl_more"
+            app:layout_constraintTop_toBottomOf="@id/lblMore"
             app:strokeColor="@color/divider_color"
             app:strokeWidth="0.8dp">
 
@@ -654,7 +654,7 @@
 
                 <!-- Privacy Policy -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_privacy"
+                    android:id="@+id/layoutPrivacy"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -663,7 +663,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_privacy"
+                        android:id="@+id/iconPrivacy"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -696,7 +696,7 @@
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/icon_privacy"
+                        app:layout_constraintStart_toEndOf="@id/iconPrivacy"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -708,7 +708,7 @@
 
                 <!-- Rate Us -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_rate"
+                    android:id="@+id/layoutRate"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -717,7 +717,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_rate"
+                        android:id="@+id/iconRate"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -750,7 +750,7 @@
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/icon_rate"
+                        app:layout_constraintStart_toEndOf="@id/iconRate"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -762,7 +762,7 @@
 
                 <!-- Share App -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/layout_share"
+                    android:id="@+id/layoutShare"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_48sdp"
                     android:background="?attr/selectableItemBackground"
@@ -771,7 +771,7 @@
                     android:paddingHorizontal="@dimen/_14sdp">
 
                     <FrameLayout
-                        android:id="@+id/icon_share"
+                        android:id="@+id/iconShare"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -804,7 +804,7 @@
                         android:textSize="@dimen/_13ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/icon_share"
+                        app:layout_constraintStart_toEndOf="@id/iconShare"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

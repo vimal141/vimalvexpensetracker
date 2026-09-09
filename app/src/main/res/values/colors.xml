@@ -130,5 +130,4 @@
     <color name="nav_active">#1B8A5A</color>
     <color name="nav_inactive">#9CA3AF</color>
     <color name="indicatorInactive">#D1D5DB</color>
-    <color name="card_bg">#FFFFFF</color>
 </resources>

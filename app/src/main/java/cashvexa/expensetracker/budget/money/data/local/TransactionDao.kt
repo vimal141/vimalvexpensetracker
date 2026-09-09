@@ -23,7 +23,6 @@ interface TransactionDao {
     @Query("SELECT * FROM transactions WHERE accountId = :accountId ORDER BY date DESC, timestamp DESC")
     fun getAllTransactions(accountId: Int): Flow<List<Transaction>>
 
-
     @Query("SELECT * FROM transactions WHERE accountId = :accountId AND date BETWEEN :start AND :end ORDER BY date DESC, timestamp DESC")
     fun getTransactionsForRange(accountId: Int, start: Long, end: Long): Flow<List<Transaction>>
 

@@ -7,7 +7,7 @@
 
     <!-- Header / Toolbar -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_header"
+        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/_14sdp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_back"
+            android:id="@+id/btnBack"
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -30,7 +30,7 @@
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_title"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -53,7 +53,7 @@
         android:padding="@dimen/_13sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.textview.MaterialTextView

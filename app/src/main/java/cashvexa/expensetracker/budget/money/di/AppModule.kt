@@ -9,7 +9,7 @@ import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
 val appModule = module {
-    single { AppDatabase.Companion.getDatabase(androidApplication()) }
+    single { AppDatabase.getDatabase(androidApplication()) }
     single { get<AppDatabase>().transactionDao() }
     single { get<AppDatabase>().accountDao() }
     single { get<AppDatabase>().categoryDao() }

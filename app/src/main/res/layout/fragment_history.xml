@@ -26,7 +26,7 @@
 
     <!-- Contextual Action Bar for Selection Mode -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_cab"
+        android:id="@+id/layoutCab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bgColor"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_cab_close"
+            android:id="@+id/btnCabClose"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -52,7 +52,7 @@
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_cab_count"
+            android:id="@+id/txtCabCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -63,12 +63,12 @@
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_cab_select_all"
-            app:layout_constraintStart_toEndOf="@id/btn_cab_close"
+            app:layout_constraintEnd_toStartOf="@+id/btnCabSelectAll"
+            app:layout_constraintStart_toEndOf="@id/btnCabClose"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_cab_select_all"
+            android:id="@+id/btnCabSelectAll"
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_12sdp"
@@ -79,11 +79,11 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_unselected"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_cab_delete"
+            app:layout_constraintEnd_toStartOf="@id/btnCabDelete"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_cab_delete"
+            android:id="@+id/btnCabDelete"
             android:layout_width="@dimen/_27sdp"
             android:layout_height="@dimen/_27sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -100,7 +100,7 @@
 
     <!-- Search Box Card -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_search"
+        android:id="@+id/cardSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_14sdp"
@@ -120,7 +120,7 @@
             android:paddingVertical="@dimen/_8sdp">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/ic_search"
+                android:id="@+id/icSearch"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
                 android:scaleType="centerInside"
@@ -131,7 +131,7 @@
                 app:tint="@color/subTextColor" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_search"
+                android:id="@+id/etSearch"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -145,12 +145,12 @@
                 android:textColorHint="@color/subTextColor"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/btn_clear_search"
-                app:layout_constraintStart_toEndOf="@id/ic_search"
+                app:layout_constraintEnd_toStartOf="@id/btnClearSearch"
+                app:layout_constraintStart_toEndOf="@id/icSearch"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/btn_clear_search"
+                android:id="@+id/btnClearSearch"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -168,7 +168,7 @@
 
     <!-- Category Type Filter Chips -->
     <HorizontalScrollView
-        android:id="@+id/scroll_chips"
+        android:id="@+id/scrollChips"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_4sdp"
@@ -176,7 +176,7 @@
         android:clipToPadding="false"
         android:paddingHorizontal="@dimen/_14sdp"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/card_search">
+        app:layout_constraintTop_toBottomOf="@id/cardSearch">
 
         <com.google.android.material.chip.ChipGroup
             android:layout_width="wrap_content"
@@ -185,7 +185,7 @@
             app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_all"
+                android:id="@+id/chipAll"
                 style="@style/CategoryChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -193,14 +193,14 @@
                 android:text="@string/all" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_income"
+                android:id="@+id/chipIncome"
                 style="@style/CategoryChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/income" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_expense"
+                android:id="@+id/chipExpense"
                 style="@style/CategoryChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
 
     <!-- History RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_history"
+        android:id="@+id/rvHistory"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_6sdp"
@@ -221,20 +221,20 @@
         android:paddingHorizontal="@dimen/_14sdp"
         android:paddingBottom="@dimen/_70sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scroll_chips"
+        app:layout_constraintTop_toBottomOf="@id/scrollChips"
         tools:listitem="@layout/item_transaction" />
 
     <!-- Empty State -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_empty"
+        android:id="@+id/layoutEmpty"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_search">
+        app:layout_constraintTop_toBottomOf="@id/cardSearch">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_empty"
+            android:id="@+id/txtEmpty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"

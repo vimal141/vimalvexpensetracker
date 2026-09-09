@@ -10,7 +10,7 @@
     android:paddingHorizontal="@dimen/_2sdp">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/icon_container"
+        android:id="@+id/iconContainer"
         android:layout_width="@dimen/_36sdp"
         android:layout_height="@dimen/_36sdp"
         app:cardBackgroundColor="@color/bgColorCard"
@@ -23,7 +23,7 @@
         app:strokeWidth="0.8dp">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_category"
+            android:id="@+id/imgCategory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/_9sdp"
@@ -33,7 +33,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_category_name"
+        android:id="@+id/txtCategoryName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
@@ -46,6 +46,6 @@
         android:textSize="@dimen/_9ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_container" />
+        app:layout_constraintTop_toBottomOf="@id/iconContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

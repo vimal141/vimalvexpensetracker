@@ -8,7 +8,7 @@
 
     <!-- Header / Toolbar -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_header"
+        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/_14sdp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_back"
+            android:id="@+id/btnBack"
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -28,13 +28,13 @@
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_title"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:fontFamily="@font/semi_bold"
             android:maxLines="1"
-            android:text="Export Statement"
+            android:text="@string/export_statement"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +46,7 @@
 
     <!-- PDF Document Card Preview -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_preview"
+        android:id="@+id/cardPreview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/_14sdp"
@@ -56,8 +56,8 @@
         app:cardElevation="2dp"
         app:strokeColor="@color/divider_color"
         app:strokeWidth="1dp"
-        app:layout_constraintTop_toBottomOf="@id/layout_header"
-        app:layout_constraintBottom_toTopOf="@id/bottom_layout">
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintBottom_toTopOf="@id/bottomLayout">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -83,7 +83,7 @@
 
     <!-- Bottom Controls & Theme Selector -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottom_layout"
+        android:id="@+id/bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/bgColorCard"
@@ -105,7 +105,7 @@
                 android:layout_marginBottom="@dimen/_6sdp"
                 android:fontFamily="@font/semi_bold"
                 android:letterSpacing="0.05"
-                android:text="SELECT THEME COLOR"
+                android:text="@string/select_theme_color"
                 android:textColor="@color/subTextColor"
                 android:textSize="@dimen/_9ssp" />
 
@@ -133,7 +133,7 @@
                 android:layout_height="@dimen/_44sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/semi_bold"
-                android:text="Export PDF Statement"
+                android:text="@string/export_pdf_statement"
                 android:textSize="@dimen/_12ssp"
                 app:cornerRadius="@dimen/_12sdp"
                 app:elevation="@dimen/_2sdp"

@@ -104,7 +104,7 @@ object PdfGenerator {
         canvas.drawText(statementText, rightMargin - statementWidth, yPosition - 10f, statementTitlePaint)
         
         val sdfDate = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
-        val generatedDateStr = "Generated on: ${sdfDate.format(Date())}"
+        val generatedDateStr = context.getString(R.string.generated_on, sdfDate.format(Date()))
         val dateWidth = lightTextPaint.measureText(generatedDateStr)
         canvas.drawText(generatedDateStr, rightMargin - dateWidth, yPosition + 10f, lightTextPaint)
         

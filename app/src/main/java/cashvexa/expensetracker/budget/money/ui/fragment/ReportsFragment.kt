@@ -158,8 +158,8 @@ class ReportsFragment : Fragment() {
 
     private fun showMonthYearPickerDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_month_year_picker, null)
-        val monthPicker = dialogView.findViewById<NumberPicker>(R.id.picker_month)
-        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.picker_year)
+        val monthPicker = dialogView.findViewById<NumberPicker>(R.id.pickerMonth)
+        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.pickerYear)
 
         val months = arrayOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
         monthPicker.minValue = 0
@@ -194,7 +194,7 @@ class ReportsFragment : Fragment() {
 
     private fun showYearPickerDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_year_picker, null)
-        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.picker_year)
+        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.pickerYear)
 
         val currentCal = viewModel.reportCalendar.value
         val currentYear = currentCal.get(Calendar.YEAR)
@@ -204,7 +204,7 @@ class ReportsFragment : Fragment() {
         yearPicker.value = currentYear
 
         val dialog = MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Select Year")
+            .setTitle(getString(R.string.select_year))
             .setBackground(ContextCompat.getDrawable(requireContext(), R.drawable.bg_dialog))
             .setView(dialogView)
             .setPositiveButton(getString(R.string.select)) { _, _ ->
@@ -369,13 +369,13 @@ class ReportsFragment : Fragment() {
             val pctInt = pctDouble.roundToInt()
             val row = layoutInflater.inflate(R.layout.item_category_row, binding.layoutCategories, false)
 
-            row.findViewById<View>(R.id.view_color_dot)
+            row.findViewById<View>(R.id.viewColorDot)
                 .setBackgroundColor(CategoryHelper.getColor(requireContext(), item.category))
-            row.findViewById<TextView>(R.id.txt_category_name).text = item.category
-            row.findViewById<TextView>(R.id.txt_category_amount).text = "$symbol ${CurrencyHelper.formatAmount(item.total)}"
-            row.findViewById<TextView>(R.id.txt_category_percent).text = pctText
+            row.findViewById<TextView>(R.id.txtCategoryName).text = item.category
+            row.findViewById<TextView>(R.id.txtCategoryAmount).text = "$symbol ${CurrencyHelper.formatAmount(item.total)}"
+            row.findViewById<TextView>(R.id.txtCategoryPercent).text = pctText
 
-            val progressBar = row.findViewById<ProgressBar>(R.id.progress_category)
+            val progressBar = row.findViewById<ProgressBar>(R.id.progressCategory)
             progressBar.progress = pctInt
             progressBar.progressTintList = ColorStateList.valueOf(
                 CategoryHelper.getColor(requireContext(), item.category)

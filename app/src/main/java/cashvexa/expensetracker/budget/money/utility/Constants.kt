@@ -12,4 +12,7 @@ object Constants {
     const val EXTRA_START_TIME = "EXTRA_START_TIME"
     const val EXTRA_END_TIME = "EXTRA_END_TIME"
     const val EXTRA_PERIOD_TEXT = "EXTRA_PERIOD_TEXT"
+
+    const val PRIVACY_URI = "https://sites.google.com/view/cashvexa-expensetracker/"
+    const val DB_NAME = "ExpenseBookDB"
 }

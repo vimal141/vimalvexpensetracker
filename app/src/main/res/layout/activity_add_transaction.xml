@@ -8,7 +8,7 @@
 
     <!-- 1. HEADER (Fixed Top - ThemeActivity Style) -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_header"
+        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/_14sdp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_back"
+            android:id="@+id/btnBack"
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -30,7 +30,7 @@
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_title"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_delete"
+            android:id="@+id/btnDelete"
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:layout_marginEnd="@dimen/_4sdp"
@@ -66,7 +66,7 @@
 
     <!-- 2. TYPE TABS (Fixed below Header) -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_tabs"
+        android:id="@+id/cardTabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_34sdp"
         android:layout_marginHorizontal="@dimen/_14sdp"
@@ -74,7 +74,7 @@
         app:cardBackgroundColor="@color/bgColorCard"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="0dp"
-        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
         app:strokeColor="@color/divider_color"
         app:strokeWidth="0.8dp">
 
@@ -85,7 +85,7 @@
             android:padding="@dimen/_3sdp">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tab_expense"
+                android:id="@+id/tabExpense"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -98,7 +98,7 @@
                 android:textSize="@dimen/_11ssp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tab_income"
+                android:id="@+id/tabIncome"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -112,7 +112,7 @@
 
     <!-- 3. MIDDLE SCROLLABLE CATEGORY LIST -->
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/lbl_category"
+        android:id="@+id/lblCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16sdp"
@@ -122,10 +122,10 @@
         android:textColor="@color/TextColor"
         android:textSize="@dimen/_11ssp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_tabs" />
+        app:layout_constraintTop_toBottomOf="@id/cardTabs" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_categories"
+        android:id="@+id/rvCategories"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_4sdp"
@@ -133,15 +133,15 @@
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingBottom="@dimen/_8sdp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/layout_bottom_container"
-        app:layout_constraintTop_toBottomOf="@id/lbl_category"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottomContainer"
+        app:layout_constraintTop_toBottomOf="@id/lblCategory"
         app:spanCount="4"
         tools:itemCount="12"
         tools:listitem="@layout/item_category_grid" />
 
     <!-- 4. FIXED BOTTOM CONTAINER (Amount, Date, Notes & Save Button) -->
     <LinearLayout
-        android:id="@+id/layout_bottom_container"
+        android:id="@+id/layoutBottomContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -154,7 +154,7 @@
 
         <!-- Amount Card (Static, above layout_meta) -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_amount"
+            android:id="@+id/cardAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_8sdp"
@@ -165,26 +165,26 @@
             app:strokeWidth="0.8dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_amount"
+                android:id="@+id/layoutAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_12sdp"
                 android:paddingVertical="@dimen/_8sdp">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/card_currency"
+                    android:id="@+id/cardCurrency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="@color/primaryColorSurface"
                     app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="0dp"
                     app:strokeWidth="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/et_amount"
+                    app:layout_constraintBottom_toBottomOf="@id/etAmount"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/et_amount">
+                    app:layout_constraintTop_toTopOf="@id/etAmount">
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/txt_currency"
+                        android:id="@+id/txtCurrency"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
@@ -196,7 +196,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_amount"
+                    android:id="@+id/etAmount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -211,7 +211,7 @@
                     android:textSize="@dimen/_22ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/card_currency"
+                    app:layout_constraintLeft_toRightOf="@id/cardCurrency"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -219,7 +219,7 @@
 
         <!-- Date & Notes Card -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/layout_meta"
+            android:id="@+id/layoutMeta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/bgColorCard"
@@ -236,7 +236,7 @@
 
                 <!-- Date Row Picker -->
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_date"
+                    android:id="@+id/btnDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -254,7 +254,7 @@
                         android:paddingVertical="@dimen/_8sdp">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/ic_cal"
+                            android:id="@+id/icCal"
                             android:layout_width="@dimen/_14sdp"
                             android:layout_height="@dimen/_14sdp"
                             android:src="@drawable/ic_calendar"
@@ -272,24 +272,24 @@
                             android:textColor="@color/subTextColor"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/ic_cal"
+                            app:layout_constraintStart_toEndOf="@id/icCal"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/txt_date"
+                            android:id="@+id/txtDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_6sdp"
                             android:fontFamily="@font/semi_bold"
-                            android:text="Today"
+                            android:text="@string/today"
                             android:textColor="@color/TextColor"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/ic_arrow_date"
+                            app:layout_constraintEnd_toStartOf="@id/icArrowDate"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/ic_arrow_date"
+                            android:id="@+id/icArrowDate"
                             android:layout_width="@dimen/_12sdp"
                             android:layout_height="@dimen/_12sdp"
                             android:src="@drawable/ic_arrow_down"
@@ -303,7 +303,7 @@
 
                 <!-- Notes Input -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_notes"
+                    android:id="@+id/inputNotes"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -315,7 +315,7 @@
                     app:boxCornerRadiusTopStart="@dimen/_8sdp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_notes"
+                        android:id="@+id/etNotes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
@@ -331,7 +331,7 @@
 
         <!-- Save / Submit Button -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_submit"
+            android:id="@+id/btnSubmit"
             style="@style/Widget.App.PrimaryButton"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"

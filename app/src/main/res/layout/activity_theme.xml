@@ -7,7 +7,7 @@
 
     <!-- Header / Toolbar -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_header"
+        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/_14sdp"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_back"
+            android:id="@+id/btnBack"
             android:layout_width="@dimen/_31sdp"
             android:layout_height="@dimen/_31sdp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -29,7 +29,7 @@
             app:tint="@color/TextColor" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_title"
+            android:id="@+id/txtTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_10sdp"
@@ -40,12 +40,12 @@
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_done"
-            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintEnd_toStartOf="@id/btnDone"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/btn_done"
+            android:id="@+id/btnDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_button"
@@ -65,7 +65,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
        <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_theme"
+        android:id="@+id/cardTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_14sdp"
@@ -73,7 +73,7 @@
         app:cardCornerRadius="@dimen/_14sdp"
         app:cardElevation="0dp"
         android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
         app:strokeColor="@color/divider_color"
         app:strokeWidth="0.8dp">
 
@@ -84,14 +84,14 @@
 
             <!-- Light Theme -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_light"
+                android:id="@+id/layoutLight"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
-                    android:id="@+id/icon_light_container"
+                    android:id="@+id/iconLightContainer"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -123,12 +123,12 @@
                     android:textColor="@color/TextColor"
                     android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/radio_light"
-                    app:layout_constraintStart_toEndOf="@id/icon_light_container"
+                    app:layout_constraintEnd_toStartOf="@+id/radioLight"
+                    app:layout_constraintStart_toEndOf="@id/iconLightContainer"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/radio_light"
+                    android:id="@+id/radioLight"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
                     android:background="@android:color/transparent"
@@ -147,14 +147,14 @@
 
             <!-- Dark Theme -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_dark"
+                android:id="@+id/layoutDark"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
-                    android:id="@+id/icon_dark_container"
+                    android:id="@+id/iconDarkContainer"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -186,12 +186,12 @@
                     android:textColor="@color/TextColor"
                     android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/radio_dark"
-                    app:layout_constraintStart_toEndOf="@id/icon_dark_container"
+                    app:layout_constraintEnd_toStartOf="@+id/radioDark"
+                    app:layout_constraintStart_toEndOf="@id/iconDarkContainer"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/radio_dark"
+                    android:id="@+id/radioDark"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
                     android:background="@android:color/transparent"
@@ -210,14 +210,14 @@
 
             <!-- System Default Theme -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_system"
+                android:id="@+id/layoutSystem"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:background="?attr/selectableItemBackground"
                 android:paddingHorizontal="@dimen/_14sdp">
 
                 <FrameLayout
-                    android:id="@+id/icon_system_container"
+                    android:id="@+id/iconSystemContainer"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -249,12 +249,12 @@
                     android:textColor="@color/TextColor"
                     android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/radio_system"
-                    app:layout_constraintStart_toEndOf="@id/icon_system_container"
+                    app:layout_constraintEnd_toStartOf="@+id/radioSystem"
+                    app:layout_constraintStart_toEndOf="@id/iconSystemContainer"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/radio_system"
+                    android:id="@+id/radioSystem"
                     android:layout_width="@dimen/_23sdp"
                     android:layout_height="@dimen/_23sdp"
                     android:background="@android:color/transparent"

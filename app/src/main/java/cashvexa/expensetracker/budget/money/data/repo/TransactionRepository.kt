@@ -1,7 +1,6 @@
 package cashvexa.expensetracker.budget.money.data.repo
 
 import cashvexa.expensetracker.budget.money.data.local.TransactionDao
-import cashvexa.expensetracker.budget.money.data.model.CategorySum
 import cashvexa.expensetracker.budget.money.data.model.Transaction
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -19,11 +18,8 @@ class TransactionRepository(private val dao: TransactionDao) {
         dao.searchWithFilters(accountId, query, type, category)
 
 
-    suspend fun insert(transaction: Transaction) =
-        withContext(Dispatchers.IO) { dao.insert(transaction) }
-    suspend fun update(transaction: Transaction) =
-        withContext(Dispatchers.IO) { dao.update(transaction) }
-    suspend fun delete(transaction: Transaction) =
-        withContext(Dispatchers.IO) { dao.delete(transaction) }
+    suspend fun insert(transaction: Transaction) = withContext(Dispatchers.IO) { dao.insert(transaction) }
+    suspend fun update(transaction: Transaction) = withContext(Dispatchers.IO) { dao.update(transaction) }
+    suspend fun delete(transaction: Transaction) = withContext(Dispatchers.IO) { dao.delete(transaction) }
     suspend fun deleteAll() = withContext(Dispatchers.IO) { dao.deleteAll() }
 }

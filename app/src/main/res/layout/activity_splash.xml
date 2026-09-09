@@ -7,7 +7,7 @@
     android:background="@color/bgColor">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_logo"
+        android:id="@+id/imgLogo"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:src="@mipmap/ic_launcher_round"
@@ -17,25 +17,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:rotation="15"
-        app:layout_constraintBottom_toTopOf="@+id/txt_app_name" />
+        app:layout_constraintBottom_toTopOf="@+id/txtAppName" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_app_name"
+        android:id="@+id/txtAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="@color/TextColor"
         android:textSize="@dimen/_18ssp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/txt_tagline"
+        app:layout_constraintBottom_toTopOf="@+id/txtTagline"
         android:fontFamily="@font/bold"
         android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_tagline"
+        android:id="@+id/txtTagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_2sdp"
@@ -44,7 +44,7 @@
         android:textSize="@dimen/_10ssp"
         android:fontFamily="@font/regular"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_app_name"
+        app:layout_constraintTop_toBottomOf="@id/txtAppName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -83,7 +83,7 @@
             android:textAlignment="viewStart"
             android:ellipsize="end"
             android:includeFontPadding="false"
-            android:text="By checking the box, you agree to our application Privacy policy."
+            android:text="@string/privacy_policy_agreement"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_10ssp"
             android:layout_marginStart="@dimen/_2sdp"

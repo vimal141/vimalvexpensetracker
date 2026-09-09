@@ -289,8 +289,8 @@ class DashboardFragment : Fragment() {
 
     private fun showMonthYearPicker() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_month_year_picker, null)
-        val monthPicker = dialogView.findViewById<NumberPicker>(R.id.picker_month)
-        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.picker_year)
+        val monthPicker = dialogView.findViewById<NumberPicker>(R.id.pickerMonth)
+        val yearPicker = dialogView.findViewById<NumberPicker>(R.id.pickerYear)
 
         val months = arrayOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
         monthPicker.minValue = 0

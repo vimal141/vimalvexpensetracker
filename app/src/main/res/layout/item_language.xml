@@ -19,7 +19,7 @@
         android:paddingHorizontal="@dimen/_14sdp">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_flag"
+            android:id="@+id/imgFlag"
             android:layout_width="@dimen/_32sdp"
             android:layout_height="@dimen/_24sdp"
             android:scaleType="fitCenter"
@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_language_name"
+            android:id="@+id/txtLanguageName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
@@ -39,14 +39,14 @@
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_13ssp"
             android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@+id/txt_sub_title"
+            app:layout_constraintBottom_toTopOf="@+id/txtSubTitle"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/img_flag"
+            app:layout_constraintStart_toEndOf="@id/imgFlag"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_sub_title"
+            android:id="@+id/txtSubTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
@@ -61,8 +61,8 @@
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/img_flag"
-            app:layout_constraintTop_toBottomOf="@id/txt_language_name" />
+            app:layout_constraintStart_toEndOf="@id/imgFlag"
+            app:layout_constraintTop_toBottomOf="@id/txtLanguageName" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbSelected"
@@ -76,7 +76,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottie_hand"
+            android:id="@+id/lottieHand"
             android:layout_width="@dimen/_38sdp"
             android:layout_height="@dimen/_38sdp"
             android:visibility="visible"

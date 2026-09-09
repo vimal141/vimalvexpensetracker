@@ -21,6 +21,7 @@ import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.FragmentSettingsBinding
 import kotlin.text.equals
 import androidx.core.net.toUri
+import cashvexa.expensetracker.budget.money.utility.Constants
 
 class SettingsFragment : Fragment() {
 
@@ -103,7 +104,7 @@ class SettingsFragment : Fragment() {
 
         binding.layoutPrivacy.setOnClickListener {
             try {
-                startActivity(Intent(Intent.ACTION_VIEW, "https://www.google.com".toUri()))
+                startActivity(Intent(Intent.ACTION_VIEW, Constants.PRIVACY_URI.toUri()))
             } catch (_: Exception) {
                 Toast.makeText(requireContext(), getString(R.string.toast_error_browser), Toast.LENGTH_SHORT).show()
             }

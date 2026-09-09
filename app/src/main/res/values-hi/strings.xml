@@ -23,7 +23,6 @@
     <string name="category">श्रेणी</string>
     <string name="date">दिनांक</string>
     <string name="notes">नोट्स</string>
-    <string name="notes_hint">विवरण जोड़ें (वैकल्पिक)...</string>
     <string name="save_transaction">लेनदेन सहेजें</string>
     <string name="update_transaction">लेनदेन अद्यतन करें</string>
 
@@ -45,23 +44,19 @@
     <string name="yearly">वार्षिक</string>
     <string name="category_breakdown">श्रेणी विवरण</string>
     <string name="financial_analysis">आय और खर्च विश्लेषण</string>
-    <string name="total_volume">कुल</string>
 
     <!-- Settings -->
     <string name="settings">सेटिंग्स</string>
     <string name="preferences">सामान्य</string>
-    <string name="dark_mode">डार्क मोड</string>
     <string name="currency">मुद्रा</string>
     <string name="currency_value">₹ INR</string>
     <string name="more">अधिक</string>
-    <string name="categories">श्रेणियां</string>
     <string name="export_data">डेटा निर्यात करें</string>
     <string name="about_app">ऐप के बारे में</string>
     <string name="privacy_policy">गोपनीयता नीति</string>
     <string name="rate_us">हमें रेट करें</string>
     <string name="share_app">ऐप साझा करें</string>
     <string name="version">संस्करण %1$s</string>
-    <string name="premium">प्रीमियम</string>
 
     <!-- OnBoarding -->
     <string name="onboarding_title_1">आय और व्यय को ट्रैक करें</string>
@@ -82,22 +77,13 @@
     <string name="clear_all_data">सभी डेटा साफ़ करें</string>
     <string name="no_transactions_yet">अभी तक कोई लेनदेन नहीं</string>
     <string name="no_data">कोई डेटा नहीं</string>
-    <string name="tap_the_button_below_to_add_your_first_transaction">लेनदेन जोड़ने के लिए + दबाएं</string>
 
     <!-- Validation & Toasts -->
-    <string name="toast_account_first">कृपया पहले एक प्रोफ़ाइल बनाएं</string>
-    <string name="toast_account_created">प्रोफ़ाइल सफलतापूर्वक बनाया गया!</string>
-    <string name="toast_switched_to">%1$s पर स्विच किया गया</string>
     <string name="toast_transaction_deleted">लेनदेन हटा दिया गया</string>
     <string name="toast_transaction_updated">लेनदेन अद्यतन किया गया!</string>
     <string name="toast_transaction_saved">लेनदेन सहेजा गया!</string>
-    <string name="toast_currency_set">मुद्रा %1$s पर सेट की गई</string>
-    <string name="toast_currency_updated">मुद्रा अद्यतन की गई</string>
     <string name="toast_all_data_cleared">सभी डेटा साफ़ कर दिया गया</string>
     <string name="toast_error_browser">ब्राउज़र नहीं खोला जा सका</string>
-    <string name="toast_thanks_support">Expense Tracker का समर्थन करने के लिए धन्यवाद!</string>
-    <string name="toast_thanks_rating">हमें 5 सितारे देने के लिए धन्यवाद!</string>
-    <string name="toast_privacy_policy">गोपनीयता नीति पृष्ठ: www.google.com</string>
     <string name="toast_thanks_support_emoji">समर्थन के लिए धन्यवाद! 😊</string>
     <string name="toast_error_account_missing">त्रुटि: प्रोफ़ाइल का विवरण गायब है</string>
     <string name="toast_pdf_exported">PDF विवरण सफलतापूर्वक निर्यात किया गया!</string>
@@ -127,8 +113,6 @@
     <string name="desc_clear_all_data">यह स्थायी रूप से सभी लेनदेन को हटा देगा। इसे पूर्ववत नहीं किया जा सकता!</string>
     <string name="delete_all">सभी हटाएं</string>
     <string name="cancel">रद्द करें</string>
-    <string name="app_about_desc">संस्करण 1.0.0\n\nएक प्रीमियम, ऑफ़लाइन खर्च ट्रैकर।\n\n2026 में ❤️ के साथ निर्मित।</string>
-    <string name="ok">ठीक है</string>
     <string name="share_via">के माध्यम से साझा करें</string>
     <string name="share_app_desc">Expense Tracker के साथ अपने खर्चों को बुद्धिमानी से ट्रैक करें! इसे अभी डाउनलोड करें।</string>
 
@@ -140,9 +124,6 @@
     <string name="delete">हटाएं</string>
     <string name="toast_transactions_deleted">%1$d लेनदेन हटा दिए गए</string>
 
-    <string name="delete_transaction">लेनदेन हटाएं</string>
-    <string name="delete_transaction_desc">क्या आप निश्चित रूप से इस लेनदेन को हटाना चाहते हैं?</string>
-    <string name="error_enter_amount">कृपया एक राशि दर्ज करें</string>
     <string name="error_valid_amount">एक मान्य सकारात्मक राशि दर्ज करें</string>
 
     <string name="default_pdf_name">Expense_Statement.pdf</string>
@@ -154,7 +135,6 @@
     <string name="period_label">अवधि: %1$s</string>
     <string name="total_income">कुल आय</string>
     <string name="closing_balance">अंतिम शेष</string>
-    <string name="sr_no">क्र.</string>
     <string name="type">प्रकार</string>
     
     <string name="select_month">महीना चुनें</string>
@@ -170,18 +150,10 @@
     <string name="card_holder">कार्ड धारक</string>
     <string name="toast_agree_privacy">कृपया गोपनीयता नीति से सहमत हों</string>
 
-    <string name="change_currency">मुद्रा बदलें</string>
-    <string name="change_currency_desc">क्या आप निश्चित रूप से अपनी मुद्रा को %1$s (%2$s) पर सेट करना चाहते हैं?</string>
     <string name="done">हो गया</string>
-    <string name="change_account">प्रोफ़ाइल बदलें</string>
-    <string name="change_account_desc">क्या आप निश्चित रूप से प्रोफ़ाइल \'%1$s\' पर स्विच करना चाहते हैं?</string>
-    <string name="toast_account_changed">प्रोफ़ाइल %1$s पर बदल दिया गया</string>
     <string name="toast_press_back_again_to_exit">बाहर निकलने के लिए फिर से वापस दबाएं</string>
     <string name="toast_no_transactions_period">चयनित अवधि के लिए कोई लेनदेन नहीं मिला</string>
     <string name="language">भाषा</string>
-    <string name="change_language">भाषा बदलें</string>
-    <string name="change_language_desc">क्या आप निश्चित रूप से ऐप की भाषा %1$s पर सेट करना चाहते हैं?</string>
-    <string name="toast_language_updated">भाषा सफलतापूर्वक अद्यतन की गई!</string>
     <!-- About App -->
     <string name="about_tagline">स्मार्ट और सरल खर्च ट्रैकर</string>
     <string name="about_key_features">प्रमुख विशेषताएं</string>
@@ -195,4 +167,13 @@
     <string name="select_category">श्रेणी चुनें</string>
     <string name="label_date">दिनांक</string>
     <string name="hint_notes_optional">नोट्स (वैकल्पिक)</string>
+    <string name="income_breakdown">आय का विवरण</string>
+    <string name="today">आज</string>
+    <string name="select_year">वर्ष चुनें</string>
+    <string name="statement_period">विवरण अवधि</string>
+    <string name="select_theme_color">थीम रंग चुनें</string>
+    <string name="export_statement">विवरण निर्यात करें</string>
+    <string name="export_pdf_statement">PDF विवरण निर्यात करें</string>
+    <string name="error_select_category">कृपया एक श्रेणी चुनें</string>
+    <string name="generated_on">तैयार किया गया: %1$s</string>
 </resources>

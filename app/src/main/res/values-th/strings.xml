@@ -23,7 +23,6 @@
     <string name="category">หมวดหมู่</string>
     <string name="date">วันที่</string>
     <string name="notes">บันทึก</string>
-    <string name="notes_hint">เพิ่มคำอธิบาย (ไม่บังคับ)...</string>
     <string name="save_transaction">บันทึกรายการ</string>
     <string name="update_transaction">อัปเดตรายการ</string>
 
@@ -45,23 +44,19 @@
     <string name="yearly">รายปี</string>
     <string name="category_breakdown">การสัดส่วนหมวดหมู่</string>
     <string name="financial_analysis">วิเคราะห์รายรับรายจ่าย</string>
-    <string name="total_volume">รวม</string>
 
     <!-- Settings -->
     <string name="settings">การตั้งค่า</string>
     <string name="preferences">ทั่วไป</string>
-    <string name="dark_mode">โหมดมืด</string>
     <string name="currency">สกุลเงิน</string>
     <string name="currency_value">₹ INR</string>
     <string name="more">เพิ่มเติม</string>
-    <string name="categories">หมวดหมู่</string>
     <string name="export_data">ส่งออกข้อมูล</string>
     <string name="about_app">เกี่ยวกับแอป</string>
     <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="rate_us">ให้คะแนนเรา</string>
     <string name="share_app">แชร์แอป</string>
     <string name="version">เวอร์ชัน %1$s</string>
-    <string name="premium">พรีเมียม</string>
 
     <!-- OnBoarding -->
     <string name="onboarding_title_1">ติดตามรายรับและรายจ่าย</string>
@@ -82,22 +77,13 @@
     <string name="clear_all_data">ล้างข้อมูลทั้งหมด</string>
     <string name="no_transactions_yet">ยังไม่มีรายการ</string>
     <string name="no_data">ไม่มีข้อมูล</string>
-    <string name="tap_the_button_below_to_add_your_first_transaction">แตะ + เพื่อเพิ่มรายการ</string>
 
     <!-- Validation & Toasts -->
-    <string name="toast_account_first">โปรดสร้างโปรไฟล์ก่อน</string>
-    <string name="toast_account_created">สร้างโปรไฟล์สำเร็จ!</string>
-    <string name="toast_switched_to">เปลี่ยนเป็น %1$s แล้ว</string>
     <string name="toast_transaction_deleted">ลบรายการแล้ว</string>
     <string name="toast_transaction_updated">อัปเดตรายการแล้ว!</string>
     <string name="toast_transaction_saved">บันทึกรายการแล้ว!</string>
-    <string name="toast_currency_set">ตั้งค่าสกุลเงินเป็น %1$s แล้ว</string>
-    <string name="toast_currency_updated">อัปเดตสกุลเงินแล้ว</string>
     <string name="toast_all_data_cleared">ล้างข้อมูลทั้งหมดแล้ว</string>
     <string name="toast_error_browser">ไม่สามารถเปิดเบราว์เซอร์ได้</string>
-    <string name="toast_thanks_support">ขอบคุณที่สนับสนุน Expense Tracker!</string>
-    <string name="toast_thanks_rating">ขอบคุณที่ให้คะแนน 5 ดาว!</string>
-    <string name="toast_privacy_policy">หน้านโยบายความเป็นส่วนตัว: www.google.com</string>
     <string name="toast_thanks_support_emoji">ขอบคุณสำหรับการสนับสนุน! 😊</string>
     <string name="toast_error_account_missing">ข้อผิดพลาด: ข้อมูลโปรไฟล์ไม่ครบถ้วน</string>
     <string name="toast_pdf_exported">ส่งออกรายงาน PDF สำเร็จ!</string>
@@ -127,8 +113,6 @@
     <string name="desc_clear_all_data">การดำเนินการนี้จะลบรายการทั้งหมดอย่างถาวร!</string>
     <string name="delete_all">ลบทั้งหมด</string>
     <string name="cancel">ยกเลิก</string>
-    <string name="app_about_desc">เวอร์ชัน 1.0.0\n\nแอปจัดการรายรับรายจ่ายแบบออฟไลน์</string>
-    <string name="ok">ตกลง</string>
     <string name="share_via">แชร์ผ่าน</string>
     <string name="share_app_desc">จัดการค่าใช้จ่ายอย่างชาญฉลาดด้วย Expense Tracker!</string>
 
@@ -140,9 +124,6 @@
     <string name="delete">ลบ</string>
     <string name="toast_transactions_deleted">ลบ %1$d รายการแล้ว</string>
 
-    <string name="delete_transaction">ลบรายการ</string>
-    <string name="delete_transaction_desc">คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?</string>
-    <string name="error_enter_amount">โปรดป้อนจำนวนเงิน</string>
     <string name="error_valid_amount">ป้อนจำนวนเงินที่เป็นบวกที่ถูกต้อง</string>
 
     <string name="default_pdf_name">รายงานบัญชี.pdf</string>
@@ -154,7 +135,6 @@
     <string name="period_label">ระยะเวลา: %1$s</string>
     <string name="total_income">รายรับทั้งหมด</string>
     <string name="closing_balance">ยอดยกไป</string>
-    <string name="sr_no">ลำดับ</string>
     <string name="type">ประเภท</string>
     
     <string name="select_month">เลือกเดือน</string>
@@ -170,18 +150,10 @@
     <string name="card_holder">ชื่อผู้ถือบัตร</string>
     <string name="toast_agree_privacy">โปรดยอมรับนโยบายความเป็นส่วนตัว</string>
 
-    <string name="change_currency">เปลี่ยนสกุลเงิน</string>
-    <string name="change_currency_desc">คุณแน่ใจหรือไม่ว่าต้องการตั้งสกุลเงินเป็น %1$s (%2$s)?</string>
     <string name="done">เสร็จสิ้น</string>
-    <string name="change_account">เปลี่ยนโปรไฟล์</string>
-    <string name="change_account_desc">คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนเป็นโปรไฟล์ \'%1$s\'?</string>
-    <string name="toast_account_changed">เปลี่ยนโปรไฟล์เป็น %1$s แล้ว</string>
     <string name="toast_press_back_again_to_exit">กดย้อนกลับอีกครั้งเพื่อออกจากแอป</string>
     <string name="toast_no_transactions_period">ไม่พบรายการในช่วงเวลาที่เลือก</string>
     <string name="language">ภาษา</string>
-    <string name="change_language">เปลี่ยนภาษา</string>
-    <string name="change_language_desc">คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนภาษาแอปเป็น %1$s?</string>
-    <string name="toast_language_updated">อัปเดตภาษาสำเร็จแล้ว!</string>
     <!-- About App -->
     <string name="about_tagline">บันทึกรายรับรายจ่ายที่ง่ายและชาญฉลาด</string>
     <string name="about_key_features">คุณสมบัติเด่น</string>
@@ -195,4 +167,13 @@
     <string name="select_category">เลือกหมวดหมู่</string>
     <string name="label_date">วันที่</string>
     <string name="hint_notes_optional">หมายเหตุ (ไม่บังคับ)</string>
+    <string name="income_breakdown">รายละเอียดรายได้</string>
+    <string name="today">วันนี้</string>
+    <string name="select_year">เลือกปี</string>
+    <string name="statement_period">ระยะเวลาของรายการ</string>
+    <string name="select_theme_color">เลือกสีธีม</string>
+    <string name="export_statement">ส่งออกรายการ</string>
+    <string name="export_pdf_statement">ส่งออกรายการ PDF</string>
+    <string name="error_select_category">โปรดเลือกหมวดหมู่</string>
+    <string name="generated_on">สร้างเมื่อ: %1$s</string>
 </resources>

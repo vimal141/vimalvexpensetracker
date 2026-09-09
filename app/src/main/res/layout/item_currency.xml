@@ -19,7 +19,7 @@
         android:paddingHorizontal="@dimen/_14sdp">
 
         <FrameLayout
-            android:id="@+id/card_symbol"
+            android:id="@+id/cardSymbol"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,7 @@
                 android:backgroundTint="#1A2DCC70" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_currency_symbol"
+                android:id="@+id/txtCurrencySymbol"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/bold"
@@ -44,7 +44,7 @@
         </FrameLayout>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_currency_code"
+            android:id="@+id/txtCurrencyCode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
@@ -54,14 +54,14 @@
             android:textAlignment="viewStart"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_13ssp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_currency_name"
+            app:layout_constraintBottom_toTopOf="@+id/txtCurrencyName"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/card_symbol"
+            app:layout_constraintStart_toEndOf="@id/cardSymbol"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_currency_name"
+            android:id="@+id/txtCurrencyName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
@@ -75,8 +75,8 @@
             android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/rbSelected"
-            app:layout_constraintStart_toEndOf="@id/card_symbol"
-            app:layout_constraintTop_toBottomOf="@id/txt_currency_code" />
+            app:layout_constraintStart_toEndOf="@id/cardSymbol"
+            app:layout_constraintTop_toBottomOf="@id/txtCurrencyCode" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbSelected"
@@ -90,7 +90,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottie_hand"
+            android:id="@+id/lottieHand"
             android:layout_width="@dimen/_38sdp"
             android:layout_height="@dimen/_38sdp"
             android:visibility="gone"

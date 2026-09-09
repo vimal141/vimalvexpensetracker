@@ -6,7 +6,7 @@
     android:background="@color/bgColor">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
@@ -21,12 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="0.8dp"
         android:background="@color/divider_color"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/nav_background"

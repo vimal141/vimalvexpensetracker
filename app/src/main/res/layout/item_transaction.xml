@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_transaction"
+    android:id="@+id/cardTransaction"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/_8sdp"
@@ -17,7 +17,7 @@
         android:padding="@dimen/_10sdp">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/icon_container"
+            android:id="@+id/iconContainer"
             android:layout_width="@dimen/_36sdp"
             android:layout_height="@dimen/_36sdp"
             app:cardBackgroundColor="#1A2DCC70"
@@ -29,7 +29,7 @@
             app:strokeWidth="0dp">
 
             <ImageView
-                android:id="@+id/img_category"
+                android:id="@+id/imgCategory"
                 android:layout_width="@dimen/_18sdp"
                 android:layout_height="@dimen/_18sdp"
                 android:layout_gravity="center"
@@ -39,7 +39,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_category_name"
+            android:id="@+id/txtCategoryName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -52,15 +52,15 @@
             android:textAlignment="viewStart"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/_13ssp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_notes"
-            app:layout_constraintEnd_toStartOf="@+id/txt_amount"
-            app:layout_constraintStart_toEndOf="@id/icon_container"
-            app:layout_constraintTop_toTopOf="@id/icon_container"
+            app:layout_constraintBottom_toTopOf="@+id/txtNotes"
+            app:layout_constraintEnd_toStartOf="@+id/txtAmount"
+            app:layout_constraintStart_toEndOf="@id/iconContainer"
+            app:layout_constraintTop_toTopOf="@id/iconContainer"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <!-- Notes (Subtitle) -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_notes"
+            android:id="@+id/txtNotes"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
@@ -73,14 +73,14 @@
             android:textAlignment="viewStart"
             android:textColor="@color/subTextColor"
             android:textSize="@dimen/_10ssp"
-            app:layout_constraintBottom_toBottomOf="@id/icon_container"
-            app:layout_constraintEnd_toStartOf="@+id/txt_date"
-            app:layout_constraintStart_toStartOf="@id/txt_category_name"
-            app:layout_constraintTop_toBottomOf="@id/txt_category_name" />
+            app:layout_constraintBottom_toBottomOf="@id/iconContainer"
+            app:layout_constraintEnd_toStartOf="@+id/txtDate"
+            app:layout_constraintStart_toStartOf="@id/txtCategoryName"
+            app:layout_constraintTop_toBottomOf="@id/txtCategoryName" />
 
         <!-- Amount -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_amount"
+            android:id="@+id/txtAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -98,13 +98,13 @@
             app:autoSizeTextType="uniform"
             app:layout_constrainedWidth="true"
             app:layout_constraintWidth_max="@dimen/_150sdp"
-            app:layout_constraintBottom_toBottomOf="@id/txt_category_name"
+            app:layout_constraintBottom_toBottomOf="@id/txtCategoryName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/txt_category_name" />
+            app:layout_constraintTop_toTopOf="@id/txtCategoryName" />
 
         <!-- Date -->
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txt_date"
+            android:id="@+id/txtDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -115,9 +115,9 @@
             android:textAlignment="viewEnd"
             android:textColor="@color/subTextColor"
             android:textSize="@dimen/_10ssp"
-            app:layout_constraintBottom_toBottomOf="@id/txt_notes"
+            app:layout_constraintBottom_toBottomOf="@id/txtNotes"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/txt_notes" />
+            app:layout_constraintTop_toTopOf="@id/txtNotes" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

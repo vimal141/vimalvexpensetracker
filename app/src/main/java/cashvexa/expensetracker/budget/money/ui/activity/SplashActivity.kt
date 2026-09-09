@@ -21,7 +21,7 @@ import androidx.core.content.ContextCompat
 import cashvexa.expensetracker.budget.money.utility.helper.PrefManager
 import cashvexa.expensetracker.budget.money.databinding.ActivitySplashBinding
 import androidx.core.net.toUri
-import cashvexa.expensetracker.budget.money.utility.helper.Const
+import cashvexa.expensetracker.budget.money.utility.Constants
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
@@ -97,7 +97,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 try {
-                    val intent = Intent(Intent.ACTION_VIEW, Const.PRIVACY_URI.toUri())
+                    val intent = Intent(Intent.ACTION_VIEW, Constants.PRIVACY_URI.toUri())
                     startActivity(intent)
                 } catch (e: Exception) {
                     e.printStackTrace()

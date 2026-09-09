@@ -7,10 +7,11 @@ import androidx.room.RoomDatabase
 import cashvexa.expensetracker.budget.money.data.model.Account
 import cashvexa.expensetracker.budget.money.data.model.Category
 import cashvexa.expensetracker.budget.money.data.model.Transaction
+import cashvexa.expensetracker.budget.money.utility.Constants
 
 @Database(
     entities = [Transaction::class, Account::class, Category::class],
-    version = 2,
+    version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -22,15 +23,13 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
-
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "ExpenseBookDB"
-                )
-                .fallbackToDestructiveMigration()
+                    Constants.DB_NAME
+                ).fallbackToDestructiveMigration()
                 .build()
                 INSTANCE = instance
                 instance
