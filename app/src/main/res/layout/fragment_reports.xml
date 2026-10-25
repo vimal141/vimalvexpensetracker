@@ -262,21 +262,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="ltr"
-                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_10sdp">
 
                         <View
                             android:id="@+id/icIncomeBg"
-                            android:layout_width="@dimen/_28sdp"
-                            android:layout_height="@dimen/_28sdp"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
                             android:background="@drawable/bg_circle"
                             android:backgroundTint="@color/income_green_bg"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_16sdp"
-                            android:layout_height="@dimen/_16sdp"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_arrow_up"
                             app:layout_constraintBottom_toBottomOf="@id/icIncomeBg"
@@ -284,6 +284,8 @@
                             app:layout_constraintStart_toStartOf="@id/icIncomeBg"
                             app:layout_constraintTop_toTopOf="@id/icIncomeBg"
                             app:tint="@color/income_green" />
+
+
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lblIncome"
@@ -299,7 +301,7 @@
                             android:textAlignment="viewStart"
                             android:textAllCaps="true"
                             android:textColor="@color/TextColor"
-                            android:textSize="@dimen/_11ssp"
+                            android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="@id/icIncomeBg"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/icIncomeBg"
@@ -317,9 +319,9 @@
                             android:text="@string/amount"
                             android:textColor="@color/income_green"
                             android:textDirection="ltr"
-                            android:textSize="@dimen/_15ssp"
-                            app:autoSizeMaxTextSize="@dimen/_15ssp"
-                            app:autoSizeMinTextSize="@dimen/_10ssp"
+                            android:textSize="@dimen/_13ssp"
+                            app:autoSizeMaxTextSize="@dimen/_13ssp"
+                            app:autoSizeMinTextSize="@dimen/_9ssp"
                             app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -350,21 +352,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="ltr"
-                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_10sdp">
 
                         <View
                             android:id="@+id/icExpenseBg"
-                            android:layout_width="@dimen/_28sdp"
-                            android:layout_height="@dimen/_28sdp"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
                             android:background="@drawable/bg_circle"
                             android:backgroundTint="@color/expense_red_bg"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="@dimen/_16sdp"
-                            android:layout_height="@dimen/_16sdp"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_arrow_down"
                             app:layout_constraintBottom_toBottomOf="@id/icExpenseBg"
@@ -387,7 +389,7 @@
                             android:textAlignment="viewStart"
                             android:textAllCaps="true"
                             android:textColor="@color/TextColor"
-                            android:textSize="@dimen/_11ssp"
+                            android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="@id/icExpenseBg"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/icExpenseBg"
@@ -405,9 +407,9 @@
                             android:text="@string/amount"
                             android:textColor="@color/expense_red"
                             android:textDirection="ltr"
-                            android:textSize="@dimen/_15ssp"
-                            app:autoSizeMaxTextSize="@dimen/_15ssp"
-                            app:autoSizeMinTextSize="@dimen/_10ssp"
+                            android:textSize="@dimen/_13ssp"
+                            app:autoSizeMaxTextSize="@dimen/_13ssp"
+                            app:autoSizeMinTextSize="@dimen/_9ssp"
                             app:autoSizeStepGranularity="1sp"
                             app:autoSizeTextType="uniform"
                             app:layout_constraintBottom_toBottomOf="parent"
