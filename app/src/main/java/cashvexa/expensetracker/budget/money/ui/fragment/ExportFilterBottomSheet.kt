@@ -33,6 +33,7 @@ class ExportFilterBottomSheet : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        cashvexa.expensetracker.budget.money.utility.helper.EdgeToEdgeUtil.applyBottomSheetInsets(binding.root)
 
         binding.btnNext.setOnClickListener {
             var startTime = 0L

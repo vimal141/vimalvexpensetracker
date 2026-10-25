@@ -237,6 +237,7 @@ class AddTransactionActivity : BaseActivity<ActivityAddTransactionBinding>() {
         val dialog = BottomSheetDialog(this)
         val dialogBinding = DialogBottomSheetDeleteBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
+        cashvexa.expensetracker.budget.money.utility.helper.EdgeToEdgeUtil.applyBottomSheetInsets(dialogBinding.root)
 
         dialogBinding.txtDeleteTitle.text = getString(R.string.delete_transaction_title)
         dialogBinding.txtDeleteMessage.text = getString(R.string.delete_single_transaction_desc)

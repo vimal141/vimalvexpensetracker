@@ -21,7 +21,6 @@ class OnBoardingActivity : BaseActivity<ActivityOnBoardingBinding>() {
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
-        setContentView(binding.root)
         setupViewPager()
         setupListeners()
     }

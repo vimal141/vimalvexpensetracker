@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.viewbinding.ViewBinding
+import cashvexa.expensetracker.budget.money.utility.helper.EdgeToEdgeUtil
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
@@ -27,7 +25,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         setContentView(binding.root)
 
         if (isEdgeToEdgeEnabled) {
-            enableEdgeToEdge()
+            EdgeToEdgeUtil.setupEdgeToEdge(this)
             if (isAutoApplyInsetsPadding) {
                 setupEdgeToEdgePadding(getInsetView())
             }
@@ -41,20 +39,15 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
         onCreateActivity(savedInstanceState)
     }
-    protected open fun setupEdgeToEdgePadding(view: View) {
-        if (isApplyKeyboardPadding){
-            ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                insets
-            }
-        }else{
-            ViewCompat.setOnApplyWindowInsetsListener(view) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                insets
-            }
-        }
-    }
 
+    protected open fun setupEdgeToEdgePadding(view: View) {
+        EdgeToEdgeUtil.applySystemBarInsets(
+            view = view,
+            applyTop = true,
+            applyBottom = true,
+            applyLeft = true,
+            applyRight = true,
+            includeIme = isApplyKeyboardPadding
+        )
+    }
 }

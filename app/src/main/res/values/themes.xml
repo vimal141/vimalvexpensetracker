@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources >
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.ExpenseBook" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryColor</item>
         <item name="colorAccent">@color/accentColor</item>
         <item name="android:windowBackground">@color/bgColor</item>
-        <item name="android:statusBarColor">@color/bgColor</item>
-        <item name="android:navigationBarColor">@color/bgColor</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
         <item name="textAppearanceHeadlineSmall">@style/TextAppearance.App.Headline</item>
         <item name="textAppearanceTitleLarge">@style/TextAppearance.App.Title</item>
         <item name="textAppearanceBodyMedium">@style/TextAppearance.App.Body</item>

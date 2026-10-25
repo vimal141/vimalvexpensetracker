@@ -18,12 +18,13 @@ import cashvexa.expensetracker.budget.money.ui.fragment.ReportsFragment
 import cashvexa.expensetracker.budget.money.ui.fragment.SettingsFragment
 import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.ActivityMainBinding
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.get
 import androidx.core.view.size
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override val isEdgeToEdgeEnabled: Boolean = false
+    override val isEdgeToEdgeEnabled: Boolean = true
     override val isAutoApplyInsetsPadding: Boolean = false
 
     private var doubleBackToExitPressedOnce = false
@@ -35,9 +36,41 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigation) { _, insets ->
+        // 1. Apply status bar insets as top padding to ViewPager so fragments stay below the status bar,
+        // while activity_main background (@color/bgColor) fills the status bar area seamlessly.
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val sysBars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+            )
+            binding.viewPager.setPadding(
+                sysBars.left,
+                sysBars.top,
+                sysBars.right,
+                0
+            )
             insets
         }
+
+        // 2. Apply navigation bar insets as bottom padding to BottomNavigationView
+        // so its background (@color/nav_background) reaches the bottom edge through the navigation bar,
+        // while all icons and labels sit cleanly above the 3-button navigation / gesture pill!
+        val initialBottomNavPadding = binding.bottomNavigation.paddingBottom
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigation) { v, insets ->
+            val navBars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+            )
+            v.setPadding(
+                v.paddingLeft,
+                v.paddingTop,
+                v.paddingRight,
+                initialBottomNavPadding + navBars.bottom
+            )
+            insets
+        }
+
+        ViewCompat.requestApplyInsets(binding.root)
+        ViewCompat.requestApplyInsets(binding.bottomNavigation)
+
         setupViewPager()
         setupBottomNavigation()
         handleIntent(intent)

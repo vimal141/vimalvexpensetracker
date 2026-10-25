@@ -110,6 +110,7 @@ class HistoryFragment : Fragment() {
         val dialog = BottomSheetDialog(requireContext())
         val dialogBinding = DialogBottomSheetDeleteBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
+        cashvexa.expensetracker.budget.money.utility.helper.EdgeToEdgeUtil.applyBottomSheetInsets(dialogBinding.root)
 
         (dialogBinding.root.parent as? View)?.setBackgroundColor(Color.TRANSPARENT)
 

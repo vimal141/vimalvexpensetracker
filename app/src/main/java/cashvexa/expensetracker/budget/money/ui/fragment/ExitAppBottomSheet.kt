@@ -25,6 +25,7 @@ class ExitAppBottomSheet(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        cashvexa.expensetracker.budget.money.utility.helper.EdgeToEdgeUtil.applyBottomSheetInsets(binding.root)
 
         binding.btnCancel.setOnClickListener {
             dismiss()
