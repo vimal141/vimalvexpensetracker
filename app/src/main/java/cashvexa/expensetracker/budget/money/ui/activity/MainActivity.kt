@@ -15,7 +15,6 @@ import androidx.viewpager2.widget.ViewPager2
 import cashvexa.expensetracker.budget.money.ui.fragment.DashboardFragment
 import cashvexa.expensetracker.budget.money.ui.fragment.HistoryFragment
 import cashvexa.expensetracker.budget.money.ui.fragment.ReportsFragment
-import cashvexa.expensetracker.budget.money.ui.fragment.SettingsFragment
 import cashvexa.expensetracker.budget.money.R
 import cashvexa.expensetracker.budget.money.databinding.ActivityMainBinding
 import androidx.core.view.WindowInsetsCompat
@@ -83,7 +82,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun handleIntent(intent: Intent?) {
         val targetTab = intent?.getIntExtra("target_tab", -1) ?: -1
-        if (targetTab in 0..3) {
+        if (targetTab in 0..2) {
             binding.viewPager.setCurrentItem(targetTab, false)
         }
     }
@@ -108,7 +107,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun setupViewPager() {
         val adapter = MainPagerAdapter(this)
         binding.viewPager.adapter = adapter
-        binding.viewPager.offscreenPageLimit = 4
+        binding.viewPager.offscreenPageLimit = 3
         binding.viewPager.isUserInputEnabled = true
 
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -125,7 +124,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 R.id.dashboardFragment -> binding.viewPager.setCurrentItem(0, false)
                 R.id.historyFragment -> binding.viewPager.setCurrentItem(1, false)
                 R.id.reportsFragment -> binding.viewPager.setCurrentItem(2, false)
-                R.id.settingsFragment -> binding.viewPager.setCurrentItem(3, false)
             }
             true
         }
@@ -152,14 +150,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private class MainPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
-        override fun getItemCount(): Int = 4
+        override fun getItemCount(): Int = 3
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
                 0 -> DashboardFragment()
                 1 -> HistoryFragment()
                 2 -> ReportsFragment()
-                3 -> SettingsFragment()
                 else -> DashboardFragment()
             }
         }

@@ -14,15 +14,31 @@
         android:ellipsize="end"
         android:fontFamily="@font/bold"
         android:maxLines="1"
-        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_8sdp"
         android:paddingVertical="@dimen/_12sdp"
         android:text="@string/transaction_history"
         android:textAlignment="viewStart"
         android:textColor="@color/TextColor"
         android:textSize="@dimen/_22ssp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSettings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btnSettings"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentTittle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragmentTittle"
+        app:tint="@color/TextColor" />
 
     <!-- Contextual Action Bar for Selection Mode -->
     <androidx.constraintlayout.widget.ConstraintLayout

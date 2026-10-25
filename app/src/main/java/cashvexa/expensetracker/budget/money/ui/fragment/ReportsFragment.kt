@@ -1,6 +1,7 @@
 package cashvexa.expensetracker.budget.money.ui.fragment
 
 import cashvexa.expensetracker.budget.money.R
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import cashvexa.expensetracker.budget.money.data.model.CategorySum
 import cashvexa.expensetracker.budget.money.data.model.Transaction
+import cashvexa.expensetracker.budget.money.ui.activity.SettingsActivity
 import cashvexa.expensetracker.budget.money.ui.viewmodel.TransactionViewModel
 import cashvexa.expensetracker.budget.money.utility.Constants
 import cashvexa.expensetracker.budget.money.utility.customview.PieChartView
@@ -74,6 +76,9 @@ class ReportsFragment : Fragment() {
     }
 
     private fun setupListeners() {
+        binding.btnSettings.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingsActivity::class.java))
+        }
         binding.btnPrevMonth.setOnClickListener { viewModel.previousReportPeriod() }
         binding.btnNextMonth.setOnClickListener { viewModel.nextReportPeriod() }
 

@@ -15,6 +15,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import cashvexa.expensetracker.budget.money.data.model.Transaction
 import cashvexa.expensetracker.budget.money.ui.activity.AddTransactionActivity
+import cashvexa.expensetracker.budget.money.ui.activity.SettingsActivity
 import cashvexa.expensetracker.budget.money.ui.adapter.TransactionAdapter
 import cashvexa.expensetracker.budget.money.ui.viewmodel.TransactionViewModel
 import cashvexa.expensetracker.budget.money.utility.Constants
@@ -47,6 +48,7 @@ class HistoryFragment : Fragment() {
         setupRecyclerView()
         setupSearch()
         setupFilters()
+        setupListeners()
         observeTransactions()
     }
 
@@ -54,6 +56,12 @@ class HistoryFragment : Fragment() {
         super.onResume()
         if (::adapter.isInitialized) {
             adapter.notifyDataSetChanged()
+        }
+    }
+
+    private fun setupListeners() {
+        binding.btnSettings.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingsActivity::class.java))
         }
     }
 
@@ -69,6 +77,7 @@ class HistoryFragment : Fragment() {
             if (isSelectionMode) {
                 binding.layoutCab.visibility = View.VISIBLE
                 binding.fragmentTittle.visibility = View.INVISIBLE
+                binding.btnSettings.visibility = View.INVISIBLE
                 binding.txtCabCount.text = getString(R.string.selected_count, count)
 
                 if (count == adapter.itemCount && adapter.itemCount > 0) {
@@ -79,6 +88,7 @@ class HistoryFragment : Fragment() {
             } else {
                 binding.layoutCab.visibility = View.GONE
                 binding.fragmentTittle.visibility = View.VISIBLE
+                binding.btnSettings.visibility = View.VISIBLE
                 binding.btnCabSelectAll.setImageResource(R.drawable.ic_unselected)
             }
         }

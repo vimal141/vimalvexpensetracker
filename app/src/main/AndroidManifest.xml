@@ -74,6 +74,11 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="cashvexa.expensetracker.budget.money.ui.activity.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

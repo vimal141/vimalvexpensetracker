@@ -25,6 +25,7 @@ import cashvexa.expensetracker.budget.money.data.model.Transaction
 import cashvexa.expensetracker.budget.money.ui.activity.AccountsActivity
 import cashvexa.expensetracker.budget.money.ui.activity.AddTransactionActivity
 import cashvexa.expensetracker.budget.money.ui.activity.MainActivity
+import cashvexa.expensetracker.budget.money.ui.activity.SettingsActivity
 import cashvexa.expensetracker.budget.money.ui.adapter.TransactionAdapter
 import cashvexa.expensetracker.budget.money.ui.viewmodel.TransactionViewModel
 import cashvexa.expensetracker.budget.money.utility.Constants
@@ -203,6 +204,10 @@ class DashboardFragment : Fragment() {
         binding.btnAddExpanse.bounceOnClick {
             val intent = Intent(requireContext(), AddTransactionActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnSettings.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingsActivity::class.java))
         }
 
 
