@@ -1,21 +1,34 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# General rules
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Data Models - Keep them to avoid issues with Room or any serialization
+-keep class cashvexa.expensetracker.budget.money.data.model.** { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Room
+-keepclassmembers class * extends androidx.room.RoomDatabase {
+    <init>(...);
+}
+-keep class androidx.room.RoomDatabase
+-keep class * extends androidx.room.RoomDatabase
+-keep class * extends androidx.room.Entity
+-keep class * extends androidx.room.Dao
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Koin (Dependency Injection)
+-keep class io.insertkoin.** { *; }
+-keepclassmembers class * {
+    @org.koin.core.annotation.KoinInternalApi *;
+}
+
+# Lottie
+-keep class com.airbnb.lottie.** { *; }
+
+# Coroutines
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory {}
+
+# ViewBinding
+-keep class cashvexa.expensetracker.budget.money.databinding.** { *; }
+-flattenpackagehierarchy
